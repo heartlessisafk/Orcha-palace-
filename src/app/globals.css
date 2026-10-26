@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Core Audited Palette */
+  --color-brand-navy: #0C1731;
+  --color-brand-navy-light: #1A2B50;
+  --color-brand-navy-deep: #060C1B;
+  --color-brand-beige: #F4F0E6;
+  --color-brand-beige-sand: #E8DCC5;
+  --color-brand-canvas: #FDFBF7;
+  --color-brand-gold: #8C6D3F;
+  --color-brand-gold-light: #B89758;
+  --color-brand-charcoal: #260E01;
+  --color-brand-olive: #57503F;
+  --color-brand-muted: #757575;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-canvas);
+    color: var(--color-brand-charcoal);
+  }
+
+  /* Keyboard focus styles */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-gold);
+    outline-offset: 2px;
+  }
+}
+
+/* Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
