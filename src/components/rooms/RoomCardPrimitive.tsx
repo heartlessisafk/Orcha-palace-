@@ -24,6 +24,7 @@ export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimit
     <div
       className={cn(
         "group flex flex-col rounded-luxury bg-white border border-brand-charcoal/10 overflow-hidden shadow-subtle hover:shadow-hover transition-all duration-300 ease-out",
+        "hover:-translate-y-1.5 hover:scale-[1.012] hover:border-brand-gold/40 focus-within:ring-2 focus-within:ring-brand-gold/50",
         className
       )}
     >
@@ -64,9 +65,10 @@ export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimit
             <span className="font-sans text-[11px] font-semibold uppercase tracking-widest text-brand-gold">
               {room.views[0]}
             </span>
-            <Link href={`/rooms/${room.id}`} className="hover:text-brand-gold transition-colors block">
-              <h3 className="font-serif text-xl sm:text-2xl font-semibold text-brand-charcoal leading-tight">
-                {room.name}
+            <Link href={`/rooms/${room.id}`} className="transition-colors block">
+              <h3 className="font-serif text-xl sm:text-2xl font-semibold text-brand-charcoal group-hover:text-brand-navy leading-tight transition-colors flex items-center justify-between gap-2">
+                <span>{room.name}</span>
+                <ArrowRight className="w-4 h-4 text-brand-gold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 shrink-0" />
               </h3>
             </Link>
           </div>

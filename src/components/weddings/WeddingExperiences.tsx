@@ -125,7 +125,7 @@ export function WeddingExperiences() {
             const Icon = exp.icon;
             return (
               <FadeIn key={exp.id} delay={idx * 0.08}>
-                <div className="bg-white rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-subtle hover:shadow-elevated transition-all duration-300 flex flex-col h-full group">
+                <div className="bg-white rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.012] hover:border-brand-gold/40 active:scale-[0.985] transition-all duration-300 ease-out flex flex-col h-full group cursor-pointer">
                   {/* Photo Frame */}
                   <div className="relative aspect-[16/10] w-full overflow-hidden bg-brand-beige">
                     <Image

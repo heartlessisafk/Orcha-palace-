@@ -13,6 +13,7 @@ A comprehensive 6-phase engineering and creative refinement plan addressing anim
 - [x] **Phase 5: Gallery Layout & Cinematic Scroll Transitions** — Refine `/gallery` with sticky header, cinematic smooth scroll transitions, and enhanced lightbox interactions. (completed 2026-10-26)
 - [x] **Phase 6: Integration, Responsive Behavior, Accessibility & Final Verification** — Complete browser verification across Desktop (1440px), Tablet (768px), and Mobile (390px), ensure `prefers-reduced-motion` compliance, 0 console errors, clean production build. (completed 2026-10-26)
 - [x] **Phase 7: Editorial Cartographic Map Finale Redesign** — Eliminate AI-dashboard aesthetic, enforce strict non-overlapping stages, authentic Betwa River geography, anti-collision typography, and seamless booking invitation. (completed 2026-10-27)
+- [x] **Phase 8: Premium Interaction & Motion System and Gallery Refinement** — Implement tactile hover and selection system across all tiles, expressive typography entrance reveals, deduplicate gallery manifest, and rebuild gallery into progressive 3-at-a-time reveal. (completed 2026-10-27)
 
 ## Phase Details
 
@@ -95,3 +96,17 @@ A comprehensive 6-phase engineering and creative refinement plan addressing anim
 3. Realistic Betwa River channel with fort island bifurcation, historic bridge, and archival survey styling.
 4. Museum-quality antique-contemporary palette (`#0A1018`, `#C5A059`, `#D4C3A3`, `#16283D`).
 5. Working booking invitation and responsive layouts verified on Desktop, Tablet, and Mobile.
+
+### Phase 8: Premium Interaction & Motion System and Gallery Refinement
+
+**Goal**: Implement a tactile, luxury hover and selection system across all tiles, expressive typography entrance reveals, eliminate gallery duplicates, and rebuild the gallery into a 3-photos-at-a-time progressive reveal experience.  
+**Depends on**: Phase 7  
+**Requirements**: INTERACT-01, INTERACT-02, TYPO-01, GAL-DEDUP-01, GAL-PROG-01  
+**Success Criteria**:
+
+1. Interactive tiles (room, amenity, spa, wedding, dining) lift smoothly (3-5px), scale subtly (1.015), and zoom internal images without layout reflow.
+2. Distinct selection states with press response (`scale: 0.985`) and accessible focus/aria states.
+3. Expressive typography entrance reveals for headings and paragraphs with luxury cubic-bezier easing.
+4. Gallery deduplication removes duplicate entries (`orchha-photo-016`), retaining 48 unique verified photos with documented inventory.
+5. Gallery displays initial 3 photos per category, revealing next 3 on "Discover More" until category is exhausted.
+6. Full verification across Desktop, Tablet, Mobile with 0 errors and clean production build.

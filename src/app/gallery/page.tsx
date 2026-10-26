@@ -5,6 +5,7 @@ import Link from "next/link";
 import { NavbarPrimitive } from "@/components/layout/NavbarPrimitive";
 import { FooterPrimitive } from "@/components/layout/FooterPrimitive";
 import { GalleryViewer } from "@/components/gallery/GalleryViewer";
+import { AnimatedHeading, AnimatedParagraph, AnimatedTag } from "@/components/motion/AnimatedTypography";
 import { Sparkles, Calendar, ShieldCheck, MapPin, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -43,16 +44,16 @@ export default function GalleryPage() {
                 <span>Verified Resort Visual Chronicle</span>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-medium tracking-tight leading-[1.15]">
+              <AnimatedHeading as="h1" size="hero" inverted delay={0.1}>
                 Atmospheres of <br />
                 <span className="italic font-light text-brand-sand">The Orchha Resort</span>
-              </h1>
+              </AnimatedHeading>
 
-              <p className="font-sans text-sm sm:text-base text-white/85 max-w-2xl leading-relaxed">
+              <AnimatedParagraph variant="lead" className="text-white/85 max-w-2xl" delay={0.25}>
                 Step inside our riverside sanctuary. Discover the sacred blooming geometry of our lotus pool, 
                 hand-carved Bundelkhand stone architecture, luxury Swiss tents under starry skies, and royal 
                 banquets overlooking the ancient 14 Chhatris.
-              </p>
+              </AnimatedParagraph>
 
               {/* Key Highlights Bar */}
               <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-8 text-xs font-mono text-white/70 border-t border-white/10">

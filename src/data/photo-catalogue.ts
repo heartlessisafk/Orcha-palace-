@@ -585,8 +585,8 @@ export const PHOTO_CATALOGUE: PhotoRecord[] = [
     ],
     "isFeatured": false,
     "isDuplicate": true,
-    "isExcluded": false,
-    "exclusionReason": null,
+    "isExcluded": true,
+    "exclusionReason": "Exact duplicate of orchha-photo-015 (dji_fly_20240520_180600_0067_1716208793115_video.jpg)",
     "curatedPath": "/images/resort/curated/pool/pool-blooming-petal-splash.jpg",
     "googlePhotosUrl": "https://lh3.googleusercontent.com/pw/AP1GczPNRBmzLd2_UfS_dQyGr7uQmlLMqg2Mr4EStAL1kQILdtgfHLz8mfSsfYiIi8-2dBh84LV4hpWMXsTUOJJ7bqhA62q5oxgfYojyJxwfuPgVMymWmhfP=w1200-no"
   },

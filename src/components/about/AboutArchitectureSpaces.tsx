@@ -117,10 +117,11 @@ export function AboutArchitectureSpaces() {
                 type="button"
                 onClick={() => setActiveSpaceIndex(idx)}
                 className={cn(
-                  "flex items-center gap-2.5 p-3 sm:p-4 rounded-xl text-left border transition-all duration-300",
+                  "flex items-center gap-2.5 p-3 sm:p-4 rounded-xl text-left border transition-all duration-300 ease-out cursor-pointer",
+                  "hover:-translate-y-0.5 hover:scale-[1.01] active:scale-[0.985] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold",
                   isActive
                     ? "bg-brand-navy text-white border-brand-navy shadow-subtle ring-2 ring-brand-gold/40"
-                    : "bg-brand-canvas text-brand-charcoal border-brand-charcoal/10 hover:bg-brand-beige/60 hover:border-brand-charcoal/20"
+                    : "bg-brand-canvas text-brand-charcoal border-brand-charcoal/10 hover:bg-brand-beige/60 hover:border-brand-gold/30"
                 )}
               >
                 <Icon

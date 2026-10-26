@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { PHOTO_CATALOGUE, PhotoRecord } from "@/data/photo-catalogue";
+import { LUXURY_EASE } from "@/lib/motion";
 import { 
   X, 
   ChevronLeft, 
@@ -11,10 +12,9 @@ import {
   Maximize2, 
   Sparkles, 
   Camera, 
-  Calendar, 
-  Tag, 
   Compass,
-  CheckCircle2
+  CheckCircle2,
+  ArrowRight
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -40,13 +40,15 @@ const FILTER_GROUPS: FilterGroup[] = [
 
 export function GalleryViewer() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [visibleCount, setVisibleCount] = useState<number>(3);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const shouldReduceMotion = useReducedMotion();
 
-  // Curated photos list
+  // Curated photos list (Strictly deduplicated: excludes duplicates & exclusions)
   const curatedPhotos = useMemo(() => {
-    return PHOTO_CATALOGUE.filter((p) => p.curatedPath && !p.isExcluded);
+    return PHOTO_CATALOGUE.filter((p) => p.curatedPath && !p.isExcluded && !p.isDuplicate);
   }, []);
 
   // Filtered photos based on active category
@@ -56,6 +58,25 @@ export function GalleryViewer() {
     if (!group) return curatedPhotos;
     return curatedPhotos.filter((p) => group.categories.includes(p.category));
   }, [activeFilter, curatedPhotos]);
+
+  // When active category changes, reset visible count to initial 3
+  const handleFilterChange = (groupId: string) => {
+    setActiveFilter(groupId);
+    setVisibleCount(3);
+  };
+
+  // Progressive 3-at-a-time slice
+  const visiblePhotos = useMemo(() => {
+    return filteredPhotos.slice(0, visibleCount);
+  }, [filteredPhotos, visibleCount]);
+
+  const remainingCount = Math.max(0, filteredPhotos.length - visibleCount);
+  const nextBatchSize = Math.min(3, remainingCount);
+  const hasMore = remainingCount > 0;
+
+  const handleDiscoverMore = () => {
+    setVisibleCount((prev) => Math.min(prev + 3, filteredPhotos.length));
+  };
 
   // Lightbox navigation
   const openLightbox = (index: number) => {
@@ -70,13 +91,13 @@ export function GalleryViewer() {
 
   const nextPhoto = useCallback(() => {
     if (lightboxIndex === null) return;
-    setLightboxIndex((prev) => (prev! + 1) % filteredPhotos.length);
-  }, [lightboxIndex, filteredPhotos.length]);
+    setLightboxIndex((prev) => (prev! + 1) % visiblePhotos.length);
+  }, [lightboxIndex, visiblePhotos.length]);
 
   const prevPhoto = useCallback(() => {
     if (lightboxIndex === null) return;
-    setLightboxIndex((prev) => (prev! - 1 + filteredPhotos.length) % filteredPhotos.length);
-  }, [lightboxIndex, filteredPhotos.length]);
+    setLightboxIndex((prev) => (prev! - 1 + visiblePhotos.length) % visiblePhotos.length);
+  }, [lightboxIndex, visiblePhotos.length]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -111,7 +132,7 @@ export function GalleryViewer() {
     if (isRightSwipe) prevPhoto();
   };
 
-  const currentPhoto = lightboxIndex !== null ? filteredPhotos[lightboxIndex] : null;
+  const currentPhoto = lightboxIndex !== null ? visiblePhotos[lightboxIndex] : null;
 
   return (
     <section className="py-6 md:py-10">
@@ -132,9 +153,10 @@ export function GalleryViewer() {
               return (
                 <button
                   key={group.id}
-                  onClick={() => setActiveFilter(group.id)}
+                  onClick={() => handleFilterChange(group.id)}
                   className={cn(
-                    "px-4 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap transition-all duration-200 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-gold/50",
+                    "px-4 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap transition-all duration-200 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-gold/50 cursor-pointer",
+                    "hover:-translate-y-0.5 active:scale-[0.97]",
                     isActive
                       ? "bg-brand-navy text-brand-sand shadow-md ring-1 ring-brand-gold/40"
                       : "bg-white/90 text-brand-charcoal hover:bg-brand-beige border border-brand-charcoal/10"
@@ -158,57 +180,73 @@ export function GalleryViewer() {
         </div>
       </div>
 
-      {/* Masonry / Responsive Grid */}
+      {/* Progressive 3-at-a-Time Photo Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          <AnimatePresence>
-            {filteredPhotos.map((photo, index) => {
-              const isPortrait = photo.dimensions.orientation === "portrait";
-              const isHeroRole = photo.recommendedRole === "hero";
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeFilter}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {visiblePhotos.map((photo, index) => {
+              // Newly revealed images animate with staggered entrance; initial 3 enter cleanly
+              const isInitialBatch = index < 3;
+              const staggerOffset = isInitialBatch ? index * 0.06 : (index % 3) * 0.08;
 
               return (
                 <motion.div
                   key={photo.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.35, delay: index * 0.02 }}
+                  layout="position"
+                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: staggerOffset,
+                    ease: LUXURY_EASE,
+                  }}
                   onClick={() => openLightbox(index)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      openLightbox(index);
+                    }
+                  }}
                   className={cn(
-                    "group relative rounded-2xl overflow-hidden bg-brand-charcoal/5 cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-charcoal/8",
-                    isPortrait ? "aspect-[3/4]" : "aspect-[4/3]",
-                    isHeroRole && "sm:col-span-2 lg:col-span-2 aspect-[16/10]"
+                    "group relative rounded-2xl overflow-hidden bg-brand-charcoal/5 cursor-pointer shadow-subtle hover:shadow-hover border border-brand-charcoal/10 hover:border-brand-gold/60 transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2",
+                    "aspect-[4/3] hover:-translate-y-1.5 hover:scale-[1.015] active:scale-[0.985]"
                   )}
+                  aria-label={`Open photo: ${photo.title}`}
                 >
-                  {/* Image */}
+                  {/* Image with internal smooth zoom */}
                   <Image
                     src={photo.curatedPath || photo.googlePhotosUrl}
                     alt={photo.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                    priority={index < 4}
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                    priority={index < 3}
                   />
 
                   {/* Top Badges */}
                   <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider bg-brand-charcoal/60 backdrop-blur-md text-white border border-white/10 shadow-sm">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider bg-brand-charcoal/70 backdrop-blur-md text-white border border-white/10 shadow-sm">
                       {photo.category.replace("-", " ")}
                     </span>
                     {photo.qualityScore >= 9 && (
-                      <span className="px-2 py-1 rounded-full text-[10px] font-medium bg-brand-gold/90 backdrop-blur-md text-brand-charcoal flex items-center gap-1 shadow-sm font-mono">
-                        <Sparkles className="w-3 h-3 text-brand-charcoal" />
+                      <span className="px-2 py-1 rounded-full text-[10px] font-medium bg-brand-gold/90 backdrop-blur-md text-brand-navy flex items-center gap-1 shadow-sm font-mono font-semibold">
+                        <Sparkles className="w-3 h-3 text-brand-navy" />
                         Signature
                       </span>
                     )}
                   </div>
 
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex flex-col justify-end p-5">
+                  {/* Gradient Overlay & Metadata on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex flex-col justify-end p-5">
                     <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                       <div className="flex items-center gap-2 mb-1">
                         <Maximize2 className="w-4 h-4 text-brand-sand shrink-0" />
@@ -227,8 +265,35 @@ export function GalleryViewer() {
                 </motion.div>
               );
             })}
-          </AnimatePresence>
-        </motion.div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Progressive 3-at-a-Time "Discover More" Bar */}
+        <div className="mt-12 text-center flex flex-col items-center justify-center gap-3">
+          {hasMore ? (
+            <motion.button
+              whileHover={{ y: -2, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={handleDiscoverMore}
+              className="px-8 py-3.5 rounded-full bg-brand-navy hover:bg-brand-charcoal text-brand-sand font-sans text-sm font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2.5 border border-brand-gold/40 focus:outline-none focus:ring-2 focus:ring-brand-gold group cursor-pointer"
+            >
+              <span>Discover More Photographs</span>
+              <span className="px-2 py-0.5 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-mono">
+                +{nextBatchSize}
+              </span>
+              <ArrowRight className="w-4 h-4 text-brand-gold group-hover:translate-x-1 transition-transform" />
+            </motion.button>
+          ) : (
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-beige/60 border border-brand-charcoal/10 text-xs font-sans text-brand-charcoal/80 shadow-sm">
+              <CheckCircle2 className="w-4 h-4 text-brand-gold" />
+              <span>All {filteredPhotos.length} curated photographs in this view are displayed</span>
+            </div>
+          )}
+
+          <span className="font-mono text-xs text-brand-charcoal/60">
+            Displaying {visiblePhotos.length} of {filteredPhotos.length} unique views
+          </span>
+        </div>
       </div>
 
       {/* Interactive Lightbox Modal */}
@@ -247,7 +312,7 @@ export function GalleryViewer() {
             <div className="px-4 sm:px-8 py-4 flex items-center justify-between border-b border-white/10 z-20">
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs text-brand-sand tracking-widest uppercase">
-                  Photo {lightboxIndex + 1} of {filteredPhotos.length}
+                  Photo {lightboxIndex + 1} of {visiblePhotos.length}
                 </span>
                 <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-brand-gold" />
                 <span className="hidden sm:inline-block font-sans text-xs text-white/70">
@@ -258,7 +323,7 @@ export function GalleryViewer() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={closeLightbox}
-                  className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                  className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors focus:outline-none focus:ring-2 focus:ring-brand-gold cursor-pointer"
                   aria-label="Close Lightbox"
                 >
                   <X className="w-5 h-5" />
@@ -271,7 +336,7 @@ export function GalleryViewer() {
               {/* Prev Button */}
               <button
                 onClick={prevPhoto}
-                className="absolute left-4 sm:left-8 z-20 p-3 rounded-full bg-brand-charcoal/60 hover:bg-brand-charcoal/90 text-white border border-white/15 backdrop-blur-md transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                className="absolute left-4 sm:left-8 z-20 p-3 rounded-full bg-brand-charcoal/60 hover:bg-brand-charcoal/90 text-white border border-white/15 backdrop-blur-md transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-gold cursor-pointer"
                 aria-label="Previous Photo"
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -291,7 +356,7 @@ export function GalleryViewer() {
               {/* Next Button */}
               <button
                 onClick={nextPhoto}
-                className="absolute right-4 sm:right-8 z-20 p-3 rounded-full bg-brand-charcoal/60 hover:bg-brand-charcoal/90 text-white border border-white/15 backdrop-blur-md transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                className="absolute right-4 sm:right-8 z-20 p-3 rounded-full bg-brand-charcoal/60 hover:bg-brand-charcoal/90 text-white border border-white/15 backdrop-blur-md transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-gold cursor-pointer"
                 aria-label="Next Photo"
               >
                 <ChevronRight className="w-6 h-6" />

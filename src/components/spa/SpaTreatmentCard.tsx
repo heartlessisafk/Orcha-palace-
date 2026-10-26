@@ -22,9 +22,9 @@ export function SpaTreatmentCard({
 }: SpaTreatmentCardProps) {
   return (
     <article
-      className={`group relative bg-brand-canvas rounded-2xl overflow-hidden border transition-all duration-300 flex flex-col justify-between shadow-subtle hover:shadow-elevated ${
+      className={`group relative bg-brand-canvas rounded-2xl overflow-hidden border transition-all duration-300 ease-out flex flex-col justify-between shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.012] active:scale-[0.985] ${
         isSelected
-          ? "border-brand-gold ring-2 ring-brand-gold/30 bg-brand-beige/20"
+          ? "border-brand-gold ring-2 ring-brand-gold/50 bg-brand-beige/20 shadow-md"
           : "border-brand-charcoal/10 hover:border-brand-gold/50"
       }`}
     >

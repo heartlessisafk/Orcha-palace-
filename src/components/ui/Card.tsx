@@ -37,7 +37,8 @@ export function Card({
         "rounded-luxury overflow-hidden transition-all duration-300 ease-out",
         variants[variant],
         paddings[padding],
-        interactive && "hover:shadow-hover hover:-translate-y-1 hover:border-brand-gold/40 cursor-pointer",
+        interactive &&
+          "cursor-pointer hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 active:scale-[0.985] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2",
         className
       )}
       {...props}

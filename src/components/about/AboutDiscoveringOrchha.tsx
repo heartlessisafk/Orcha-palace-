@@ -154,7 +154,7 @@ export function AboutDiscoveringOrchha() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {attractions.map((site, idx) => (
               <FadeIn key={site.id} delay={idx * 0.08}>
-                <div className="bg-brand-canvas rounded-2xl p-6 border border-brand-charcoal/10 shadow-subtle hover:shadow-elevated transition-all duration-300 flex flex-col justify-between h-full group">
+                <div className="bg-brand-canvas rounded-2xl p-6 border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.012] hover:border-brand-gold/40 active:scale-[0.985] cursor-pointer transition-all duration-300 ease-out flex flex-col justify-between h-full group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
                   <div className="space-y-3">
                     <div className="flex items-center justify-between gap-2">
                       <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-brand-gold-dark px-2.5 py-0.5 rounded-full bg-brand-gold/15 border border-brand-gold/30">
@@ -196,7 +196,7 @@ export function AboutDiscoveringOrchha() {
               const Icon = route.icon;
               return (
                 <FadeIn key={route.hub} delay={idx * 0.1}>
-                  <div className="bg-brand-canvas rounded-2xl p-6 sm:p-7 border border-brand-charcoal/10 shadow-subtle hover:shadow-elevated transition-all duration-300 space-y-4">
+                  <div className="bg-brand-canvas rounded-2xl p-6 sm:p-7 border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.012] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-4">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-brand-navy text-brand-gold flex items-center justify-center shrink-0">
