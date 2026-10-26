@@ -16,10 +16,11 @@ import { ClippedReveal } from "@/components/motion/ClippedReveal";
 import { TiltCard } from "@/components/motion/TiltCard";
 import { RoomCardPrimitive } from "@/components/rooms/RoomCardPrimitive";
 import { GuestLoveExperience } from "@/components/reviews/GuestLoveExperience";
+import { PalaceToMapFinale } from "@/components/map/PalaceToMapFinale";
 import { VERIFIED_ROOMS } from "@/data/rooms";
 import { RESORT_ASSETS } from "@/lib/assets";
 import { RoomDetails } from "@/types/room";
-import { Waves, Coffee, TreePine, Sparkles, MapPin, Compass } from "lucide-react";
+import { Waves, Coffee, TreePine, Sparkles, MapPin, Compass, Camera, ArrowRight } from "lucide-react";
 
 export default function HomePage() {
   const [selectedRoom, setSelectedRoom] = useState<RoomDetails | null>(null);
@@ -180,19 +181,113 @@ export default function HomePage() {
         </Container>
       </Section>
 
+      {/* 6.5 VISUAL GALLERY SHOWCASE TEASER */}
+      <Section surface="canvas" spacing="default" id="gallery-preview">
+        <Container>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div className="max-w-2xl">
+              <SubtitleTag>Visual Archive</SubtitleTag>
+              <Heading as="h2" size="h2">The Resort in Photographs</Heading>
+              <Text variant="lead" className="mt-2">
+                A curated visual chronicle of 300 genuine captures across our blooming lotus pool, heritage guest wings, riverfront dining, and celebratory lawns.
+              </Text>
+            </div>
+            <Link href="/gallery" className="shrink-0">
+              <Button variant="outline" size="pill" withArrow>
+                View Full Photo Gallery
+              </Button>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            <FadeIn delay={0.05} className="col-span-2 row-span-2">
+              <Link href="/gallery" className="group block relative aspect-[4/3] rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-sm hover:shadow-xl transition-all">
+                <Image
+                  src="/images/resort/curated/pool/pool-lotus-twilight-glow.jpg"
+                  alt="Lotus Swimming Pool at Twilight"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                  <span className="text-xs font-mono text-brand-gold uppercase tracking-wider">Lotus Pool & Grounds</span>
+                  <h4 className="font-serif text-xl text-white font-medium">Twilight Pool Glow & Chhatris</h4>
+                </div>
+              </Link>
+            </FadeIn>
+
+            <FadeIn delay={0.1}>
+              <Link href="/gallery" className="group block relative aspect-square rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-sm hover:shadow-xl transition-all">
+                <Image
+                  src="/images/resort/curated/rooms/room-deluxe-king-pool-view.jpg"
+                  alt="Deluxe Room with Lotus Pool View"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
+                  <span className="text-[10px] font-mono text-brand-gold uppercase">Accommodations</span>
+                  <h4 className="font-serif text-sm text-white font-medium">Deluxe Room Pool View</h4>
+                </div>
+              </Link>
+            </FadeIn>
+
+            <FadeIn delay={0.15}>
+              <Link href="/gallery" className="group block relative aspect-square rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-sm hover:shadow-xl transition-all">
+                <Image
+                  src="/images/resort/curated/dining/dining-riverfront-alfresco.jpg"
+                  alt="Al Fresco Riverfront Dining"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
+                  <span className="text-[10px] font-mono text-brand-gold uppercase">Riverfront Dining</span>
+                  <h4 className="font-serif text-sm text-white font-medium">Betwa Riverside Kebabs</h4>
+                </div>
+              </Link>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <Link href="/gallery" className="group block relative aspect-square rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-sm hover:shadow-xl transition-all">
+                <Image
+                  src="/images/resort/curated/weddings/wedding-lawn-canopy-mandap.jpg"
+                  alt="Royal Wedding Canopy Mandap"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
+                  <span className="text-[10px] font-mono text-brand-gold uppercase">Royal Celebrations</span>
+                  <h4 className="font-serif text-sm text-white font-medium">Emerald & Ivory Mandap</h4>
+                </div>
+              </Link>
+            </FadeIn>
+
+            <FadeIn delay={0.25}>
+              <Link href="/gallery" className="group block relative aspect-square rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-sm hover:shadow-xl transition-all">
+                <Image
+                  src="/images/resort/curated/architecture/architecture-lobby-ganesha.jpg"
+                  alt="Sandstone Ganesha Lobby Mural"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
+                  <span className="text-[10px] font-mono text-brand-gold uppercase">Architecture</span>
+                  <h4 className="font-serif text-sm text-white font-medium">Handcrafted Stone Ganesha</h4>
+                </div>
+              </Link>
+            </FadeIn>
+          </div>
+        </Container>
+      </Section>
+
       {/* 7. THE GUEST LOVE EXPERIENCE (Second-Last Homepage Section: Alternating Tinder-Inspired Card Choreography) */}
       <GuestLoveExperience />
 
-      {/* ─────────────────────────────────────────────────────────────────
-          FUTURE INTEGRATION POINT: CINEMATIC PALACE-TO-MAP SCROLL FINALE
-          Next implementation prompt will insert the Inversa-Scroll-Animation
-          inspired palace-to-map interactive journey here, smoothly receiving
-          handoff from GuestLoveExperience's Act IV and flowing into the Footer.
-          Contract:
-          - Target anchor: #map-experience
-          - Input trigger: Follows naturally from Act IV ("Some places are remembered...")
-          - Output transition: Resolves cleanly into the Global Footer
-          ───────────────────────────────────────────────────────────────── */}
+      {/* 8. CINEMATIC PALACE-TO-MAP SCROLL FINALE (Closing Experience inspired by Inversa-Scroll-Animation) */}
+      <PalaceToMapFinale id="map-experience" />
 
       <FooterPrimitive />
     </div>

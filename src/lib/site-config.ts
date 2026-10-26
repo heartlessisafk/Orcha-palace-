@@ -55,9 +55,8 @@ export const SITE_CONFIG = {
     main: [
       { label: "Home", href: "/" },
       { label: "Our Story", href: "/about" },
-      { label: "Our Rooms", href: "/#rooms" },
-      { label: "Amenities", href: "/#amenities" },
-      { label: "Dining", href: "/#dining" },
+      { label: "Rooms", href: "/#rooms" },
+      { label: "Gallery", href: "/gallery" },
       { label: "Ayurveda Spa", href: "/spa" },
       { label: "Weddings", href: "/weddings" },
       { label: "Heritage Guide", href: "/about#heritage" },
@@ -65,6 +64,7 @@ export const SITE_CONFIG = {
     footer: {
       explore: [
         { label: "The Resort Story", href: "/about" },
+        { label: "Photo Gallery", href: "/gallery" },
         { label: "Accommodations", href: "/#rooms" },
         { label: "Kaleva Restaurant", href: "/#dining" },
         { label: "Ayurvedic Wellness", href: "/spa" },

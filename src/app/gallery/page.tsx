@@ -1,0 +1,111 @@
+import React from "react";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { NavbarPrimitive } from "@/components/layout/NavbarPrimitive";
+import { FooterPrimitive } from "@/components/layout/FooterPrimitive";
+import { GalleryViewer } from "@/components/gallery/GalleryViewer";
+import { Sparkles, Calendar, ShieldCheck, MapPin, ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Photo Gallery | The Orchha Resort — Betwa River Sanctuary",
+  description:
+    "Explore authentic high-resolution photography of The Orchha Resort. Featuring our lotus-shaped swimming pool, deluxe rooms, luxury Swiss tents, Kaleva restaurant, Kairali Ayurvedic spa, and riverside celebrations overlooking the 14 Royal Chhatris.",
+};
+
+export default function GalleryPage() {
+  return (
+    <div className="min-h-screen bg-brand-canvas text-brand-charcoal flex flex-col selection:bg-brand-gold/20 selection:text-brand-navy">
+      {/* Navigation */}
+      <NavbarPrimitive transparentAtTop />
+
+      <main className="flex-1">
+        {/* Cinematic Gallery Hero */}
+        <section className="relative min-h-[58vh] sm:min-h-[64vh] flex items-end pb-12 sm:pb-16 pt-32 overflow-hidden bg-brand-navy">
+          {/* Background Image: Iconic Lotus Pool Twilight */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/resort/curated/pool/pool-lotus-twilight-glow.jpg"
+              alt="Orchha Resort Lotus Pool Twilight Glow"
+              fill
+              priority
+              className="object-cover object-center filter brightness-75 scale-105"
+            />
+            {/* Multi-layered luxury overlays */}
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/60 to-brand-charcoal/30" />
+            <div className="absolute inset-0 bg-radial-vignette opacity-50" />
+          </div>
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="max-w-3xl space-y-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-brand-sand text-xs font-mono tracking-widest uppercase">
+                <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+                <span>Verified Resort Visual Chronicle</span>
+              </div>
+
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-medium tracking-tight leading-[1.15]">
+                Atmospheres of <br />
+                <span className="italic font-light text-brand-sand">The Orchha Resort</span>
+              </h1>
+
+              <p className="font-sans text-sm sm:text-base text-white/85 max-w-2xl leading-relaxed">
+                Step inside our riverside sanctuary. Discover the sacred blooming geometry of our lotus pool, 
+                hand-carved Bundelkhand stone architecture, luxury Swiss tents under starry skies, and royal 
+                banquets overlooking the ancient 14 Chhatris.
+              </p>
+
+              {/* Key Highlights Bar */}
+              <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-8 text-xs font-mono text-white/70 border-t border-white/10">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-brand-gold" />
+                  <span>100% Genuine Resort Photography</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-brand-gold" />
+                  <span>Kanchan Ghat, Betwa Riverfront</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery Interactive Viewer */}
+        <GalleryViewer />
+
+        {/* Bottom Booking Invitation CTA */}
+        <section className="py-16 md:py-24 bg-brand-beige/50 border-t border-brand-charcoal/5">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <span className="font-mono text-xs uppercase tracking-widest text-brand-gold font-medium">
+              Experience It in Person
+            </span>
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-navy max-w-2xl mx-auto leading-snug">
+              Begin Your Journey to the Riverside Sanctuary
+            </h2>
+            <p className="font-sans text-sm sm:text-base text-brand-charcoal/70 max-w-xl mx-auto">
+              Whether you seek a quiet wellness retreat, a royal heritage holiday, or a destination celebration, 
+              The Orchha Resort welcomes you with genuine Bundelkhand warmth.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+              <Link
+                href="/#rooms"
+                className="px-6 py-3 rounded-full bg-brand-navy hover:bg-brand-charcoal text-brand-sand font-sans text-sm font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2"
+              >
+                <span>Reserve Your Stay</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/weddings"
+                className="px-6 py-3 rounded-full bg-white hover:bg-brand-beige text-brand-charcoal border border-brand-charcoal/15 font-sans text-sm font-medium transition-all"
+              >
+                <span>Plan a Destination Wedding</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <FooterPrimitive />
+    </div>
+  );
+}
