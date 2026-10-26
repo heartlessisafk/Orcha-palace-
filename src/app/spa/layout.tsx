@@ -1,28 +1,34 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kerala Ayurveda Spa & Herbal Steam Sanctuary",
+  title: "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation",
   description:
-    "Restore physical, mental, and spiritual equilibrium at The Orchha Resort. Authentic Kerala Ayurveda therapies, herbal steam bath, and personalized consultations on the serene banks of the Betwa River.",
+    "Discover 11 authentic Ayurvedic therapies, warm medicated herbal oil massages, Shirodhara, and herbal body wraps at Orchha Palace Hotel Spa, Kanchanghat, Orchha. Call 9516006201 or 8103953727.",
   keywords: [
-    "Orchha Resort Spa",
-    "Kerala Ayurveda Orchha",
-    "Ayurvedic Spa Betwa River",
+    "Orchha Palace Hotel Spa",
+    "Ayurvedic Wellness Orchha",
+    "Abhyangam Orchha",
     "Shirodhara Orchha",
-    "Herbal Steam Bath Madhya Pradesh",
-    "Abhyanga Massage Orchha",
-    "Ayurvedic Retreat India",
+    "Synchronized Massage",
+    "Marma Massage",
+    "Nasyam Orchha",
+    "Ayur Herbal Wrap",
+    "Reflexology Orchha",
+    "Deep Tissue Massage Orchha",
+    "Head and Scalp Massage",
+    "Body Exfoliation Massage",
+    "Ayurvedic Spa Betwa River",
   ],
   openGraph: {
-    title: "Ayurveda Spa & Wellness Sanctuary | The Orchha Resort",
+    title: "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation",
     description:
-      "Authentic Kerala Ayurveda massages, herbal steam baths, and holistic equilibrium in a zero-pollution riverfront sanctuary.",
+      "Official catalogue of 11 authentic royal Ayurvedic therapies with warm herbal oils and restorative riverfront peace at Orchha Palace Hotel Spa.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80",
-        width: 1600,
-        height: 900,
-        alt: "Ayurveda Spa Sanctuary at The Orchha Resort",
+        url: "/images/spa/catalog/shirodhara.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Orchha Palace Hotel Spa Ayurvedic Wellness",
       },
     ],
   },

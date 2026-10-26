@@ -1,61 +1,168 @@
 "use client";
 
-import React, { useState } from "react";
-import { NavbarPrimitive } from "@/components/layout/NavbarPrimitive";
+import React, { useState, useMemo } from "react";
+import {
+  SPA_CATALOGUE,
+  SpaTreatmentItem,
+  SPA_CONTACT_INFO,
+} from "@/data/spa-catalog";
+import { SpaNavbar } from "@/components/spa/SpaNavbar";
+import { SpaHeroRoyal } from "@/components/spa/SpaHeroRoyal";
+import { SpaEditorialRoyal } from "@/components/spa/SpaEditorialRoyal";
+import { SpaCatalogueBrowser } from "@/components/spa/SpaCatalogueBrowser";
+import { SpaConversionRoyal } from "@/components/spa/SpaConversionRoyal";
+import { SpaSelectionTray } from "@/components/spa/SpaSelectionTray";
+import { SpaDetailModal } from "@/components/spa/SpaDetailModal";
+import { SpaEnquiryModalRoyal } from "@/components/spa/SpaEnquiryModalRoyal";
 import { FooterPrimitive } from "@/components/layout/FooterPrimitive";
-import { SpaHero } from "@/components/spa/SpaHero";
-import { SpaEditorial } from "@/components/spa/SpaEditorial";
-import { SpaFacilities } from "@/components/spa/SpaFacilities";
-import { SpaTreatments } from "@/components/spa/SpaTreatments";
-import { SpaConversionCta } from "@/components/spa/SpaConversionCta";
-import { SpaEnquiryModal } from "@/components/spa/SpaEnquiryModal";
 
 export default function SpaPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedTreatmentName, setSelectedTreatmentName] = useState<string>("");
+  // Quick-Commerce Selection State (Set of Treatment IDs)
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
 
-  const handleOpenEnquiry = (treatmentName?: string) => {
-    setSelectedTreatmentName(treatmentName || "");
-    setIsModalOpen(true);
+  // Modal / Drawer States
+  const [isTrayOpen, setIsTrayOpen] = useState(false);
+  const [isDetailOpen, setIsDetailOpen] = useState(false);
+  const [detailTreatment, setDetailTreatment] = useState<SpaTreatmentItem | null>(null);
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+
+  // Derived selected treatments array
+  const selectedTreatments = useMemo(() => {
+    return SPA_CATALOGUE.filter((item) => selectedIds.has(item.id));
+  }, [selectedIds]);
+
+  // Derived subtotal in INR
+  const subtotal = useMemo(() => {
+    return selectedTreatments.reduce((acc, curr) => acc + curr.price, 0);
+  }, [selectedTreatments]);
+
+  // Derived total duration in minutes
+  const totalDurationMinutes = useMemo(() => {
+    return selectedTreatments.reduce((acc, curr) => acc + curr.durationMinutes, 0);
+  }, [selectedTreatments]);
+
+  // Toggle selection for a treatment
+  const handleToggleSelect = (treatment: SpaTreatmentItem) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(treatment.id)) {
+        next.delete(treatment.id);
+      } else {
+        next.add(treatment.id);
+      }
+      return next;
+    });
   };
 
-  const handleSelectTreatment = (treatmentName: string) => {
-    setSelectedTreatmentName(treatmentName);
-    setIsModalOpen(true);
+  // Remove single item from selection tray
+  const handleRemoveItem = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      next.delete(id);
+      return next;
+    });
   };
 
-  const handleCloseEnquiry = () => {
-    setIsModalOpen(false);
+  // Clear all items from tray
+  const handleClearAll = () => {
+    setSelectedIds(new Set());
+  };
+
+  // Open detail view for a treatment
+  const handleOpenDetail = (treatment: SpaTreatmentItem) => {
+    setDetailTreatment(treatment);
+    setIsDetailOpen(true);
+  };
+
+  // Close detail view
+  const handleCloseDetail = () => {
+    setIsDetailOpen(false);
+    setDetailTreatment(null);
+  };
+
+  // Handle direct enquiry from detail modal
+  const handleEnquireForTreatment = (treatment: SpaTreatmentItem) => {
+    // Ensure item is selected
+    if (!selectedIds.has(treatment.id)) {
+      setSelectedIds((prev) => new Set(prev).add(treatment.id));
+    }
+    setIsDetailOpen(false);
+    setIsEnquiryOpen(true);
+  };
+
+  // Proceed from selection tray to enquiry modal
+  const handleProceedToEnquiry = () => {
+    setIsTrayOpen(false);
+    setIsEnquiryOpen(true);
   };
 
   return (
     <div className="min-h-screen bg-brand-canvas text-brand-charcoal flex flex-col selection:bg-brand-gold/20 selection:text-brand-navy">
-      {/* Primary Global Navigation */}
-      <NavbarPrimitive transparentAtTop />
+      {/* 1. Sticky Spa Navigation with Quick Selection Tray */}
+      <SpaNavbar
+        selectedCount={selectedTreatments.length}
+        subtotal={subtotal}
+        onOpenTray={() => setIsTrayOpen(true)}
+        onOpenEnquiry={() => setIsEnquiryOpen(true)}
+      />
 
-      {/* 1. Serene Cinematic Spa Hero */}
-      <SpaHero onOpenEnquiry={handleOpenEnquiry} />
+      {/* 2. Royal Cinematic Opening Hero */}
+      <SpaHeroRoyal
+        selectedCount={selectedTreatments.length}
+        subtotal={subtotal}
+        onOpenTray={() => setIsTrayOpen(true)}
+        onOpenEnquiry={() => setIsEnquiryOpen(true)}
+      />
 
-      {/* 2. Editorial Philosophy & Dosha Balance */}
-      <SpaEditorial />
+      {/* 3. Royal Indian Wellness Editorial & Dosha Philosophy */}
+      <SpaEditorialRoyal />
 
-      {/* 3. Verified Property Spa Facilities */}
-      <SpaFacilities />
+      {/* 4. Quick-Commerce Catalogue Browser (Search, Filter, 11 Treatment Cards) */}
+      <SpaCatalogueBrowser
+        selectedIds={selectedIds}
+        onToggleSelect={handleToggleSelect}
+        onOpenDetail={handleOpenDetail}
+      />
 
-      {/* 4. Authentic Ayurvedic Treatment Menu */}
-      <SpaTreatments onSelectTreatment={handleSelectTreatment} />
-
-      {/* 5. Spa Conversion Banner & Concierge Gateway */}
-      <SpaConversionCta onOpenEnquiry={handleOpenEnquiry} />
+      {/* 5. Royal Conversion Banner with Direct Contacts */}
+      <SpaConversionRoyal
+        onOpenEnquiry={() => setIsEnquiryOpen(true)}
+        selectedCount={selectedTreatments.length}
+      />
 
       {/* 6. Footer Navigation & Resort Information */}
       <FooterPrimitive />
 
-      {/* Modal: Interactive Treatment & Concierge Enquiry */}
-      <SpaEnquiryModal
-        isOpen={isModalOpen}
-        onClose={handleCloseEnquiry}
-        defaultTreatmentName={selectedTreatmentName}
+      {/* Interactive Selection Tray (Quick-Commerce Cart/Drawer) */}
+      <SpaSelectionTray
+        selectedTreatments={selectedTreatments}
+        subtotal={subtotal}
+        totalDurationMinutes={totalDurationMinutes}
+        isOpen={isTrayOpen}
+        onClose={() => setIsTrayOpen(false)}
+        onOpen={() => setIsTrayOpen(true)}
+        onRemoveItem={handleRemoveItem}
+        onClearAll={handleClearAll}
+        onProceedToEnquiry={handleProceedToEnquiry}
+      />
+
+      {/* Treatment Detail Modal (Full Image & Verbatim PDF Description) */}
+      <SpaDetailModal
+        treatment={detailTreatment}
+        isOpen={isDetailOpen}
+        isSelected={detailTreatment ? selectedIds.has(detailTreatment.id) : false}
+        onClose={handleCloseDetail}
+        onToggleSelect={handleToggleSelect}
+        onEnquireForTreatment={handleEnquireForTreatment}
+      />
+
+      {/* Royal Spa Enquiry Modal (Pre-populated Itinerary, WhatsApp, Call & Copy Actions) */}
+      <SpaEnquiryModalRoyal
+        isOpen={isEnquiryOpen}
+        onClose={() => setIsEnquiryOpen(false)}
+        selectedTreatments={selectedTreatments}
+        subtotal={subtotal}
+        totalDurationMinutes={totalDurationMinutes}
       />
     </div>
   );
