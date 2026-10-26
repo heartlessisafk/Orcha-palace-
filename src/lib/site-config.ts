@@ -58,7 +58,7 @@ export const SITE_CONFIG = {
       { label: "Our Rooms", href: "/#rooms" },
       { label: "Amenities", href: "/#amenities" },
       { label: "Dining", href: "/#dining" },
-      { label: "Ayurveda Spa", href: "/#spa" },
+      { label: "Ayurveda Spa", href: "/spa" },
       { label: "Heritage Guide", href: "/#heritage" },
       { label: "Design System", href: "/design-system" },
     ],
@@ -66,7 +66,7 @@ export const SITE_CONFIG = {
       explore: [
         { label: "Accommodations", href: "/#rooms" },
         { label: "Kaleva Restaurant", href: "/#dining" },
-        { label: "Ayurvedic Wellness", href: "/#spa" },
+        { label: "Ayurvedic Wellness", href: "/spa" },
         { label: "Destination Weddings", href: "/#events" },
         { label: "14 Royal Chhatris", href: "/#heritage" },
       ],
