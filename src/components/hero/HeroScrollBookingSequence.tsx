@@ -40,7 +40,6 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
   // Warm-Beige Reservation Panel transforms (rises up and expands)
   const panelY = useTransform(scrollYProgress, [0.15, 0.75], ["65vh", "0vh"]);
   const panelScale = useTransform(scrollYProgress, [0.15, 0.75], [0.94, 1.0]);
-  const panelOpacity = useTransform(scrollYProgress, [0.12, 0.45], [0.4, 1.0]);
 
   // Smooth scroll handler for first-screen CTA button
   const handleScrollToBooking = () => {
@@ -201,10 +200,10 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
         {/* 2. Rising Warm-Beige Reservation Panel */}
         <motion.div
           ref={bookingPanelRef}
-          style={{ y: panelY, scale: panelScale, opacity: panelOpacity }}
+          style={{ y: panelY, scale: panelScale }}
           className="relative z-20 pb-8 sm:pb-12 px-4 sm:px-6 md:px-8 max-w-container mx-auto w-full origin-bottom"
         >
-          <div className="rounded-2xl bg-brand-beige border border-brand-gold/25 shadow-floating overflow-hidden transition-all duration-300">
+          <div className="rounded-2xl bg-brand-beige border border-brand-gold/25 shadow-floating overflow-hidden">
             {/* Panel Header Bar */}
             <div className="bg-brand-navy px-6 py-3 border-b border-white/10 flex items-center justify-between text-xs text-white font-sans">
               <div className="flex items-center gap-2">
@@ -220,11 +219,11 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
 
             {/* Panel Search Content Body */}
             <div className="p-5 sm:p-7 bg-brand-beige">
-              <RoomSearchWidgetPrimitive className="border-none shadow-none p-0 bg-transparent" />
+              <RoomSearchWidgetPrimitive className="border-none shadow-none p-0 bg-brand-beige" />
             </div>
 
             {/* Quick Reassurance Strip */}
-            <div className="bg-brand-beige-sand/40 px-6 py-2.5 border-t border-brand-charcoal/8 flex flex-wrap items-center justify-between gap-3 text-[11px] text-brand-olive font-sans">
+            <div className="bg-brand-beige-sand px-6 py-2.5 border-t border-brand-charcoal/8 flex flex-wrap items-center justify-between gap-3 text-[11px] text-brand-olive font-sans">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-3.5 h-3.5 text-brand-gold-dark" />
                 <span>Zero reservation fee · Flexible 48-hour free cancellation</span>
