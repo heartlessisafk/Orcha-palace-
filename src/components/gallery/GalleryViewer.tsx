@@ -114,45 +114,47 @@ export function GalleryViewer() {
   const currentPhoto = lightboxIndex !== null ? filteredPhotos[lightboxIndex] : null;
 
   return (
-    <section className="py-12 md:py-16">
-      {/* Category Filter Pills */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-        <div className="flex items-center gap-2 overflow-x-auto pb-3 pt-1 scrollbar-none no-scrollbar">
-          {FILTER_GROUPS.map((group) => {
-            const count =
-              group.id === "all"
-                ? curatedPhotos.length
-                : curatedPhotos.filter((p) => group.categories.includes(p.category)).length;
+    <section className="py-6 md:py-10">
+      {/* Sticky Category Filter Bar */}
+      <div className="sticky top-16 sm:top-20 z-30 bg-brand-canvas/95 backdrop-blur-md py-3.5 border-y border-brand-charcoal/10 shadow-sm mb-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5 scrollbar-none no-scrollbar">
+            {FILTER_GROUPS.map((group) => {
+              const count =
+                group.id === "all"
+                  ? curatedPhotos.length
+                  : curatedPhotos.filter((p) => group.categories.includes(p.category)).length;
 
-            if (count === 0 && group.id !== "all") return null;
+              if (count === 0 && group.id !== "all") return null;
 
-            const isActive = activeFilter === group.id;
+              const isActive = activeFilter === group.id;
 
-            return (
-              <button
-                key={group.id}
-                onClick={() => setActiveFilter(group.id)}
-                className={cn(
-                  "px-4 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap transition-all duration-200 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-gold/50",
-                  isActive
-                    ? "bg-brand-navy text-brand-sand shadow-md"
-                    : "bg-white/80 text-brand-charcoal hover:bg-brand-beige border border-brand-charcoal/10"
-                )}
-              >
-                <span>{group.label}</span>
-                <span
+              return (
+                <button
+                  key={group.id}
+                  onClick={() => setActiveFilter(group.id)}
                   className={cn(
-                    "text-[10px] px-1.5 py-0.5 rounded-full font-mono",
+                    "px-4 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap transition-all duration-200 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-gold/50",
                     isActive
-                      ? "bg-brand-sand/20 text-brand-sand"
-                      : "bg-brand-charcoal/5 text-brand-charcoal/60"
+                      ? "bg-brand-navy text-brand-sand shadow-md ring-1 ring-brand-gold/40"
+                      : "bg-white/90 text-brand-charcoal hover:bg-brand-beige border border-brand-charcoal/10"
                   )}
                 >
-                  {count}
-                </span>
-              </button>
-            );
-          })}
+                  <span>{group.label}</span>
+                  <span
+                    className={cn(
+                      "text-[10px] px-1.5 py-0.5 rounded-full font-mono",
+                      isActive
+                        ? "bg-brand-sand/20 text-brand-sand"
+                        : "bg-brand-charcoal/5 text-brand-charcoal/60"
+                    )}
+                  >
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
 

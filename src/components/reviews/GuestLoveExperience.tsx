@@ -40,36 +40,41 @@ export function GuestLoveExperience({
   });
 
   // CARD 1 TRANSFORMS (Enters at start, exits LEFT)
-  const x1 = useTransform(scrollYProgress, [0.08, 0.26], [0, -750]);
-  const rotate1 = useTransform(scrollYProgress, [0.08, 0.26], [0, -5]);
-  const opacity1 = useTransform(scrollYProgress, [0.05, 0.24], [1, 0]);
-  const scale1 = useTransform(scrollYProgress, [0.08, 0.26], [1, 0.95]);
+  const x1 = useTransform(scrollYProgress, [0.0, 0.08, 0.24, 1.0], [0, 0, -850, -850], { clamp: true });
+  const rotate1 = useTransform(scrollYProgress, [0.0, 0.08, 0.24, 1.0], [0, 0, -6, -6], { clamp: true });
+  const opacity1 = useTransform(scrollYProgress, [0.0, 0.08, 0.22, 1.0], [1, 1, 0, 0], { clamp: true });
+  const scale1 = useTransform(scrollYProgress, [0.0, 0.08, 0.24, 1.0], [1, 1, 0.94, 0.94], { clamp: true });
+  const pe1 = useTransform(scrollYProgress, (p) => (p < 0.22 ? "auto" : "none"));
 
   // CARD 2 TRANSFORMS (Enters RIGHT, settles, exits RIGHT)
-  const x2 = useTransform(scrollYProgress, [0.14, 0.30, 0.44, 0.54], [750, 0, 0, 750]);
-  const rotate2 = useTransform(scrollYProgress, [0.14, 0.30, 0.44, 0.54], [5, 0, 0, 5]);
-  const opacity2 = useTransform(scrollYProgress, [0.14, 0.26, 0.44, 0.54], [0, 1, 1, 0]);
-  const scale2 = useTransform(scrollYProgress, [0.14, 0.30, 0.44, 0.54], [0.95, 1, 1, 0.95]);
+  const x2 = useTransform(scrollYProgress, [0.0, 0.20, 0.30, 0.44, 0.52, 1.0], [850, 850, 0, 0, 850, 850], { clamp: true });
+  const rotate2 = useTransform(scrollYProgress, [0.0, 0.20, 0.30, 0.44, 0.52, 1.0], [6, 6, 0, 0, 6, 6], { clamp: true });
+  const opacity2 = useTransform(scrollYProgress, [0.0, 0.20, 0.28, 0.44, 0.52, 1.0], [0, 0, 1, 1, 0, 0], { clamp: true });
+  const scale2 = useTransform(scrollYProgress, [0.0, 0.20, 0.30, 0.44, 0.52, 1.0], [0.94, 0.94, 1, 1, 0.94, 0.94], { clamp: true });
+  const pe2 = useTransform(scrollYProgress, (p) => (p >= 0.22 && p < 0.50 ? "auto" : "none"));
 
   // CARD 3 TRANSFORMS (Enters LEFT, settles, exits LEFT)
-  const x3 = useTransform(scrollYProgress, [0.42, 0.56, 0.68, 0.78], [-750, 0, 0, -750]);
-  const rotate3 = useTransform(scrollYProgress, [0.42, 0.56, 0.68, 0.78], [-5, 0, 0, -5]);
-  const opacity3 = useTransform(scrollYProgress, [0.42, 0.52, 0.68, 0.78], [0, 1, 1, 0]);
-  const scale3 = useTransform(scrollYProgress, [0.42, 0.56, 0.68, 0.78], [0.95, 1, 1, 0.95]);
+  const x3 = useTransform(scrollYProgress, [0.0, 0.48, 0.58, 0.70, 0.78, 1.0], [-850, -850, 0, 0, -850, -850], { clamp: true });
+  const rotate3 = useTransform(scrollYProgress, [0.0, 0.48, 0.58, 0.70, 0.78, 1.0], [-6, -6, 0, 0, -6, -6], { clamp: true });
+  const opacity3 = useTransform(scrollYProgress, [0.0, 0.48, 0.56, 0.70, 0.78, 1.0], [0, 0, 1, 1, 0, 0], { clamp: true });
+  const scale3 = useTransform(scrollYProgress, [0.0, 0.48, 0.58, 0.70, 0.78, 1.0], [0.94, 0.94, 1, 1, 0.94, 0.94], { clamp: true });
+  const pe3 = useTransform(scrollYProgress, (p) => (p >= 0.50 && p < 0.76 ? "auto" : "none"));
 
-  // CARD 4 TRANSFORMS (Enters RIGHT, settles in center)
-  const x4 = useTransform(scrollYProgress, [0.66, 0.80], [750, 0]);
-  const rotate4 = useTransform(scrollYProgress, [0.66, 0.80], [5, 0]);
-  const opacity4 = useTransform(scrollYProgress, [0.66, 0.76, 0.88, 0.94], [0, 1, 1, 0]);
-  const scale4 = useTransform(scrollYProgress, [0.66, 0.80, 0.88, 0.94], [0.95, 1, 1, 0.94]);
+  // CARD 4 TRANSFORMS (Enters RIGHT, settles in center, fades out)
+  const x4 = useTransform(scrollYProgress, [0.0, 0.74, 0.82, 1.0], [850, 850, 0, 0], { clamp: true });
+  const rotate4 = useTransform(scrollYProgress, [0.0, 0.74, 0.82, 1.0], [6, 6, 0, 0], { clamp: true });
+  const opacity4 = useTransform(scrollYProgress, [0.0, 0.74, 0.82, 0.90, 0.94, 1.0], [0, 0, 1, 1, 0, 0], { clamp: true });
+  const scale4 = useTransform(scrollYProgress, [0.0, 0.74, 0.82, 0.90, 0.94, 1.0], [0.94, 0.94, 1, 1, 0.94, 0.94], { clamp: true });
+  const pe4 = useTransform(scrollYProgress, (p) => (p >= 0.76 && p < 0.92 ? "auto" : "none"));
 
   // ACT IV: COLLECTIVE MEMORY MOMENT (Fades in over center to conclude sequence)
-  const opacityCollective = useTransform(scrollYProgress, [0.88, 0.96], [0, 1]);
-  const yCollective = useTransform(scrollYProgress, [0.88, 0.96], [35, 0]);
-  const scaleCollective = useTransform(scrollYProgress, [0.88, 0.96], [0.96, 1]);
+  const opacityCollective = useTransform(scrollYProgress, [0.0, 0.92, 0.98, 1.0], [0, 0, 1, 1], { clamp: true });
+  const yCollective = useTransform(scrollYProgress, [0.0, 0.92, 0.98, 1.0], [30, 30, 0, 0], { clamp: true });
+  const scaleCollective = useTransform(scrollYProgress, [0.0, 0.92, 0.98, 1.0], [0.96, 0.96, 1, 1], { clamp: true });
+  const peCollective = useTransform(scrollYProgress, (p) => (p >= 0.92 ? "auto" : "none"));
 
   // Progress dot indicator states
-  const activeDotIndex = useTransform(scrollYProgress, [0, 0.28, 0.52, 0.74, 0.92], [0, 1, 2, 3, 4]);
+  const activeDotIndex = useTransform(scrollYProgress, [0, 0.28, 0.52, 0.76, 0.94], [0, 1, 2, 3, 4], { clamp: true });
   const [currentIndicator, setCurrentIndicator] = useState(0);
 
   useEffect(() => {
@@ -119,8 +124,9 @@ export function GuestLoveExperience({
               rotate: rotate1,
               opacity: opacity1,
               scale: scale1,
+              pointerEvents: pe1 as any,
             }}
-            className="absolute inset-0 pointer-events-auto"
+            className="absolute inset-0"
           >
             <ReviewEditorialCard review={VERIFIED_GUEST_REVIEWS[0]} />
           </motion.div>
@@ -132,8 +138,9 @@ export function GuestLoveExperience({
               rotate: rotate2,
               opacity: opacity2,
               scale: scale2,
+              pointerEvents: pe2 as any,
             }}
-            className="absolute inset-0 pointer-events-auto"
+            className="absolute inset-0"
           >
             <ReviewEditorialCard review={VERIFIED_GUEST_REVIEWS[1]} />
           </motion.div>
@@ -145,8 +152,9 @@ export function GuestLoveExperience({
               rotate: rotate3,
               opacity: opacity3,
               scale: scale3,
+              pointerEvents: pe3 as any,
             }}
-            className="absolute inset-0 pointer-events-auto"
+            className="absolute inset-0"
           >
             <ReviewEditorialCard review={VERIFIED_GUEST_REVIEWS[2]} />
           </motion.div>
@@ -158,8 +166,9 @@ export function GuestLoveExperience({
               rotate: rotate4,
               opacity: opacity4,
               scale: scale4,
+              pointerEvents: pe4 as any,
             }}
-            className="absolute inset-0 pointer-events-auto"
+            className="absolute inset-0"
           >
             <ReviewEditorialCard review={VERIFIED_GUEST_REVIEWS[3]} />
           </motion.div>
@@ -170,8 +179,9 @@ export function GuestLoveExperience({
               opacity: opacityCollective,
               y: yCollective,
               scale: scaleCollective,
+              pointerEvents: peCollective as any,
             }}
-            className="absolute inset-0 pointer-events-auto flex items-center justify-center"
+            className="absolute inset-0 flex items-center justify-center"
           >
             <div className="w-full max-w-3xl bg-white border border-brand-gold/30 rounded-2xl p-8 xl:p-12 shadow-2xl text-center space-y-6 relative overflow-hidden">
               <div

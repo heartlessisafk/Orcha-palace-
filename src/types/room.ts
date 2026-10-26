@@ -5,6 +5,17 @@ export interface RoomAmenity {
   iconName?: string;
 }
 
+export interface RoomGalleryImage {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+export interface RoomSpecItem {
+  label: string;
+  value: string;
+}
+
 export interface RoomDetails {
   id: string;
   category: RoomCategory;
@@ -21,6 +32,9 @@ export interface RoomDetails {
   views: string[];
   keyAmenities: string[];
   imageKey: string;
+  gallery?: RoomGalleryImage[];
+  features?: string[];
+  specs?: RoomSpecItem[];
   badge?: string;
   inventoryNote?: string;
 }

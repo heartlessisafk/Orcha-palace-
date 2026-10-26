@@ -105,7 +105,7 @@ export function PalaceToMapFinale({
       id={id}
       ref={containerRef}
       className={cn(
-        "relative bg-[#0C131D] text-white border-t border-brand-gold/20 overflow-hidden",
+        "relative bg-[#0C131D] text-white border-t border-brand-gold/20 overflow-visible lg:overflow-visible",
         "lg:h-[450vh]",
         className
       )}
@@ -159,11 +159,11 @@ export function PalaceToMapFinale({
         >
           <div className="w-[88%] h-[82%] border border-brand-gold/25 relative">
             {/* Grid Crosshairs & Coordinate Labels */}
-            <div className="absolute inset-0 grid grid-cols-6 grid-rows-4 divide-x divide-y divide-brand-gold/15">
+            <div className="absolute inset-0 grid grid-cols-6 grid-rows-4 divide-x divide-y divide-brand-gold/30">
               {[...Array(24)].map((_, i) => (
                 <div key={i} className="relative">
                   {i % 5 === 0 && (
-                    <span className="absolute top-1 left-1.5 text-[9px] font-mono text-brand-gold/50 tracking-wider">
+                    <span className="absolute top-1 left-1.5 text-[9px] font-mono text-brand-gold tracking-wider font-semibold">
                       +{25.34 + i * 0.002}°N
                     </span>
                   )}
@@ -192,51 +192,51 @@ export function PalaceToMapFinale({
               viewBox="0 0 1000 500"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full drop-shadow-[0_0_15px_rgba(197,160,89,0.4)]"
+              className="w-full h-full drop-shadow-[0_0_20px_rgba(230,202,133,0.6)]"
             >
               {/* Ground & Plinth lines */}
-              <line x1="50" y1="420" x2="950" y2="420" stroke="#C5A059" strokeWidth="2" strokeDasharray="6 3" />
-              <line x1="100" y1="435" x2="900" y2="435" stroke="#C5A059" strokeWidth="1" strokeOpacity="0.5" />
+              <line x1="50" y1="420" x2="950" y2="420" stroke="#E6CA85" strokeWidth="2.5" strokeDasharray="6 3" />
+              <line x1="100" y1="435" x2="900" y2="435" stroke="#E6CA85" strokeWidth="1.5" strokeOpacity="0.7" />
 
               {/* Center Monument: The Grand Shikhara / Cenotaph Spire */}
               <path
                 d="M500 80 L520 180 L545 270 L560 360 L570 420 L430 420 L440 360 L455 270 L480 180 Z"
-                stroke="#C5A059"
+                stroke="#F5E2B3"
                 strokeWidth="2.5"
-                fill="rgba(197,160,89,0.04)"
+                fill="rgba(230,202,133,0.08)"
               />
               {/* Spire Kalash & Finial */}
-              <circle cx="500" cy="70" r="7" stroke="#E6CA85" strokeWidth="2" fill="rgba(230,202,133,0.3)" />
-              <line x1="500" y1="50" x2="500" y2="70" stroke="#E6CA85" strokeWidth="2" />
+              <circle cx="500" cy="70" r="7" stroke="#F5E2B3" strokeWidth="2" fill="rgba(245,226,179,0.5)" />
+              <line x1="500" y1="50" x2="500" y2="70" stroke="#F5E2B3" strokeWidth="2" />
 
               {/* Chhatri Arched Tiers */}
-              <path d="M465 240 Q500 215 535 240" stroke="#C5A059" strokeWidth="2" />
-              <path d="M450 310 Q500 280 550 310" stroke="#C5A059" strokeWidth="2" />
-              <path d="M435 380 Q500 340 565 380" stroke="#C5A059" strokeWidth="2" />
+              <path d="M465 240 Q500 215 535 240" stroke="#F5E2B3" strokeWidth="2" />
+              <path d="M450 310 Q500 280 550 310" stroke="#F5E2B3" strokeWidth="2" />
+              <path d="M435 380 Q500 340 565 380" stroke="#F5E2B3" strokeWidth="2" />
 
               {/* Left Flanking Chhatri Dome */}
               <path
                 d="M280 160 L300 240 L315 320 L330 420 L230 420 L245 320 L260 240 Z"
-                stroke="#C5A059"
+                stroke="#E6CA85"
                 strokeWidth="2"
-                strokeOpacity="0.8"
-                fill="rgba(197,160,89,0.03)"
+                strokeOpacity="0.9"
+                fill="rgba(197,160,89,0.05)"
               />
-              <circle cx="280" cy="150" r="6" stroke="#C5A059" strokeWidth="1.5" />
-              <line x1="280" y1="135" x2="280" y2="150" stroke="#C5A059" strokeWidth="1.5" />
-              <path d="M255 280 Q280 260 305 280" stroke="#C5A059" strokeWidth="1.5" />
+              <circle cx="280" cy="150" r="6" stroke="#E6CA85" strokeWidth="1.5" />
+              <line x1="280" y1="135" x2="280" y2="150" stroke="#E6CA85" strokeWidth="1.5" />
+              <path d="M255 280 Q280 260 305 280" stroke="#E6CA85" strokeWidth="1.5" />
 
               {/* Right Flanking Chhatri Dome */}
               <path
                 d="M720 160 L740 240 L755 320 L770 420 L670 420 L685 320 L700 240 Z"
-                stroke="#C5A059"
+                stroke="#E6CA85"
                 strokeWidth="2"
-                strokeOpacity="0.8"
-                fill="rgba(197,160,89,0.03)"
+                strokeOpacity="0.9"
+                fill="rgba(197,160,89,0.05)"
               />
-              <circle cx="720" cy="150" r="6" stroke="#C5A059" strokeWidth="1.5" />
-              <line x1="720" y1="135" x2="720" y2="150" stroke="#C5A059" strokeWidth="1.5" />
-              <path d="M695 280 Q720 260 745 280" stroke="#C5A059" strokeWidth="1.5" />
+              <circle cx="720" cy="150" r="6" stroke="#E6CA85" strokeWidth="1.5" />
+              <line x1="720" y1="135" x2="720" y2="150" stroke="#E6CA85" strokeWidth="1.5" />
+              <path d="M695 280 Q720 260 745 280" stroke="#E6CA85" strokeWidth="1.5" />
 
               {/* Outer Pavilion Minarets */}
               <path d="M120 250 L135 330 L145 420 L95 420 L105 330 Z" stroke="#C5A059" strokeWidth="1.5" strokeOpacity="0.6" />
@@ -314,9 +314,9 @@ export function PalaceToMapFinale({
               >
                 <defs>
                   <linearGradient id="riverGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" stopColor="#2A5C8A" stopOpacity="0.8" />
-                    <stop offset="50%" stopColor="#1E4770" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="#153655" stopOpacity="0.8" />
+                    <stop offset="0%" stopColor="#1E4F8A" stopOpacity="0.9" />
+                    <stop offset="50%" stopColor="#1B426E" stopOpacity="0.95" />
+                    <stop offset="100%" stopColor="#133050" stopOpacity="0.9" />
                   </linearGradient>
                   <linearGradient id="goldSheen" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#C5A059" stopOpacity="0.6" />
@@ -327,25 +327,25 @@ export function PalaceToMapFinale({
                 {/* Topographic Elevation Contour Lines */}
                 <path
                   d="M100 200 C300 150, 400 350, 850 250"
-                  stroke="#C5A059"
-                  strokeWidth="0.8"
-                  strokeOpacity="0.2"
+                  stroke="#E6CA85"
+                  strokeWidth="1.2"
+                  strokeOpacity="0.35"
                   strokeDasharray="4 4"
                   fill="none"
                 />
                 <path
                   d="M50 350 C250 300, 450 500, 920 400"
-                  stroke="#C5A059"
-                  strokeWidth="0.8"
-                  strokeOpacity="0.2"
+                  stroke="#E6CA85"
+                  strokeWidth="1.2"
+                  strokeOpacity="0.35"
                   strokeDasharray="4 4"
                   fill="none"
                 />
                 <path
                   d="M150 100 C350 50, 600 220, 900 120"
-                  stroke="#C5A059"
-                  strokeWidth="0.8"
-                  strokeOpacity="0.15"
+                  stroke="#E6CA85"
+                  strokeWidth="1"
+                  strokeOpacity="0.3"
                   strokeDasharray="4 4"
                   fill="none"
                 />
@@ -362,9 +362,9 @@ export function PalaceToMapFinale({
                      C 645 450, 700 520, 750 600
                      Z"
                   fill="url(#riverGradient)"
-                  stroke="#4A88BA"
-                  strokeWidth="1.5"
-                  strokeOpacity="0.7"
+                  stroke="#5BA2DC"
+                  strokeWidth="2"
+                  strokeOpacity="0.85"
                 />
 
                 {/* River Secondary Branch forming Orchha Fort Island */}

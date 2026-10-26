@@ -2,12 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { RoomDetails } from "@/types/room";
 import { RESORT_ASSETS } from "@/lib/assets";
 import { HoverZoom } from "@/components/motion/HoverZoom";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { Users, Maximize2, Bed, Eye } from "lucide-react";
+import { Users, Maximize2, Bed, Eye, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface RoomCardPrimitiveProps {
@@ -26,8 +27,8 @@ export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimit
         className
       )}
     >
-      {/* Media Frame with Hover Zoom */}
-      <div className="relative">
+      {/* Media Frame with Hover Zoom & Link */}
+      <Link href={`/rooms/${room.id}`} className="relative block overflow-hidden">
         <HoverZoom aspectRatio="4:3">
           <Image
             src={asset.src}
@@ -53,7 +54,7 @@ export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimit
             Staging Composition
           </div>
         )}
-      </div>
+      </Link>
 
       {/* Content Body */}
       <div className="flex flex-col flex-1 p-6 sm:p-7">
@@ -63,9 +64,11 @@ export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimit
             <span className="font-sans text-[11px] font-semibold uppercase tracking-widest text-brand-gold">
               {room.views[0]}
             </span>
-            <h3 className="font-serif text-xl sm:text-2xl font-semibold text-brand-charcoal leading-tight">
-              {room.name}
-            </h3>
+            <Link href={`/rooms/${room.id}`} className="hover:text-brand-gold transition-colors block">
+              <h3 className="font-serif text-xl sm:text-2xl font-semibold text-brand-charcoal leading-tight">
+                {room.name}
+              </h3>
+            </Link>
           </div>
           <div className="text-right shrink-0">
             <span className="block font-sans text-[10px] uppercase tracking-wider text-brand-muted">
@@ -99,16 +102,22 @@ export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimit
           </div>
         </div>
 
-        {/* Action Button */}
-        <div className="mt-auto pt-2">
+        {/* Action Buttons */}
+        <div className="mt-auto pt-2 grid grid-cols-2 gap-3">
+          <Link href={`/rooms/${room.id}`} className="w-full">
+            <Button variant="outline" size="md" fullWidth className="text-xs border-brand-charcoal/20 hover:border-brand-gold hover:text-brand-gold-dark">
+              Explore Room
+            </Button>
+          </Link>
           <Button
             variant="primary"
             size="md"
             fullWidth
             withArrow
             onClick={() => onEnquire?.(room)}
+            className="text-xs"
           >
-            Reserve or Enquire
+            Reserve
           </Button>
         </div>
       </div>
