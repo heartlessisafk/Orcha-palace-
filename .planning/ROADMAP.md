@@ -12,6 +12,7 @@ A comprehensive 6-phase engineering and creative refinement plan addressing anim
 - [x] **Phase 4: Functional Room-Detail Pages** — Implement dedicated dynamic routes (`/rooms/[slug]` and `/rooms`) with photo gallery, room specs, amenities, floor plans/views, and booking actions. (completed 2026-10-26)
 - [x] **Phase 5: Gallery Layout & Cinematic Scroll Transitions** — Refine `/gallery` with sticky header, cinematic smooth scroll transitions, and enhanced lightbox interactions. (completed 2026-10-26)
 - [x] **Phase 6: Integration, Responsive Behavior, Accessibility & Final Verification** — Complete browser verification across Desktop (1440px), Tablet (768px), and Mobile (390px), ensure `prefers-reduced-motion` compliance, 0 console errors, clean production build. (completed 2026-10-26)
+- [x] **Phase 7: Editorial Cartographic Map Finale Redesign** — Eliminate AI-dashboard aesthetic, enforce strict non-overlapping stages, authentic Betwa River geography, anti-collision typography, and seamless booking invitation. (completed 2026-10-27)
 
 ## Phase Details
 
@@ -81,3 +82,16 @@ A comprehensive 6-phase engineering and creative refinement plan addressing anim
 1. `npm run type-check` passes with 0 errors.
 2. `npm run build` succeeds with all static routes pre-rendered.
 3. CDP browser verification confirms 0 console errors and clean rendering across Desktop, Tablet, and Mobile.
+
+### Phase 7: Editorial Cartographic Map Finale Redesign
+
+**Goal**: Transform the palace-to-map finale into a museum-quality heritage cartographic experience with zero headline collisions, non-overlapping typography, authentic Betwa River geography, and seamless booking invitation integration.  
+**Depends on**: Phase 6  
+**Requirements**: MAP-REDESIGN-01, MAP-REDESIGN-02, MAP-REDESIGN-03, MAP-REDESIGN-04  
+**Success Criteria**:
+
+1. Stage A headline completely exits before Stage C map reveals (`opacity: 0`, `visibility: hidden` above 0.14 scroll).
+2. Zero label collisions: all landmark markers and text callouts have non-overlapping bounding zones.
+3. Realistic Betwa River channel with fort island bifurcation, historic bridge, and archival survey styling.
+4. Museum-quality antique-contemporary palette (`#0A1018`, `#C5A059`, `#D4C3A3`, `#16283D`).
+5. Working booking invitation and responsive layouts verified on Desktop, Tablet, and Mobile.

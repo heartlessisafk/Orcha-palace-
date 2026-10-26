@@ -4,14 +4,22 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Completed all 6 Phases under GSD workflow.
+**Current focus:** Completed all 7 Phases under GSD workflow, including Map Finale Redesign.
 
 ## Current Position
-Phase: 6 of 6 (Completed)  
+Phase: 7 of 7 (Completed)  
 Status: Complete  
-Last activity: 2026-10-27 — Fully completed all 6 phases: repaired Palace-to-Map sticky animation, fixed review cards stuck on the left, corrected accommodation imagery, built functional room routes (/rooms and /rooms/[slug]), refined gallery with sticky filters & lightbox, and verified responsive accessibility across Desktop, Tablet, and Mobile with 0 console errors.
+Last activity: 2026-10-27 — Fully completed Phase 7: Redesigned Palace-to-Map finale to eliminate AI-dashboard aesthetic, enforcing strict 5-stage non-overlapping scroll choreography, authentic Betwa River geography, quadrant anti-collision typography, and seamless booking invitation integration.
 
 Progress: [██████████] 100%
+
+## Performance Metrics
+- Completed phases: 7 / 7
+- Errors in build: 0
+- Type check: Clean (0 errors)
+- Console errors in browser: 0
+- Mobile horizontal overflow: None (hasOverflow: false across Desktop, Tablet, and Mobile)
+- Landmark collisions: 0 (verified pairwise bounding box separation across all 6 heritage sites)
 
 ## Performance Metrics
 - Completed phases: 6 / 6

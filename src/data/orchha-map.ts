@@ -14,7 +14,13 @@ export interface HeritageLocationMarker {
   name: string;
   hindiName?: string;
   category: "resort" | "monument" | "temple" | "ghat";
-  mapCoords: { x: number; y: number }; // Percentage 0-100 on the cartographic canvas
+  mapCoords: { x: number; y: number }; // Percentage (0-100) on the cartographic canvas
+  callout: {
+    align: "left" | "right" | "center";
+    quadrant: "NW" | "W" | "SW" | "N" | "E" | "SE";
+    subtitle: string;
+    labelOffset?: { x: number; y: number }; // Offset in px or % for custom leader pinning
+  };
   realCoordinates: string;
   distanceFromResort: string;
   walkingTime?: string;
@@ -31,58 +37,58 @@ export const ORCHHA_HERITAGE_LOCATIONS: HeritageLocationMarker[] = [
     name: "The Orchha Resort",
     hindiName: "द ओरछा रिसॉर्ट",
     category: "resort",
-    mapCoords: { x: 64, y: 56 },
+    mapCoords: { x: 67, y: 48 },
+    callout: {
+      align: "left",
+      quadrant: "E",
+      subtitle: "Sacred Riverbank Sanctuary",
+    },
     realCoordinates: "25.3516° N, 78.6424° E",
     distanceFromResort: "Primary Destination",
     walkingTime: "0 min",
     description:
-      "Riverfront luxury sanctuary with 32 rooms and AC Swiss tents, blooming lotus pool, and authentic Kerala Ayurveda spa on tranquil riverbanks.",
-    historicalEra: "Certified Zero-Pollution Sanctuary",
+      "Riverfront luxury sanctuary with 32 heritage rooms, luxury AC Swiss tents, blooming lotus pool, and authentic Kerala Ayurveda spa along tranquil riverbanks opposite the royal cenotaphs.",
+    historicalEra: "Zero-Pollution Riverbank Sanctuary",
     badgeText: "Your Sanctuary",
     isPrimary: true,
     imageSrc: "/images/resort/genuine/slide2.jpg",
   },
   {
     id: "royal-chhatris",
-    name: "14 Royal Cenotaphs (Chhatris)",
-    hindiName: "चौदह शाही छत्रियाँ",
+    name: "Kanchan Ghat & 14 Royal Cenotaphs",
+    hindiName: "कंचन घाट एवं चौदह शाही छत्रियाँ",
     category: "monument",
-    mapCoords: { x: 53, y: 73 },
+    mapCoords: { x: 67, y: 76 },
+    callout: {
+      align: "left",
+      quadrant: "SE",
+      subtitle: "17th C. Bundela Memorial Shikharas",
+    },
     realCoordinates: "25.3485° N, 78.6410° E",
-    distanceFromResort: "500 m along river path",
+    distanceFromResort: "500 m south along riverbank",
     walkingTime: "~6 min walk",
     description:
-      "Grand multi-tiered 17th-century memorials of Bundela rulers with towering shikharas rising beside the Betwa River opposite the resort.",
+      "Grand multi-tiered 17th-century cenotaphs of Bundela monarchs with towering shikharas rising along the Betwa River steps, directly visible from the resort grounds.",
     historicalEra: "17th Century (Bundela Dynasty)",
     badgeText: "Royal Memorials",
     imageSrc: "/images/resort/genuine/chhatris.jpg",
-  },
-  {
-    id: "kanchan-ghat",
-    name: "Kanchan Ghat & River Betwa",
-    hindiName: "कंचन घाट",
-    category: "ghat",
-    mapCoords: { x: 61, y: 48 },
-    realCoordinates: "25.3510° N, 78.6418° E",
-    distanceFromResort: "Direct river access at resort perimeter",
-    walkingTime: "Immediate access",
-    description:
-      "Sacred river steps renowned for peaceful morning mists, sunset reflections of royal chhatris, and seasonal river rafting waters.",
-    historicalEra: "Sacred Riverbed",
-    badgeText: "River Sanctuary",
-    imageSrc: "/images/resort/genuine/slide1.jpg",
   },
   {
     id: "orchha-fort",
     name: "Orchha Fort & Jahangir Mahal",
     hindiName: "जहाँगीर महल एवं ओरछा दुर्ग",
     category: "monument",
-    mapCoords: { x: 47, y: 32 },
+    mapCoords: { x: 50, y: 26 },
+    callout: {
+      align: "center",
+      quadrant: "N",
+      subtitle: "Imperial Island Citadel & Palaces",
+    },
     realCoordinates: "25.3533° N, 78.6442° E",
     distanceFromResort: "1.2 km north via stone bridge",
     walkingTime: "~15 min walk / 4 min drive",
     description:
-      "Spectacular multi-storied palace combining Mughal and Rajput architecture, featuring 136 domed rooms and ornamental stone jalis.",
+      "Monumental fortified island citadel comprising Jahangir Mahal, Raja Mahal, and Sheesh Mahal. Features 136 domed chambers, turquoise ceramic tiles, and open courtyards.",
     historicalEra: "Completed 1605 CE by Bir Singh Deo",
     badgeText: "Imperial Citadel",
     imageSrc: "/images/resort/genuine/g1.jpg",
@@ -92,14 +98,19 @@ export const ORCHHA_HERITAGE_LOCATIONS: HeritageLocationMarker[] = [
     name: "Ram Raja Temple",
     hindiName: "श्री राम राजा मंदिर",
     category: "temple",
-    mapCoords: { x: 33, y: 36 },
+    mapCoords: { x: 30, y: 38 },
+    callout: {
+      align: "right",
+      quadrant: "W",
+      subtitle: "Sacred Palace Temple of King Rama",
+    },
     realCoordinates: "25.3524° N, 78.6385° E",
     distanceFromResort: "1.0 km northwest",
     walkingTime: "~12 min walk / 3 min drive",
     description:
-      "The only temple in India where Lord Rama is venerated as a reigning monarch, receiving daily police guard of honour at dawn and dusk.",
+      "The only temple in India where Lord Rama is venerated as a reigning monarch. Originally Queen Ganeshkunwar's royal palace, honoring daily ceremonial gun salutes at dawn and dusk.",
     historicalEra: "16th Century (Queen Ganeshkunwar)",
-    badgeText: "Sacred Kingdom",
+    badgeText: "Living Kingdom",
     imageSrc: "/images/resort/genuine/g6.jpg",
   },
   {
@@ -107,12 +118,17 @@ export const ORCHHA_HERITAGE_LOCATIONS: HeritageLocationMarker[] = [
     name: "Chaturbhuj Temple",
     hindiName: "चतुर्भुज मंदिर",
     category: "temple",
-    mapCoords: { x: 36, y: 46 },
+    mapCoords: { x: 30, y: 60 },
+    callout: {
+      align: "right",
+      quadrant: "SW",
+      subtitle: "105m Sky-Piercing Stone Shikhara",
+    },
     realCoordinates: "25.3518° N, 78.6394° E",
     distanceFromResort: "1.1 km northwest",
     walkingTime: "~13 min walk",
     description:
-      "Colossal sanctum built on an elevated stone plinth with towering spires resembling a cathedral, soaring 105 meters above the valley.",
+      "Colossal cruciform temple built upon an immense stone platform, crowned by towering shikharas resembling a Gothic cathedral rising dramatically above the Betwa valley.",
     historicalEra: "Completed 1627 CE",
     badgeText: "Monumental Spire",
     imageSrc: "/images/resort/genuine/g7.jpg",
@@ -122,12 +138,17 @@ export const ORCHHA_HERITAGE_LOCATIONS: HeritageLocationMarker[] = [
     name: "Laxmi Narayan Temple",
     hindiName: "लक्ष्मी नारायण मंदिर",
     category: "temple",
-    mapCoords: { x: 20, y: 20 },
+    mapCoords: { x: 18, y: 16 },
+    callout: {
+      align: "right",
+      quadrant: "NW",
+      subtitle: "Triangular Fresco Fort-Temple",
+    },
     realCoordinates: "25.3582° N, 78.6328° E",
     distanceFromResort: "1.8 km northwest",
     walkingTime: "~6 min drive / 22 min walk",
     description:
-      "Unique triangular fort-temple renowned for exquisite Bundeli frescoes depicting mythological epics, Nayaka-Nayika scenes, and historic battles.",
+      "Striking triangular fortress-temple perched upon a rocky knoll, celebrated for extraordinary 17th to 19th-century Bundeli frescoes depicting epics, royal court ceremonies, and battle scenes.",
     historicalEra: "Built 1622 CE by Bir Singh Deo",
     badgeText: "Fresco Fort-Temple",
     imageSrc: "/images/resort/genuine/g11.jpg",
