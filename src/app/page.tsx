@@ -60,9 +60,9 @@ export default function HomePage() {
                 32 private rooms and luxury Swiss tents facing landscaped orchards and the lotus pool.
               </Text>
             </div>
-            <Link href="/design-system">
+            <Link href="/about">
               <Button variant="outline" size="pill" withArrow>
-                View Design System Specs
+                Our Property Story
               </Button>
             </Link>
           </div>

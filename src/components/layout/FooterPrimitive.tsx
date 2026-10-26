@@ -75,11 +75,6 @@ export function FooterPrimitive() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link href="/design-system" className="hover:text-brand-gold-light transition-colors block py-0.5 text-brand-gold">
-                  Design System Preview →
-                </Link>
-              </li>
             </ul>
           </div>
 

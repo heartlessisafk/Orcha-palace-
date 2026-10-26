@@ -149,6 +149,20 @@ Our technology selection is dictated strictly by the project requirements: excep
 │ [X] Spa conversion banner with direct cross-links to accommodation    │
 │ [X] Full responsive testing & REA browser scenario screenshots         │
 ├────────────────────────────────────────────────────────────────────────┤
+│ WEDDINGS PAGE & NAVIGATION CLEANUP (/weddings) (Completed)             │
+│ [X] Remove "Design System" link from all public header & mobile menus  │
+│ [X] Remove "Design System Preview" link from footer navigation         │
+│ [X] Preserve internal /design-system route and tokens for dev use      │
+│ [X] Add "Weddings" to desktop navigation, mobile drawer, and footer    │
+│ [X] Curate 4 user-supplied genuine property wedding setup photographs  │
+│ [X] Section A: Cinematic Wedding Hero (Sangeet pyro stage & vows)      │
+│ [X] Section B: The Wedding Story (Why Orchha?, Betwa & Ram Raja)       │
+│ [X] Section C: Venues & Spaces (Lawns, Stage, Mandap, Ballroom, Pool)  │
+│ [X] Section D: Wedding Experiences (Haldi, Sangeet, Pheras, Feasting)  │
+│ [X] Section E: Honest Enquiry Form with WhatsApp & Email Handoff       │
+│ [X] Section F: Final Romantic Call to Action (Reception stage backdrop)│
+│ [X] Responsive verification across Desktop, Tablet, and Mobile (9 shots)│
+├────────────────────────────────────────────────────────────────────────┤
 │ PHASE 5: SOCIAL PROOF, MEDIA & INTERACTIVITY                           │
 │ [ ] Build verified Testimonials slider with guest avatar switcher      │
 │ [ ] Build Heritage Guide (14 Royal Chhatris, Fort, River Betwa)        │
