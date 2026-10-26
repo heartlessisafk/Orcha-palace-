@@ -43,7 +43,21 @@ export const RESORT_ASSETS: Record<string, ResortAsset> = {
     replacementFileName: "logo-vector.svg",
   },
 
-  // Hero Photography
+  // Hero Video & Photography
+  heroVideo: {
+    id: "hero-video",
+    category: "hero",
+    title: "Cinematic Heritage Resort Ambient Video",
+    description: "Atmospheric luxury slow-pan of calm water reflections, glowing evening lanterns and palace stone",
+    src: "https://assets.mixkit.co/videos/preview/mixkit-sunset-over-a-calm-river-and-historical-palace-42468-large.mp4",
+    aspectRatio: "16:9",
+    width: 1920,
+    height: 1080,
+    alt: "Cinematic atmospheric footage of heritage riverside architecture (Staging Composition)",
+    isStagingPlaceholder: true,
+    targetPlacement: "Homepage Cinematic Full-Viewport Hero Background",
+    replacementFileName: "VID-01-orchha-resort-drone-cinematic.mp4",
+  },
   heroDesktop: {
     id: "hero-desktop",
     category: "hero",

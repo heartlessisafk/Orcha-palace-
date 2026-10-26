@@ -115,14 +115,19 @@ Our technology selection is dictated strictly by the project requirements: excep
 │ [X] Deploy interactive Design System Preview (/design-system)          │
 │ [X] Verify build, static generation (5/5 pages), and REA screenshots  │
 ├────────────────────────────────────────────────────────────────────────┤
-│ PHASE 3: HERO & MANDATORY ROOM-SEARCH INTERFACE (Next Milestone)       │
-│ [ ] Construct sticky translucent Navbar with mobile responsive sheet   │
-│ [ ] Build full-viewport Hero section with Lotus pool visual            │
-│ [ ] Implement mandatory Room-Search Widget immediately below Hero      │
-│ [ ] Integrate date picker, room/guest selectors & WhatsApp bridge      │
+│ PHASE 3: CINEMATIC HERO & SCROLL-TRANSFORMING BOOKING (High Priority) │
+│ [ ] Deploy full-screen cinematic video hero with poster & mobile crop  │
+│ [ ] Overlaid identity, rating badge & prominent first-screen Book CTA   │
+│ [ ] Implement scroll-controlled hero-to-booking transformation         │
+│     - Sticky track: Video recedes/scales as beige panel rises          │
+│     - Panel expands smoothly into settled room search interface        │
+│     - Zero scroll-trapping or jank; natural hand-off to page scroll   │
+│ [ ] Implement reduced-motion & touch-optimized mobile fallbacks        │
+│ [ ] Integrate date picker, guest steppers & WhatsApp/OTA handoffs      │
 ├────────────────────────────────────────────────────────────────────────┤
-│ PHASE 4: CORE CONTENT SECTIONS & HERITAGE NARRATIVE                    │
-│ [ ] Build Philosophy section with word-by-word scroll text reveal      │
+│ PHASE 4: EDITORIAL STORYTELLING & DIVERSE PHOTOGRAPHY CHOREOGRAPHY     │
+│ [ ] Enhance word-by-word scroll text reveal with editorial typography  │
+│ [ ] Implement photography motion vocabulary: clipped reveals, tilt     │
 │ [ ] Build "Our Rooms" 4-card showcase with hover zoom interactions    │
 │ [ ] Build "Why Stay With Us" 2x2 signature amenities grid              │
 │ [ ] Build "How We Host" 5-point synced interactive accordion           │
