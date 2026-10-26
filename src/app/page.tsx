@@ -15,6 +15,7 @@ import { FadeIn } from "@/components/motion/FadeIn";
 import { ClippedReveal } from "@/components/motion/ClippedReveal";
 import { TiltCard } from "@/components/motion/TiltCard";
 import { RoomCardPrimitive } from "@/components/rooms/RoomCardPrimitive";
+import { GuestLoveExperience } from "@/components/reviews/GuestLoveExperience";
 import { VERIFIED_ROOMS } from "@/data/rooms";
 import { RESORT_ASSETS } from "@/lib/assets";
 import { RoomDetails } from "@/types/room";
@@ -178,6 +179,20 @@ export default function HomePage() {
           </div>
         </Container>
       </Section>
+
+      {/* 7. THE GUEST LOVE EXPERIENCE (Second-Last Homepage Section: Alternating Tinder-Inspired Card Choreography) */}
+      <GuestLoveExperience />
+
+      {/* ─────────────────────────────────────────────────────────────────
+          FUTURE INTEGRATION POINT: CINEMATIC PALACE-TO-MAP SCROLL FINALE
+          Next implementation prompt will insert the Inversa-Scroll-Animation
+          inspired palace-to-map interactive journey here, smoothly receiving
+          handoff from GuestLoveExperience's Act IV and flowing into the Footer.
+          Contract:
+          - Target anchor: #map-experience
+          - Input trigger: Follows naturally from Act IV ("Some places are remembered...")
+          - Output transition: Resolves cleanly into the Global Footer
+          ───────────────────────────────────────────────────────────────── */}
 
       <FooterPrimitive />
     </div>

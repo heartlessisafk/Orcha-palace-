@@ -163,13 +163,25 @@ Our technology selection is dictated strictly by the project requirements: excep
 │ [X] Section F: Final Romantic Call to Action (Reception stage backdrop)│
 │ [X] Responsive verification across Desktop, Tablet, and Mobile (9 shots)│
 ├────────────────────────────────────────────────────────────────────────┤
-│ PHASE 5: SOCIAL PROOF, MEDIA & INTERACTIVITY                           │
-│ [ ] Build verified Testimonials slider with guest avatar switcher      │
-│ [ ] Build Heritage Guide (14 Royal Chhatris, Fort, River Betwa)        │
-│ [ ] Build Collapsible FAQ accordion and Instagram photo mosaic         │
-│ [ ] Construct 4-column master footer with transit notes & directions   │
+│ PHASE 5: THE GUEST LOVE EXPERIENCE (Completed)                          │
+│ [X] Research authentic, attributable reviews (TripAdvisor, MMT, Google) │
+│ [X] Record exact source URLs, verbatim quotes, ratings, and genuine photos│
+│ [X] Build typed data model in src/data/reviews.ts                       │
+│ [X] Implement Tinder-inspired alternating scroll choreography:          │
+│     - Act I: An invitation to listen ("Not just a stay. A memory...")   │
+│     - Act II: Review deck comes alive (ratings, badges, genuine imagery)│
+│     - Act III: Alternating left-right-left-right directional sequence   │
+│     - Act IV: The collective memory moment ("Some places are remembered")│
+│ [X] Bi-directional smooth scrubbing & responsive touch carousel         │
+│ [X] Documented handoff contract for the upcoming Palace-to-Map Finale   │
+│ [X] Browser verification across Desktop (1440), Tablet (768), Mobile (390)│
 ├────────────────────────────────────────────────────────────────────────┤
-│ PHASE 6: QUALITY CONTROL, LIGHTHOUSE PERFORMANCE & HANDOVER            │
+│ PHASE 6: CINEMATIC PALACE-TO-MAP SCROLL FINALE (Upcoming Next)          │
+│ [ ] Inversa-Scroll-Animation inspired interactive map sequence          │
+│ [ ] Connect seamlessly from Guest Love Experience Act IV                │
+│ [ ] Resolve into final booking CTA and global master footer             │
+├────────────────────────────────────────────────────────────────────────┤
+│ PHASE 7: QUALITY CONTROL, LIGHTHOUSE PERFORMANCE & HANDOVER             │
 │ [ ] Performance optimization: WebP/AVIF generation & blur placeholders │
 │ [ ] Responsive QA across Desktop (1440px), Tablet (810px), Mobile (390)│
 │ [ ] WCAG 2.1 AA accessibility audit & keyboard navigation testing      │
