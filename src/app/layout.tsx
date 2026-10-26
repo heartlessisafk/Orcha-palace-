@@ -18,6 +18,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.orchharesort.com"),
   title: {
     default: `${SITE_CONFIG.name} — Luxury Sanctuary on the River Betwa`,
     template: `%s | ${SITE_CONFIG.name}`,

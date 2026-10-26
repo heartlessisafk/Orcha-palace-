@@ -115,15 +115,28 @@ Our technology selection is dictated strictly by the project requirements: excep
 │ [X] Deploy interactive Design System Preview (/design-system)          │
 │ [X] Verify build, static generation (5/5 pages), and REA screenshots  │
 ├────────────────────────────────────────────────────────────────────────┤
-│ PHASE 3: CINEMATIC HERO & SCROLL-TRANSFORMING BOOKING (Completed)      │
+│ CREATIVE DIRECTION ADDENDUM: CINEMATIC HERO & BOOKING (Completed)       │
 │ [X] Deploy full-screen cinematic video hero with poster & mobile crop  │
 │ [X] Overlaid identity, rating badge & prominent first-screen Book CTA   │
 │ [X] Implement scroll-controlled hero-to-booking transformation         │
 │     - Sticky track: Video recedes/scales as beige panel rises          │
 │     - Panel expands smoothly into settled room search interface        │
-│     - Zero scroll-trapping or jank; natural hand-off to page scroll   │
+│     - Panel background locked to 100% solid opaque #F4F0E6 (WAAPI fix) │
 │ [X] Implement reduced-motion & touch-optimized mobile fallbacks        │
 │ [X] Integrate date picker, guest steppers & WhatsApp/OTA handoffs      │
+├────────────────────────────────────────────────────────────────────────┤
+│ PHASE 3: THE HERITAGE ABOUT PAGE (/about) (Completed)                  │
+│ [X] Live property research & Fact Sheet extraction (orchharesort.com)  │
+│ [X] Clear factual separation: Property Truth vs. Orchha Monuments      │
+│ [X] 26 genuine resort photographs acquired & registered                │
+│ [X] Section A: Cinematic Opening (AboutHero - Dusk Pavilions)          │
+│ [X] Section B: The Place Beside the Betwa (Kanchanghat Sanctuary)      │
+│ [X] Section C: The Spirit of Orchha & 14 Cenotaphs (Bundela Heritage)  │
+│ [X] Section D: Architecture & Spaces (Yogesh Chandra, Lotus Pool)      │
+│ [X] Section E: Hospitality & Rejuvenation (Kaleva, Spa, Folk Dances)   │
+│ [X] Section F: Discovering Orchha (Curated trails & transit matrix)    │
+│ [X] Section G: Final Invitation & Stay Concierge (Booking & WhatsApp)  │
+│ [X] Responsive verification across Desktop, Tablet, and Mobile         │
 ├────────────────────────────────────────────────────────────────────────┤
 │ PHASE 4: DEDICATED LUXURY SPA EXPERIENCE & WELLNESS ROUTE (Completed)  │
 │ [X] Create dedicated route at /spa matching App Router architecture   │

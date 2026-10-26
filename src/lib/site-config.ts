@@ -10,8 +10,8 @@ export const SITE_CONFIG = {
   metaDescription:
     "Experience understated royal luxury at The Orchha Resort. Located on the serene banks of the river Betwa in Orchha, featuring 32 heritage rooms & luxury Swiss tents, lotus pool, and authentic Kerala Ayurveda.",
   propertyFacts: {
-    totalRooms: 32,
-    categories: ["Standard Room", "Deluxe Room", "Deluxe AC Swiss Tent", "Heritage Suite"],
+    totalRooms: 44,
+    categories: ["Standard Room (27)", "Deluxe Room (6)", "Deluxe AC Swiss Tent (11)"],
     architect: "Yogesh Chandra (New Delhi)",
     signatureFeatures: [
       "Lotus-shaped outdoor swimming pool",
@@ -54,21 +54,22 @@ export const SITE_CONFIG = {
   navigation: {
     main: [
       { label: "Home", href: "/" },
-      { label: "About", href: "/#about" },
+      { label: "Our Story", href: "/about" },
       { label: "Our Rooms", href: "/#rooms" },
       { label: "Amenities", href: "/#amenities" },
       { label: "Dining", href: "/#dining" },
       { label: "Ayurveda Spa", href: "/spa" },
-      { label: "Heritage Guide", href: "/#heritage" },
+      { label: "Heritage Guide", href: "/about#heritage" },
       { label: "Design System", href: "/design-system" },
     ],
     footer: {
       explore: [
+        { label: "The Resort Story", href: "/about" },
         { label: "Accommodations", href: "/#rooms" },
         { label: "Kaleva Restaurant", href: "/#dining" },
         { label: "Ayurvedic Wellness", href: "/spa" },
         { label: "Destination Weddings", href: "/#events" },
-        { label: "14 Royal Chhatris", href: "/#heritage" },
+        { label: "14 Royal Chhatris", href: "/about#spirit" },
       ],
       legal: [
         { label: "Privacy Policy", href: "/privacy" },
