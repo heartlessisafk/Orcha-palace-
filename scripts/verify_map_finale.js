@@ -96,6 +96,7 @@ async function run() {
 
   console.log('Map finale section metrics:', metrics.result.value);
   const { top: mapTop, height: mapHeight } = metrics.result.value;
+  const maxScroll = mapHeight - 900;
 
   // ACT I: Scroll to top of #map-experience (Opening frame)
   console.log('\n--- ACT I: Opening Monumental Frame ("Discover Orchha") ---');
@@ -108,11 +109,11 @@ async function run() {
   // Verify Act I DOM elements
   const act1Check = await send('Runtime.evaluate', {
     expression: `(() => {
-      const text = document.getElementById('map-experience').innerText;
+      const text = document.getElementById('map-experience').innerText.toLowerCase();
       return {
-        hasDiscoverOrchha: text.includes('Discover Orchha'),
-        hasBeyondOrdinary: text.includes('Beyond the Ordinary'),
-        hasBetwaSanctuary: text.includes('A sanctuary beside the sacred Betwa')
+        hasDiscoverOrchha: text.includes('discover orchha'),
+        hasBeyondOrdinary: text.includes('beyond the ordinary'),
+        hasBetwaSanctuary: text.includes('a sanctuary beside the sacred betwa')
       };
     })()`,
     returnByValue: true
@@ -122,7 +123,7 @@ async function run() {
   // ACT II: Scroll to 28% of track (Image desaturates, blueprint line-art and coordinate grid scale in)
   console.log('\n--- ACT II: Architectural Line-Art & Coordinate Blueprint ---');
   await send('Runtime.evaluate', {
-    expression: `window.scrollTo({ top: ${mapTop + mapHeight * 0.28}, behavior: 'instant' })`
+    expression: `window.scrollTo({ top: ${mapTop + maxScroll * 0.28}, behavior: 'instant' })`
   });
   await new Promise(r => setTimeout(r, 1000));
   await takeScreenshot('map_02_desktop_line_art_blueprint.png');
@@ -130,7 +131,7 @@ async function run() {
   // ACT III: Scroll to 52% of track (Cartographic Map of Orchha Canvas with Betwa River unfolds)
   console.log('\n--- ACT III: Cartographic Map Canvas Reveal ---');
   await send('Runtime.evaluate', {
-    expression: `window.scrollTo({ top: ${mapTop + mapHeight * 0.52}, behavior: 'instant' })`
+    expression: `window.scrollTo({ top: ${mapTop + maxScroll * 0.52}, behavior: 'instant' })`
   });
   await new Promise(r => setTimeout(r, 1000));
   await takeScreenshot('map_03_desktop_cartographic_map.png');
@@ -138,7 +139,7 @@ async function run() {
   // ACT IV: Scroll to 68% of track (Location Markers with concentric pulses)
   console.log('\n--- ACT IV: Location Markers Emergence ---');
   await send('Runtime.evaluate', {
-    expression: `window.scrollTo({ top: ${mapTop + mapHeight * 0.68}, behavior: 'instant' })`
+    expression: `window.scrollTo({ top: ${mapTop + maxScroll * 0.68}, behavior: 'instant' })`
   });
   await new Promise(r => setTimeout(r, 1000));
   await takeScreenshot('map_04_desktop_location_markers.png');
@@ -157,7 +158,7 @@ async function run() {
   // ACT V: Scroll to 92% of track (The Final Closing Invitation & Book Your Stay CTA)
   console.log('\n--- ACT V: Final Closing Invitation & Book Your Stay CTA ---');
   await send('Runtime.evaluate', {
-    expression: `window.scrollTo({ top: ${mapTop + mapHeight * 0.92}, behavior: 'instant' })`
+    expression: `window.scrollTo({ top: ${mapTop + maxScroll * 0.92}, behavior: 'instant' })`
   });
   await new Promise(r => setTimeout(r, 1000));
   await takeScreenshot('map_06_desktop_final_cta.png');
@@ -165,11 +166,11 @@ async function run() {
   // Verify Act V DOM elements
   const act5Check = await send('Runtime.evaluate', {
     expression: `(() => {
-      const text = document.getElementById('map-experience').innerText;
+      const text = document.getElementById('map-experience').innerText.toLowerCase();
       const ctaBtn = Array.from(document.querySelectorAll('#map-experience button, #map-experience a')).find(el => el.innerText.includes('Book Your Stay'));
       return {
-        hasClosingMessage: text.includes('Your next chapter begins here'),
-        hasSacredValley: text.includes('The Sacred Valley of Bundelkhand'),
+        hasClosingMessage: text.includes('your next chapter begins here'),
+        hasSacredValley: text.includes('the sacred valley of bundelkhand'),
         hasBookCTA: !!ctaBtn,
         hasWhatsAppDesk: text.includes('+91 94251 41240')
       };

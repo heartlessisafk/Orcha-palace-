@@ -48,37 +48,39 @@ export function PalaceToMapFinale({
   // ─────────────────────────────────────────────────────────────────────────
 
   // ACT I: Hero Text Lift & Dissolve
-  const heroTextOpacity = useTransform(scrollYProgress, [0.00, 0.18], [1.0, 0.0]);
-  const heroTextY = useTransform(scrollYProgress, [0.00, 0.18], [0, -45]);
+  const heroTextOpacity = useTransform(scrollYProgress, [0.00, 0.18], [1.0, 0.0], { clamp: true });
+  const heroTextY = useTransform(scrollYProgress, [0.00, 0.18], [0, -45], { clamp: true });
 
   // ACT II: Image Saturation, Darkening & Line-Art Transformation
   // Inversa: saturate(1) -> saturate(0), overlay opacity 0.35 -> 0.85
-  const imageSaturation = useTransform(scrollYProgress, [0.10, 0.32], [1.0, 0.0]);
-  const imageOverlayOpacity = useTransform(scrollYProgress, [0.10, 0.35], [0.35, 0.88]);
-  const imageScale = useTransform(scrollYProgress, [0.00, 0.35], [1.06, 1.0]);
+  const imageSaturation = useTransform(scrollYProgress, [0.10, 0.32], [1.0, 0.0], { clamp: true });
+  const imageOverlayOpacity = useTransform(scrollYProgress, [0.10, 0.35], [0.35, 0.88], { clamp: true });
+  const imageScale = useTransform(scrollYProgress, [0.00, 0.35], [1.06, 1.0], { clamp: true });
 
   // Architectural Outline & Coordinate Grid (Scales in and illuminates)
-  const lineArtOpacity = useTransform(scrollYProgress, [0.16, 0.30, 0.44, 0.54], [0.0, 1.0, 1.0, 0.0]);
-  const lineArtScale = useTransform(scrollYProgress, [0.16, 0.36], [1.2, 1.0]);
+  const lineArtOpacity = useTransform(scrollYProgress, [0.16, 0.30, 0.44, 0.54], [0.0, 1.0, 1.0, 0.0], { clamp: true });
+  const lineArtScale = useTransform(scrollYProgress, [0.16, 0.36], [1.2, 1.0], { clamp: true });
 
-  const gridOverlayOpacity = useTransform(scrollYProgress, [0.24, 0.36, 0.65, 0.75], [0.0, 0.85, 0.85, 0.2]);
-  const gridScale = useTransform(scrollYProgress, [0.22, 0.36], [1.6, 1.0]);
+  const gridOverlayOpacity = useTransform(scrollYProgress, [0.24, 0.36, 0.65, 0.75], [0.0, 0.85, 0.85, 0.2], { clamp: true });
+  const gridScale = useTransform(scrollYProgress, [0.22, 0.36], [1.6, 1.0], { clamp: true });
 
   // ACT III: Cartographic Map Canvas Reveal
-  const mapOpacity = useTransform(scrollYProgress, [0.38, 0.52, 0.82, 0.92], [0.0, 1.0, 1.0, 0.35]);
-  const mapScale = useTransform(scrollYProgress, [0.38, 0.55], [0.94, 1.0]);
+  const mapOpacity = useTransform(scrollYProgress, [0.38, 0.52, 0.82, 0.92], [0.0, 1.0, 1.0, 0.35], { clamp: true });
+  const mapScale = useTransform(scrollYProgress, [0.38, 0.55], [0.94, 1.0], { clamp: true });
+  const mapPointerEvents = useTransform(scrollYProgress, (p) => (p >= 0.36 && p < 0.82 ? "auto" : "none"));
 
   // ACT IV: Location Markers Staggered Emergence
-  const resortMarkerOpacity = useTransform(scrollYProgress, [0.48, 0.56], [0.0, 1.0]);
-  const cenotaphMarkerOpacity = useTransform(scrollYProgress, [0.52, 0.60], [0.0, 1.0]);
-  const fortMarkerOpacity = useTransform(scrollYProgress, [0.56, 0.64], [0.0, 1.0]);
-  const templeMarkerOpacity = useTransform(scrollYProgress, [0.60, 0.68], [0.0, 1.0]);
-  const laxmiMarkerOpacity = useTransform(scrollYProgress, [0.64, 0.72], [0.0, 1.0]);
+  const resortMarkerOpacity = useTransform(scrollYProgress, [0.48, 0.56], [0.0, 1.0], { clamp: true });
+  const cenotaphMarkerOpacity = useTransform(scrollYProgress, [0.52, 0.60], [0.0, 1.0], { clamp: true });
+  const fortMarkerOpacity = useTransform(scrollYProgress, [0.56, 0.64], [0.0, 1.0], { clamp: true });
+  const templeMarkerOpacity = useTransform(scrollYProgress, [0.60, 0.68], [0.0, 1.0], { clamp: true });
+  const laxmiMarkerOpacity = useTransform(scrollYProgress, [0.64, 0.72], [0.0, 1.0], { clamp: true });
 
   // ACT V: The Final Closing Invitation
-  const ctaCardOpacity = useTransform(scrollYProgress, [0.82, 0.94], [0.0, 1.0]);
-  const ctaCardY = useTransform(scrollYProgress, [0.82, 0.94], [40, 0]);
-  const ctaCardScale = useTransform(scrollYProgress, [0.82, 0.94], [0.96, 1.0]);
+  const ctaCardOpacity = useTransform(scrollYProgress, [0.82, 0.94], [0.0, 1.0], { clamp: true });
+  const ctaCardY = useTransform(scrollYProgress, [0.82, 0.94], [40, 0], { clamp: true });
+  const ctaCardScale = useTransform(scrollYProgress, [0.82, 0.94], [0.96, 1.0], { clamp: true });
+  const ctaPointerEvents = useTransform(scrollYProgress, (p) => (p >= 0.82 ? "auto" : "none"));
 
   // Visual Scroll Progress Indicator
   const progressPercent = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
@@ -257,8 +259,9 @@ export function PalaceToMapFinale({
           style={{
             opacity: mapOpacity,
             scale: mapScale,
+            pointerEvents: mapPointerEvents as any,
           }}
-          className="absolute inset-0 flex items-center justify-center p-8 pointer-events-auto"
+          className="absolute inset-0 flex items-center justify-center p-8"
         >
           <div className="w-full max-w-6xl h-[620px] rounded-3xl bg-[#090E17]/90 border border-brand-gold/30 shadow-2xl relative overflow-hidden flex flex-col backdrop-blur-md">
             {/* Map Header Bar */}
@@ -534,8 +537,9 @@ export function PalaceToMapFinale({
             opacity: ctaCardOpacity,
             y: ctaCardY,
             scale: ctaCardScale,
+            pointerEvents: ctaPointerEvents as any,
           }}
-          className="absolute inset-0 z-50 flex items-center justify-center p-6 pointer-events-auto"
+          className="absolute inset-0 z-50 flex items-center justify-center p-6"
         >
           <div className="w-full max-w-2xl bg-[#080D15]/95 border border-brand-gold/40 rounded-3xl p-8 sm:p-12 shadow-2xl text-center space-y-6 relative overflow-hidden backdrop-blur-xl">
             {/* Ambient Corner Glow */}
