@@ -14,6 +14,7 @@ A comprehensive 6-phase engineering and creative refinement plan addressing anim
 - [x] **Phase 6: Integration, Responsive Behavior, Accessibility & Final Verification** — Complete browser verification across Desktop (1440px), Tablet (768px), and Mobile (390px), ensure `prefers-reduced-motion` compliance, 0 console errors, clean production build. (completed 2026-10-26)
 - [x] **Phase 7: Editorial Cartographic Map Finale Redesign** — Eliminate AI-dashboard aesthetic, enforce strict non-overlapping stages, authentic Betwa River geography, anti-collision typography, and seamless booking invitation. (completed 2026-10-27)
 - [x] **Phase 8: Premium Interaction & Motion System and Gallery Refinement** — Implement tactile hover and selection system across all tiles, expressive typography entrance reveals, deduplicate gallery manifest, and rebuild gallery into progressive 3-at-a-time reveal. (completed 2026-10-27)
+- [x] **Phase 9: Real Geographic Scroll Map and Tourist Landmark Explorer** — Replace artificial vector map with a real Leaflet-powered geographic basemap (CARTO dark tiles), verified WGS-84 coordinates for resort & top attractions, synchronized landmark explorer, and 5-stage cinematic homepage scroll finale. (completed 2026-10-29)
 
 ## Phase Details
 
@@ -110,3 +111,18 @@ A comprehensive 6-phase engineering and creative refinement plan addressing anim
 4. Gallery deduplication removes duplicate entries (`orchha-photo-016`), retaining 48 unique verified photos with documented inventory.
 5. Gallery displays initial 3 photos per category, revealing next 3 on "Discover More" until category is exhausted.
 6. Full verification across Desktop, Tablet, Mobile with 0 errors and clean production build.
+
+### Phase 9: Real Geographic Scroll Map and Tourist Landmark Explorer
+
+**Goal**: Replace the invented vector map with a real, geographically grounded Leaflet map with authentic CARTO tiles, verified WGS-84 coordinates for The Orchha Resort and surrounding heritage attractions, a synchronized landmark explorer, and a 5-stage cinematic homepage finale.  
+**Depends on**: Phase 8  
+**Requirements**: REAL-MAP-01, REAL-MAP-02, LANDMARK-EXP-01, MOTION-01, FINALE-01  
+**Success Criteria**:
+
+1. Real interactive map renders authentic Orchha geography, real roads, and true Betwa River bends with zero artificial geometry.
+2. Verified WGS-84 coordinates applied to The Orchha Resort (25.344842, 78.639536) and 6 surrounding heritage landmarks.
+3. Synchronized landmark list with category filtering, tactile hover states, and camera `flyTo` transitions.
+4. Primary luxury marker treatment for The Orchha Resort and refined consistent styling for tourist landmarks.
+5. Non-conflicting map gestures (`scrollWheelZoom: false`, responsive drag/touch pan and zoom controls).
+6. 5-stage scroll finale cleanly transitions from resort introduction into the real map and ends with the luxury booking invitation.
+7. Verification across Desktop, Tablet, Mobile with 0 console errors and clean production build.
