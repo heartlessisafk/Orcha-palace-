@@ -2,9 +2,9 @@
   "tileInspection": {
     "totalTileElements": 13,
     "sampleTileSrcs": [
-      "https://c.basemaps.cartocdn.com/rastertiles/voyager/15/23541/13997@2x.png",
-      "https://d.basemaps.cartocdn.com/rastertiles/voyager/15/23542/13997@2x.png",
-      "https://b.basemaps.cartocdn.com/rastertiles/voyager/15/23541/13996@2x.png"
+      "https://c.basemaps.cartocdn.com/rastertiles/voyager/15/23541/13997@2x.png?key=cb1_504x_1_350c2ab927631baf97f5db2f",
+      "https://d.basemaps.cartocdn.com/rastertiles/voyager/15/23542/13997@2x.png?key=cb1_504x_1_350c2ab927631baf97f5db2f",
+      "https://b.basemaps.cartocdn.com/rastertiles/voyager/15/23541/13996@2x.png?key=cb1_504x_1_350c2ab927631baf97f5db2f"
     ],
     "isVoyager": true,
     "isDark": false
@@ -36,8 +36,11 @@
     "innerWidth": 390,
     "hasOverflow": false
   },
-  "totalTileRequests": 35,
-  "sampleTileUrl": "https://c.basemaps.cartocdn.com/rastertiles/voyager/15/23541/13997@2x.png",
-  "sampleEtag": "\"wm-da89c20e77c1-light\"",
-  "consoleErrors": []
+  "totalTileRequests": 32,
+  "sampleTileUrl": "https://c.basemaps.cartocdn.com/rastertiles/voyager/15/23540/13998@2x.png?key=cb1_504x_1_350c2ab927631baf97f5db2f",
+  "sampleEtag": "martin-20261026-01",
+  "consoleErrors": [],
+  "apiKeyConfigured": true,
+  "watermarkRemoved": true,
+  "etagHasWatermark": false
 }
