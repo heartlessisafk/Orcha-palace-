@@ -15,6 +15,7 @@ A comprehensive 6-phase engineering and creative refinement plan addressing anim
 - [x] **Phase 7: Editorial Cartographic Map Finale Redesign** — Eliminate AI-dashboard aesthetic, enforce strict non-overlapping stages, authentic Betwa River geography, anti-collision typography, and seamless booking invitation. (completed 2026-10-27)
 - [x] **Phase 8: Premium Interaction & Motion System and Gallery Refinement** — Implement tactile hover and selection system across all tiles, expressive typography entrance reveals, deduplicate gallery manifest, and rebuild gallery into progressive 3-at-a-time reveal. (completed 2026-10-27)
 - [x] **Phase 9: Real Geographic Scroll Map and Tourist Landmark Explorer** — Replace artificial vector map with a real Leaflet-powered geographic basemap (CARTO dark tiles), verified WGS-84 coordinates for resort & top attractions, synchronized landmark explorer, and 5-stage cinematic homepage scroll finale. (completed 2026-10-29)
+- [x] **Phase 10: Booking Experience Redesign & Hero Text Legibility Refinement** — Replace awkward floating scroll booking with an integrated luxury reservation suite, eliminate overlapping and background bleed, implement proper modal scroll locking, and add a luxury translucent editorial surface behind hero text for pristine contrast. (completed 2026-11-02)
 
 ## Phase Details
 
@@ -126,3 +127,19 @@ A comprehensive 6-phase engineering and creative refinement plan addressing anim
 5. Non-conflicting map gestures (`scrollWheelZoom: false`, responsive drag/touch pan and zoom controls).
 6. 5-stage scroll finale cleanly transitions from resort introduction into the real map and ends with the luxury booking invitation.
 7. Verification across Desktop, Tablet, Mobile with 0 console errors and clean production build.
+
+### Phase 10: Booking Experience Redesign & Hero Text Legibility Refinement
+
+**Goal**: Redesign the booking experience into a seamless, integrated luxury reservation suite with zero section overlaps and full scroll locking, and introduce a sophisticated translucent editorial surface behind the hero text to guarantee crisp contrast and legibility.  
+**Depends on**: Phase 9  
+**Requirements**: BOOKING-01, BOOKING-02, HERO-LEGIBILITY-01, MODAL-01  
+**Success Criteria**:
+
+1. Hero location kicker, serif headline, and description render with high contrast and crystal-clear readability against all background photography.
+2. Background photograph remains visually prominent and unobstructed.
+3. Booking section transitions naturally from the hero with no floating overlap, no background bleed-through, and no unexpected margins.
+4. Booking panel occupies appropriate container width aligning with the luxury layout grid.
+5. Search inputs support check-in/out dates, guest counts, room counts, and preferred category.
+6. Handoff modal or inline view implements full body scroll locking, background containment, and keyboard accessibility.
+7. WhatsApp concierge and direct email reservation handoffs remain 100% operational.
+8. Zero horizontal overflow across Desktop, Tablet, and Mobile with clean production build.

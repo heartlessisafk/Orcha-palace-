@@ -4,21 +4,24 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Phase 9 — Real Geographic Scroll Map and Tourist Landmark Explorer.
+**Current focus:** Phase 10 — Booking Experience Redesign & Hero Text Legibility Refinement.
 
 ## Current Position
-Phase: 9 of 9 (Completed)  
+Phase: 10 of 10 (Completed)  
 Status: Completed  
-Last activity: 2026-10-29 — Completed Phase 9: Real geographic Leaflet basemap with CARTO Dark Matter tiles, 100% verified WGS-84 coordinates for resort & top attractions, synchronized landmark explorer, and 5-stage cinematic homepage finale with full CDP verification.
+Last activity: 2026-11-02 — Completed Phase 10: Luxury editorial translucent surface for hero typography, integrated in-flow reservation sanctuary suite, and root/body scroll-locking concierge handoff modal with full CDP verification.
 
 Progress: [██████████] 100%
 
 ## Performance Metrics
-- Completed phases: 9 / 9
+- Completed phases: 10 / 10
 - Errors in build: 0
 - Type check: Clean (0 errors)
 - Console errors in browser: 0
 - Mobile horizontal overflow: None (hasOverflow: false across Desktop, Tablet, and Mobile)
+- Hero contrast: Verified (blur 12px, border white/15, gold pill kicker, 60px crisp white headline)
+- Booking layout stability: Verified (in-flow container 1280px, zero overlap with philosophy section)
+- Modal scroll locking: Verified (body & html overflow: hidden, 0px scroll on mouse wheel)
 - Map geography: 100% real (CARTO vector-quality raster tiles, authentic Betwa bends, real roads)
 - Geographic coordinates: 100% verified WGS-84 (Orchha Resort: 25.344842, 78.639536)
 - Gallery duplicates: 0 (orchha-photo-016 excluded, 48 unique curated photos verified)
@@ -34,3 +37,4 @@ Progress: [██████████] 100%
 7. **Editorial Cartographic Map Finale Redesign (Phase 7):** Museum-quality cartographic atlas with authentic Betwa meander and fort island bifurcation, guaranteed anti-collision typography, and seamless Stage E booking invitation.
 8. **Premium Interaction & Motion System and Gallery Curation (Phase 8):** Universal tactile tile contract (hover lift, internal zoom, directional indicators), expressive masked typography reveals, complete catalogue deduplication (48 unique photos), and progressive 3-at-a-time gallery reveal.
 9. **Real Geographic Scroll Map and Tourist Landmark Explorer (Phase 9):** Real Leaflet-powered geographic basemap with CARTO dark tiles, true Betwa River geography and roads, verified WGS-84 coordinates for resort & 6 top heritage landmarks, synchronized explorer with category filters and smooth flyTo camera, and 5-stage scroll finale ending in luxury booking invitation.
+10. **Booking Experience Redesign & Hero Text Legibility Refinement (Phase 10):** Translucent editorial glass surface for high-contrast hero typography, integrated in-flow reservation sanctuary suite with zero section overlaps, and root/body scroll-locking concierge handoff modal.

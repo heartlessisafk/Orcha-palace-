@@ -85,7 +85,7 @@ export function NavbarPrimitive({
             <span>{SITE_CONFIG.contact.phonePrimary}</span>
           </a>
 
-          <Link href="/#rooms">
+          <Link href="/#booking-sequence">
             <Button variant="primary" size="pill" withArrow>
               Reserve Stay
             </Button>
@@ -125,7 +125,7 @@ export function NavbarPrimitive({
                 <Phone className="w-4 h-4 text-brand-gold" />
                 <span>Call Concierge: {SITE_CONFIG.contact.phonePrimary}</span>
               </a>
-              <Link href="/#rooms" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/#booking-sequence" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button variant="primary" size="md" fullWidth withArrow>
                   Reserve Stay
                 </Button>
