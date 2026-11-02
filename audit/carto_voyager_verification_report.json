@@ -1,0 +1,43 @@
+{
+  "tileInspection": {
+    "totalTileElements": 13,
+    "sampleTileSrcs": [
+      "https://c.basemaps.cartocdn.com/rastertiles/voyager/15/23541/13997@2x.png",
+      "https://d.basemaps.cartocdn.com/rastertiles/voyager/15/23542/13997@2x.png",
+      "https://b.basemaps.cartocdn.com/rastertiles/voyager/15/23541/13996@2x.png"
+    ],
+    "isVoyager": true,
+    "isDark": false
+  },
+  "styleToggleRemoved": true,
+  "landmarks": {
+    "listCount": 14,
+    "listNames": [
+      "The Orchha Resort",
+      "Kanchan Ghat & 14 Royal Cenotaphs",
+      "Orchha Fort & Jahangir Mahal",
+      "Ram Raja Temple",
+      "Chaturbhuj Temple",
+      "Laxmi Narayan Temple",
+      "Betwa River & Orchha Sanctuary",
+      "The Orchha Resort",
+      "Kanchan Ghat & 14 Royal Cenotaphs",
+      "Orchha Fort & Jahangir Mahal",
+      "Ram Raja Temple",
+      "Chaturbhuj Temple",
+      "Laxmi Narayan Temple",
+      "Betwa River & Orchha Sanctuary"
+    ],
+    "mapMarkerCount": 14,
+    "resortMarkerPresent": true
+  },
+  "mobileOverflow": {
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "hasOverflow": false
+  },
+  "totalTileRequests": 35,
+  "sampleTileUrl": "https://c.basemaps.cartocdn.com/rastertiles/voyager/15/23541/13997@2x.png",
+  "sampleEtag": "\"wm-da89c20e77c1-light\"",
+  "consoleErrors": []
+}

@@ -21,7 +21,6 @@ import {
   RotateCcw,
   Plus,
   Minus,
-  Layers,
   Check,
   Building2,
   Landmark,
@@ -33,6 +32,16 @@ import "leaflet/dist/leaflet.css";
 
 // Dynamic type for Leaflet map instance
 type LeafletMap = any;
+
+const CARTO_API_KEY =
+  process.env.NEXT_PUBLIC_CARTO_API_KEY ||
+  process.env.VITE_CARTO_API_KEY ||
+  "";
+
+function getCartoTileUrl() {
+  const keyParam = CARTO_API_KEY ? `?key=${encodeURIComponent(CARTO_API_KEY)}` : "";
+  return `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png${keyParam}`;
+}
 
 export interface RealOrchhaMapProps {
   className?: string;
@@ -55,7 +64,6 @@ export function RealOrchhaMap({
     selectedLandmarkId || "orchha-resort"
   );
   const [hoveredId, setHoveredId] = useState<string | null>(null);
-  const [mapStyle, setMapStyle] = useState<"dark" | "voyager">("dark");
   const [isMapReady, setIsMapReady] = useState(false);
 
   // Sync external selectedLandmarkId if provided
@@ -109,16 +117,13 @@ export function RealOrchhaMap({
       mapInstanceRef.current = map;
 
       // Add Tile Layer
-      const tileUrl =
-        mapStyle === "dark"
-          ? "https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png"
-          : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
+      const tileUrl = getCartoTileUrl();
 
       const tileLayer = L.tileLayer(tileUrl, {
         subdomains: "abcd",
         maxZoom: 19,
         attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+          '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> &copy; <a href="https://carto.com/" target="_blank" rel="noopener noreferrer">CARTO</a>',
       }).addTo(map);
 
       tileLayerRef.current = tileLayer;
@@ -128,7 +133,7 @@ export function RealOrchhaMap({
         .attribution({
           position: "bottomright",
           prefix:
-            '<span class="text-[9px] text-white/50 tracking-wider">CARTO · OpenStreetMap</span>',
+            '<span class="text-[9px] text-gray-700 font-sans tracking-wider">CARTO · OpenStreetMap</span>',
         })
         .addTo(map);
 
@@ -196,26 +201,6 @@ export function RealOrchhaMap({
     };
   }, []);
 
-  // Update tile layer if style switches
-  useEffect(() => {
-    if (!mapInstanceRef.current || !tileLayerRef.current) return;
-    import("leaflet").then((L) => {
-      if (!mapInstanceRef.current) return;
-      mapInstanceRef.current.removeLayer(tileLayerRef.current);
-      const tileUrl =
-        mapStyle === "dark"
-          ? "https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png"
-          : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
-
-      const newTileLayer = L.tileLayer(tileUrl, {
-        subdomains: "abcd",
-        maxZoom: 19,
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
-      }).addTo(mapInstanceRef.current);
-      tileLayerRef.current = newTileLayer;
-    });
-  }, [mapStyle]);
 
   // Handle marker selection visual highlighting
   useEffect(() => {
@@ -468,24 +453,10 @@ export function RealOrchhaMap({
           />
 
           {/* Ambient Map Gradients to blend softly */}
-          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_60%,rgba(8,13,21,0.5)_100%)] z-1" />
+          <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_20px_rgba(8,13,21,0.2)] z-1" />
 
           {/* Floating Map Controls in Top Right */}
           <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
-            {/* Map Style Toggle */}
-            <button
-              onClick={() =>
-                setMapStyle((s) => (s === "dark" ? "voyager" : "dark"))
-              }
-              title="Toggle Cartographic Style"
-              className="p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-brand-gold/30 text-brand-gold hover:text-white shadow-xl backdrop-blur-md transition-all flex items-center gap-1.5 text-xs font-sans"
-            >
-              <Layers className="w-4 h-4" />
-              <span className="hidden sm:inline">
-                {mapStyle === "dark" ? "Dark Atlas" : "Daylight"}
-              </span>
-            </button>
-
             {/* Zoom In */}
             <button
               onClick={handleZoomIn}

@@ -16,6 +16,7 @@ A comprehensive 6-phase engineering and creative refinement plan addressing anim
 - [x] **Phase 8: Premium Interaction & Motion System and Gallery Refinement** — Implement tactile hover and selection system across all tiles, expressive typography entrance reveals, deduplicate gallery manifest, and rebuild gallery into progressive 3-at-a-time reveal. (completed 2026-10-27)
 - [x] **Phase 9: Real Geographic Scroll Map and Tourist Landmark Explorer** — Replace artificial vector map with a real Leaflet-powered geographic basemap (CARTO dark tiles), verified WGS-84 coordinates for resort & top attractions, synchronized landmark explorer, and 5-stage cinematic homepage scroll finale. (completed 2026-10-29)
 - [x] **Phase 10: Booking Experience Redesign & Hero Text Legibility Refinement** — Replace awkward floating scroll booking with an integrated luxury reservation suite, eliminate overlapping and background bleed, implement proper modal scroll locking, and add a luxury translucent editorial surface behind hero text for pristine contrast. (completed 2026-11-02)
+- [x] **Phase 11: CARTO Voyager Light Map Implementation & Authentication Architecture** — Eliminate dark basemap and style toggle, establish CARTO Voyager as the permanent default light map style, configure environment variable mapping (`NEXT_PUBLIC_CARTO_API_KEY` / `VITE_CARTO_API_KEY`) with zero logging or git leaks, preserve all 7 heritage landmarks and interactions, and verify in browser. (completed 2026-11-02)
 
 ## Phase Details
 

@@ -4,27 +4,26 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Phase 10 — Booking Experience Redesign & Hero Text Legibility Refinement.
+**Current focus:** Phase 11 — CARTO Voyager Light Map Implementation & Authentication Architecture.
 
 ## Current Position
-Phase: 10 of 10 (Completed)  
+Phase: 11 of 11 (Completed)  
 Status: Completed  
-Last activity: 2026-11-02 — Completed Phase 10: Luxury editorial translucent surface for hero typography, integrated in-flow reservation sanctuary suite, and root/body scroll-locking concierge handoff modal with full CDP verification.
+Last activity: 2026-11-02 — Completed Phase 11: Set CARTO Voyager as permanent light basemap, removed dark mode and style toggle, wired NEXT_PUBLIC_CARTO_API_KEY environment resolution, verified 7 landmarks, category filtering, camera transitions, and clean production build.
 
 Progress: [██████████] 100%
 
 ## Performance Metrics
-- Completed phases: 10 / 10
+- Completed phases: 11 / 11
 - Errors in build: 0
 - Type check: Clean (0 errors)
 - Console errors in browser: 0
 - Mobile horizontal overflow: None (hasOverflow: false across Desktop, Tablet, and Mobile)
-- Hero contrast: Verified (blur 12px, border white/15, gold pill kicker, 60px crisp white headline)
-- Booking layout stability: Verified (in-flow container 1280px, zero overlap with philosophy section)
-- Modal scroll locking: Verified (body & html overflow: hidden, 0px scroll on mouse wheel)
-- Map geography: 100% real (CARTO vector-quality raster tiles, authentic Betwa bends, real roads)
+- Map basemap style: Permanent CARTO Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`)
+- Basemap style toggle: Completely removed (no Dark Atlas button)
+- Marker contrast on light map: High contrast (dark navy/charcoal background `#0B131E` with gold `#C5A059` border and crisp white typography)
 - Geographic coordinates: 100% verified WGS-84 (Orchha Resort: 25.344842, 78.639536)
-- Gallery duplicates: 0 (orchha-photo-016 excluded, 48 unique curated photos verified)
+- API key security: Handled via `.env.local`, excluded from git via `.gitignore`, never logged
 
 ## Accumulated Context
 ### Key Milestones Delivered:
