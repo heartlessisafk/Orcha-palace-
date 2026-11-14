@@ -157,9 +157,9 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
         id="booking-sequence"
         className="relative z-20 -mt-10 sm:-mt-14 lg:-mt-16 pb-12 sm:pb-16 px-4 sm:px-6 md:px-8 max-w-container mx-auto w-full"
       >
-        <div className="rounded-3xl bg-brand-beige border border-brand-gold/30 shadow-[0_20px_60px_rgba(0,0,0,0.18)] overflow-hidden">
+        <div className="rounded-3xl bg-brand-beige border border-brand-gold/30 shadow-[0_20px_60px_rgba(0,0,0,0.18)] overflow-visible relative">
           {/* Header Bar */}
-          <div className="bg-brand-navy px-6 py-3.5 border-b border-brand-gold/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-white font-sans">
+          <div className="bg-brand-navy rounded-t-3xl px-6 py-3.5 border-b border-brand-gold/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-white font-sans">
             <div className="flex items-center gap-2.5">
               <div className="w-5 h-5 rounded-full bg-brand-gold/20 flex items-center justify-center">
                 <Sparkles className="w-3 h-3 text-brand-gold" />
@@ -179,7 +179,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
           </div>
 
           {/* Reassurance Strip */}
-          <div className="bg-brand-beige-sand px-6 py-3 border-t border-brand-charcoal/10 flex flex-wrap items-center justify-between gap-3 text-xs text-brand-olive font-sans">
+          <div className="bg-brand-beige-sand rounded-b-3xl px-6 py-3 border-t border-brand-charcoal/10 flex flex-wrap items-center justify-between gap-3 text-xs text-brand-olive font-sans">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-brand-gold-dark" />
               <span>Zero reservation fee · Flexible 48-hour free cancellation</span>

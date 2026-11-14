@@ -52,13 +52,30 @@ export function RoomSearchWidgetPrimitive({
     defaultCategoryName || "all"
   );
   const [isGuestPickerOpen, setIsGuestPickerOpen] = useState(false);
+  const [openDirection, setOpenDirection] = useState<"down" | "up">("down");
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
   const [isHandoffModalOpen, setIsHandoffModalOpen] = useState(false);
 
   const guestPickerRef = useRef<HTMLDivElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // Close guest picker dropdown on outside click
+  // Intelligent directional positioning for the occupancy popover
+  const handleToggleGuestPicker = () => {
+    if (!isGuestPickerOpen && guestPickerRef.current) {
+      const rect = guestPickerRef.current.getBoundingClientRect();
+      const spaceBelow = window.innerHeight - rect.bottom;
+      const spaceAbove = rect.top;
+      // If space below is restricted (< 370px) and there is more headroom above, flip upward
+      if (spaceBelow < 370 && spaceAbove > spaceBelow) {
+        setOpenDirection("up");
+      } else {
+        setOpenDirection("down");
+      }
+    }
+    setIsGuestPickerOpen(!isGuestPickerOpen);
+  };
+
+  // Close guest picker dropdown on outside click or Escape key
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -68,11 +85,20 @@ export function RoomSearchWidgetPrimitive({
         setIsGuestPickerOpen(false);
       }
     }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsGuestPickerOpen(false);
+      }
+    }
+
     if (isGuestPickerOpen) {
       document.addEventListener("mousedown", handleClickOutside);
+      window.addEventListener("keydown", handleKeyDown);
     }
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isGuestPickerOpen]);
 
@@ -198,7 +224,13 @@ export function RoomSearchWidgetPrimitive({
             </div>
 
             {/* 3. Guests Selector Dropdown */}
-            <div className="space-y-1.5 relative" ref={guestPickerRef}>
+            <div
+              className={cn(
+                "space-y-1.5 relative",
+                isGuestPickerOpen ? "z-40" : "z-10"
+              )}
+              ref={guestPickerRef}
+            >
               <label className="font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy flex items-center justify-between">
                 <span className="flex items-center gap-1.5">
                   <Users className="w-3.5 h-3.5 text-brand-gold" />
@@ -210,7 +242,7 @@ export function RoomSearchWidgetPrimitive({
                 type="button"
                 aria-haspopup="dialog"
                 aria-expanded={isGuestPickerOpen}
-                onClick={() => setIsGuestPickerOpen(!isGuestPickerOpen)}
+                onClick={handleToggleGuestPicker}
                 className="w-full rounded-xl bg-brand-canvas border border-brand-charcoal/15 px-3.5 py-3 font-sans text-sm font-medium text-brand-charcoal text-left flex items-center justify-between focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
               >
                 <span className="truncate">
@@ -223,12 +255,19 @@ export function RoomSearchWidgetPrimitive({
 
               {/* Guest / Room Dropdown Popover */}
               {isGuestPickerOpen && (
-                <div className="absolute top-full left-0 right-0 mt-2 p-5 rounded-2xl bg-white border border-brand-gold/25 shadow-2xl z-50 space-y-4 animate-fade-in">
+                <div
+                  className={cn(
+                    "absolute left-0 right-0 sm:left-auto sm:right-0 w-full sm:w-[320px] p-5 rounded-2xl bg-white border border-brand-gold/30 shadow-2xl z-50 space-y-4 animate-fade-in",
+                    openDirection === "up"
+                      ? "bottom-full mb-2 shadow-[0_-20px_50px_rgba(0,0,0,0.2)]"
+                      : "top-full mt-2"
+                  )}
+                >
                   <div className="pb-2 border-b border-brand-charcoal/10 flex items-center justify-between">
                     <span className="font-serif text-sm font-semibold text-brand-navy">
                       Select Occupancy
                     </span>
-                    <span className="text-[11px] font-sans text-brand-olive">
+                    <span className="text-[11px] font-sans text-brand-olive font-mono">
                       Up to 3 rooms online
                     </span>
                   </div>

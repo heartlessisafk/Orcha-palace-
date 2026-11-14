@@ -4,14 +4,14 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Phase 21: Remove Excessive Blue Colour Grading & Restore Warm Heritage Tones (Client Feedback Fix 04).
+**Current focus:** Phase 22: Global Booking Widget — Occupancy Dropdown Clipping & Layering Bug (Client Feedback Fix 06).
 
 ## Current Position
-Milestone: Client Feedback Optimization (Phase 21 in sequence) (Completed)  
-Status: Phase 21 Completed & Verified (Excessive blue grading removed from Homepage, Our Story, and Gallery; golden heritage tones and natural turquoise pool water fully restored; text legibility preserved; 0 regressions)  
-Last activity: 2026-11-14 — Completed Phase 21: Resolved Client Feedback Fix 04. Removed artificial navy blue gradient overlays across Homepage hero, Our Story hero (`slide1.jpg`), and Gallery hero/cards. Golden carved teak furniture, gold-leaf ceiling coffers, Bundeli paintings, and natural turquoise lotus pool water restored to authentic vibrancy. Preserved WCAG AA text contrast via localized neutral scrims and glass cards. Verified 14/14 static pages, 0 TypeScript errors, and 0 regressions across all 10 routes.
+Milestone: Client Feedback Optimization (Phase 22 in sequence) (Completed)  
+Status: Phase 22 Completed & Verified (Occupancy dropdown clipping resolved across all viewports; 320px responsive panel with intelligent upward/downward flipping; 0 regressions)  
+Last activity: 2026-11-14 — Completed Phase 22: Resolved Client Feedback Fix 06 based on `IMG_1680.jpeg`. Eliminated restrictive `overflow-hidden` on `#booking-sequence` container while preserving 24px corner radii with explicit `rounded-t-3xl` and `rounded-b-3xl`. Upgraded `RoomSearchWidgetPrimitive.tsx` with a responsive 320px desktop/tablet popover, full-width mobile layout, intelligent directional flip detection (`spaceBelow < 370px`), `z-40` stacking elevation, and `Escape` keyboard dismissal. Verified across Desktop (1440px & 1024px), Tablet (768px), and Mobile (390px) with 0 build errors and 0 regressions.
 
-Progress: [██████████] 100% (Phases 1-21 complete)
+Progress: [██████████] 100% (Phases 1-22 complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed
