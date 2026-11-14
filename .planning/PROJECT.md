@@ -1,31 +1,69 @@
-# The Orchha Resort Redesign & Cinematic Experience Upgrade
+# The Orchha Resort — Major Professional Design & Engineering Upgrade
 
 ## What This Is
-A cinematic, production-grade luxury hospitality website for The Orchha Resort, situated beside the Betwa River opposite the 14 Royal Chhatris in Orchha, Madhya Pradesh. The website features authentic resort photography, dedicated wellness and wedding showcases, an interactive visual gallery, functional accommodation detail routes, and a scroll-driven palace-to-map cartographic finale.
+A bespoke, production-grade luxury hospitality digital experience for **The Orchha Resort**, situated on the tranquil riverbanks of the Betwa River directly opposite the 14 Royal Chhatris in Orchha, Madhya Pradesh. The website features authentic curated resort photography, dedicated wellness and royal wedding showcases, an interactive visual gallery, functional accommodation detail suites, and an authentic CARTO Voyager geographic finale.
 
 ## Core Value
-To provide an authentic, cinematic, and technically flawless digital hospitality experience where the right photography appears in the right section, all scroll animations execute with physical coherence, accommodations can be explored in detail, and every visitor arrives naturally at the decision to reserve a stay.
+Deliver an out-of-distribution luxury hospitality experience with flawless visual coherence, bespoke typography, physical scroll choreography, tactile 3D interactions, and authenticated real-world geography, ensuring every visitor experiences the historical grandeur of Orchha and effortlessly reserves their stay.
 
-## Requirements
+---
 
-### Validated
-- [x] Initial Phase 1 & 2 design system tokens, responsive navbar, and mobile drawer.
-- [x] Solid warm-beige `#F4F0E6` hero booking sequence without video bleed-through.
-- [x] Authentic heritage About page (`/about`) with verified property narrative.
-- [x] Dedicated Royal Weddings route (`/weddings`) with verified event photography.
-- [x] Dedicated Kairali Ayurveda Spa route (`/spa`) with authentic treatment offerings.
-- [x] Master photo catalogue of 300 genuine Google Photos album items with 49 high-resolution curated assets in `public/images/resort/curated/`.
-- [x] Dedicated visual photo gallery route (`/gallery`) with category filter pills and interactive lightbox modal.
+## Installed Skills Inventory
+The project is fortified with five world-class design intelligence and engineering skill suites installed project-locally in `.agents/skills/`:
 
-### Active Scope (Complete Website Repair & Upgrade)
-- [ ] **Phase 1: Fix Blank Palace-to-Map Animation** — Eliminate sticky-breaking CSS `overflow-hidden`, fix layer transforms and visibility, verify full 5-act animation in browser.
-- [ ] **Phase 2: Fix Review Cards Stuck on Left** — Diagnose positioning, width, and scroll-driver in `GuestLoveExperience.tsx`, restore alternating left-right card animation.
-- [ ] **Phase 3: Accommodation Image Corrections** — Verify and map genuine photos to Standard Heritage Room, Deluxe Room, Deluxe Swiss Tent, and Royal Suite without mismatches.
-- [ ] **Phase 4: Functional Room-Detail Pages** — Implement dedicated dynamic routes (`/rooms/[slug]` and `/rooms`) with photo gallery, room specs, amenities, floor plans/views, and booking actions.
-- [ ] **Phase 5: Gallery Layout & Cinematic Scroll Transitions** — Refine `/gallery` with sticky header, cinematic smooth scroll transitions, and enhanced lightbox interactions.
-- [ ] **Phase 6: Integration, Responsive Behavior, Accessibility & Final Verification** — Complete browser verification across Desktop (1440px), Tablet (768px), and Mobile (390px), ensure `prefers-reduced-motion` compliance, 0 console errors, clean production build.
+1. **Anthropic Frontend Design (`frontend-design`)**:
+   - Location: `.agents/skills/frontend-design/SKILL.md`
+   - Git Commit: `2c5958ecac7cee2b583967a2c4981d0f4a75c579`
+   - Role: Distinctive visual identity, opinionated typography, anti-template layout direction, and aesthetic integrity tailored to Bundelkhand heritage.
 
-### Out of Scope
-- Rebuilding the application from scratch or changing the Next.js / Tailwind / Framer Motion stack.
-- Modifying working routes (`/spa`, `/about`, `/weddings`) unnecessarily.
-- Using unverified stock photography or fictional geographical distances.
+2. **Impeccable (`impeccable`)**:
+   - Location: `.agents/skills/impeccable/SKILL.md`
+   - Git Commit: `32f10a7833666f056e82a5e83ca4faed7ba4b1f9` (v4.9.1)
+   - Role: Out-of-distribution craft floor, critique rubric, slop elimination, design token formalization (`DESIGN.md`), and tactile UI refinement.
+
+3. **Taste Skill (`taste-skill` / `design-taste-frontend`)**:
+   - Location: `.agents/skills/taste-skill/SKILL.md`
+   - Git Commit: `f6b76575f949707b4e3c37cd86cb44b0b98643e8` (v2.5.1)
+   - Role: Professional agency-level execution, section discipline, authentic photographic integration, quiet micro-interactions, and visual finishes.
+
+4. **UI UX Pro Max (`ui-ux-pro-max`)**:
+   - Location: `.agents/skills/ui-ux-pro-max/SKILL.md`
+   - Git Commit: `6ae86f61f520d6ca229d2f40e070410638c908c5` (v1.0.0)
+   - Role: 192 reasoning rules, 80 searchable styles, 74 font pairings, 120 UX guidelines, GSAP motion patterns, touch ergonomics (min 44px targets), and accessibility standards.
+
+5. **Vercel Web Design Guidelines (`web-design-guidelines`)**:
+   - Location: `.agents/skills/web-design-guidelines/SKILL.md`
+   - Git Commit: `1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62` (v1.0.0)
+   - Reference: `.agents/skills/web-design-guidelines/references/web-interface-guidelines.md`
+   - Role: High-signal Web Interface Guidelines compliance, keyboard navigation (`focus-visible:ring`), accessible forms, touch feedback, and zero layout shift.
+
+---
+
+## Engineering Constraints & Preservation Rules
+All modifications must adhere strictly to [GEMINI.md](file:///Users/sam/Projects/orccha/GEMINI.md):
+- **Preserve All Working Animations:** 5-act palace-to-map scroll sequence, Leaflet real geography map, alternating guest love review cards, and hero entrance choreography.
+- **Preserve Existing Gallery Tiles & Proportions:** Maintain 48-photo curated manifest, aspect ratios, and 3-at-a-time progressive reveal.
+- **Preserve Navigation & Routing:** All routes (`/`, `/rooms`, `/rooms/[slug]`, `/gallery`, `/about`, `/spa`, `/weddings`) and hash anchors.
+- **Preserve Booking Functionality:** Docked Reservation Sanctuary Suite, date pickers, occupancy steppers, and scroll-locking concierge modal.
+- **Never Replace Photographs with Stock:** Real photography only.
+- **Avoid Heavy/Unnecessary Libraries:** Build with Next.js 15, React 19, Tailwind CSS, Framer Motion, and Leaflet.
+- **Tactile Button Standard:** Every interactive button must receive a consistent premium 3D hover interaction without breaking existing click/touch/keyboard behaviors.
+
+---
+
+## Seven-Phase Execution Roadmap (Milestone 2)
+
+- [x] **Phase 1: Project Preparation, Skill Integration & Baseline Protection** (completed 2026-11-14)
+  - Initialize GSD milestone state, download & verify all 5 skills into `.agents/skills/`, establish permanent project rules (`GEMINI.md`, `AGENTS.md`), and capture verified baseline.
+- [ ] **Phase 2: Design Token Architecture, Luxury Typography & Color Harmonies**
+  - Refine color palette, typography hierarchy, and spacing tokens according to `frontend-design`, `impeccable`, and `ui-ux-pro-max` guidelines. Formalize `DESIGN.md`.
+- [ ] **Phase 3: Universal Tactile Button & Micro-Interaction System**
+  - Implement consistent, premium 3D hover interaction across all interactive buttons across the site with tactile elevation and gilded glow.
+- [ ] **Phase 4: Hero Section & Reservation Suite Visual Elevation**
+  - Elevate hero entrance choreography and editorial layout using `taste-skill` and `impeccable` principles. Polish the in-flow Reservation Sanctuary Suite.
+- [ ] **Phase 5: Accommodation Cards & Dynamic Room Details Refinement**
+  - Refine room cards on `/` and `/rooms` with tactile depth, editorial spec typography, and subtle image zoom. Enhance dynamic room pages (`/rooms/[slug]`).
+- [ ] **Phase 6: Visual Storytelling, Heritage About & Media Experiences Polish**
+  - Refine `/gallery` masonry and 3-at-a-time reveal with smooth layout transitions. Polish `/about`, `/weddings`, and `/spa` with bespoke editorial layouts.
+- [ ] **Phase 7: End-to-End Performance, Accessibility Audit & Production Hardening**
+  - Audit against `web-design-guidelines` (ARIA, keyboard navigation, focus indicators). Test responsive viewports across Desktop, Tablet, and Mobile. Complete production build verification.

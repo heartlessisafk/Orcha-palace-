@@ -18,6 +18,21 @@ A comprehensive 6-phase engineering and creative refinement plan addressing anim
 - [x] **Phase 10: Booking Experience Redesign & Hero Text Legibility Refinement** — Replace awkward floating scroll booking with an integrated luxury reservation suite, eliminate overlapping and background bleed, implement proper modal scroll locking, and add a luxury translucent editorial surface behind hero text for pristine contrast. (completed 2026-11-02)
 - [x] **Phase 11: CARTO Voyager Light Map Implementation & Authentication Architecture** — Eliminate dark basemap and style toggle, establish CARTO Voyager as the permanent default light map style, configure environment variable mapping (`NEXT_PUBLIC_CARTO_API_KEY` / `VITE_CARTO_API_KEY`) with zero logging or git leaks, preserve all 7 heritage landmarks and interactions, and verify in browser. (completed 2026-11-02)
 
+---
+
+## Milestone 2: Major Professional Design & Engineering Upgrade
+
+A seven-phase execution roadmap establishing top-tier design craft, slop-free aesthetics, universal 3D button interactions, and rigorous accessibility across the entire Orchha Resort website.
+
+### Seven-Phase Roadmap
+- [x] **Phase 12 (Upgrade Phase 1): Project Preparation, Skill Integration & Baseline Protection** — Initialize GSD milestone state, install and verify all 5 design skills (`frontend-design`, `impeccable`, `taste-skill`, `ui-ux-pro-max`, `web-design-guidelines`) in `.agents/skills/`, establish permanent rules (`GEMINI.md`, `AGENTS.md`), and secure a verified Git baseline. (completed 2026-11-14)
+- [ ] **Phase 13 (Upgrade Phase 2): Design Token Architecture, Luxury Typography & Color Harmonies** — Formalize `DESIGN.md`, refine palette tokens (Bundelkhand gold, deep royal navy, warm beige, pristine stone), enforce strict typographic scale and line-height discipline, and banish templated fonts.
+- [ ] **Phase 14 (Upgrade Phase 3): Universal Tactile Button & Micro-Interaction System** — Implement consistent, tactile 3D hover interactions (Z-elevation, gilded ambient drop shadows, active press state) across every button on the website with 100% preservation of existing click/keyboard behaviors.
+- [ ] **Phase 15 (Upgrade Phase 4): Hero Section & Reservation Suite Visual Elevation** — Elevate hero entrance choreography and editorial layout using `taste-skill` and `impeccable` guidelines; polish the in-flow Reservation Sanctuary Suite with subtle glass reflections and tactile steppers.
+- [ ] **Phase 16 (Upgrade Phase 5): Accommodation Cards & Dynamic Room Details Refinement** — Refine room cards on `/` and `/rooms` with tactile depth and editorial spec typography; polish dynamic `/rooms/[slug]` suites with immersive gallery carousels and direct WhatsApp concierge booking.
+- [ ] **Phase 17 (Upgrade Phase 6): Visual Storytelling, Heritage About & Media Experiences Polish** — Polish `/gallery` masonry and 3-at-a-time reveal; refine `/about`, `/weddings`, and `/spa` with bespoke editorial typography and luxury layout rhythm while strictly preserving all real photographs.
+- [ ] **Phase 18 (Upgrade Phase 7): End-to-End Performance, Accessibility Audit & Production Hardening** — Full audit against Vercel Web Interface Guidelines (ARIA, keyboard navigation, visible focus rings, zero layout shift); verify Desktop, Tablet, and Mobile responsiveness; complete production build verification.
+
 ## Phase Details
 
 ### Phase 1: Fix Blank Palace-to-Map Animation

@@ -4,26 +4,28 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Phase 11 — CARTO Voyager Light Map Implementation & Authentication Architecture.
+**Current focus:** Milestone 2: Major Professional Design & Engineering Upgrade — Phase 12 (Upgrade Phase 1): Project Preparation, Skill Integration & Baseline Protection.
 
 ## Current Position
-Phase: 11 of 11 (Completed)  
+Milestone: 2 — Major Professional Design & Engineering Upgrade
+Phase: 1 of 7 (Phase 12 in sequence) (Completed)  
 Status: Completed  
-Last activity: 2026-11-02 — Completed Phase 11: Set CARTO Voyager as permanent light basemap, removed dark mode and style toggle, wired NEXT_PUBLIC_CARTO_API_KEY environment resolution, verified 7 landmarks, category filtering, camera transitions, and clean production build.
+Last activity: 2026-11-14 — Completed Milestone 2 Phase 1: Installed 5 professional design skills (`frontend-design`, `impeccable`, `taste-skill`, `ui-ux-pro-max`, `web-design-guidelines`) in `.agents/skills/`, established project rules (`GEMINI.md`, `AGENTS.md`), created 7-phase roadmap, and secured clean Git baseline.
 
-Progress: [██████████] 100%
+Progress: [█░░░░░░░░░] 14% (Milestone 2: 1/7 phases complete)
 
 ## Performance Metrics
-- Completed phases: 11 / 11
+- Milestone 1 phases: 11 / 11 completed
+- Milestone 2 phases: 1 / 7 completed
+- Installed design skills: 5/5 verified in `.agents/skills/`
 - Errors in build: 0
 - Type check: Clean (0 errors)
 - Console errors in browser: 0
 - Mobile horizontal overflow: None (hasOverflow: false across Desktop, Tablet, and Mobile)
-- Map basemap style: Permanent CARTO Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`)
-- Basemap style toggle: Completely removed (no Dark Atlas button)
-- Marker contrast on light map: High contrast (dark navy/charcoal background `#0B131E` with gold `#C5A059` border and crisp white typography)
-- Geographic coordinates: 100% verified WGS-84 (Orchha Resort: 25.344842, 78.639536)
-- API key security: Handled via `.env.local`, excluded from git via `.gitignore`, never logged
+- Map basemap style: Permanent CARTO Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=...`) with valid API key
+- Watermarks on map: 0 (completely eliminated)
+- Working animations preserved: 100%
+- Mapped authentic photography: 100% intact (0 stock replacements)
 
 ## Accumulated Context
 ### Key Milestones Delivered:
