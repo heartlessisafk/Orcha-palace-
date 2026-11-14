@@ -4,25 +4,30 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Milestone 2: Major Professional Design & Engineering Upgrade — Phase 18 (Upgrade Phase 7): Production Hardening, Accessibility Audit & Final Milestone Completion.
+**Current focus:** Phase 19: Header Branding Upgrade — Official Logo Replacement & Interactive White-to-Blue Container.
 
 ## Current Position
-Milestone: 2 — Major Professional Design & Engineering Upgrade (COMPLETED)
-Phase: 7 of 7 (Phase 18 in sequence) (Completed)  
-Status: Milestone 2 Complete (All 7 phases executed, verified, and audited with 0 regressions)  
-Last activity: 2026-11-14 — Completed Milestone 2 Phase 7: Executed comprehensive production hardening and accessibility audit. Implemented skip-to-content bypass link, enclosed all 10 routes in `<main id="main-content">`, added ARIA landmarks to navigation and form controls, configured Leaflet map tile presentation semantics (0 missing alt tags), re-verified 32-room inventory consistency, validated universal 3D button interactions, executed 30-case regression test across 10 routes and 3 viewports (0px overflow), confirmed 0 console errors, and verified clean Next.js production build.
+Milestone: Post-Milestone Brand Upgrade (Phase 19 in sequence) (Completed)  
+Status: Phase 19 Completed & Verified (Official logo installed, interactive container operational, 0 regressions)  
+Last activity: 2026-11-14 — Completed Phase 19: Replaced header branding with official client logo (`IMG_1674.png`). Engineered a luxury white/ivory container with softly rounded corners (`rounded-xl`), GPU-accelerated CSS mask rendering preserving original serifs and "by the river..." tagline. Implemented 300ms smooth transition to brand navy blue (`#0C1731`) on hover and keyboard Tab focus with white lettering. Verified desktop, tablet, and mobile layouts via automated CDP testing and visual screenshots with 0px overflow and 0 build errors.
 
-Progress: [██████████] 100% (Milestone 2: 7/7 phases complete)
+Progress: [██████████] 100% (Phases 1-19 complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed
 - Milestone 2 phases: 7 / 7 completed
+- Branding upgrade phase: Phase 19 completed
 - Installed design skills: 5/5 verified in `.agents/skills/`
 - Design system canonical document: `DESIGN.md` established at project root
 - Universal 3D button system: Active via `useTactile3D` and `Button.tsx` (verified on all interactive buttons)
+- Header branding system: Official `IMG_1674.png` active in interactive white-to-blue luxury container
 - Errors in build: 0
 - Type check: Clean (0 errors)
 - Console errors in browser: 0
+- Missing image alt tags: 0
+- Mobile & responsive horizontal overflow: None (hasOverflow: false across all tested viewports)
+- Curated & verified images on disk: 109 unique images (0 missing references across `src/`)
+- Working animations preserved: 100%
 - Missing image alt tags: 0
 - Mobile & responsive horizontal overflow: None (hasOverflow: false across all tested viewports)
 - Baseline screenshots captured: 30 baseline + 4 Phase 4 + 15 Phase 5 + 11 Phase 6 + 10 Phase 7 audit screenshots

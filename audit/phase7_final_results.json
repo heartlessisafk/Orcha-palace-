@@ -13,13 +13,13 @@
     "hamburgerAriaExpanded": true,
     "checkInLabelAssociation": true,
     "checkOutLabelAssociation": true,
-    "totalImagesOnHome": 21,
+    "totalImagesOnHome": 20,
     "missingAltCount": 0
   },
   "tasteSkillAudit": {
     "categoryCount": 7,
     "editorialWideCount": 1,
-    "standardTileCount": 3
+    "standardTileCount": 4
   },
   "tactile3DButtonAudit": {
     "found": true,

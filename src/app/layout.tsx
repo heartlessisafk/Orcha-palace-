@@ -52,6 +52,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${crimsonText.variable} ${dmSans.variable} scroll-smooth`}>
+      <head>
+        <link rel="preload" href="/images/brand/orchha-logo.png" as="image" type="image/png" />
+      </head>
       <body className="min-h-screen bg-brand-canvas text-brand-charcoal font-sans antialiased selection:bg-brand-gold/30 selection:text-brand-navy">
         <a
           href="#main-content"

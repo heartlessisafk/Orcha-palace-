@@ -32,6 +32,7 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 - [x] **Phase 16 (Upgrade Phase 5): Page-by-Page Cinematic Refinement & Editorial Elevation** — Surgical editorial elevation across all 7 core sections: Homepage (motion hero entrance, amenities links, booking dock), Rooms & Suites (32 rooms, accurate specs, dynamic suites), Gallery (6 consolidated categories, asymmetrical editorial tiles, progressive reveal, 3D CTAs), Weddings (6 royal sections, verified venues), Spa (Kairali Ayurveda storytelling, 16 treatments), About (authentic Bundelkhand heritage, 32-room alignment), and Map & Footer (CARTO Voyager light map, verified landmarks, 4-column footer). (completed 2026-11-14)
 - [x] **Phase 17 (Upgrade Phase 6): Technical Stabilization, Animation Integrity & Deep Responsive Testing** — Full verification of animation inventory (hero entrance, bidirectional scroll on 380vh review track and 450vh map finale, reduced-motion), end-to-end booking flow test with WhatsApp handoff and scroll-lock dialog, 9-viewport responsive matrix (63 test cases, 0 overflow), and 0 console errors. (completed 2026-11-14)
 - [x] **Phase 18 (Upgrade Phase 7): End-to-End Performance, Accessibility Audit & Production Hardening** — Full audit against Vercel Web Interface Guidelines (skip-to-content link, main landmarks, ARIA labels, form associations, map tile presentation, visible focus rings, zero layout shift); verified 10-route multi-viewport regression matrix across Desktop, Tablet, and Mobile (0px overflow); confirmed 0 console errors and clean production build. (completed 2026-11-14)
+- [x] **Phase 19: Header Branding Upgrade — Official Logo Replacement & Interactive White-to-Blue Container** — Replaced header branding with official client logo (`IMG_1674.png`), engineered luxury white container with 300ms hover transition to brand navy blue and white lettering, verified zero layout shift, accessibility, and 3-viewport responsiveness. (completed 2026-11-14)
 
 ## Phase Details
 
@@ -257,3 +258,18 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 5. Universal 3D button system (tilt, sheen, elevation, tactile press) functioning smoothly across all interactive elements.
 6. Multi-viewport regression matrix (10 routes × 3 viewports = 30 configurations) confirms 0px horizontal overflow.
 7. Next.js production build (`npm run build`) compiles 14/14 static & SSG routes with 0 console errors.
+
+### Phase 19: Header Branding Upgrade — Official Logo Replacement & Interactive White-to-Blue Container
+
+**Goal**: Seamlessly replace obsolete header branding with the client's official logo asset (`IMG_1674.png`). Frame it in an elegant white luxury container with a 300ms interactive hover transition to brand navy blue and white lettering, ensuring zero layout shift and 100% responsive stability.  
+**Depends on**: Phase 18  
+**Requirements**: LOGO-REPLACE-01, LOGO-DEFAULT-01, LOGO-HOVER-01, LOGO-A11Y-01, LOGO-RESPONSIVE-01  
+**Success Criteria**:
+
+1. Official logo asset (`IMG_1674.png`) preserved and cropped to exact 607 × 92 bounds (`orchha-logo.png`).
+2. Obsolete emblem circle and secondary header text completely removed from `NavbarPrimitive.tsx`.
+3. Default state renders crisp white luxury container (`rounded-xl`, `bg-white`) with deep navy lettering.
+4. Hover state transitions smoothly (300ms ease-out) to brand navy container (`bg-brand-navy`) with white lettering.
+5. Zero movement, resizing, or layout shifts on hover or reset.
+6. Keyboard Tab navigation provides accessible gold focus ring and high-contrast color elevation.
+7. Desktop, Tablet, and Mobile layouts verified via automated CDP testing and visual screenshots with 0px horizontal overflow.

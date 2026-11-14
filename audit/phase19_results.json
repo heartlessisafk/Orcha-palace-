@@ -1,0 +1,38 @@
+{
+  "defaultState": {
+    "found": true,
+    "container": {
+      "bg": "rgb(255, 255, 255)",
+      "border": "rgba(38, 14, 1, 0.1)",
+      "borderRadius": "12px",
+      "width": 226,
+      "height": 47,
+      "top": 20,
+      "left": 48
+    },
+    "logoMask": {
+      "bg": "rgb(12, 23, 49)",
+      "maskImage": "url(\"http://localhost:3000/images/brand/orchha-logo.png\")",
+      "width": 192,
+      "height": 29
+    }
+  },
+  "hoverState": {
+    "containerBg": "rgb(12, 23, 49)",
+    "maskBg": "rgb(255, 255, 255)"
+  },
+  "mouseOutState": {
+    "containerBg": "rgb(255, 255, 255)",
+    "maskBg": "rgb(12, 23, 49)"
+  },
+  "tablet": {
+    "hasOverflow": false,
+    "containerWidth": 204,
+    "containerHeight": 44
+  },
+  "mobile": {
+    "hasOverflow": false,
+    "containerWidth": 175,
+    "containerHeight": 36
+  }
+}

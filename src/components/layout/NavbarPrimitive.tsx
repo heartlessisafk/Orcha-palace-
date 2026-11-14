@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { SITE_CONFIG } from "@/lib/site-config";
 import { Button } from "@/components/ui/Button";
 import { Phone, Menu, X } from "lucide-react";
@@ -41,25 +40,27 @@ export function NavbarPrimitive({
       )}
     >
       <div className="max-w-wide mx-auto px-5 sm:px-8 md:px-12 flex items-center justify-between">
-        {/* Brand Logo & Title */}
-        <Link href="/" className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-gold rounded-lg p-1">
-          <div className="relative w-10 h-10 shrink-0 rounded-full border border-brand-gold/40 flex items-center justify-center p-1 bg-white">
-            <Image
-              src="/images/brand/orchha-emblem.svg"
-              alt="Orchha Resort Emblem"
-              width={32}
-              height={32}
-              className="object-contain"
-            />
-          </div>
-          <div>
-            <span className="block font-serif text-lg sm:text-xl font-semibold tracking-tight text-brand-navy group-hover:text-brand-gold transition-colors">
-              The Orchha Resort
-            </span>
-            <span className="block font-sans text-[10px] tracking-widest uppercase text-brand-gold font-medium">
-              Betwa River Sanctuary
-            </span>
-          </div>
+        {/* Official Brand Logo & Interactive Luxury White-to-Blue Container */}
+        <Link
+          href="/"
+          className="group relative inline-flex items-center justify-center rounded-xl bg-white px-3.5 py-1.5 sm:px-4 sm:py-2 border border-brand-charcoal/10 shadow-subtle hover:bg-brand-navy hover:border-brand-navy focus-visible:bg-brand-navy focus-visible:border-brand-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 transition-all duration-300 ease-out shrink-0 select-none"
+          aria-label="The Orchha Resort — Return to Homepage"
+        >
+          {/* Logo Lettering & Tagline via Antialiased Mask Asset */}
+          <span
+            className="block w-[145px] sm:w-[170px] md:w-[192px] aspect-[607/92] bg-brand-navy group-hover:bg-white group-focus-visible:bg-white transition-colors duration-300 ease-out"
+            style={{
+              maskImage: 'url("/images/brand/orchha-logo.png")',
+              WebkitMaskImage: 'url("/images/brand/orchha-logo.png")',
+              maskSize: "contain",
+              WebkitMaskSize: "contain",
+              maskRepeat: "no-repeat",
+              WebkitMaskRepeat: "no-repeat",
+              maskPosition: "center",
+              WebkitMaskPosition: "center",
+            }}
+            aria-hidden="true"
+          />
         </Link>
 
         {/* Center Desktop Navigation Pill */}
