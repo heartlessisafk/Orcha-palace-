@@ -117,7 +117,7 @@ export function FooterPrimitive() {
                 href={SITE_CONFIG.otaLinks.makeMyTrip}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between p-2.5 rounded-lg border border-white/15 bg-white/5 hover:bg-white/10 text-xs text-white transition-all"
+                className="flex items-center justify-between p-2.5 rounded-lg border border-white/15 bg-white/5 hover:bg-white/10 text-xs text-white transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 hover:shadow-subtle hover:border-brand-gold/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
               >
                 <span>MakeMyTrip Verified Listing</span>
                 <ExternalLink className="w-3.5 h-3.5 text-brand-gold" />
@@ -126,7 +126,7 @@ export function FooterPrimitive() {
                 href={SITE_CONFIG.otaLinks.agoda}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between p-2.5 rounded-lg border border-white/15 bg-white/5 hover:bg-white/10 text-xs text-white transition-all"
+                className="flex items-center justify-between p-2.5 rounded-lg border border-white/15 bg-white/5 hover:bg-white/10 text-xs text-white transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 hover:shadow-subtle hover:border-brand-gold/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
               >
                 <span>Agoda International Listing</span>
                 <ExternalLink className="w-3.5 h-3.5 text-brand-gold" />

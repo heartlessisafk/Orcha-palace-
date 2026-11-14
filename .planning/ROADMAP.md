@@ -221,8 +221,17 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 
 ### Phase 15: Universal Tactile Button & Micro-Interaction System
 
-**Goal**: Implement consistent, premium 3D hover interaction across all interactive buttons across the site with tactile elevation and gilded glow.  
+**Goal**: Implement a reusable, GPU-accelerated 3D tactile interaction system for every interactive button and clickable control across the website, preserving all existing handlers, routing, and accessibility.  
 **Depends on**: Phase 14  
+**Requirements**: BUTTON-3D-01, TACTILE-HOOK-01, SHEEN-OVERLAY-01, ACCESSIBLE-TOUCH-01  
+**Success Criteria**:
+
+1. Centralized `useTactile3D` hook created with zero layout recalculation overhead.
+2. Universal `Button.tsx` upgraded with perspective tilt (±6°), 4px elevation, dynamic sheen overlay, and tactile press compression (`scale: 0.975`).
+3. Upgraded controls across reservation dock, gallery filter pills, "Discover More" progressive trigger, map controls, room detail carousel/thumbs, and spa selections.
+4. Touch devices supported with clean press feedback without hover tilt; `prefers-reduced-motion` respected.
+5. Automated CDP verification confirms 3D matrix transform, booking modal trigger, body scroll lock, and zero mobile overflow.
+6. Clean Next.js build and type-check verified.
 
 ### Phase 16: Hero Section & Reservation Suite Visual Elevation
 

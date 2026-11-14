@@ -4,26 +4,27 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Milestone 2: Major Professional Design & Engineering Upgrade — Phase 14 (Upgrade Phase 3): Design Token Architecture, Luxury Typography & Color Harmonies.
+**Current focus:** Milestone 2: Major Professional Design & Engineering Upgrade — Phase 15 (Upgrade Phase 4): Universal Tactile Button & Micro-Interaction System.
 
 ## Current Position
 Milestone: 2 — Major Professional Design & Engineering Upgrade
-Phase: 3 of 7 (Phase 14 in sequence) (Completed)  
-Status: Completed (Awaiting Phase 4 user prompt)  
-Last activity: 2026-11-14 — Completed Milestone 2 Phase 3: Authored canonical DESIGN.md design system with 5-skill coordination. Defined royal heritage palette, 4px grid spacing, Crimson Text + DM Sans typography scale, 6-subject photography guidelines (zero stock rule), universal tactile 3D button contracts, and synchronized Tailwind/CSS tokens.
+Phase: 4 of 7 (Phase 15 in sequence) (Completed)  
+Status: Completed (Awaiting Phase 5 user prompt)  
+Last activity: 2026-11-14 — Completed Milestone 2 Phase 4: Engineered centralized `useTactile3D` hook and upgraded universal `Button.tsx` with 3D perspective tilt (±6°), 4px elevation, dynamic sheen overlay, and tactile press compression (`scale: 0.975`). Upgraded controls across reservation dock, gallery filter pills, "Discover More" progressive trigger, map controls, room detail carousel/thumbs, and spa selections. Verified via automated CDP tests and screenshots.
 
-Progress: [███░░░░░░░] 43% (Milestone 2: 3/7 phases complete)
+Progress: [████░░░░░░] 57% (Milestone 2: 4/7 phases complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed
-- Milestone 2 phases: 3 / 7 completed
+- Milestone 2 phases: 4 / 7 completed
 - Installed design skills: 5/5 verified in `.agents/skills/`
 - Design system canonical document: `DESIGN.md` established at project root
+- Universal 3D button system: Active via `useTactile3D` and `Button.tsx`
 - Errors in build: 0
 - Type check: Clean (0 errors)
 - Console errors in browser: 0
 - Mobile horizontal overflow: None (hasOverflow: false across Desktop, Tablet, and Mobile on all 10 routes)
-- Baseline screenshots captured: 30 full-page screenshots (10 routes x 3 viewports)
+- Baseline screenshots captured: 30 full-page screenshots (10 routes x 3 viewports) + 4 Phase 4 3D button screenshots
 - Curated & verified images on disk: 109 unique images (0 missing references across `src/`)
 - Map basemap style: Permanent CARTO Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=...`) with valid API key
 - Watermarks on map: 0 (completely eliminated)
@@ -46,3 +47,4 @@ Progress: [███░░░░░░░] 43% (Milestone 2: 3/7 phases complete
 12. **Project Preparation & Skill Integration (Phase 12):** Installed 5 professional design intelligence skills in `.agents/skills/`, established permanent project rules (`GEMINI.md`, `AGENTS.md`), and structured 7-phase upgrade roadmap.
 13. **Comprehensive Codebase Mapping & Baseline Audit (Phase 13):** Full architectural mapping, multi-viewport audit of all 10 pages, 30 baseline captures, 109 image assets verified with 0 missing files, interactive reservation/map/gallery verification, and 10-point regression checklist.
 14. **Design Token Architecture & Luxury Typography (Phase 14):** Created canonical `DESIGN.md` in root with 5-skill coordinated team. Standardized royal Indian heritage palette, 4px grid, Crimson Text + DM Sans hierarchy, 6-subject photography guidelines (zero stock rule), universal tactile 3D button contracts, and synchronized Tailwind/CSS tokens.
+15. **Universal Tactile Button & Micro-Interaction System (Phase 15):** Implemented centralized `useTactile3D` hook and upgraded universal `Button.tsx` with 3D perspective tilt (±6°), 4px elevation, dynamic sheen overlay, and tactile press compression (`scale: 0.975`). Upgraded controls across reservation dock, gallery filter pills, "Discover More" progressive trigger, map controls, room detail carousel/thumbs, and spa selections. Verified via automated CDP tests and screenshots.

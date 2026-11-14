@@ -166,10 +166,10 @@ export function SpaCatalogueBrowser({
                   key={cat.id}
                   type="button"
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-sans font-medium transition-all shrink-0 whitespace-nowrap ${
+                  className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-sans font-medium transition-all shrink-0 whitespace-nowrap tactile-3d hover:-translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold ${
                     isActive
-                      ? "bg-brand-navy text-white shadow-subtle"
-                      : "bg-brand-beige/60 text-brand-charcoal/80 hover:bg-brand-beige hover:text-brand-navy border border-brand-charcoal/10"
+                      ? "bg-brand-navy text-white shadow-subtle hover:shadow-hover"
+                      : "bg-brand-beige/60 text-brand-charcoal/80 hover:bg-brand-beige hover:text-brand-navy border border-brand-charcoal/10 shadow-subtle hover:shadow-card"
                   }`}
                 >
                   <span>{cat.label}</span>

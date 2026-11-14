@@ -158,7 +158,7 @@ export function RoomDetailView({ room }: RoomDetailViewProps) {
                         prev > 0 ? prev - 1 : galleryImages.length - 1
                       )
                     }
-                    className="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white backdrop-blur-md transition-all shadow-md focus:outline-none"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white backdrop-blur-md transition-all tactile-3d hover:scale-105 active:scale-95 shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
                     aria-label="Previous photograph"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -169,7 +169,7 @@ export function RoomDetailView({ room }: RoomDetailViewProps) {
                         prev < galleryImages.length - 1 ? prev + 1 : 0
                       )
                     }
-                    className="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white backdrop-blur-md transition-all shadow-md focus:outline-none"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/50 hover:bg-black/80 text-white backdrop-blur-md transition-all tactile-3d hover:scale-105 active:scale-95 shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
                     aria-label="Next photograph"
                   >
                     <ChevronRight className="w-5 h-5" />
@@ -196,10 +196,10 @@ export function RoomDetailView({ room }: RoomDetailViewProps) {
                     key={idx}
                     onClick={() => setActiveImageIndex(idx)}
                     className={cn(
-                      "relative aspect-[16/10] rounded-xl overflow-hidden border-2 transition-all duration-200 focus:outline-none",
+                      "relative aspect-[16/10] rounded-xl overflow-hidden border-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold tactile-3d hover:-translate-y-0.5 active:scale-95",
                       activeImageIndex === idx
                         ? "border-brand-gold shadow-md scale-[1.02] ring-2 ring-brand-gold/40"
-                        : "border-transparent opacity-70 hover:opacity-100"
+                        : "border-transparent opacity-70 hover:opacity-100 hover:shadow-subtle"
                     )}
                     aria-label={`View ${img.caption}`}
                   >

@@ -17,6 +17,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/Button";
 
 // Filter tab configuration
 interface FilterGroup {
@@ -155,11 +156,11 @@ export function GalleryViewer() {
                   key={group.id}
                   onClick={() => handleFilterChange(group.id)}
                   className={cn(
-                    "px-4 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap transition-all duration-200 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-gold/50 cursor-pointer",
-                    "hover:-translate-y-0.5 active:scale-[0.97]",
+                    "px-4 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap transition-all duration-250 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold cursor-pointer",
+                    "tactile-3d hover:-translate-y-0.5 active:scale-[0.97]",
                     isActive
-                      ? "bg-brand-navy text-brand-sand shadow-md ring-1 ring-brand-gold/40"
-                      : "bg-white/90 text-brand-charcoal hover:bg-brand-beige border border-brand-charcoal/10"
+                      ? "bg-brand-navy text-brand-sand shadow-md ring-1 ring-brand-gold/40 hover:shadow-gold-ambient"
+                      : "bg-white/90 text-brand-charcoal hover:bg-brand-beige border border-brand-charcoal/10 shadow-subtle hover:shadow-card"
                   )}
                 >
                   <span>{group.label}</span>
@@ -271,18 +272,18 @@ export function GalleryViewer() {
         {/* Progressive 3-at-a-Time "Discover More" Bar */}
         <div className="mt-12 text-center flex flex-col items-center justify-center gap-3">
           {hasMore ? (
-            <motion.button
-              whileHover={{ y: -2, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <Button
+              variant="primary"
+              size="lg"
               onClick={handleDiscoverMore}
-              className="px-8 py-3.5 rounded-full bg-brand-navy hover:bg-brand-charcoal text-brand-sand font-sans text-sm font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2.5 border border-brand-gold/40 focus:outline-none focus:ring-2 focus:ring-brand-gold group cursor-pointer"
+              withArrow
+              className="rounded-full shadow-md hover:shadow-gold-ambient border border-brand-gold/40 group px-8 py-3.5 text-brand-sand font-medium text-sm"
             >
               <span>Discover More Photographs</span>
-              <span className="px-2 py-0.5 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-mono">
+              <span className="ml-2 px-2 py-0.5 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-mono">
                 +{nextBatchSize}
               </span>
-              <ArrowRight className="w-4 h-4 text-brand-gold group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            </Button>
           ) : (
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-beige/60 border border-brand-charcoal/10 text-xs font-sans text-brand-charcoal/80 shadow-sm">
               <CheckCircle2 className="w-4 h-4 text-brand-gold" />
@@ -323,7 +324,7 @@ export function GalleryViewer() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={closeLightbox}
-                  className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors focus:outline-none focus:ring-2 focus:ring-brand-gold cursor-pointer"
+                  className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all tactile-3d hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold cursor-pointer"
                   aria-label="Close Lightbox"
                 >
                   <X className="w-5 h-5" />
@@ -336,7 +337,7 @@ export function GalleryViewer() {
               {/* Prev Button */}
               <button
                 onClick={prevPhoto}
-                className="absolute left-4 sm:left-8 z-20 p-3 rounded-full bg-brand-charcoal/60 hover:bg-brand-charcoal/90 text-white border border-white/15 backdrop-blur-md transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-gold cursor-pointer"
+                className="absolute left-4 sm:left-8 z-20 p-3 rounded-full bg-brand-charcoal/60 hover:bg-brand-charcoal/90 text-white border border-white/15 backdrop-blur-md transition-all tactile-3d hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold cursor-pointer shadow-lg"
                 aria-label="Previous Photo"
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -356,7 +357,7 @@ export function GalleryViewer() {
               {/* Next Button */}
               <button
                 onClick={nextPhoto}
-                className="absolute right-4 sm:right-8 z-20 p-3 rounded-full bg-brand-charcoal/60 hover:bg-brand-charcoal/90 text-white border border-white/15 backdrop-blur-md transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-gold cursor-pointer"
+                className="absolute right-4 sm:right-8 z-20 p-3 rounded-full bg-brand-charcoal/60 hover:bg-brand-charcoal/90 text-white border border-white/15 backdrop-blur-md transition-all tactile-3d hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold cursor-pointer shadow-lg"
                 aria-label="Next Photo"
               >
                 <ChevronRight className="w-6 h-6" />

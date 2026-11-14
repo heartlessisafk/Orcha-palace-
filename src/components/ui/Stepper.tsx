@@ -45,7 +45,7 @@ export function Stepper({
           onClick={handleDecrement}
           disabled={value <= min}
           aria-label={`Decrease ${label}`}
-          className="w-8 h-8 rounded-full border border-brand-charcoal/20 flex items-center justify-center text-brand-charcoal hover:border-brand-gold hover:text-brand-gold disabled:opacity-30 disabled:pointer-events-none transition-colors"
+          className="w-8 h-8 rounded-full border border-brand-charcoal/20 flex items-center justify-center text-brand-charcoal hover:border-brand-gold hover:text-brand-gold disabled:opacity-30 disabled:pointer-events-none transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 hover:shadow-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
         >
           <Minus className="w-3.5 h-3.5" />
         </button>
@@ -57,7 +57,7 @@ export function Stepper({
           onClick={handleIncrement}
           disabled={value >= max}
           aria-label={`Increase ${label}`}
-          className="w-8 h-8 rounded-full border border-brand-charcoal/20 flex items-center justify-center text-brand-charcoal hover:border-brand-gold hover:text-brand-gold disabled:opacity-30 disabled:pointer-events-none transition-colors"
+          className="w-8 h-8 rounded-full border border-brand-charcoal/20 flex items-center justify-center text-brand-charcoal hover:border-brand-gold hover:text-brand-gold disabled:opacity-30 disabled:pointer-events-none transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 hover:shadow-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
         >
           <Plus className="w-3.5 h-3.5" />
         </button>

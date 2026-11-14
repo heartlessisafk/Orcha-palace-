@@ -117,10 +117,10 @@ export function SpaTreatmentCard({
           <button
             type="button"
             onClick={() => onToggleSelect(treatment)}
-            className={`inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-sans font-semibold transition-all shadow-subtle ${
+            className={`inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-sans font-semibold transition-all shadow-subtle tactile-3d hover:-translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold ${
               isSelected
-                ? "bg-brand-gold text-brand-navy hover:bg-brand-gold-dark hover:text-white"
-                : "bg-brand-navy text-white hover:bg-brand-navy-light"
+                ? "bg-brand-gold text-brand-navy hover:bg-brand-gold-dark hover:text-white hover:shadow-gold-ambient"
+                : "bg-brand-navy text-white hover:bg-brand-navy-light hover:shadow-hover"
             }`}
           >
             {isSelected ? (

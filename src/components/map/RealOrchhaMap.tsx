@@ -321,10 +321,10 @@ export function RealOrchhaMap({
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
                 className={cn(
-                  "px-3 py-1.5 rounded-full text-xs font-sans tracking-wide transition-all duration-200 border",
+                  "px-3 py-1.5 rounded-full text-xs font-sans tracking-wide transition-all duration-200 border tactile-3d hover:-translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold",
                   isActive
-                    ? "bg-brand-gold text-brand-charcoal font-semibold border-brand-gold shadow-md"
-                    : "bg-white/5 text-white/75 border-white/10 hover:border-brand-gold/40 hover:text-white"
+                    ? "bg-brand-gold text-brand-charcoal font-semibold border-brand-gold shadow-md hover:shadow-gold-ambient"
+                    : "bg-white/5 text-white/75 border-white/10 hover:border-brand-gold/40 hover:text-white shadow-subtle"
                 )}
               >
                 {cat.label}
@@ -461,7 +461,7 @@ export function RealOrchhaMap({
             <button
               onClick={handleZoomIn}
               title="Zoom In"
-              className="p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all flex items-center justify-center"
+              className="p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 hover:shadow-gold-ambient flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
             >
               <Plus className="w-4 h-4" />
             </button>
@@ -470,7 +470,7 @@ export function RealOrchhaMap({
             <button
               onClick={handleZoomOut}
               title="Zoom Out"
-              className="p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all flex items-center justify-center"
+              className="p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 hover:shadow-gold-ambient flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
             >
               <Minus className="w-4 h-4" />
             </button>
@@ -479,7 +479,7 @@ export function RealOrchhaMap({
             <button
               onClick={handleResetView}
               title="Reset Overview"
-              className="p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all flex items-center justify-center"
+              className="p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 hover:shadow-gold-ambient flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
             >
               <RotateCcw className="w-4 h-4" />
             </button>

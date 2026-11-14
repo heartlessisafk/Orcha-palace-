@@ -31,6 +31,28 @@
   }
 }
 
+@layer components {
+  /* Tactile 3D Interactive Button Foundation */
+  .tactile-3d {
+    perspective: 800px;
+    transform-style: preserve-3d;
+    will-change: transform, box-shadow;
+    transform: perspective(800px) rotateX(var(--tactile-rx, 0deg)) rotateY(var(--tactile-ry, 0deg)) translateZ(var(--tactile-tz, 0px)) scale(var(--tactile-scale, 1));
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .tactile-sheen {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    overflow: hidden;
+    opacity: var(--tactile-sheen-opacity, 0);
+    background: radial-gradient(circle at var(--tactile-sheen-x, 50%) var(--tactile-sheen-y, 50%), rgba(255, 255, 255, 0.32) 0%, transparent 65%);
+    transition: opacity 0.25s ease;
+  }
+}
+
 /* Reduced Motion Safety */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -40,5 +62,10 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .tactile-3d {
+    transform: none !important;
+    transition: none !important;
   }
 }

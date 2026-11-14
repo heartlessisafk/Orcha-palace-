@@ -59,8 +59,8 @@ All modifications must adhere strictly to [GEMINI.md](file:///Users/sam/Projects
   - Understand the entire existing website before changing design or code. Map architecture, audit all 10 pages across 3 viewports (30 baseline screenshots), build exhaustive animation inventory, verify zero missing assets across 109 images, verify interactive flows (booking modal scroll lock, CARTO Voyager map, gallery reveal), and establish 10-point non-negotiable regression checklist.
 - [x] **Phase 3: Design Token Architecture, Luxury Typography & Color Harmonies** (completed 2026-11-14)
   - Established canonical DESIGN.md design system. Coordinated 5 design skills (Anthropic Frontend Design, Impeccable, Taste Skill, UI UX Pro Max, Vercel Guidelines). Grounded brand in Bundelkhand royal heritage and contemporary luxury. Synchronized Tailwind tokens (gold-ambient and modal shadows), CSS variables (brand-gold-dark), typography scales (< 80ch lines), photography guidelines for all 6 dimensions, tactile 3D button contracts, and collision-proof Z-index hierarchy.
-- [ ] **Phase 4: Universal Tactile Button & Micro-Interaction System**
-  - Implement consistent, premium 3D hover interaction across all interactive buttons across the site with tactile elevation and gilded glow.
+- [x] **Phase 4: Universal Tactile Button & Micro-Interaction System** (completed 2026-11-14)
+  - Implemented centralized `useTactile3D` hook and upgraded universal `Button.tsx` with 3D perspective tilt (max ±6°), 4px elevation lift, interactive light reflection sheen, and tactile click compression (`scale: 0.975`, `tz: -2px`). Upgraded specialized controls across reservation dock, gallery filter pills, "Discover More" progressive trigger, map controls, room detail carousel/thumbs, and spa selections. Verified via automated CDP tests and screenshots.
 - [ ] **Phase 5: Hero Section & Reservation Suite Visual Elevation**
   - Elevate hero entrance choreography and editorial layout using `taste-skill` and `impeccable` principles. Polish the in-flow Reservation Sanctuary Suite.
 - [ ] **Phase 6: Accommodation Cards & Dynamic Room Details Refinement**
