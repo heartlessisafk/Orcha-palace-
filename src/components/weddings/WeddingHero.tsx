@@ -31,9 +31,8 @@ export function WeddingHero() {
           sizes="100vw"
           className="object-cover object-center scale-105 transition-transform duration-1000 ease-out"
         />
-        {/* Layered luxury scrim for optimal legibility and romantic mood */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/65 to-brand-navy/45" />
-        <div className="absolute inset-0 bg-radial-vignette opacity-80" />
+        {/* Layered luxury scrim for optimal legibility and natural warm wedding atmosphere */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/35 to-black/25" />
       </div>
 
       {/* 2. Content Container */}

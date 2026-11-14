@@ -1,0 +1,137 @@
+[
+  {
+    "viewport": "desktop_1440",
+    "dimensions": "1440x900",
+    "inspection": {
+      "found": true,
+      "title": "Where Royal Heritage Becomes Your Forever",
+      "subtitle": "Celebrate your union on the tranquil banks of the River Betwa, across from Orchha's 16th-century royal horizon. Sprawling illuminated banquet lawns, canopied mandaps, and authentic Bundelkhand hospitality tailored for unforgettable memories.",
+      "badge": "Royal Wedding Celebrations",
+      "hasImage": true,
+      "imgSrc": "/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+      "imgComplete": true,
+      "imgNaturalWidth": 768,
+      "imgNaturalHeight": 432,
+      "overlayStyles": [
+        {
+          "className": "absolute inset-0 bg-gradient-to-t from-black/60 via-black/35 to-black/25",
+          "computedBackground": "linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25))",
+          "computedColor": "rgba(0, 0, 0, 0)",
+          "opacity": "1"
+        }
+      ],
+      "hasNavyOverlay": false,
+      "hasHorizontalOverflow": false,
+      "scrollWidth": 1425,
+      "innerWidth": 1440
+    }
+  },
+  {
+    "viewport": "ipad_portrait_768",
+    "dimensions": "768x1024",
+    "inspection": {
+      "found": true,
+      "title": "Where Royal Heritage Becomes Your Forever",
+      "subtitle": "Celebrate your union on the tranquil banks of the River Betwa, across from Orchha's 16th-century royal horizon. Sprawling illuminated banquet lawns, canopied mandaps, and authentic Bundelkhand hospitality tailored for unforgettable memories.",
+      "badge": "Royal Wedding Celebrations",
+      "hasImage": true,
+      "imgSrc": "/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+      "imgComplete": true,
+      "imgNaturalWidth": 409,
+      "imgNaturalHeight": 230,
+      "overlayStyles": [
+        {
+          "className": "absolute inset-0 bg-gradient-to-t from-black/60 via-black/35 to-black/25",
+          "computedBackground": "linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25))",
+          "computedColor": "rgba(0, 0, 0, 0)",
+          "opacity": "1"
+        }
+      ],
+      "hasNavyOverlay": false,
+      "hasHorizontalOverflow": false,
+      "scrollWidth": 768,
+      "innerWidth": 768
+    }
+  },
+  {
+    "viewport": "ipad_air_820",
+    "dimensions": "820x1180",
+    "inspection": {
+      "found": true,
+      "title": "Where Royal Heritage Becomes Your Forever",
+      "subtitle": "Celebrate your union on the tranquil banks of the River Betwa, across from Orchha's 16th-century royal horizon. Sprawling illuminated banquet lawns, canopied mandaps, and authentic Bundelkhand hospitality tailored for unforgettable memories.",
+      "badge": "Royal Wedding Celebrations",
+      "hasImage": true,
+      "imgSrc": "/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+      "imgComplete": true,
+      "imgNaturalWidth": 437,
+      "imgNaturalHeight": 246,
+      "overlayStyles": [
+        {
+          "className": "absolute inset-0 bg-gradient-to-t from-black/60 via-black/35 to-black/25",
+          "computedBackground": "linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25))",
+          "computedColor": "rgba(0, 0, 0, 0)",
+          "opacity": "1"
+        }
+      ],
+      "hasNavyOverlay": false,
+      "hasHorizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820
+    }
+  },
+  {
+    "viewport": "iphone_14_390",
+    "dimensions": "390x844",
+    "inspection": {
+      "found": true,
+      "title": "Where Royal Heritage Becomes Your Forever",
+      "subtitle": "Celebrate your union on the tranquil banks of the River Betwa, across from Orchha's 16th-century royal horizon. Sprawling illuminated banquet lawns, canopied mandaps, and authentic Bundelkhand hospitality tailored for unforgettable memories.",
+      "badge": "Royal Wedding Celebrations",
+      "hasImage": true,
+      "imgSrc": "/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+      "imgComplete": true,
+      "imgNaturalWidth": 332,
+      "imgNaturalHeight": 187,
+      "overlayStyles": [
+        {
+          "className": "absolute inset-0 bg-gradient-to-t from-black/60 via-black/35 to-black/25",
+          "computedBackground": "linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25))",
+          "computedColor": "rgba(0, 0, 0, 0)",
+          "opacity": "1"
+        }
+      ],
+      "hasNavyOverlay": false,
+      "hasHorizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390
+    }
+  },
+  {
+    "viewport": "iphone_se_375",
+    "dimensions": "375x667",
+    "inspection": {
+      "found": true,
+      "title": "Where Royal Heritage Becomes Your Forever",
+      "subtitle": "Celebrate your union on the tranquil banks of the River Betwa, across from Orchha's 16th-century royal horizon. Sprawling illuminated banquet lawns, canopied mandaps, and authentic Bundelkhand hospitality tailored for unforgettable memories.",
+      "badge": "Royal Wedding Celebrations",
+      "hasImage": true,
+      "imgSrc": "/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+      "imgComplete": true,
+      "imgNaturalWidth": 375,
+      "imgNaturalHeight": 211,
+      "overlayStyles": [
+        {
+          "className": "absolute inset-0 bg-gradient-to-t from-black/60 via-black/35 to-black/25",
+          "computedBackground": "linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25))",
+          "computedColor": "rgba(0, 0, 0, 0)",
+          "opacity": "1"
+        }
+      ],
+      "hasNavyOverlay": false,
+      "hasHorizontalOverflow": false,
+      "scrollWidth": 375,
+      "innerWidth": 375
+    }
+  }
+]
