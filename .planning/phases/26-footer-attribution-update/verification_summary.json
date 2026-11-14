@@ -1,0 +1,53 @@
+[
+  {
+    "viewport": "desktop_1440",
+    "dimensions": "1440x900",
+    "inspection": {
+      "found": true,
+      "hasOldAttribution": false,
+      "hasNewAttribution": true,
+      "nameFound": true,
+      "nameClasses": "font-medium text-brand-beige-sand/95 hover:text-brand-gold transition-colors duration-300 cursor-default",
+      "nameColor": "rgba(232, 220, 197, 0.95)",
+      "webDevFound": true,
+      "webDevClasses": "text-[11px] text-brand-beige-sand/50 tracking-wider",
+      "webDevColor": "rgba(232, 220, 197, 0.5)",
+      "hasHorizontalOverflow": false,
+      "windowWidth": 1440
+    }
+  },
+  {
+    "viewport": "tablet_768",
+    "dimensions": "768x1024",
+    "inspection": {
+      "found": true,
+      "hasOldAttribution": false,
+      "hasNewAttribution": true,
+      "nameFound": true,
+      "nameClasses": "font-medium text-brand-beige-sand/95 hover:text-brand-gold transition-colors duration-300 cursor-default",
+      "nameColor": "rgba(232, 220, 197, 0.95)",
+      "webDevFound": true,
+      "webDevClasses": "text-[11px] text-brand-beige-sand/50 tracking-wider",
+      "webDevColor": "rgba(232, 220, 197, 0.5)",
+      "hasHorizontalOverflow": false,
+      "windowWidth": 768
+    }
+  },
+  {
+    "viewport": "mobile_390",
+    "dimensions": "390x844",
+    "inspection": {
+      "found": true,
+      "hasOldAttribution": false,
+      "hasNewAttribution": true,
+      "nameFound": true,
+      "nameClasses": "font-medium text-brand-beige-sand/95 hover:text-brand-gold transition-colors duration-300 cursor-default",
+      "nameColor": "rgba(232, 220, 197, 0.95)",
+      "webDevFound": true,
+      "webDevClasses": "text-[11px] text-brand-beige-sand/50 tracking-wider",
+      "webDevColor": "rgba(232, 220, 197, 0.5)",
+      "hasHorizontalOverflow": false,
+      "windowWidth": 390
+    }
+  }
+]

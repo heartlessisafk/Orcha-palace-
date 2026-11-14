@@ -138,9 +138,17 @@ export function FooterPrimitive() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-beige-sand/60 font-sans">
           <p>© {new Date().getFullYear()} The Orchha Resort. All rights reserved.</p>
-          <p>
-            Designed by Architect {SITE_CONFIG.propertyFacts.architect} · Heritage Redesign v2.0
-          </p>
+          <div className="flex flex-col sm:items-end text-center sm:text-right gap-0.5">
+            <p className="text-brand-beige-sand/70">
+              Designed &amp; Developed by{" "}
+              <span className="font-medium text-brand-beige-sand/95 hover:text-brand-gold transition-colors duration-300 cursor-default">
+                Samarth Shukla
+              </span>
+            </p>
+            <p className="text-[11px] text-brand-beige-sand/50 tracking-wider">
+              Web Developer
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -348,3 +348,16 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 4. Responsive grid adapted (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6`) for 4-column desktop, 2x2 tablet, and 1-column mobile.
 5. Multi-viewport automated CDP verification confirms 0 horizontal overflow.
 6. Clean production build and zero regressions across all 10 site routes.
+
+### Phase 26: Website Footer Attribution Update
+
+**Goal**: Update the footer attribution to credit Samarth Shukla (Web Developer) with refined hierarchy, subtle gold hover warmth, and responsive alignment, completely replacing the former architect credit without modifying any other footer sections.  
+**Depends on**: Phase 25  
+**Requirements**: FOOTER-CREDIT-01, FOOTER-HIERARCHY-01, FOOTER-RESPONSIVE-01  
+**Success Criteria**:
+1. Removed `Designed by Architect Yogesh Chandra (New Delhi) · Heritage Redesign v2.0` completely.
+2. Rendered `Designed & Developed by Samarth Shukla` with sub-label `Web Developer`.
+3. Applied refined typography and subtle 300ms gold hover transition to `Samarth Shukla`.
+4. Maintained desktop right-alignment and mobile center-alignment with 0 horizontal overflow.
+5. All other footer columns, contact details, and OTA links 100% preserved.
+6. Clean build and 0 regressions across all 10 site routes.
