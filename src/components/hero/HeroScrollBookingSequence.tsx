@@ -103,9 +103,9 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
 
             {/* High-Contrast Location Kicker */}
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-gold-light text-xs font-mono uppercase tracking-widest shadow-sm">
-                <MapPin className="w-3.5 h-3.5 text-brand-gold" />
-                <span>Betwa River Sanctuary · Orchha, Madhya Pradesh</span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-gold-light text-[11px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest shadow-sm">
+                <MapPin className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+                <span>KANCHANGHAT · ORCHHA, MADHYA PRADESH, INDIA</span>
               </div>
             </div>
 

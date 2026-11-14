@@ -4,14 +4,14 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Phase 22: Global Booking Widget — Occupancy Dropdown Clipping & Layering Bug (Client Feedback Fix 06).
+**Current focus:** Phase 23: Correct Homepage Hero Location Label (Client Feedback Fix 05).
 
 ## Current Position
-Milestone: Client Feedback Optimization (Phase 22 in sequence) (Completed)  
-Status: Phase 22 Completed & Verified (Occupancy dropdown clipping resolved across all viewports; 320px responsive panel with intelligent upward/downward flipping; 0 regressions)  
-Last activity: 2026-11-14 — Completed Phase 22: Resolved Client Feedback Fix 06 based on `IMG_1680.jpeg`. Eliminated restrictive `overflow-hidden` on `#booking-sequence` container while preserving 24px corner radii with explicit `rounded-t-3xl` and `rounded-b-3xl`. Upgraded `RoomSearchWidgetPrimitive.tsx` with a responsive 320px desktop/tablet popover, full-width mobile layout, intelligent directional flip detection (`spaceBelow < 370px`), `z-40` stacking elevation, and `Escape` keyboard dismissal. Verified across Desktop (1440px & 1024px), Tablet (768px), and Mobile (390px) with 0 build errors and 0 regressions.
+Milestone: Client Feedback Optimization (Phase 23 in sequence) (Completed)  
+Status: Phase 23 Completed & Verified (Homepage hero location badge updated to exact client-approved text: "KANCHANGHAT · ORCHHA, MADHYA PRADESH, INDIA"; verified across all viewports; 0 regressions)  
+Last activity: 2026-11-14 — Completed Phase 23: Resolved Client Feedback Fix 05. Replaced previous location label with exact approved text `KANCHANGHAT · ORCHHA, MADHYA PRADESH, INDIA` in `HeroScrollBookingSequence.tsx`. Preserved MapPin icon, luxury navy/gold aesthetic, and added responsive font scaling (`text-[11px] sm:text-xs`) to prevent awkward line wrapping on mobile. Verified exact string match via CDP across Desktop (1440px), Tablet (768px), and Mobile (390px) with 0 regressions.
 
-Progress: [██████████] 100% (Phases 1-22 complete)
+Progress: [██████████] 100% (Phases 1-23 complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed
