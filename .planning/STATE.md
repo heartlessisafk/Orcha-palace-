@@ -4,25 +4,32 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Phase 19: Header Branding Upgrade — Official Logo Replacement & Interactive White-to-Blue Container.
+**Current focus:** Phase 20: Heritage Geography Map Reveal — Text Visibility & Scroll Performance Optimization (Client Feedback Fix 03).
 
 ## Current Position
-Milestone: Post-Milestone Brand Upgrade (Phase 19 in sequence) (Completed)  
-Status: Phase 19 Completed & Verified (Official logo installed, interactive container operational, 0 regressions)  
-Last activity: 2026-11-14 — Completed Phase 19: Replaced header branding with official client logo (`IMG_1674.png`). Engineered a luxury white/ivory container with softly rounded corners (`rounded-xl`), GPU-accelerated CSS mask rendering preserving original serifs and "by the river..." tagline. Implemented 300ms smooth transition to brand navy blue (`#0C1731`) on hover and keyboard Tab focus with white lettering. Verified desktop, tablet, and mobile layouts via automated CDP testing and visual screenshots with 0px overflow and 0 build errors.
+Milestone: Client Feedback Optimization (Phase 20 in sequence) (Completed)  
+Status: Phase 20 Completed & Verified (Text visibility resolved with luxury floating panel, scroll lag eliminated via GPU promotion & visibility gating, 0 regressions)  
+Last activity: 2026-11-14 — Completed Phase 20: Resolved Client Feedback Fix 03 based on `IMG_1675.jpeg`. Enclosed Stage 1 dialog in an elegant translucent floating luxury panel (`rounded-3xl`, `bg-white/90 sm:bg-white/95`, `backdrop-blur-md`, `border border-brand-gold/35`) with deep navy (`#0C1731`) and charcoal typography, achieving 100% contrast against the Chhatris photo. Eliminated continuous `filter: saturate()` repaints, added Leaflet map visibility gating (`visibility: hidden` when off-screen), promoted layers to GPU compositor, and removed nested backdrop blur on scaling map header. Verified all 5 scroll acts and 10 application routes with 0 build errors.
 
-Progress: [██████████] 100% (Phases 1-19 complete)
+Progress: [██████████] 100% (Phases 1-20 complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed
 - Milestone 2 phases: 7 / 7 completed
 - Branding upgrade phase: Phase 19 completed
+- Client feedback fixes: Phase 20 completed
 - Installed design skills: 5/5 verified in `.agents/skills/`
 - Design system canonical document: `DESIGN.md` established at project root
 - Universal 3D button system: Active via `useTactile3D` and `Button.tsx` (verified on all interactive buttons)
 - Header branding system: Official `IMG_1674.png` active in interactive white-to-blue luxury container
+- Map experience: Refined translucent floating panel in Stage 1, 60fps GPU-accelerated scroll choreography
 - Errors in build: 0
 - Type check: Clean (0 errors)
+- Console errors in browser: 0
+- Missing image alt tags: 0
+- Mobile & responsive horizontal overflow: None (hasOverflow: false across all tested viewports)
+- Curated & verified images on disk: 109 unique images (0 missing references across `src/`)
+- Working animations preserved: 100%
 - Console errors in browser: 0
 - Missing image alt tags: 0
 - Mobile & responsive horizontal overflow: None (hasOverflow: false across all tested viewports)

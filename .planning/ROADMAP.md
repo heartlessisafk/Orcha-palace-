@@ -33,6 +33,7 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 - [x] **Phase 17 (Upgrade Phase 6): Technical Stabilization, Animation Integrity & Deep Responsive Testing** — Full verification of animation inventory (hero entrance, bidirectional scroll on 380vh review track and 450vh map finale, reduced-motion), end-to-end booking flow test with WhatsApp handoff and scroll-lock dialog, 9-viewport responsive matrix (63 test cases, 0 overflow), and 0 console errors. (completed 2026-11-14)
 - [x] **Phase 18 (Upgrade Phase 7): End-to-End Performance, Accessibility Audit & Production Hardening** — Full audit against Vercel Web Interface Guidelines (skip-to-content link, main landmarks, ARIA labels, form associations, map tile presentation, visible focus rings, zero layout shift); verified 10-route multi-viewport regression matrix across Desktop, Tablet, and Mobile (0px overflow); confirmed 0 console errors and clean production build. (completed 2026-11-14)
 - [x] **Phase 19: Header Branding Upgrade — Official Logo Replacement & Interactive White-to-Blue Container** — Replaced header branding with official client logo (`IMG_1674.png`), engineered luxury white container with 300ms hover transition to brand navy blue and white lettering, verified zero layout shift, accessibility, and 3-viewport responsiveness. (completed 2026-11-14)
+- [x] **Phase 20: Heritage Geography Map Reveal — Text Visibility & Scroll Performance Optimization (Client Feedback Fix 03)** — Introduced a refined translucent floating information panel behind Stage 1 map reveal dialog (`IMG_1675.jpeg`), eliminated expensive continuous `filter: saturate()`, implemented Leaflet map visibility gating and GPU acceleration, and verified smooth 60fps scrolling across all 5 acts. (completed 2026-11-14)
 
 ## Phase Details
 
@@ -273,3 +274,19 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 5. Zero movement, resizing, or layout shifts on hover or reset.
 6. Keyboard Tab navigation provides accessible gold focus ring and high-contrast color elevation.
 7. Desktop, Tablet, and Mobile layouts verified via automated CDP testing and visual screenshots with 0px horizontal overflow.
+
+### Phase 20: Heritage Geography Map Reveal — Text Visibility & Scroll Performance Optimization (Client Feedback Fix 03)
+
+**Goal**: Resolve text visibility issues and scroll lag identified in Client Feedback Fix 03 (`IMG_1675.jpeg`). Implement a refined translucent floating information panel behind Stage 1 dialog and eliminate heavy GPU filter repaints to ensure silky 60fps scrolling.  
+**Depends on**: Phase 19  
+**Requirements**: MAP-VISIBILITY-01, MAP-PERF-01, MAP-CONTAINER-01, MAP-STAGE-01  
+**Success Criteria**:
+
+1. Stage 1 dialog wrapped in an elegant translucent floating panel (`rounded-3xl`, `bg-white/90 sm:bg-white/95`, `backdrop-blur-md`, `border border-brand-gold/35`).
+2. High-contrast typography hierarchy (`Crimson Text` in `#0C1731`, charcoal descriptions, antique gold badges) ensuring 100% readability.
+3. Underlying heritage photography remains clearly visible through and around the floating panel.
+4. Continuous `filter: saturate()` eliminated, replacing with GPU-composited opacity transitions.
+5. Strict visibility gating applied to Leaflet map (`visibility: hidden` when inactive), grid, line-art, and CTA layers.
+6. Real Leaflet map top bar optimized by removing nested backdrop-blur, eliminating GPU frame-buffer readback stalls.
+7. Mobile layout header upgraded with matching high-contrast ivory card styling.
+8. All 5 scroll acts and 10 application routes verified with zero regressions.

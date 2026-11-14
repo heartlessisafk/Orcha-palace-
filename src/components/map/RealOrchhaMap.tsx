@@ -305,7 +305,7 @@ export function RealOrchhaMap({
       {/* ─────────────────────────────────────────────────────────────────
           HEADER & CATEGORY FILTER BAR
           ───────────────────────────────────────────────────────────────── */}
-      <div className="p-4 sm:p-6 border-b border-brand-gold/15 bg-[#0B131E]/90 backdrop-blur-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="p-4 sm:p-6 border-b border-brand-gold/15 bg-[#0B131E]/98 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
             <Compass className="w-4 h-4 text-brand-gold animate-spin-slow" />

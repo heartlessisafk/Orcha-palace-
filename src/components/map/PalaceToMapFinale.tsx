@@ -49,25 +49,28 @@ export function PalaceToMapFinale({
   const heroPointerEvents = useTransform(scrollYProgress, (p) => (p < 0.11 ? "auto" : "none"));
 
   // STAGE 2: Image Saturation Dissolve & Architectural Blueprint (0.08 - 0.30)
-  const imageSaturation = useTransform(scrollYProgress, [0.06, 0.22], [1.0, 0.0], { clamp: true });
   const imageOverlayOpacity = useTransform(scrollYProgress, [0.06, 0.26], [0.35, 0.94], { clamp: true });
   const imageScale = useTransform(scrollYProgress, [0.00, 0.28], [1.05, 1.0], { clamp: true });
 
   // Architectural Grid & Cenotaph Blueprint
   const lineArtOpacity = useTransform(scrollYProgress, [0.10, 0.18, 0.25, 0.32], [0.0, 1.0, 1.0, 0.0], { clamp: true });
   const lineArtScale = useTransform(scrollYProgress, [0.10, 0.25], [1.1, 1.0], { clamp: true });
+  const lineArtVisibility = useTransform(scrollYProgress, (p) => (p >= 0.08 && p <= 0.34 ? "visible" : "hidden"));
 
   const gridOverlayOpacity = useTransform(scrollYProgress, [0.12, 0.20, 0.28, 0.34], [0.0, 0.5, 0.5, 0.0], { clamp: true });
+  const gridVisibility = useTransform(scrollYProgress, (p) => (p >= 0.10 && p <= 0.36 ? "visible" : "hidden"));
 
   // STAGE 3 & 4: Real Geographic Map & Tourist Explorer (0.28 - 0.78)
   const mapOpacity = useTransform(scrollYProgress, [0.28, 0.38, 0.72, 0.82], [0.0, 1.0, 1.0, 0.0], { clamp: true });
   const mapScale = useTransform(scrollYProgress, [0.28, 0.38, 0.72, 0.82], [0.96, 1.0, 1.0, 0.98], { clamp: true });
+  const mapVisibility = useTransform(scrollYProgress, (p) => (p >= 0.26 && p <= 0.84 ? "visible" : "hidden"));
   const mapPointerEvents = useTransform(scrollYProgress, (p) => (p >= 0.28 && p < 0.78 ? "auto" : "none"));
 
   // STAGE 5: Final Luxury Booking Invitation (0.78 - 0.96)
   const ctaCardOpacity = useTransform(scrollYProgress, [0.78, 0.88], [0.0, 1.0], { clamp: true });
   const ctaCardY = useTransform(scrollYProgress, [0.78, 0.88], [40, 0], { clamp: true });
   const ctaCardScale = useTransform(scrollYProgress, [0.78, 0.88], [0.96, 1.0], { clamp: true });
+  const ctaVisibility = useTransform(scrollYProgress, (p) => (p >= 0.76 ? "visible" : "hidden"));
   const ctaPointerEvents = useTransform(scrollYProgress, (p) => (p >= 0.78 ? "auto" : "none"));
 
   // Global Desktop Progress Indicator Bar
@@ -104,14 +107,9 @@ export function PalaceToMapFinale({
           style={{
             scale: imageScale,
           }}
-          className="absolute inset-0 w-full h-full pointer-events-none"
+          className="absolute inset-0 w-full h-full pointer-events-none transform-gpu"
         >
-          <motion.div
-            style={{
-              filter: useTransform(imageSaturation, (s) => `saturate(${s})`),
-            }}
-            className="relative w-full h-full"
-          >
+          <div className="relative w-full h-full">
             <Image
               src={RESORT_ASSETS.chhatrisHeritage.src}
               alt="The 14 Royal Cenotaphs along the River Betwa in Orchha"
@@ -120,14 +118,14 @@ export function PalaceToMapFinale({
               priority
               className="object-cover object-center"
             />
-          </motion.div>
+          </div>
 
           {/* Dynamic Darkness Overlay */}
           <motion.div
             style={{
               opacity: imageOverlayOpacity,
             }}
-            className="absolute inset-0 bg-[#080D15]"
+            className="absolute inset-0 bg-[#080D15] transform-gpu"
           />
 
           {/* Subtle Ambient Radial Vignette */}
@@ -138,8 +136,9 @@ export function PalaceToMapFinale({
         <motion.div
           style={{
             opacity: gridOverlayOpacity,
+            visibility: gridVisibility as any,
           }}
-          className="absolute inset-0 pointer-events-none flex items-center justify-center"
+          className="absolute inset-0 pointer-events-none flex items-center justify-center transform-gpu"
         >
           <div className="w-[92%] h-[86%] border border-brand-gold/20 relative">
             <div className="absolute inset-0 grid grid-cols-6 grid-rows-4 divide-x divide-y divide-brand-gold/15">
@@ -166,8 +165,9 @@ export function PalaceToMapFinale({
           style={{
             opacity: lineArtOpacity,
             scale: lineArtScale,
+            visibility: lineArtVisibility as any,
           }}
-          className="absolute inset-0 pointer-events-none flex items-center justify-center"
+          className="absolute inset-0 pointer-events-none flex items-center justify-center transform-gpu"
         >
           <div className="w-full max-w-5xl h-[500px] relative px-8 flex items-center justify-center">
             <svg
@@ -222,9 +222,10 @@ export function PalaceToMapFinale({
           style={{
             opacity: mapOpacity,
             scale: mapScale,
+            visibility: mapVisibility as any,
             pointerEvents: mapPointerEvents as any,
           }}
-          className="absolute inset-0 flex items-center justify-center p-6 xl:p-10 z-20"
+          className="absolute inset-0 flex items-center justify-center p-6 xl:p-10 z-20 transform-gpu will-change-[transform,opacity]"
         >
           <div className="w-full max-w-7xl h-[680px]">
             <RealOrchhaMap
@@ -243,24 +244,33 @@ export function PalaceToMapFinale({
             visibility: heroVisibility as any,
             pointerEvents: heroPointerEvents as any,
           }}
-          className="absolute inset-0 z-30 flex flex-col items-center justify-center p-6 text-center space-y-4 max-w-3xl mx-auto"
+          className="absolute inset-0 z-30 flex items-center justify-center p-6"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-xs font-serif tracking-widest text-brand-gold uppercase">
-            <Compass className="w-3.5 h-3.5 text-brand-gold animate-spin-slow" />
-            Sacred Betwa River Valley · Bundelkhand
-          </div>
+          {/* Refined Translucent Floating Information Panel (White / Warm Ivory Luxury Glass) */}
+          <div className="w-full max-w-2xl text-center space-y-5 px-8 py-10 sm:px-12 sm:py-12 rounded-3xl bg-white/90 sm:bg-white/95 backdrop-blur-md border border-brand-gold/35 shadow-[0_20px_50px_rgba(0,0,0,0.35)] relative overflow-hidden">
+            {/* Subtle Ambient Gold Corner Highlight */}
+            <div
+              aria-hidden="true"
+              className="absolute -top-20 -right-20 w-44 h-44 bg-brand-gold/10 rounded-full blur-2xl pointer-events-none"
+            />
 
-          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white font-normal tracking-tight drop-shadow-md">
-            The Heritage Geography of Orchha
-          </h2>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-navy/5 border border-brand-gold/35 text-xs font-serif tracking-widest text-brand-gold-dark uppercase font-medium">
+              <Compass className="w-3.5 h-3.5 text-brand-gold-dark animate-spin-slow" />
+              Sacred Betwa River Valley · Bundelkhand
+            </div>
 
-          <p className="font-sans text-sm sm:text-base text-white/80 max-w-xl mx-auto leading-relaxed">
-            Discover the temples, royal architecture, and river landscapes surrounding your stay.
-          </p>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-brand-navy font-normal tracking-tight leading-tight">
+              The Heritage Geography of Orchha
+            </h2>
 
-          <div className="pt-4 flex items-center gap-2 text-xs font-mono text-brand-gold tracking-widest">
-            <span>SCROLL TO UNVEIL REAL GEOGRAPHY</span>
-            <span className="animate-bounce">↓</span>
+            <p className="font-sans text-sm sm:text-base text-brand-charcoal/80 max-w-lg mx-auto leading-relaxed">
+              Discover the temples, royal architecture, and river landscapes surrounding your stay.
+            </p>
+
+            <div className="pt-2 flex items-center justify-center gap-2 text-xs font-mono text-brand-gold-dark font-medium tracking-widest">
+              <span>SCROLL TO UNVEIL REAL GEOGRAPHY</span>
+              <span className="animate-bounce">↓</span>
+            </div>
           </div>
         </motion.div>
 
@@ -270,9 +280,10 @@ export function PalaceToMapFinale({
             opacity: ctaCardOpacity,
             y: ctaCardY,
             scale: ctaCardScale,
+            visibility: ctaVisibility as any,
             pointerEvents: ctaPointerEvents as any,
           }}
-          className="absolute inset-0 z-50 flex items-center justify-center p-6"
+          className="absolute inset-0 z-50 flex items-center justify-center p-6 transform-gpu"
         >
           <div className="w-full max-w-2xl bg-[#080D15]/95 border border-brand-gold/40 rounded-3xl p-8 sm:p-12 shadow-2xl text-center space-y-6 relative overflow-hidden backdrop-blur-xl">
             {/* Ambient Corner Glow */}
@@ -347,12 +358,12 @@ export function PalaceToMapFinale({
           Real geographic map with touch-friendly navigation
           ───────────────────────────────────────────────────────────────── */}
       <div className="lg:hidden px-4 py-16 sm:px-6 max-w-4xl mx-auto space-y-8">
-        <header className="text-center space-y-3">
-          <SubtitleTag inverted>Beyond the Ordinary</SubtitleTag>
-          <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal">
+        <header className="text-center space-y-3 p-6 sm:p-8 rounded-2xl bg-white/95 border border-brand-gold/35 shadow-xl text-brand-charcoal">
+          <SubtitleTag>Beyond the Ordinary</SubtitleTag>
+          <h2 className="font-serif text-3xl sm:text-4xl text-brand-navy font-normal">
             The Heritage Geography of Orchha
           </h2>
-          <p className="font-sans text-sm text-white/80 leading-relaxed max-w-md mx-auto">
+          <p className="font-sans text-sm text-brand-charcoal/80 leading-relaxed max-w-md mx-auto">
             Discover the temples, royal architecture, and sacred river landscapes surrounding your stay.
           </p>
         </header>
