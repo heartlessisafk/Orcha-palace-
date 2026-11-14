@@ -1,0 +1,3849 @@
+{
+  "timestamp": "2026-11-14T07:02:14.809Z",
+  "routes": {
+    "home": {
+      "url": "http://localhost:3000/",
+      "viewports": {
+        "desktop": {
+          "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+          "scrollW": 1425,
+          "innerW": 1440,
+          "hasOverflow": false,
+          "totalImages": 34,
+          "brokenImages": 13,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "The Orchha Resort blooming lotus pool illuminated at twilight",
+              "naturalW": 1200,
+              "naturalH": 675,
+              "clientW": 1425,
+              "clientH": 900,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 475,
+              "naturalH": 844,
+              "clientW": 554,
+              "clientH": 416,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 475,
+              "naturalH": 844,
+              "clientW": 554,
+              "clientH": 416,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 554,
+              "clientH": 416,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 554,
+              "clientH": 416,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-chhatris-reflection-river.jpg&w=1920&q=75",
+              "alt": "14 Royal Cenotaphs reflected in River Betwa at Kanchan Ghat",
+              "naturalW": 600,
+              "naturalH": 900,
+              "clientW": 554,
+              "clientH": 346,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "Lotus Swimming Pool at Twilight",
+              "naturalW": 600,
+              "naturalH": 337,
+              "clientW": 562,
+              "clientH": 421,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Room with Lotus Pool View",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 268,
+              "clientH": 268,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fdining%2Fdining-riverfront-alfresco.jpg&w=1920&q=75",
+              "alt": "Al Fresco Riverfront Dining",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 268,
+              "clientH": 268,
+              "isBroken": true
+            }
+          ],
+          "totalButtons": 45,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Book Your Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Scroll to Reserve",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "2 Adults · 1 RmChange",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Check Rates & Book",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 56,
+          "screenshot": "home_desktop.png",
+          "consoleErrors": []
+        },
+        "tablet": {
+          "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+          "scrollW": 768,
+          "innerW": 768,
+          "hasOverflow": false,
+          "totalImages": 34,
+          "brokenImages": 12,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "The Orchha Resort blooming lotus pool illuminated at twilight",
+              "naturalW": 640,
+              "naturalH": 360,
+              "clientW": 768,
+              "clientH": 922,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-chhatris-reflection-river.jpg&w=1920&q=75",
+              "alt": "14 Royal Cenotaphs reflected in River Betwa at Kanchan Ghat",
+              "naturalW": 640,
+              "naturalH": 960,
+              "clientW": 702,
+              "clientH": 439,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "Lotus Swimming Pool at Twilight",
+              "naturalW": 640,
+              "naturalH": 360,
+              "clientW": 702,
+              "clientH": 526,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Room with Lotus Pool View",
+              "naturalW": 320,
+              "naturalH": 568,
+              "clientW": 338,
+              "clientH": 338,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fdining%2Fdining-riverfront-alfresco.jpg&w=1920&q=75",
+              "alt": "Al Fresco Riverfront Dining",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 338,
+              "clientH": 338,
+              "isBroken": true
+            }
+          ],
+          "totalButtons": 45,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Book Your Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Scroll to Reserve",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "2 Adults · 1 RmChange",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Check Rates & Book",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 56,
+          "screenshot": "home_tablet.png",
+          "consoleErrors": []
+        },
+        "mobile": {
+          "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+          "scrollW": 390,
+          "innerW": 390,
+          "hasOverflow": false,
+          "totalImages": 28,
+          "brokenImages": 12,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "The Orchha Resort blooming lotus pool illuminated at twilight",
+              "naturalW": 324,
+              "naturalH": 182,
+              "clientW": 390,
+              "clientH": 760,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-chhatris-reflection-river.jpg&w=1920&q=75",
+              "alt": "14 Royal Cenotaphs reflected in River Betwa at Kanchan Ghat",
+              "naturalW": 324,
+              "naturalH": 487,
+              "clientW": 348,
+              "clientH": 218,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "Lotus Swimming Pool at Twilight",
+              "naturalW": 324,
+              "naturalH": 182,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Room with Lotus Pool View",
+              "naturalW": 162,
+              "naturalH": 288,
+              "clientW": 165,
+              "clientH": 165,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fdining%2Fdining-riverfront-alfresco.jpg&w=1920&q=75",
+              "alt": "Al Fresco Riverfront Dining",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 165,
+              "clientH": 165,
+              "isBroken": true
+            }
+          ],
+          "totalButtons": 45,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Book Your Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Scroll to Reserve",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "2 Adults · 1 RmChange",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Check Rates & Book",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 56,
+          "screenshot": "home_mobile.png",
+          "consoleErrors": []
+        }
+      }
+    },
+    "rooms": {
+      "url": "http://localhost:3000/rooms",
+      "viewports": {
+        "desktop": {
+          "title": "Accommodations & Luxury Swiss Tents | The Orchha Resort | The Orchha Resort",
+          "scrollW": 1425,
+          "innerW": 1440,
+          "hasOverflow": false,
+          "totalImages": 8,
+          "brokenImages": 1,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "The Orchha Resort lotus pool and heritage landscape at dusk",
+              "naturalW": 1200,
+              "naturalH": 675,
+              "clientW": 1425,
+              "clientH": 535,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 554,
+              "clientH": 416,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 554,
+              "clientH": 416,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 475,
+              "naturalH": 844,
+              "clientW": 554,
+              "clientH": 416,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 475,
+              "naturalH": 844,
+              "clientW": 554,
+              "clientH": 416,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fdining%2Fdining-riverfront-alfresco.jpg&w=1920&q=75",
+              "alt": "Alfresco riverside dining overlooking the River Betwa and Chhatris",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 552,
+              "clientH": 414,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 12,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Explore Room",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Reserve",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Explore Room",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Reserve",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 35,
+          "screenshot": "rooms_desktop.png",
+          "consoleErrors": []
+        },
+        "tablet": {
+          "title": "Accommodations & Luxury Swiss Tents | The Orchha Resort | The Orchha Resort",
+          "scrollW": 768,
+          "innerW": 768,
+          "hasOverflow": false,
+          "totalImages": 8,
+          "brokenImages": 1,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "The Orchha Resort lotus pool and heritage landscape at dusk",
+              "naturalW": 640,
+              "naturalH": 360,
+              "clientW": 768,
+              "clientH": 399,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fdining%2Fdining-riverfront-alfresco.jpg&w=1920&q=75",
+              "alt": "Alfresco riverside dining overlooking the River Betwa and Chhatris",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 704,
+              "clientH": 528,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 12,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Explore Room",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Reserve",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Explore Room",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Reserve",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 35,
+          "screenshot": "rooms_tablet.png",
+          "consoleErrors": []
+        },
+        "mobile": {
+          "title": "Accommodations & Luxury Swiss Tents | The Orchha Resort | The Orchha Resort",
+          "scrollW": 390,
+          "innerW": 390,
+          "hasOverflow": false,
+          "totalImages": 8,
+          "brokenImages": 1,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "The Orchha Resort lotus pool and heritage landscape at dusk",
+              "naturalW": 324,
+              "naturalH": 182,
+              "clientW": 390,
+              "clientH": 523,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fdining%2Fdining-riverfront-alfresco.jpg&w=1920&q=75",
+              "alt": "Alfresco riverside dining overlooking the River Betwa and Chhatris",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 350,
+              "clientH": 263,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 12,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Explore Room",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Reserve",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Explore Room",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Reserve",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 35,
+          "screenshot": "rooms_mobile.png",
+          "consoleErrors": []
+        }
+      }
+    },
+    "room_deluxe": {
+      "url": "http://localhost:3000/rooms/deluxe-room",
+      "viewports": {
+        "desktop": {
+          "title": "Deluxe Marble Room — Luxury Stay in Orchha | The Orchha Resort",
+          "scrollW": 1425,
+          "innerW": 1440,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the blooming lotus swimming pool",
+              "naturalW": 1000,
+              "naturalH": 1777,
+              "clientW": 1152,
+              "clientH": 494,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the blooming lotus swimming pool",
+              "naturalW": 300,
+              "naturalH": 533,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Spacious Deluxe Room interior with king bed and polished marble floor",
+              "naturalW": 300,
+              "naturalH": 533,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-bathroom-marble-vanity.jpg&w=1920&q=75",
+              "alt": "Deluxe ensuite bathroom with marble vanity and walk-in hot shower",
+              "naturalW": 360,
+              "naturalH": 639,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-deck-loungers-day.jpg&w=1920&q=75",
+              "alt": "Sun loungers on the central lotus pool deck directly below deluxe rooms",
+              "naturalW": 360,
+              "naturalH": 480,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 361,
+              "clientH": 270,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 361,
+              "clientH": 271,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 361,
+              "clientH": 270,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Previous photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Next photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View King bedroom with direct picture window perspective of the lotus pool",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Spacious layout with polished marble flooring and carved furniture",
+              "disabled": false
+            }
+          ],
+          "totalLinks": 38,
+          "screenshot": "room_deluxe_desktop.png",
+          "consoleErrors": []
+        },
+        "tablet": {
+          "title": "Deluxe Marble Room — Luxury Stay in Orchha | The Orchha Resort",
+          "scrollW": 768,
+          "innerW": 768,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the blooming lotus swimming pool",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 704,
+              "clientH": 396,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the blooming lotus swimming pool",
+              "naturalW": 160,
+              "naturalH": 284,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Spacious Deluxe Room interior with king bed and polished marble floor",
+              "naturalW": 160,
+              "naturalH": 284,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-bathroom-marble-vanity.jpg&w=1920&q=75",
+              "alt": "Deluxe ensuite bathroom with marble vanity and walk-in hot shower",
+              "naturalW": 192,
+              "naturalH": 341,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-deck-loungers-day.jpg&w=1920&q=75",
+              "alt": "Sun loungers on the central lotus pool deck directly below deluxe rooms",
+              "naturalW": 192,
+              "naturalH": 256,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Previous photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Next photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View King bedroom with direct picture window perspective of the lotus pool",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Spacious layout with polished marble flooring and carved furniture",
+              "disabled": false
+            }
+          ],
+          "totalLinks": 38,
+          "screenshot": "room_deluxe_tablet.png",
+          "consoleErrors": []
+        },
+        "mobile": {
+          "title": "Deluxe Marble Room — Luxury Stay in Orchha | The Orchha Resort",
+          "scrollW": 390,
+          "innerW": 390,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the blooming lotus swimming pool",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 350,
+              "clientH": 219,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the blooming lotus swimming pool",
+              "naturalW": 81,
+              "naturalH": 144,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Spacious Deluxe Room interior with king bed and polished marble floor",
+              "naturalW": 81,
+              "naturalH": 144,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-bathroom-marble-vanity.jpg&w=1920&q=75",
+              "alt": "Deluxe ensuite bathroom with marble vanity and walk-in hot shower",
+              "naturalW": 97,
+              "naturalH": 173,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-deck-loungers-day.jpg&w=1920&q=75",
+              "alt": "Sun loungers on the central lotus pool deck directly below deluxe rooms",
+              "naturalW": 97,
+              "naturalH": 130,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Previous photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Next photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View King bedroom with direct picture window perspective of the lotus pool",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Spacious layout with polished marble flooring and carved furniture",
+              "disabled": false
+            }
+          ],
+          "totalLinks": 38,
+          "screenshot": "room_deluxe_mobile.png",
+          "consoleErrors": []
+        }
+      }
+    },
+    "room_tent": {
+      "url": "http://localhost:3000/rooms/deluxe-swiss-tent",
+      "viewports": {
+        "desktop": {
+          "title": "Deluxe AC Swiss Tent — Luxury Stay in Orchha | The Orchha Resort",
+          "scrollW": 1425,
+          "innerW": 1440,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 1000,
+              "naturalH": 1777,
+              "clientW": 1152,
+              "clientH": 494,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 300,
+              "naturalH": 533,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-vanity-dressing.jpg&w=1920&q=75",
+              "alt": "Dressing vanity, timber floors, and wardrobe inside the Swiss tent",
+              "naturalW": 360,
+              "naturalH": 639,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-verandah-twilight.jpg&w=1920&q=75",
+              "alt": "Private verandah of the Swiss tent at twilight with garden views",
+              "naturalW": 360,
+              "naturalH": 639,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-cenotaphs-golden-hour.jpg&w=1920&q=75",
+              "alt": "The 14 Royal Cenotaphs at Kanchan Ghat illuminated at golden hour",
+              "naturalW": 360,
+              "naturalH": 639,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 361,
+              "clientH": 270,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 361,
+              "clientH": 271,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 361,
+              "clientH": 270,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Previous photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Next photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Interior glamping bedroom under the patterned canvas canopy ceiling",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Dedicated dressing vanity and storage area on polished timber floors",
+              "disabled": false
+            }
+          ],
+          "totalLinks": 38,
+          "screenshot": "room_tent_desktop.png",
+          "consoleErrors": []
+        },
+        "tablet": {
+          "title": "Deluxe AC Swiss Tent — Luxury Stay in Orchha | The Orchha Resort",
+          "scrollW": 768,
+          "innerW": 768,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 704,
+              "clientH": 396,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 160,
+              "naturalH": 284,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-vanity-dressing.jpg&w=1920&q=75",
+              "alt": "Dressing vanity, timber floors, and wardrobe inside the Swiss tent",
+              "naturalW": 192,
+              "naturalH": 341,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-verandah-twilight.jpg&w=1920&q=75",
+              "alt": "Private verandah of the Swiss tent at twilight with garden views",
+              "naturalW": 192,
+              "naturalH": 341,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-cenotaphs-golden-hour.jpg&w=1920&q=75",
+              "alt": "The 14 Royal Cenotaphs at Kanchan Ghat illuminated at golden hour",
+              "naturalW": 192,
+              "naturalH": 341,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Previous photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Next photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Interior glamping bedroom under the patterned canvas canopy ceiling",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Dedicated dressing vanity and storage area on polished timber floors",
+              "disabled": false
+            }
+          ],
+          "totalLinks": 38,
+          "screenshot": "room_tent_tablet.png",
+          "consoleErrors": []
+        },
+        "mobile": {
+          "title": "Deluxe AC Swiss Tent — Luxury Stay in Orchha | The Orchha Resort",
+          "scrollW": 390,
+          "innerW": 390,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 350,
+              "clientH": 219,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 81,
+              "naturalH": 144,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-vanity-dressing.jpg&w=1920&q=75",
+              "alt": "Dressing vanity, timber floors, and wardrobe inside the Swiss tent",
+              "naturalW": 97,
+              "naturalH": 173,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-verandah-twilight.jpg&w=1920&q=75",
+              "alt": "Private verandah of the Swiss tent at twilight with garden views",
+              "naturalW": 97,
+              "naturalH": 173,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-cenotaphs-golden-hour.jpg&w=1920&q=75",
+              "alt": "The 14 Royal Cenotaphs at Kanchan Ghat illuminated at golden hour",
+              "naturalW": 97,
+              "naturalH": 173,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite with river views and heritage decor",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Previous photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Next photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Interior glamping bedroom under the patterned canvas canopy ceiling",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Dedicated dressing vanity and storage area on polished timber floors",
+              "disabled": false
+            }
+          ],
+          "totalLinks": 38,
+          "screenshot": "room_tent_mobile.png",
+          "consoleErrors": []
+        }
+      }
+    },
+    "room_suite": {
+      "url": "http://localhost:3000/rooms/royal-heritage-suite",
+      "viewports": {
+        "desktop": {
+          "title": "Royal Heritage Suite — Luxury Stay in Orchha | The Orchha Resort",
+          "scrollW": 1425,
+          "innerW": 1440,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite living parlor with carved wood diwan and brass lamps",
+              "naturalW": 1000,
+              "naturalH": 1777,
+              "clientW": 1152,
+              "clientH": 494,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite living parlor with carved wood diwan and brass lamps",
+              "naturalW": 300,
+              "naturalH": 533,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Master bedroom suite with king bed and direct panoramic views",
+              "naturalW": 300,
+              "naturalH": 533,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-bathroom-marble-vanity.jpg&w=1920&q=75",
+              "alt": "Luxury master bathroom with polished marble vanity and tub",
+              "naturalW": 360,
+              "naturalH": 639,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-chhatris-reflection-river.jpg&w=1920&q=75",
+              "alt": "14 Royal Cenotaphs reflected in the River Betwa seen from the suite balcony",
+              "naturalW": 300,
+              "naturalH": 450,
+              "clientW": 272,
+              "clientH": 169,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 361,
+              "clientH": 270,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 361,
+              "clientH": 271,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 361,
+              "clientH": 270,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Previous photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Next photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Spacious salon with handcrafted diwan, plush armchairs, and brass decor",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Master bedroom with plush king bedding and scenic landscape views",
+              "disabled": false
+            }
+          ],
+          "totalLinks": 38,
+          "screenshot": "room_suite_desktop.png",
+          "consoleErrors": []
+        },
+        "tablet": {
+          "title": "Royal Heritage Suite — Luxury Stay in Orchha | The Orchha Resort",
+          "scrollW": 768,
+          "innerW": 768,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite living parlor with carved wood diwan and brass lamps",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 704,
+              "clientH": 396,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite living parlor with carved wood diwan and brass lamps",
+              "naturalW": 160,
+              "naturalH": 284,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Master bedroom suite with king bed and direct panoramic views",
+              "naturalW": 160,
+              "naturalH": 284,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-bathroom-marble-vanity.jpg&w=1920&q=75",
+              "alt": "Luxury master bathroom with polished marble vanity and tub",
+              "naturalW": 192,
+              "naturalH": 341,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-chhatris-reflection-river.jpg&w=1920&q=75",
+              "alt": "14 Royal Cenotaphs reflected in the River Betwa seen from the suite balcony",
+              "naturalW": 160,
+              "naturalH": 240,
+              "clientW": 160,
+              "clientH": 99,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Previous photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Next photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Spacious salon with handcrafted diwan, plush armchairs, and brass decor",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Master bedroom with plush king bedding and scenic landscape views",
+              "disabled": false
+            }
+          ],
+          "totalLinks": 38,
+          "screenshot": "room_suite_tablet.png",
+          "consoleErrors": []
+        },
+        "mobile": {
+          "title": "Royal Heritage Suite — Luxury Stay in Orchha | The Orchha Resort",
+          "scrollW": 390,
+          "innerW": 390,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite living parlor with carved wood diwan and brass lamps",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 350,
+              "clientH": 219,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-suite-heritage-living.jpg&w=1920&q=75",
+              "alt": "Royal Heritage Suite living parlor with carved wood diwan and brass lamps",
+              "naturalW": 81,
+              "naturalH": 144,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Master bedroom suite with king bed and direct panoramic views",
+              "naturalW": 81,
+              "naturalH": 144,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-bathroom-marble-vanity.jpg&w=1920&q=75",
+              "alt": "Luxury master bathroom with polished marble vanity and tub",
+              "naturalW": 97,
+              "naturalH": 173,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-chhatris-reflection-river.jpg&w=1920&q=75",
+              "alt": "14 Royal Cenotaphs reflected in the River Betwa seen from the suite balcony",
+              "naturalW": 81,
+              "naturalH": 121,
+              "clientW": 75,
+              "clientH": 45,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-tent-interior-canopy.jpg&w=1920&q=75",
+              "alt": "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Previous photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Next photograph",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Spacious salon with handcrafted diwan, plush armchairs, and brass decor",
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "View Master bedroom with plush king bedding and scenic landscape views",
+              "disabled": false
+            }
+          ],
+          "totalLinks": 38,
+          "screenshot": "room_suite_mobile.png",
+          "consoleErrors": []
+        }
+      }
+    },
+    "gallery": {
+      "url": "http://localhost:3000/gallery",
+      "viewports": {
+        "desktop": {
+          "title": "Photo Gallery | The Orchha Resort — Betwa River Sanctuary | The Orchha Resort",
+          "scrollW": 1425,
+          "innerW": 1440,
+          "hasOverflow": false,
+          "totalImages": 6,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "Orchha Resort Lotus Pool Twilight Glow",
+              "naturalW": 1200,
+              "naturalH": 675,
+              "clientW": 1425,
+              "clientH": 576,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-chhatris-river-view.jpg&w=1920&q=75",
+              "alt": "Bundela Chhatris along River Betwa",
+              "naturalW": 475,
+              "naturalH": 844,
+              "clientW": 387,
+              "clientH": 290,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-cenotaphs-golden-hour.jpg&w=1920&q=75",
+              "alt": "Royal Cenotaphs at Golden Hour",
+              "naturalW": 475,
+              "naturalH": 844,
+              "clientW": 387,
+              "clientH": 290,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-monument-stone-spires.jpg&w=1920&q=75",
+              "alt": "Orchha Architectural Spires",
+              "naturalW": 475,
+              "naturalH": 844,
+              "clientW": 387,
+              "clientH": 290,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 13,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "All Curated Views48",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Aerial & Grounds4",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Architecture7",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Rooms & Tents8",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 23,
+          "screenshot": "gallery_desktop.png",
+          "consoleErrors": []
+        },
+        "tablet": {
+          "title": "Photo Gallery | The Orchha Resort — Betwa River Sanctuary | The Orchha Resort",
+          "scrollW": 768,
+          "innerW": 768,
+          "hasOverflow": false,
+          "totalImages": 6,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "Orchha Resort Lotus Pool Twilight Glow",
+              "naturalW": 640,
+              "naturalH": 360,
+              "clientW": 768,
+              "clientH": 655,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-chhatris-river-view.jpg&w=1920&q=75",
+              "alt": "Bundela Chhatris along River Betwa",
+              "naturalW": 384,
+              "naturalH": 682,
+              "clientW": 346,
+              "clientH": 259,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-cenotaphs-golden-hour.jpg&w=1920&q=75",
+              "alt": "Royal Cenotaphs at Golden Hour",
+              "naturalW": 384,
+              "naturalH": 682,
+              "clientW": 346,
+              "clientH": 259,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-monument-stone-spires.jpg&w=1920&q=75",
+              "alt": "Orchha Architectural Spires",
+              "naturalW": 384,
+              "naturalH": 682,
+              "clientW": 346,
+              "clientH": 259,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 13,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "All Curated Views48",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Aerial & Grounds4",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Architecture7",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Rooms & Tents8",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 23,
+          "screenshot": "gallery_tablet.png",
+          "consoleErrors": []
+        },
+        "mobile": {
+          "title": "Photo Gallery | The Orchha Resort — Betwa River Sanctuary | The Orchha Resort",
+          "scrollW": 390,
+          "innerW": 390,
+          "hasOverflow": false,
+          "totalImages": 6,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fpool%2Fpool-lotus-twilight-glow.jpg&w=1920&q=75",
+              "alt": "Orchha Resort Lotus Pool Twilight Glow",
+              "naturalW": 324,
+              "naturalH": 182,
+              "clientW": 390,
+              "clientH": 568,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-chhatris-river-view.jpg&w=1920&q=75",
+              "alt": "Bundela Chhatris along River Betwa",
+              "naturalW": 390,
+              "naturalH": 693,
+              "clientW": 356,
+              "clientH": 267,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-cenotaphs-golden-hour.jpg&w=1920&q=75",
+              "alt": "Royal Cenotaphs at Golden Hour",
+              "naturalW": 390,
+              "naturalH": 693,
+              "clientW": 356,
+              "clientH": 267,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fheritage%2Fheritage-monument-stone-spires.jpg&w=1920&q=75",
+              "alt": "Orchha Architectural Spires",
+              "naturalW": 390,
+              "naturalH": 693,
+              "clientW": 356,
+              "clientH": 267,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 13,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "All Curated Views48",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Aerial & Grounds4",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Architecture7",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Rooms & Tents8",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 23,
+          "screenshot": "gallery_mobile.png",
+          "consoleErrors": []
+        }
+      }
+    },
+    "about": {
+      "url": "http://localhost:3000/about",
+      "viewports": {
+        "desktop": {
+          "title": "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa | The Orchha Resort",
+          "scrollW": 1425,
+          "innerW": 1440,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 6,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fslide1.jpg&w=1920&q=75",
+              "alt": "The Orchha Resort entrance pavilions and landscaped gardens illuminated at dusk",
+              "naturalW": 1011,
+              "naturalH": 450,
+              "clientW": 1425,
+              "clientH": 900,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fslide2.jpg&w=1920&q=75",
+              "alt": "Panoramic view of The Orchha Resort facade and manicured lawns at Kanchanghat",
+              "naturalW": 586,
+              "naturalH": 261,
+              "clientW": 647,
+              "clientH": 404,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fchhatris.jpg&w=1920&q=75",
+              "alt": "Historical 14 Royal Chhatris cenotaphs on the banks of the Betwa River at Orchha",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 445,
+              "clientH": 420,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fswimming.jpg&w=1920&q=75",
+              "alt": "Genuine Lotus-Shaped outdoor swimming pool at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 612,
+              "clientH": 382,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fkaleva.jpg&w=1920&q=75",
+              "alt": "Kaleva Multi-Cuisine Restaurant dining hall at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 554,
+              "clientH": 312,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fspa2.jpg&w=1920&q=75",
+              "alt": "Ayurveda Spa therapy suite at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 554,
+              "clientH": 312,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Ftennis.jpg&w=1920&q=75",
+              "alt": "Outdoor tennis court on the grounds of The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 554,
+              "clientH": 312,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2F14.jpg&w=1920&q=75",
+              "alt": "Evening lawn setup for celebrations and folk dance at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 554,
+              "clientH": 312,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 15,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Explore The Story",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Reserve Your Sanctuary Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "River Dawn",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Daylight Flora",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 28,
+          "screenshot": "about_desktop.png",
+          "consoleErrors": []
+        },
+        "tablet": {
+          "title": "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa | The Orchha Resort",
+          "scrollW": 768,
+          "innerW": 768,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 6,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fslide1.jpg&w=1920&q=75",
+              "alt": "The Orchha Resort entrance pavilions and landscaped gardens illuminated at dusk",
+              "naturalW": 539,
+              "naturalH": 240,
+              "clientW": 768,
+              "clientH": 1024,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fslide2.jpg&w=1920&q=75",
+              "alt": "Panoramic view of The Orchha Resort facade and manicured lawns at Kanchanghat",
+              "naturalW": 539,
+              "naturalH": 240,
+              "clientW": 702,
+              "clientH": 439,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fchhatris.jpg&w=1920&q=75",
+              "alt": "Historical 14 Royal Chhatris cenotaphs on the banks of the Betwa River at Orchha",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 420,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fswimming.jpg&w=1920&q=75",
+              "alt": "Genuine Lotus-Shaped outdoor swimming pool at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 636,
+              "clientH": 398,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fkaleva.jpg&w=1920&q=75",
+              "alt": "Kaleva Multi-Cuisine Restaurant dining hall at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 395,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fspa2.jpg&w=1920&q=75",
+              "alt": "Ayurveda Spa therapy suite at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 395,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Ftennis.jpg&w=1920&q=75",
+              "alt": "Outdoor tennis court on the grounds of The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 395,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2F14.jpg&w=1920&q=75",
+              "alt": "Evening lawn setup for celebrations and folk dance at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 395,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 15,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Explore The Story",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Reserve Your Sanctuary Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "River Dawn",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Daylight Flora",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 28,
+          "screenshot": "about_tablet.png",
+          "consoleErrors": []
+        },
+        "mobile": {
+          "title": "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa | The Orchha Resort",
+          "scrollW": 390,
+          "innerW": 390,
+          "hasOverflow": false,
+          "totalImages": 10,
+          "brokenImages": 6,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fslide1.jpg&w=1920&q=75",
+              "alt": "The Orchha Resort entrance pavilions and landscaped gardens illuminated at dusk",
+              "naturalW": 274,
+              "naturalH": 121,
+              "clientW": 390,
+              "clientH": 1032,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fslide2.jpg&w=1920&q=75",
+              "alt": "Panoramic view of The Orchha Resort facade and manicured lawns at Kanchanghat",
+              "naturalW": 274,
+              "naturalH": 121,
+              "clientW": 348,
+              "clientH": 218,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fchhatris.jpg&w=1920&q=75",
+              "alt": "Historical 14 Royal Chhatris cenotaphs on the banks of the Betwa River at Orchha",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 348,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fswimming.jpg&w=1920&q=75",
+              "alt": "Genuine Lotus-Shaped outdoor swimming pool at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 298,
+              "clientH": 186,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fkaleva.jpg&w=1920&q=75",
+              "alt": "Kaleva Multi-Cuisine Restaurant dining hall at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 196,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fspa2.jpg&w=1920&q=75",
+              "alt": "Ayurveda Spa therapy suite at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 196,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Ftennis.jpg&w=1920&q=75",
+              "alt": "Outdoor tennis court on the grounds of The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 196,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2F14.jpg&w=1920&q=75",
+              "alt": "Evening lawn setup for celebrations and folk dance at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 196,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 15,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Explore The Story",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Reserve Your Sanctuary Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "River Dawn",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Daylight Flora",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 28,
+          "screenshot": "about_mobile.png",
+          "consoleErrors": []
+        }
+      }
+    },
+    "weddings": {
+      "url": "http://localhost:3000/weddings",
+      "viewports": {
+        "desktop": {
+          "title": "Royal Destination Weddings | The Orchha Resort on River Betwa | The Orchha Resort",
+          "scrollW": 1425,
+          "innerW": 1440,
+          "hasOverflow": false,
+          "totalImages": 12,
+          "brokenImages": 7,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+              "alt": "Couple celebration on the illuminated royal stage with cold pyro fountains at The Orchha Resort",
+              "naturalW": 768,
+              "naturalH": 432,
+              "clientW": 1425,
+              "clientH": 901,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-aerial-lawn-night.jpg&w=1920&q=75",
+              "alt": "Aerial view of the illuminated wedding banquet lawn setup at night at The Orchha Resort",
+              "naturalW": 445,
+              "naturalH": 250,
+              "clientW": 647,
+              "clientH": 404,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-aerial-lawn-night.jpg&w=1920&q=75",
+              "alt": "Aerial view of the illuminated wedding banquet lawn setup at night at The Orchha Resort",
+              "naturalW": 422,
+              "naturalH": 237,
+              "clientW": 612,
+              "clientH": 382,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fswimming.jpg&w=1920&q=75",
+              "alt": "The Lotus-shaped swimming pool at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 361,
+              "clientH": 225,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+              "alt": "Couple celebration on the illuminated royal stage with cold pyro fountains at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 361,
+              "clientH": 225,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-mandap-canopy.jpg&w=1920&q=75",
+              "alt": "Royal wedding canopy decorated with hanging illuminated lotus lamps and floral tassels at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 361,
+              "clientH": 225,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fkaleva.jpg&w=1920&q=75",
+              "alt": "Kaleva Restaurant dining team at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 361,
+              "clientH": 225,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fspa2.jpg&w=1920&q=75",
+              "alt": "Ayurveda Wellness Therapy Suite at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 361,
+              "clientH": 225,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fg6.jpg&w=1920&q=75",
+              "alt": "Deluxe Air-Conditioned Swiss Tent in lush garden setting at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 361,
+              "clientH": 225,
+              "isBroken": true
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Enquire About Your Wedding",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Explore Wedding Spaces",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Grand Banquet LawnsOutdoor Grandeur",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Royal Reception StageMajestic Stagecraft",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 23,
+          "screenshot": "weddings_desktop.png",
+          "consoleErrors": []
+        },
+        "tablet": {
+          "title": "Royal Destination Weddings | The Orchha Resort on River Betwa | The Orchha Resort",
+          "scrollW": 768,
+          "innerW": 768,
+          "hasOverflow": false,
+          "totalImages": 12,
+          "brokenImages": 6,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+              "alt": "Couple celebration on the illuminated royal stage with cold pyro fountains at The Orchha Resort",
+              "naturalW": 409,
+              "naturalH": 230,
+              "clientW": 768,
+              "clientH": 1024,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-aerial-lawn-night.jpg&w=1920&q=75",
+              "alt": "Aerial view of the illuminated wedding banquet lawn setup at night at The Orchha Resort",
+              "naturalW": 409,
+              "naturalH": 230,
+              "clientW": 702,
+              "clientH": 439,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-aerial-lawn-night.jpg&w=1920&q=75",
+              "alt": "Aerial view of the illuminated wedding banquet lawn setup at night at The Orchha Resort",
+              "naturalW": 409,
+              "naturalH": 230,
+              "clientW": 636,
+              "clientH": 398,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fswimming.jpg&w=1920&q=75",
+              "alt": "The Lotus-shaped swimming pool at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 439,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+              "alt": "Couple celebration on the illuminated royal stage with cold pyro fountains at The Orchha Resort",
+              "naturalW": 204,
+              "naturalH": 115,
+              "clientW": 702,
+              "clientH": 439,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-mandap-canopy.jpg&w=1920&q=75",
+              "alt": "Royal wedding canopy decorated with hanging illuminated lotus lamps and floral tassels at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 439,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fkaleva.jpg&w=1920&q=75",
+              "alt": "Kaleva Restaurant dining team at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 439,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fspa2.jpg&w=1920&q=75",
+              "alt": "Ayurveda Wellness Therapy Suite at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 439,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fg6.jpg&w=1920&q=75",
+              "alt": "Deluxe Air-Conditioned Swiss Tent in lush garden setting at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 439,
+              "isBroken": true
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Enquire About Your Wedding",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Explore Wedding Spaces",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Grand Banquet LawnsOutdoor Grandeur",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Royal Reception StageMajestic Stagecraft",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 23,
+          "screenshot": "weddings_tablet.png",
+          "consoleErrors": []
+        },
+        "mobile": {
+          "title": "Royal Destination Weddings | The Orchha Resort on River Betwa | The Orchha Resort",
+          "scrollW": 390,
+          "innerW": 390,
+          "hasOverflow": false,
+          "totalImages": 12,
+          "brokenImages": 6,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+              "alt": "Couple celebration on the illuminated royal stage with cold pyro fountains at The Orchha Resort",
+              "naturalW": 207,
+              "naturalH": 116,
+              "clientW": 390,
+              "clientH": 1032,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-aerial-lawn-night.jpg&w=1920&q=75",
+              "alt": "Aerial view of the illuminated wedding banquet lawn setup at night at The Orchha Resort",
+              "naturalW": 207,
+              "naturalH": 116,
+              "clientW": 348,
+              "clientH": 218,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-aerial-lawn-night.jpg&w=1920&q=75",
+              "alt": "Aerial view of the illuminated wedding banquet lawn setup at night at The Orchha Resort",
+              "naturalW": 207,
+              "naturalH": 116,
+              "clientW": 298,
+              "clientH": 186,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fswimming.jpg&w=1920&q=75",
+              "alt": "The Lotus-shaped swimming pool at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 218,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-sangeet-celebration.jpg&w=1920&q=75",
+              "alt": "Couple celebration on the illuminated royal stage with cold pyro fountains at The Orchha Resort",
+              "naturalW": 207,
+              "naturalH": 116,
+              "clientW": 348,
+              "clientH": 218,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fweddings%2Fwedding-mandap-canopy.jpg&w=1920&q=75",
+              "alt": "Royal wedding canopy decorated with hanging illuminated lotus lamps and floral tassels at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 218,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fkaleva.jpg&w=1920&q=75",
+              "alt": "Kaleva Restaurant dining team at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 218,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fspa2.jpg&w=1920&q=75",
+              "alt": "Ayurveda Wellness Therapy Suite at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 218,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fg6.jpg&w=1920&q=75",
+              "alt": "Deluxe Air-Conditioned Swiss Tent in lush garden setting at The Orchha Resort",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 218,
+              "isBroken": true
+            }
+          ],
+          "totalButtons": 17,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Enquire About Your Wedding",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Explore Wedding Spaces",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Grand Banquet LawnsOutdoor Grandeur",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Royal Reception StageMajestic Stagecraft",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 23,
+          "screenshot": "weddings_mobile.png",
+          "consoleErrors": []
+        }
+      }
+    },
+    "spa": {
+      "url": "http://localhost:3000/spa",
+      "viewports": {
+        "desktop": {
+          "title": "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation | The Orchha Resort",
+          "scrollW": 1425,
+          "innerW": 1440,
+          "hasOverflow": false,
+          "totalImages": 19,
+          "brokenImages": 12,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fcrest_transparent.png&w=1920&q=75",
+              "alt": "Orchha Palace Hotel Spa Royal Elephant Crest",
+              "naturalW": 40,
+              "naturalH": 42,
+              "clientW": 36,
+              "clientH": 36,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fbotanical_transparent.png&w=1920&q=75",
+              "alt": "",
+              "naturalW": 77,
+              "naturalH": 105,
+              "clientW": 176,
+              "clientH": 240,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fcrest_transparent.png&w=1920&q=75",
+              "alt": "",
+              "naturalW": 16,
+              "naturalH": 17,
+              "clientW": 16,
+              "clientH": 16,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fshirodhara.jpg&w=1920&q=75",
+              "alt": "Traditional brass vessel pouring warm herbal oil steadily over the forehead at Orchha Palace Spa",
+              "naturalW": 239,
+              "naturalH": 366,
+              "clientW": 386,
+              "clientH": 516,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fabhyangam_card.jpg&w=1920&q=75",
+              "alt": "Authentic full-body Ayurvedic oil massage using warm medicated herbal oils at Orchha Palace Spa",
+              "naturalW": 190,
+              "naturalH": 142,
+              "clientW": 122,
+              "clientH": 96,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fbotanical_transparent.png&w=1920&q=75",
+              "alt": "",
+              "naturalW": 63,
+              "naturalH": 86,
+              "clientW": 144,
+              "clientH": 208,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fabhyangam_card.jpg&w=1920&q=75",
+              "alt": "Authentic full-body Ayurvedic oil massage using warm medicated herbal oils at Orchha Palace Spa",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 361,
+              "clientH": 270,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fshirodhara_card.jpg&w=1920&q=75",
+              "alt": "Traditional brass vessel pouring warm herbal oil steadily over the forehead at Orchha Palace Spa",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 361,
+              "clientH": 271,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fmarma-massage_card.jpg&w=1920&q=75",
+              "alt": "Therapeutic massage focused on vital body energy points with Ayurvedic potlis and warm oils",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 361,
+              "clientH": 270,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fnasyam_card.jpg&w=1920&q=75",
+              "alt": "Traditional Panchakarma therapy with medicated herbal oils gently applied through nasal passages",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 361,
+              "clientH": 270,
+              "isBroken": true
+            }
+          ],
+          "totalButtons": 23,
+          "sampleButtons": [
+            {
+              "text": "Treatment Tray",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Explore 11 Spa Treatments",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Open Treatment Tray",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "View",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "All Therapies11",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Ayurvedic Massages4",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 18,
+          "screenshot": "spa_desktop.png",
+          "consoleErrors": []
+        },
+        "tablet": {
+          "title": "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation | The Orchha Resort",
+          "scrollW": 768,
+          "innerW": 768,
+          "hasOverflow": false,
+          "totalImages": 19,
+          "brokenImages": 12,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fcrest_transparent.png&w=1920&q=75",
+              "alt": "Orchha Palace Hotel Spa Royal Elephant Crest",
+              "naturalW": 40,
+              "naturalH": 42,
+              "clientW": 36,
+              "clientH": 36,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fbotanical_transparent.png&w=1920&q=75",
+              "alt": "",
+              "naturalW": 77,
+              "naturalH": 105,
+              "clientW": 128,
+              "clientH": 176,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fcrest_transparent.png&w=1920&q=75",
+              "alt": "",
+              "naturalW": 16,
+              "naturalH": 17,
+              "clientW": 16,
+              "clientH": 16,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fshirodhara.jpg&w=1920&q=75",
+              "alt": "Traditional brass vessel pouring warm herbal oil steadily over the forehead at Orchha Palace Spa",
+              "naturalW": 230,
+              "naturalH": 352,
+              "clientW": 386,
+              "clientH": 516,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fabhyangam_card.jpg&w=1920&q=75",
+              "alt": "Authentic full-body Ayurvedic oil massage using warm medicated herbal oils at Orchha Palace Spa",
+              "naturalW": 190,
+              "naturalH": 142,
+              "clientW": 122,
+              "clientH": 96,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fbotanical_transparent.png&w=1920&q=75",
+              "alt": "",
+              "naturalW": 63,
+              "naturalH": 86,
+              "clientW": 112,
+              "clientH": 160,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fabhyangam_card.jpg&w=1920&q=75",
+              "alt": "Authentic full-body Ayurvedic oil massage using warm medicated herbal oils at Orchha Palace Spa",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fshirodhara_card.jpg&w=1920&q=75",
+              "alt": "Traditional brass vessel pouring warm herbal oil steadily over the forehead at Orchha Palace Spa",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fmarma-massage_card.jpg&w=1920&q=75",
+              "alt": "Therapeutic massage focused on vital body energy points with Ayurvedic potlis and warm oils",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fnasyam_card.jpg&w=1920&q=75",
+              "alt": "Traditional Panchakarma therapy with medicated herbal oils gently applied through nasal passages",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": true
+            }
+          ],
+          "totalButtons": 23,
+          "sampleButtons": [
+            {
+              "text": "Treatment Tray",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Explore 11 Spa Treatments",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Open Treatment Tray",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "View",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "All Therapies11",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Ayurvedic Massages4",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 18,
+          "screenshot": "spa_tablet.png",
+          "consoleErrors": []
+        },
+        "mobile": {
+          "title": "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation | The Orchha Resort",
+          "scrollW": 390,
+          "innerW": 390,
+          "hasOverflow": false,
+          "totalImages": 19,
+          "brokenImages": 12,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fcrest_transparent.png&w=1920&q=75",
+              "alt": "Orchha Palace Hotel Spa Royal Elephant Crest",
+              "naturalW": 40,
+              "naturalH": 42,
+              "clientW": 32,
+              "clientH": 32,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fbotanical_transparent.png&w=1920&q=75",
+              "alt": "",
+              "naturalW": 77,
+              "naturalH": 105,
+              "clientW": 128,
+              "clientH": 176,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fcrest_transparent.png&w=1920&q=75",
+              "alt": "",
+              "naturalW": 16,
+              "naturalH": 17,
+              "clientW": 16,
+              "clientH": 16,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fshirodhara.jpg&w=1920&q=75",
+              "alt": "Traditional brass vessel pouring warm herbal oil steadily over the forehead at Orchha Palace Spa",
+              "naturalW": 116,
+              "naturalH": 178,
+              "clientW": 346,
+              "clientH": 463,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fabhyangam_card.jpg&w=1920&q=75",
+              "alt": "Authentic full-body Ayurvedic oil massage using warm medicated herbal oils at Orchha Palace Spa",
+              "naturalW": 190,
+              "naturalH": 142,
+              "clientW": 0,
+              "clientH": 0,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fextracted%2Fbotanical_transparent.png&w=1920&q=75",
+              "alt": "",
+              "naturalW": 63,
+              "naturalH": 86,
+              "clientW": 112,
+              "clientH": 160,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fabhyangam_card.jpg&w=1920&q=75",
+              "alt": "Authentic full-body Ayurvedic oil massage using warm medicated herbal oils at Orchha Palace Spa",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fshirodhara_card.jpg&w=1920&q=75",
+              "alt": "Traditional brass vessel pouring warm herbal oil steadily over the forehead at Orchha Palace Spa",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fmarma-massage_card.jpg&w=1920&q=75",
+              "alt": "Therapeutic massage focused on vital body energy points with Ayurvedic potlis and warm oils",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": true
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fspa%2Fcatalog%2Fnasyam_card.jpg&w=1920&q=75",
+              "alt": "Traditional Panchakarma therapy with medicated herbal oils gently applied through nasal passages",
+              "naturalW": 0,
+              "naturalH": 0,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": true
+            }
+          ],
+          "totalButtons": 23,
+          "sampleButtons": [
+            {
+              "text": "Treatment Tray",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Explore 11 Spa Treatments",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Open Treatment Tray",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "View",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "All Therapies11",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Ayurvedic Massages4",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 18,
+          "screenshot": "spa_mobile.png",
+          "consoleErrors": []
+        }
+      }
+    },
+    "design_system": {
+      "url": "http://localhost:3000/design-system",
+      "viewports": {
+        "desktop": {
+          "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+          "scrollW": 1425,
+          "innerW": 1440,
+          "hasOverflow": false,
+          "totalImages": 4,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 558,
+              "clientH": 419,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 396,
+              "naturalH": 703,
+              "clientW": 558,
+              "clientH": 419,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 14,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Primary Navy",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Antique Gold",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Linen Secondary",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Hairline Outline",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 27,
+          "screenshot": "design_system_desktop.png",
+          "consoleErrors": []
+        },
+        "tablet": {
+          "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+          "scrollW": 768,
+          "innerW": 768,
+          "hasOverflow": false,
+          "totalImages": 4,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 640,
+              "naturalH": 1137,
+              "clientW": 702,
+              "clientH": 527,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 14,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Primary Navy",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Antique Gold",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Linen Secondary",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Hairline Outline",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 27,
+          "screenshot": "design_system_tablet.png",
+          "consoleErrors": []
+        },
+        "mobile": {
+          "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+          "scrollW": 390,
+          "innerW": 390,
+          "hasOverflow": false,
+          "totalImages": 4,
+          "brokenImages": 0,
+          "imageDetails": [
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-interior-panoramic.jpg&w=1920&q=75",
+              "alt": "Standard Heritage Room bedroom interior with king bed and marble floor",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Frooms%2Froom-deluxe-king-pool-view.jpg&w=1920&q=75",
+              "alt": "Deluxe Marble Room overlooking the lotus pool at The Orchha Resort",
+              "naturalW": 324,
+              "naturalH": 577,
+              "clientW": 348,
+              "clientH": 261,
+              "isBroken": false
+            },
+            {
+              "src": "http://localhost:3000/images/brand/orchha-emblem.svg",
+              "alt": "Orchha Resort Emblem",
+              "naturalW": 160,
+              "naturalH": 160,
+              "clientW": 30,
+              "clientH": 30,
+              "isBroken": false
+            }
+          ],
+          "totalButtons": 14,
+          "sampleButtons": [
+            {
+              "text": "Reserve Stay",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "",
+              "ariaLabel": "Open menu",
+              "disabled": false
+            },
+            {
+              "text": "Primary Navy",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Antique Gold",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Linen Secondary",
+              "ariaLabel": null,
+              "disabled": false
+            },
+            {
+              "text": "Hairline Outline",
+              "ariaLabel": null,
+              "disabled": false
+            }
+          ],
+          "totalLinks": 27,
+          "screenshot": "design_system_mobile.png",
+          "consoleErrors": []
+        }
+      }
+    }
+  },
+  "deepDives": {
+    "booking": {
+      "found": true,
+      "hasCheckInInput": true,
+      "hasReserveButton": true,
+      "buttonText": "Check Rate & Book",
+      "modalOpenedOnReserveClick": true,
+      "bodyScrollLockedDuringModal": true,
+      "htmlScrollLockedDuringModal": true,
+      "modalTitle": "Direct Concierge Handoff - Complete Your Reservation",
+      "ariaRole": "dialog"
+    },
+    "gallery": {
+      "hasDiscoverMoreButton": true,
+      "initialTileElements": 6,
+      "filterPillsCount": 4,
+      "filterPills": [
+        "All Curated Views48",
+        "Architecture7",
+        "Rooms & Tents8",
+        "Lotus Pool5"
+      ]
+    },
+    "reviews": {
+      "found": true,
+      "height": 3420,
+      "cardCount": 7
+    },
+    "map": {
+      "found": true,
+      "tileCount": 13,
+      "isVoyager": true,
+      "hasKeyParam": true,
+      "markerCount": 14,
+      "filterCount": 6
+    }
+  },
+  "summary": {}
+}

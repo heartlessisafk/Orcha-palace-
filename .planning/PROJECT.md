@@ -55,15 +55,15 @@ All modifications must adhere strictly to [GEMINI.md](file:///Users/sam/Projects
 
 - [x] **Phase 1: Project Preparation, Skill Integration & Baseline Protection** (completed 2026-11-14)
   - Initialize GSD milestone state, download & verify all 5 skills into `.agents/skills/`, establish permanent project rules (`GEMINI.md`, `AGENTS.md`), and capture verified baseline.
-- [ ] **Phase 2: Design Token Architecture, Luxury Typography & Color Harmonies**
+- [x] **Phase 2: Comprehensive Codebase Mapping, Route Audit, Animation Inventory & Baseline Visual Capture** (completed 2026-11-14)
+  - Understand the entire existing website before changing design or code. Map architecture, audit all 10 pages across 3 viewports (30 baseline screenshots), build exhaustive animation inventory, verify zero missing assets across 109 images, verify interactive flows (booking modal scroll lock, CARTO Voyager map, gallery reveal), and establish 10-point non-negotiable regression checklist.
+- [ ] **Phase 3: Design Token Architecture, Luxury Typography & Color Harmonies**
   - Refine color palette, typography hierarchy, and spacing tokens according to `frontend-design`, `impeccable`, and `ui-ux-pro-max` guidelines. Formalize `DESIGN.md`.
-- [ ] **Phase 3: Universal Tactile Button & Micro-Interaction System**
+- [ ] **Phase 4: Universal Tactile Button & Micro-Interaction System**
   - Implement consistent, premium 3D hover interaction across all interactive buttons across the site with tactile elevation and gilded glow.
-- [ ] **Phase 4: Hero Section & Reservation Suite Visual Elevation**
+- [ ] **Phase 5: Hero Section & Reservation Suite Visual Elevation**
   - Elevate hero entrance choreography and editorial layout using `taste-skill` and `impeccable` principles. Polish the in-flow Reservation Sanctuary Suite.
-- [ ] **Phase 5: Accommodation Cards & Dynamic Room Details Refinement**
+- [ ] **Phase 6: Accommodation Cards & Dynamic Room Details Refinement**
   - Refine room cards on `/` and `/rooms` with tactile depth, editorial spec typography, and subtle image zoom. Enhance dynamic room pages (`/rooms/[slug]`).
-- [ ] **Phase 6: Visual Storytelling, Heritage About & Media Experiences Polish**
-  - Refine `/gallery` masonry and 3-at-a-time reveal with smooth layout transitions. Polish `/about`, `/weddings`, and `/spa` with bespoke editorial layouts.
-- [ ] **Phase 7: End-to-End Performance, Accessibility Audit & Production Hardening**
-  - Audit against `web-design-guidelines` (ARIA, keyboard navigation, focus indicators). Test responsive viewports across Desktop, Tablet, and Mobile. Complete production build verification.
+- [ ] **Phase 7: Storytelling, Gallery, Media Experiences Polish & Final Production Hardening**
+  - Refine `/gallery` masonry and 3-at-a-time reveal with smooth layout transitions. Polish `/about`, `/weddings`, and `/spa` with bespoke editorial layouts. Audit against `web-design-guidelines` (ARIA, keyboard navigation, focus indicators). Test responsive viewports across Desktop, Tablet, and Mobile. Complete production build verification.

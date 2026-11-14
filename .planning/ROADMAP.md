@@ -159,3 +159,71 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 6. Handoff modal or inline view implements full body scroll locking, background containment, and keyboard accessibility.
 7. WhatsApp concierge and direct email reservation handoffs remain 100% operational.
 8. Zero horizontal overflow across Desktop, Tablet, and Mobile with clean production build.
+
+### Phase 11: CARTO Voyager Light Map & API Integration
+
+**Goal**: Configure valid CARTO API key, make CARTO Voyager light raster tiles the permanent default map style, and eliminate all API KEY REQUIRED watermarks across the map.  
+**Depends on**: Phase 10  
+**Requirements**: CARTO-API-01, VOYAGER-01, WATERMARK-ELIM-01  
+**Success Criteria**:
+
+1. `NEXT_PUBLIC_CARTO_API_KEY` configured securely in `.env.local` and `.gitignore`.
+2. CARTO Voyager raster tiles configured as permanent default at `https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=...`.
+3. Zero watermarks across the map; clean geographical roads, river curves, and terrain rendered.
+4. All 7 landmarks, custom pins, category filters, and camera `flyTo` transitions verified intact.
+
+---
+
+## Milestone 2: Major Professional Design & Engineering Upgrade
+
+### Phase 12: Project Preparation, Skill Integration & Baseline Protection
+
+**Goal**: Download and locally install 5 world-class design intelligence skills, establish non-negotiable preservation rules, and capture clean Git baseline.  
+**Depends on**: Phase 11  
+**Requirements**: GSD-SKILLS-01, PRESERVE-RULES-01, BASELINE-CHECK-01  
+**Success Criteria**:
+
+1. All 5 skills verified in `.agents/skills/` (`frontend-design`, `impeccable`, `taste-skill`, `ui-ux-pro-max`, `web-design-guidelines`).
+2. Permanent project preservation rules recorded in `GEMINI.md`, `AGENTS.md`, and `.agents/rules/project-preservation-rules.md`.
+3. Seven-phase upgrade roadmap established in `.planning/`.
+4. Clean production build and type-check verified.
+
+### Phase 13: Comprehensive Codebase Mapping, Route Audit, Animation Inventory & Baseline Visual Capture
+
+**Goal**: Understand the entire existing website before changing its design or code. Perform a full codebase mapping, multi-viewport audit of all 10 pages, build an exhaustive animation inventory, verify all 109 image assets with zero missing files, test interactive workflows, capture 30 baseline screenshots, and establish a strict 10-point regression checklist.  
+**Depends on**: Phase 12  
+**Requirements**: AUDIT-MAP-01, ANIM-INVENTORY-01, ASSET-AUDIT-01, BASELINE-CAPTURE-01, REGRESSION-CHECK-01  
+**Success Criteria**:
+
+1. Complete architectural dependency map established for framework, routes, components, and data stores.
+2. Multi-viewport audit across Desktop (1440px), Tablet (768px), and Mobile (390px) confirms 0 horizontal overflow across all 10 routes.
+3. Exhaustive animation inventory documents triggers, easing, durations, initial/final states, and mobile behavior for all 7 key motion systems.
+4. Asset audit confirms 109 unique images on disk with exactly 0 missing references in `src/`.
+5. Interactive tests verify reservation modal scroll lock, CARTO Voyager map tiles, and gallery 3-at-a-time reveal.
+6. 30 full-page baseline screenshots captured in `audit/screenshots/phase2_baseline/`.
+7. 10-point non-negotiable regression checklist formulated.
+
+### Phase 14: Design Token Architecture, Luxury Typography & Color Harmonies
+
+**Goal**: Refine color palette, typography hierarchy, and spacing tokens according to `frontend-design`, `impeccable`, and `ui-ux-pro-max` guidelines. Formalize `DESIGN.md`.  
+**Depends on**: Phase 13  
+
+### Phase 15: Universal Tactile Button & Micro-Interaction System
+
+**Goal**: Implement consistent, premium 3D hover interaction across all interactive buttons across the site with tactile elevation and gilded glow.  
+**Depends on**: Phase 14  
+
+### Phase 16: Hero Section & Reservation Suite Visual Elevation
+
+**Goal**: Elevate hero entrance choreography and editorial layout using `taste-skill` and `impeccable` principles. Polish the in-flow Reservation Sanctuary Suite.  
+**Depends on**: Phase 15  
+
+### Phase 17: Accommodation Cards & Dynamic Room Details Refinement
+
+**Goal**: Refine room cards on `/` and `/rooms` with tactile depth, editorial spec typography, and subtle image zoom. Enhance dynamic room pages (`/rooms/[slug]`).  
+**Depends on**: Phase 16  
+
+### Phase 18: Storytelling, Gallery, Media Experiences Polish & Final Production Hardening
+
+**Goal**: Refine `/gallery` masonry and 3-at-a-time reveal. Polish `/about`, `/weddings`, and `/spa` with bespoke editorial layouts. Complete Web Interface Guidelines audit and final production verification.  
+**Depends on**: Phase 17
