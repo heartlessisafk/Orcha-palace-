@@ -4,25 +4,33 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Milestone 2: Major Professional Design & Engineering Upgrade — Phase 17 (Upgrade Phase 6): Technical Stabilization, Animation Integrity & Deep Responsive Testing.
+**Current focus:** Milestone 2: Major Professional Design & Engineering Upgrade — Phase 18 (Upgrade Phase 7): Production Hardening, Accessibility Audit & Final Milestone Completion.
 
 ## Current Position
-Milestone: 2 — Major Professional Design & Engineering Upgrade
-Phase: 6 of 7 (Phase 17 in sequence) (Completed)  
-Status: Completed (Phase 6 executed and verified; awaiting final Phase 7 prompt)  
-Last activity: 2026-11-14 — Completed Milestone 2 Phase 6: Executed comprehensive technical stabilization. Verified bidirectional scroll on 380vh review track and 450vh map finale; added alias anchor `#reviews`; verified end-to-end booking flow (date calculations, steppers, scroll-lock dialog, pre-filled WhatsApp handoff, Escape key dismissal); audited 9 viewports across 7 routes (63 test cases, 0px overflow); confirmed 0 console errors and clean production build.
+Milestone: 2 — Major Professional Design & Engineering Upgrade (COMPLETED)
+Phase: 7 of 7 (Phase 18 in sequence) (Completed)  
+Status: Milestone 2 Complete (All 7 phases executed, verified, and audited with 0 regressions)  
+Last activity: 2026-11-14 — Completed Milestone 2 Phase 7: Executed comprehensive production hardening and accessibility audit. Implemented skip-to-content bypass link, enclosed all 10 routes in `<main id="main-content">`, added ARIA landmarks to navigation and form controls, configured Leaflet map tile presentation semantics (0 missing alt tags), re-verified 32-room inventory consistency, validated universal 3D button interactions, executed 30-case regression test across 10 routes and 3 viewports (0px overflow), confirmed 0 console errors, and verified clean Next.js production build.
 
-Progress: [█████████░] 86% (Milestone 2: 6/7 phases complete)
+Progress: [██████████] 100% (Milestone 2: 7/7 phases complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed
-- Milestone 2 phases: 6 / 7 completed
+- Milestone 2 phases: 7 / 7 completed
 - Installed design skills: 5/5 verified in `.agents/skills/`
 - Design system canonical document: `DESIGN.md` established at project root
-- Universal 3D button system: Active via `useTactile3D` and `Button.tsx`
+- Universal 3D button system: Active via `useTactile3D` and `Button.tsx` (verified on all interactive buttons)
 - Errors in build: 0
 - Type check: Clean (0 errors)
 - Console errors in browser: 0
+- Missing image alt tags: 0
+- Mobile & responsive horizontal overflow: None (hasOverflow: false across all tested viewports)
+- Baseline screenshots captured: 30 baseline + 4 Phase 4 + 15 Phase 5 + 11 Phase 6 + 10 Phase 7 audit screenshots
+- Curated & verified images on disk: 109 unique images (0 missing references across `src/`)
+- Map basemap style: Permanent CARTO Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=...`) with valid API key
+- Watermarks on map: 0 (completely eliminated)
+- Working animations preserved: 100%
+- Mapped authentic photography: 100% intact (0 stock replacements)
 - Mobile & responsive horizontal overflow: None (hasOverflow: false across all 9 tested viewports)
 - Baseline screenshots captured: 30 baseline + 4 Phase 4 + 15 Phase 5 + 11 Phase 6 stabilization screenshots
 - Curated & verified images on disk: 109 unique images (0 missing references across `src/`)

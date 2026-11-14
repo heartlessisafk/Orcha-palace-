@@ -31,7 +31,7 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 - [x] **Phase 15 (Upgrade Phase 4): Universal Tactile Button & Micro-Interaction System** — Implement centralized `useTactile3D` hook and upgraded universal `Button.tsx` with 3D perspective tilt (±6°), 4px elevation, dynamic sheen overlay, and tactile press compression (`scale: 0.975`). Upgraded controls across reservation dock, gallery filter pills, "Discover More" progressive trigger, map controls, room detail carousel/thumbs, and spa selections. (completed 2026-11-14)
 - [x] **Phase 16 (Upgrade Phase 5): Page-by-Page Cinematic Refinement & Editorial Elevation** — Surgical editorial elevation across all 7 core sections: Homepage (motion hero entrance, amenities links, booking dock), Rooms & Suites (32 rooms, accurate specs, dynamic suites), Gallery (6 consolidated categories, asymmetrical editorial tiles, progressive reveal, 3D CTAs), Weddings (6 royal sections, verified venues), Spa (Kairali Ayurveda storytelling, 16 treatments), About (authentic Bundelkhand heritage, 32-room alignment), and Map & Footer (CARTO Voyager light map, verified landmarks, 4-column footer). (completed 2026-11-14)
 - [x] **Phase 17 (Upgrade Phase 6): Technical Stabilization, Animation Integrity & Deep Responsive Testing** — Full verification of animation inventory (hero entrance, bidirectional scroll on 380vh review track and 450vh map finale, reduced-motion), end-to-end booking flow test with WhatsApp handoff and scroll-lock dialog, 9-viewport responsive matrix (63 test cases, 0 overflow), and 0 console errors. (completed 2026-11-14)
-- [ ] **Phase 18 (Upgrade Phase 7): End-to-End Performance, Accessibility Audit & Production Hardening** — Full audit against Vercel Web Interface Guidelines (ARIA, keyboard navigation, visible focus rings, zero layout shift); verify Desktop, Tablet, and Mobile responsiveness; complete production build verification.
+- [x] **Phase 18 (Upgrade Phase 7): End-to-End Performance, Accessibility Audit & Production Hardening** — Full audit against Vercel Web Interface Guidelines (skip-to-content link, main landmarks, ARIA labels, form associations, map tile presentation, visible focus rings, zero layout shift); verified 10-route multi-viewport regression matrix across Desktop, Tablet, and Mobile (0px overflow); confirmed 0 console errors and clean production build. (completed 2026-11-14)
 
 ## Phase Details
 
@@ -245,5 +245,15 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 
 ### Phase 18: Storytelling, Gallery, Media Experiences Polish & Final Production Hardening
 
-**Goal**: Refine `/gallery` masonry and 3-at-a-time reveal. Polish `/about`, `/weddings`, and `/spa` with bespoke editorial layouts. Complete Web Interface Guidelines audit and final production verification.  
-**Depends on**: Phase 17
+**Goal**: Full audit against Vercel Web Interface Guidelines, accessibility compliance (WCAG AA), real photo fidelity, universal 3D button interactions, 10-route multi-viewport regression testing, and final production build hardening.  
+**Depends on**: Phase 17  
+**Requirements**: AUDIT-FINAL-01, ACCESSIBILITY-01, BUTTON-AUDIT-01, REGRESSION-01, BUILD-PROD-01  
+**Success Criteria**:
+
+1. Skip-to-content link, main landmarks, and navigation ARIA semantics verified across all 10 application routes.
+2. Form controls in reservation dock and wedding inquiry bound via explicit `id` and `htmlFor` associations.
+3. Leaflet map tiles configured with `alt=""` and `role="presentation"`, achieving 0 missing `alt` attributes.
+4. Curated photo manifest (109 local verified images, 0 generic stock) 100% verified.
+5. Universal 3D button system (tilt, sheen, elevation, tactile press) functioning smoothly across all interactive elements.
+6. Multi-viewport regression matrix (10 routes × 3 viewports = 30 configurations) confirms 0px horizontal overflow.
+7. Next.js production build (`npm run build`) compiles 14/14 static & SSG routes with 0 console errors.

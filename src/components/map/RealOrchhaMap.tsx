@@ -126,6 +126,15 @@ export function RealOrchhaMap({
           '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> &copy; <a href="https://carto.com/" target="_blank" rel="noopener noreferrer">CARTO</a>',
       }).addTo(map);
 
+      // Accessibility: ensure dynamically loaded map tiles carry empty alt and presentation role
+      tileLayer.on("tileload", (e: any) => {
+        if (e.tile) {
+          e.tile.alt = "";
+          e.tile.setAttribute("role", "presentation");
+          e.tile.setAttribute("aria-hidden", "true");
+        }
+      });
+
       tileLayerRef.current = tileLayer;
 
       // Add Custom Attribution in corner

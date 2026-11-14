@@ -63,7 +63,7 @@ export function NavbarPrimitive({
         </Link>
 
         {/* Center Desktop Navigation Pill */}
-        <nav className="hidden lg:flex items-center gap-1 px-4 py-1.5 rounded-full bg-brand-beige/60 border border-brand-charcoal/8 backdrop-blur-sm">
+        <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-1 px-4 py-1.5 rounded-full bg-brand-beige/60 border border-brand-charcoal/8 backdrop-blur-sm">
           {SITE_CONFIG.navigation.main.map((item) => (
             <Link
               key={item.href}
@@ -96,8 +96,9 @@ export function NavbarPrimitive({
         <button
           type="button"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 rounded-full border border-brand-charcoal/15 text-brand-charcoal hover:bg-brand-beige transition-colors"
+          className="lg:hidden p-2 rounded-full border border-brand-charcoal/15 text-brand-charcoal hover:bg-brand-beige transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -106,7 +107,7 @@ export function NavbarPrimitive({
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-x-0 top-[65px] bg-brand-canvas/98 border-b border-brand-charcoal/10 shadow-floating p-6 backdrop-blur-lg animate-fade-in">
-          <nav className="flex flex-col space-y-3">
+          <nav aria-label="Mobile Navigation" className="flex flex-col space-y-3">
             {SITE_CONFIG.navigation.main.map((item) => (
               <Link
                 key={item.href}

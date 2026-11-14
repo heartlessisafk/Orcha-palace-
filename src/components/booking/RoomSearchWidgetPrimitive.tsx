@@ -134,7 +134,7 @@ export function RoomSearchWidgetPrimitive({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
             {/* 1. Check-In Date */}
             <div className="space-y-1.5">
-              <label className="font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy flex items-center justify-between">
+              <label htmlFor="checkin-date" className="font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy flex items-center justify-between cursor-pointer">
                 <span className="flex items-center gap-1.5">
                   <Calendar className="w-3.5 h-3.5 text-brand-gold" />
                   <span>Check-In</span>
@@ -143,6 +143,7 @@ export function RoomSearchWidgetPrimitive({
               </label>
               <div className="relative">
                 <input
+                  id="checkin-date"
                   type="date"
                   min={today}
                   value={query.checkInDate}
@@ -170,7 +171,7 @@ export function RoomSearchWidgetPrimitive({
 
             {/* 2. Check-Out Date */}
             <div className="space-y-1.5">
-              <label className="font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy flex items-center justify-between">
+              <label htmlFor="checkout-date" className="font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy flex items-center justify-between cursor-pointer">
                 <span className="flex items-center gap-1.5">
                   <Calendar className="w-3.5 h-3.5 text-brand-gold" />
                   <span>Check-Out</span>
@@ -181,6 +182,7 @@ export function RoomSearchWidgetPrimitive({
               </label>
               <div className="relative">
                 <input
+                  id="checkout-date"
                   type="date"
                   min={query.checkInDate || today}
                   value={query.checkOutDate}
@@ -206,6 +208,8 @@ export function RoomSearchWidgetPrimitive({
               </label>
               <button
                 type="button"
+                aria-haspopup="dialog"
+                aria-expanded={isGuestPickerOpen}
                 onClick={() => setIsGuestPickerOpen(!isGuestPickerOpen)}
                 className="w-full rounded-xl bg-brand-canvas border border-brand-charcoal/15 px-3.5 py-3 font-sans text-sm font-medium text-brand-charcoal text-left flex items-center justify-between focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
               >

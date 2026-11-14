@@ -53,7 +53,7 @@ export function WeddingEnquiryForm() {
     "Canopied Mandap Pavilion",
     "The Royal Ballroom (1,500 sq ft)",
     "Lotus Poolside Terrace",
-    "Complete Resort Buyout (All 44 Keys)",
+    "Complete Resort Buyout (All 32 Keys)",
   ];
 
   const handleToggleSpace = (space: string) => {
@@ -162,10 +162,11 @@ ${formData.fullName}`;
               {/* Row 1: Name & Contact */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
-                  <label className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy">
+                  <label htmlFor="wedding-fullname" className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy cursor-pointer">
                     Your Name / Couple&apos;s Name <span className="text-rose-500">*</span>
                   </label>
                   <input
+                    id="wedding-fullname"
                     type="text"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
@@ -181,10 +182,11 @@ ${formData.fullName}`;
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy">
+                  <label htmlFor="wedding-phone" className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy cursor-pointer">
                     WhatsApp / Phone Number <span className="text-rose-500">*</span>
                   </label>
                   <input
+                    id="wedding-phone"
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -203,10 +205,11 @@ ${formData.fullName}`;
               {/* Row 2: Email & Target Date */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
-                  <label className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy">
+                  <label htmlFor="wedding-email" className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy cursor-pointer">
                     Email Address
                   </label>
                   <input
+                    id="wedding-email"
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -216,11 +219,12 @@ ${formData.fullName}`;
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy flex items-center gap-1.5">
+                  <label htmlFor="wedding-date" className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy flex items-center gap-1.5 cursor-pointer">
                     <Calendar className="w-3.5 h-3.5 text-brand-gold-dark" />
                     Preferred Date / Month
                   </label>
                   <input
+                    id="wedding-date"
                     type="text"
                     value={formData.targetDate}
                     onChange={(e) => setFormData({ ...formData, targetDate: e.target.value })}
@@ -233,11 +237,12 @@ ${formData.fullName}`;
               {/* Row 3: Guest Count & Duration */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
-                  <label className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy flex items-center gap-1.5">
+                  <label htmlFor="wedding-guests" className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy flex items-center gap-1.5 cursor-pointer">
                     <Users className="w-3.5 h-3.5 text-brand-gold-dark" />
                     Estimated Guest Count
                   </label>
                   <select
+                    id="wedding-guests"
                     value={formData.guestCount}
                     onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-brand-charcoal/15 bg-white text-brand-charcoal font-sans text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all"
@@ -250,11 +255,12 @@ ${formData.fullName}`;
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy flex items-center gap-1.5">
+                  <label htmlFor="wedding-duration" className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy flex items-center gap-1.5 cursor-pointer">
                     <Clock className="w-3.5 h-3.5 text-brand-gold-dark" />
                     Duration of Celebration
                   </label>
                   <select
+                    id="wedding-duration"
                     value={formData.durationDays}
                     onChange={(e) => setFormData({ ...formData, durationDays: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-brand-charcoal/15 bg-white text-brand-charcoal font-sans text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all"
@@ -305,14 +311,15 @@ ${formData.fullName}`;
 
               {/* Special Notes / Message */}
               <div className="space-y-1.5 pt-2">
-                <label className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy">
+                <label htmlFor="wedding-notes" className="block text-xs font-sans font-semibold uppercase tracking-wider text-brand-navy cursor-pointer">
                   Celebration Vision or Special Requests
                 </label>
                 <textarea
+                  id="wedding-notes"
                   rows={3}
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  placeholder="Share any special preferences (e.g., pure vegetarian catering, specific dates, accommodation requirements for 44 rooms)..."
+                  placeholder="Share any special preferences (e.g., pure vegetarian catering, specific dates, accommodation requirements for up to 32 rooms and tents)..."
                   className="w-full px-4 py-3 rounded-xl border border-brand-charcoal/15 bg-white text-brand-charcoal font-sans text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all resize-none"
                 />
               </div>

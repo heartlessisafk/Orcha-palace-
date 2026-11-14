@@ -27,8 +27,9 @@ export default function HomePage() {
     <div className="min-h-screen bg-brand-canvas text-brand-charcoal flex flex-col selection:bg-brand-gold/20 selection:text-brand-navy">
       <NavbarPrimitive transparentAtTop />
 
-      {/* 1 & 2. CINEMATIC HERO & SCROLL-TRANSFORMING BOOKING SEQUENCE */}
-      <HeroScrollBookingSequence />
+      <main id="main-content" className="flex-1">
+        {/* 1 & 2. CINEMATIC HERO & SCROLL-TRANSFORMING BOOKING SEQUENCE */}
+        <HeroScrollBookingSequence />
 
       {/* 3. RESORT PHILOSOPHY & WORD-BY-WORD SCROLL REVEAL */}
       <Section surface="canvas" spacing="default" id="about">
@@ -315,8 +316,9 @@ export default function HomePage() {
       {/* 7. THE GUEST LOVE EXPERIENCE (Second-Last Homepage Section: Alternating Tinder-Inspired Card Choreography) */}
       <GuestLoveExperience />
 
-      {/* 8. CINEMATIC PALACE-TO-MAP SCROLL FINALE (Closing Experience inspired by Inversa-Scroll-Animation) */}
-      <PalaceToMapFinale id="map-experience" />
+        {/* 8. CINEMATIC PALACE-TO-MAP SCROLL FINALE (Closing Experience inspired by Inversa-Scroll-Animation) */}
+        <PalaceToMapFinale id="map-experience" />
+      </main>
 
       <FooterPrimitive />
     </div>

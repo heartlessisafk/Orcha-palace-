@@ -106,29 +106,31 @@ export default function SpaPage() {
         onOpenEnquiry={() => setIsEnquiryOpen(true)}
       />
 
-      {/* 2. Royal Cinematic Opening Hero */}
-      <SpaHeroRoyal
-        selectedCount={selectedTreatments.length}
-        subtotal={subtotal}
-        onOpenTray={() => setIsTrayOpen(true)}
-        onOpenEnquiry={() => setIsEnquiryOpen(true)}
-      />
+      <main id="main-content" className="flex-1">
+        {/* 2. Royal Cinematic Opening Hero */}
+        <SpaHeroRoyal
+          selectedCount={selectedTreatments.length}
+          subtotal={subtotal}
+          onOpenTray={() => setIsTrayOpen(true)}
+          onOpenEnquiry={() => setIsEnquiryOpen(true)}
+        />
 
-      {/* 3. Royal Indian Wellness Editorial & Dosha Philosophy */}
-      <SpaEditorialRoyal />
+        {/* 3. Royal Indian Wellness Editorial & Dosha Philosophy */}
+        <SpaEditorialRoyal />
 
-      {/* 4. Quick-Commerce Catalogue Browser (Search, Filter, 11 Treatment Cards) */}
-      <SpaCatalogueBrowser
-        selectedIds={selectedIds}
-        onToggleSelect={handleToggleSelect}
-        onOpenDetail={handleOpenDetail}
-      />
+        {/* 4. Quick-Commerce Catalogue Browser (Search, Filter, 11 Treatment Cards) */}
+        <SpaCatalogueBrowser
+          selectedIds={selectedIds}
+          onToggleSelect={handleToggleSelect}
+          onOpenDetail={handleOpenDetail}
+        />
 
-      {/* 5. Royal Conversion Banner with Direct Contacts */}
-      <SpaConversionRoyal
-        onOpenEnquiry={() => setIsEnquiryOpen(true)}
-        selectedCount={selectedTreatments.length}
-      />
+        {/* 5. Royal Conversion Banner with Direct Contacts */}
+        <SpaConversionRoyal
+          onOpenEnquiry={() => setIsEnquiryOpen(true)}
+          selectedCount={selectedTreatments.length}
+        />
+      </main>
 
       {/* 6. Footer Navigation & Resort Information */}
       <FooterPrimitive />

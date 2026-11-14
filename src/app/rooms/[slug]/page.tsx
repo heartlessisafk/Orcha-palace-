@@ -51,7 +51,7 @@ export default async function RoomDetailPage({ params }: PageProps) {
   return (
     <>
       <NavbarPrimitive />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         <RoomDetailView room={room} />
       </main>
       <FooterPrimitive />

@@ -1,0 +1,301 @@
+{
+  "impeccableDesignAudit": {
+    "hasBodyFont": true,
+    "hasHeadingFont": true,
+    "backgroundColor": "rgb(253, 251, 247)",
+    "color": "rgb(38, 14, 1)",
+    "scrollSmooth": true
+  },
+  "vercelGuidelinesAudit": {
+    "hasSkipLink": true,
+    "hasMainLandmark": true,
+    "mainNavAria": true,
+    "hamburgerAriaExpanded": true,
+    "checkInLabelAssociation": true,
+    "checkOutLabelAssociation": true,
+    "totalImagesOnHome": 21,
+    "missingAltCount": 0
+  },
+  "tasteSkillAudit": {
+    "categoryCount": 7,
+    "editorialWideCount": 1,
+    "standardTileCount": 3
+  },
+  "tactile3DButtonAudit": {
+    "found": true,
+    "hasSheen": true,
+    "hasTactileClass": true,
+    "interactiveTransformApplied": true,
+    "focusVisibleRing": true
+  },
+  "regressionTest": {
+    "routes": {
+      "home": {
+        "desktop_1440": {
+          "hasOverflow": false,
+          "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        "tablet_768": {
+          "hasOverflow": false,
+          "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        "mobile_390": {
+          "hasOverflow": false,
+          "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "rooms": {
+        "desktop_1440": {
+          "hasOverflow": false,
+          "title": "Accommodations & Luxury Swiss Tents | The Orchha Resort | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        "tablet_768": {
+          "hasOverflow": false,
+          "title": "Accommodations & Luxury Swiss Tents | The Orchha Resort | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        "mobile_390": {
+          "hasOverflow": false,
+          "title": "Accommodations & Luxury Swiss Tents | The Orchha Resort | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "room_standard": {
+        "desktop_1440": {
+          "hasOverflow": false,
+          "title": "Standard Heritage Room — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        "tablet_768": {
+          "hasOverflow": false,
+          "title": "Standard Heritage Room — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        "mobile_390": {
+          "hasOverflow": false,
+          "title": "Standard Heritage Room — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "room_deluxe": {
+        "desktop_1440": {
+          "hasOverflow": false,
+          "title": "Deluxe Marble Room — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        "tablet_768": {
+          "hasOverflow": false,
+          "title": "Deluxe Marble Room — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        "mobile_390": {
+          "hasOverflow": false,
+          "title": "Deluxe Marble Room — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "room_tent": {
+        "desktop_1440": {
+          "hasOverflow": false,
+          "title": "Deluxe AC Swiss Tent — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        "tablet_768": {
+          "hasOverflow": false,
+          "title": "Deluxe AC Swiss Tent — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        "mobile_390": {
+          "hasOverflow": false,
+          "title": "Deluxe AC Swiss Tent — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "room_suite": {
+        "desktop_1440": {
+          "hasOverflow": false,
+          "title": "Royal Heritage Suite — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        "tablet_768": {
+          "hasOverflow": false,
+          "title": "Royal Heritage Suite — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        "mobile_390": {
+          "hasOverflow": false,
+          "title": "Royal Heritage Suite — Luxury Stay in Orchha | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "gallery": {
+        "desktop_1440": {
+          "hasOverflow": false,
+          "title": "Photo Gallery | The Orchha Resort — Betwa River Sanctuary | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        "tablet_768": {
+          "hasOverflow": false,
+          "title": "Photo Gallery | The Orchha Resort — Betwa River Sanctuary | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        "mobile_390": {
+          "hasOverflow": false,
+          "title": "Photo Gallery | The Orchha Resort — Betwa River Sanctuary | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "weddings": {
+        "desktop_1440": {
+          "hasOverflow": false,
+          "title": "Royal Destination Weddings | The Orchha Resort on River Betwa | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        "tablet_768": {
+          "hasOverflow": false,
+          "title": "Royal Destination Weddings | The Orchha Resort on River Betwa | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        "mobile_390": {
+          "hasOverflow": false,
+          "title": "Royal Destination Weddings | The Orchha Resort on River Betwa | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "spa": {
+        "desktop_1440": {
+          "hasOverflow": false,
+          "title": "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        "tablet_768": {
+          "hasOverflow": false,
+          "title": "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        "mobile_390": {
+          "hasOverflow": false,
+          "title": "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "about": {
+        "desktop_1440": {
+          "hasOverflow": false,
+          "title": "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 1425,
+          "clientWidth": 1425
+        },
+        "tablet_768": {
+          "hasOverflow": false,
+          "title": "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        "mobile_390": {
+          "hasOverflow": false,
+          "title": "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa | The Orchha Resort",
+          "mainPresent": true,
+          "footerPresent": true,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      }
+    }
+  },
+  "productionHealth": {
+    "consoleErrorsCount": 0,
+    "consoleErrors": [],
+    "cleanHealth": true
+  },
+  "regressionsFound": 0
+}

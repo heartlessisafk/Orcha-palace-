@@ -39,7 +39,7 @@ export default function RoomsPage() {
     <>
       <NavbarPrimitive />
 
-      <main className="pt-20 bg-brand-canvas text-brand-charcoal min-h-screen">
+      <main id="main-content" className="pt-20 bg-brand-canvas text-brand-charcoal min-h-screen">
         {/* 1. HERO SECTION */}
         <section className="relative py-20 lg:py-28 bg-[#0C1731] text-white overflow-hidden border-b border-brand-gold/20">
           <div className="absolute inset-0 pointer-events-none opacity-30">

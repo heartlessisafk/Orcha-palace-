@@ -21,7 +21,7 @@ export default function GalleryPage() {
       {/* Navigation */}
       <NavbarPrimitive transparentAtTop />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Cinematic Gallery Hero */}
         <section className="relative min-h-[58vh] sm:min-h-[64vh] flex items-end pb-12 sm:pb-16 pt-32 overflow-hidden bg-brand-navy">
           {/* Background Image: Iconic Lotus Pool Twilight */}
