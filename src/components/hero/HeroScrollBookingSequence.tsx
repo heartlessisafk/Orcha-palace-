@@ -79,8 +79,8 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
             </div>
           )}
 
-          {/* Dynamic Darkening Vignette Layer - Restrained to preserve image beauty */}
-          <div className="absolute inset-0 z-1 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-black/35 pointer-events-none" />
+          {/* Dynamic Darkening Vignette Layer - Neutral tone to preserve authentic pool and landscape colors */}
+          <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/60 via-transparent to-black/25 pointer-events-none" />
         </div>
 
         {/* Hero Editorial Text Container */}

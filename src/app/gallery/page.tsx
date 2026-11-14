@@ -23,19 +23,19 @@ export default function GalleryPage() {
 
       <main id="main-content" className="flex-1">
         {/* Cinematic Gallery Hero */}
-        <section className="relative min-h-[58vh] sm:min-h-[64vh] flex items-end pb-12 sm:pb-16 pt-32 overflow-hidden bg-brand-navy">
-          {/* Background Image: Iconic Lotus Pool Twilight */}
+        <section className="relative min-h-[58vh] sm:min-h-[64vh] flex items-end pb-12 sm:pb-16 pt-32 overflow-hidden bg-brand-charcoal">
+          {/* Background Image: Iconic Lotus Pool Twilight - Authentic Natural Colors */}
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/resort/curated/pool/pool-lotus-twilight-glow.jpg"
               alt="Orchha Resort Lotus Pool Twilight Glow"
               fill
               priority
-              className="object-cover object-center filter brightness-75 scale-105"
+              className="object-cover object-center scale-105"
             />
-            {/* Multi-layered luxury overlays */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/60 to-brand-charcoal/30" />
-            <div className="absolute inset-0 bg-radial-vignette opacity-50" />
+            {/* Restrained neutral scrim ensuring crisp typography while showcasing genuine pool turquoise & courtyard warmth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+            <div className="absolute inset-0 bg-radial-vignette opacity-30" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

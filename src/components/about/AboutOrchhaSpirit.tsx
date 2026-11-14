@@ -88,7 +88,7 @@ export function AboutOrchhaSpirit() {
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover object-center"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
 
                   {/* Distinction Badge */}
                   <div className="absolute top-4 left-4 right-4 bg-brand-navy/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-brand-gold/40 text-xs text-brand-beige flex items-center gap-2 shadow-subtle">

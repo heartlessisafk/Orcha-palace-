@@ -4,14 +4,14 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Phase 20: Heritage Geography Map Reveal — Text Visibility & Scroll Performance Optimization (Client Feedback Fix 03).
+**Current focus:** Phase 21: Remove Excessive Blue Colour Grading & Restore Warm Heritage Tones (Client Feedback Fix 04).
 
 ## Current Position
-Milestone: Client Feedback Optimization (Phase 20 in sequence) (Completed)  
-Status: Phase 20 Completed & Verified (Text visibility resolved with luxury floating panel, scroll lag eliminated via GPU promotion & visibility gating, 0 regressions)  
-Last activity: 2026-11-14 — Completed Phase 20: Resolved Client Feedback Fix 03 based on `IMG_1675.jpeg`. Enclosed Stage 1 dialog in an elegant translucent floating luxury panel (`rounded-3xl`, `bg-white/90 sm:bg-white/95`, `backdrop-blur-md`, `border border-brand-gold/35`) with deep navy (`#0C1731`) and charcoal typography, achieving 100% contrast against the Chhatris photo. Eliminated continuous `filter: saturate()` repaints, added Leaflet map visibility gating (`visibility: hidden` when off-screen), promoted layers to GPU compositor, and removed nested backdrop blur on scaling map header. Verified all 5 scroll acts and 10 application routes with 0 build errors.
+Milestone: Client Feedback Optimization (Phase 21 in sequence) (Completed)  
+Status: Phase 21 Completed & Verified (Excessive blue grading removed from Homepage, Our Story, and Gallery; golden heritage tones and natural turquoise pool water fully restored; text legibility preserved; 0 regressions)  
+Last activity: 2026-11-14 — Completed Phase 21: Resolved Client Feedback Fix 04. Removed artificial navy blue gradient overlays across Homepage hero, Our Story hero (`slide1.jpg`), and Gallery hero/cards. Golden carved teak furniture, gold-leaf ceiling coffers, Bundeli paintings, and natural turquoise lotus pool water restored to authentic vibrancy. Preserved WCAG AA text contrast via localized neutral scrims and glass cards. Verified 14/14 static pages, 0 TypeScript errors, and 0 regressions across all 10 routes.
 
-Progress: [██████████] 100% (Phases 1-20 complete)
+Progress: [██████████] 100% (Phases 1-21 complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed

@@ -156,16 +156,16 @@ export function GalleryViewer() {
                     "px-4 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap transition-all duration-250 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold cursor-pointer",
                     "tactile-3d hover:-translate-y-0.5 active:scale-[0.97]",
                     isActive
-                      ? "bg-brand-navy text-brand-sand shadow-md ring-1 ring-brand-gold/40 hover:shadow-gold-ambient"
+                      ? "bg-brand-navy text-white shadow-md ring-1 ring-brand-gold/60 hover:shadow-gold-ambient font-semibold"
                       : "bg-white/90 text-brand-charcoal hover:bg-brand-beige border border-brand-charcoal/10 shadow-subtle hover:shadow-card"
                   )}
                 >
                   <span>{group.label}</span>
                   <span
                     className={cn(
-                      "text-[10px] px-1.5 py-0.5 rounded-full font-mono",
+                      "text-[10px] px-1.5 py-0.5 rounded-full font-mono font-medium",
                       isActive
-                        ? "bg-brand-sand/20 text-brand-sand"
+                        ? "bg-brand-gold/25 text-brand-gold-light"
                         : "bg-brand-charcoal/5 text-brand-charcoal/60"
                     )}
                   >

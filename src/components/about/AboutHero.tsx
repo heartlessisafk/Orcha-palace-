@@ -31,9 +31,9 @@ export function AboutHero() {
           sizes="100vw"
           className="object-cover object-center scale-105 transition-transform duration-1000 ease-out"
         />
-        {/* Layered luxury scrim for optimal legibility and mood */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-brand-navy/40" />
-        <div className="absolute inset-0 bg-radial-vignette opacity-70" />
+        {/* Neutral luxury scrim to preserve authentic warm golden teak & heritage salon tones while ensuring optimal contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/30" />
+        <div className="absolute inset-0 bg-radial-vignette opacity-50" />
       </div>
 
       {/* 2. Content Container */}
@@ -56,7 +56,7 @@ export function AboutHero() {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: LUXURY_EASE }}
-          className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-white leading-[1.12] tracking-tight text-balance max-w-4xl mx-auto"
+          className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-white leading-[1.12] tracking-tight text-balance max-w-4xl mx-auto drop-shadow-md"
         >
           Where Sacred Waters Meet{" "}
           <span className="font-serif italic text-brand-gold font-normal">
@@ -69,7 +69,7 @@ export function AboutHero() {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: LUXURY_EASE }}
-          className="font-sans text-base sm:text-lg md:text-xl text-brand-beige/90 max-w-2xl mx-auto font-light leading-relaxed text-pretty"
+          className="font-sans text-base sm:text-lg md:text-xl text-brand-beige-sand max-w-2xl mx-auto font-light leading-relaxed text-pretty drop-shadow-sm"
         >
           Conceived in quiet reverence beside the calm ripples of the Betwa River.
           Designed by Architect Yogesh Chandra, offering 44 sanctuary keys across
@@ -83,29 +83,29 @@ export function AboutHero() {
           transition={{ duration: 0.8, delay: 0.45, ease: LUXURY_EASE }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto pt-2"
         >
-          <div className="bg-brand-navy/60 backdrop-blur-md border border-white/10 rounded-xl p-3 sm:p-4 text-center">
+          <div className="bg-black/45 backdrop-blur-md border border-brand-gold/25 rounded-xl p-3 sm:p-4 text-center shadow-md">
             <span className="block font-serif text-xl sm:text-2xl text-brand-gold font-medium">
               Kanchan Ghat
             </span>
-            <span className="block font-sans text-xs text-white/70 uppercase tracking-wider mt-0.5">
+            <span className="block font-sans text-xs text-white/80 uppercase tracking-wider mt-0.5">
               Direct Betwa Riverfront
             </span>
           </div>
 
-          <div className="bg-brand-navy/60 backdrop-blur-md border border-white/10 rounded-xl p-3 sm:p-4 text-center">
+          <div className="bg-black/45 backdrop-blur-md border border-brand-gold/25 rounded-xl p-3 sm:p-4 text-center shadow-md">
             <span className="block font-serif text-xl sm:text-2xl text-brand-gold font-medium">
               44 Sanctuary Keys
             </span>
-            <span className="block font-sans text-xs text-white/70 uppercase tracking-wider mt-0.5">
+            <span className="block font-sans text-xs text-white/80 uppercase tracking-wider mt-0.5">
               Rooms &amp; Deluxe AC Swiss Tents
             </span>
           </div>
 
-          <div className="bg-brand-navy/60 backdrop-blur-md border border-white/10 rounded-xl p-3 sm:p-4 text-center">
+          <div className="bg-black/45 backdrop-blur-md border border-brand-gold/25 rounded-xl p-3 sm:p-4 text-center shadow-md">
             <span className="block font-serif text-xl sm:text-2xl text-brand-gold font-medium">
               0% Pollution
             </span>
-            <span className="block font-sans text-xs text-white/70 uppercase tracking-wider mt-0.5">
+            <span className="block font-sans text-xs text-white/80 uppercase tracking-wider mt-0.5">
               Certified Tranquil Belt
             </span>
           </div>

@@ -73,7 +73,7 @@ export function AboutBetwaSetting() {
                     sizes="(max-width: 1024px) 100vw, 58vw"
                     className="object-cover transition-all duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
                   {/* Floating Verified Badge on Image */}
                   <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-brand-navy/10 shadow-subtle flex items-center gap-2">
