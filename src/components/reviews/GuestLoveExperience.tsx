@@ -94,6 +94,9 @@ export function GuestLoveExperience({
         className
       )}
     >
+      {/* Anchor alias so both #reviews and #guest-stories navigate here */}
+      <span id="reviews" className="scroll-mt-20 absolute top-0" aria-hidden="true" />
+
       {/* ─────────────────────────────────────────────────────────────────
           DESKTOP PINNED VIEWPORT EXPERIENCE (lg: screens)
           ───────────────────────────────────────────────────────────────── */}

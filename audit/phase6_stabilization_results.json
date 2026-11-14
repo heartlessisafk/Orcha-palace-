@@ -1,0 +1,497 @@
+{
+  "viewportsTested": 9,
+  "routesTested": 7,
+  "responsiveMatrix": {
+    "desktop_1920x1080": {
+      "home": {
+        "scrollWidth": 1905,
+        "clientWidth": 1905,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "rooms": {
+        "scrollWidth": 1905,
+        "clientWidth": 1905,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "room_deluxe": {
+        "scrollWidth": 1905,
+        "clientWidth": 1905,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "gallery": {
+        "scrollWidth": 1905,
+        "clientWidth": 1905,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "weddings": {
+        "scrollWidth": 1905,
+        "clientWidth": 1905,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "spa": {
+        "scrollWidth": 1905,
+        "clientWidth": 1905,
+        "hasOverflow": false,
+        "navVisible": false,
+        "footerVisible": true
+      },
+      "about": {
+        "scrollWidth": 1905,
+        "clientWidth": 1905,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      }
+    },
+    "desktop_1440x900": {
+      "home": {
+        "scrollWidth": 1425,
+        "clientWidth": 1425,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "rooms": {
+        "scrollWidth": 1425,
+        "clientWidth": 1425,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "room_deluxe": {
+        "scrollWidth": 1425,
+        "clientWidth": 1425,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "gallery": {
+        "scrollWidth": 1425,
+        "clientWidth": 1425,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "weddings": {
+        "scrollWidth": 1425,
+        "clientWidth": 1425,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "spa": {
+        "scrollWidth": 1425,
+        "clientWidth": 1425,
+        "hasOverflow": false,
+        "navVisible": false,
+        "footerVisible": true
+      },
+      "about": {
+        "scrollWidth": 1425,
+        "clientWidth": 1425,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      }
+    },
+    "desktop_1280x800": {
+      "home": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "rooms": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "room_deluxe": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "gallery": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "weddings": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "spa": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265,
+        "hasOverflow": false,
+        "navVisible": false,
+        "footerVisible": true
+      },
+      "about": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      }
+    },
+    "tablet_1024x768": {
+      "home": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "rooms": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "room_deluxe": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "gallery": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "weddings": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "spa": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "hasOverflow": false,
+        "navVisible": false,
+        "footerVisible": true
+      },
+      "about": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      }
+    },
+    "tablet_768x1024": {
+      "home": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "rooms": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "room_deluxe": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "gallery": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "weddings": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "spa": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasOverflow": false,
+        "navVisible": false,
+        "footerVisible": true
+      },
+      "about": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      }
+    },
+    "mobile_430x932": {
+      "home": {
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "rooms": {
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "room_deluxe": {
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "gallery": {
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "weddings": {
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "spa": {
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "hasOverflow": false,
+        "navVisible": false,
+        "footerVisible": true
+      },
+      "about": {
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      }
+    },
+    "mobile_390x844": {
+      "home": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "rooms": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "room_deluxe": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "gallery": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "weddings": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "spa": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasOverflow": false,
+        "navVisible": false,
+        "footerVisible": true
+      },
+      "about": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      }
+    },
+    "mobile_375x812": {
+      "home": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "rooms": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "room_deluxe": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "gallery": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "weddings": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "spa": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "hasOverflow": false,
+        "navVisible": false,
+        "footerVisible": true
+      },
+      "about": {
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      }
+    },
+    "mobile_360x800": {
+      "home": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "rooms": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "room_deluxe": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "gallery": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "weddings": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      },
+      "spa": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasOverflow": false,
+        "navVisible": false,
+        "footerVisible": true
+      },
+      "about": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasOverflow": false,
+        "navVisible": true,
+        "footerVisible": true
+      }
+    }
+  },
+  "animations": {
+    "hero": {
+      "hasHeroGlass": true,
+      "glassOpacity": "1"
+    },
+    "reviews": {
+      "forwardStepsRecorded": 5,
+      "reverseRecovered": true,
+      "cardsRendered": 5
+    },
+    "mapFinale": {
+      "leafletActive": true,
+      "markersRendered": 14
+    }
+  },
+  "bookingFlow": {
+    "hasCheckIn": true,
+    "hasCheckOut": true,
+    "hasSubmitBtn": true,
+    "hasModal": true,
+    "bodyScrollLocked": true,
+    "htmlScrollLocked": true,
+    "hasWhatsAppHandoff": true,
+    "waHref": "https://wa.me/919926219900?text=*Reservation%20Enquiry%20%E2%80%94%20The%20Orchha%20Resort*%0A----------------------------------------%0ACheck-in%3A%202026-11-14%0ACheck-out%3A%202026-11-15%0ARooms%3A%201%0AGuests%3A%202%20Adults%0A----------------------------------------%0ASent%20from%20Orchha%20Resort%20Website%20Concierge",
+    "waUrlEncoded": true,
+    "escapeDismissal": {
+      "modalDismissed": true,
+      "bodyScrollUnlocked": true
+    }
+  },
+  "consoleErrors": 0,
+  "regressionsFound": 0
+}

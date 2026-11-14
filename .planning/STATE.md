@@ -4,27 +4,27 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Milestone 2: Major Professional Design & Engineering Upgrade — Phase 16 (Upgrade Phase 5): Page-by-Page Cinematic Refinement & Editorial Elevation.
+**Current focus:** Milestone 2: Major Professional Design & Engineering Upgrade — Phase 17 (Upgrade Phase 6): Technical Stabilization, Animation Integrity & Deep Responsive Testing.
 
 ## Current Position
 Milestone: 2 — Major Professional Design & Engineering Upgrade
-Phase: 5 of 7 (Phase 16 in sequence) (Completed)  
-Status: Completed (Phase 5 executed and verified; awaiting Phase 6)  
-Last activity: 2026-11-14 — Completed Milestone 2 Phase 5: Executed surgical editorial elevation across all 7 core website sections. Homepage (motion hero entrance, amenities links, smooth booking handoff), Rooms & Suites (32 rooms, accurate specs, dynamic suites), Gallery (6 consolidated categories, asymmetrical editorial tiles, progressive reveal, 3D CTAs), Weddings (6 royal sections, verified venues), Spa (Kairali Ayurveda storytelling, 16 treatments), About (authentic Bundelkhand heritage, 32-room alignment), and Map & Footer (CARTO Voyager light map, verified landmarks, 4-column footer). Verified via automated CDP tests and 15 screenshots.
+Phase: 6 of 7 (Phase 17 in sequence) (Completed)  
+Status: Completed (Phase 6 executed and verified; awaiting final Phase 7 prompt)  
+Last activity: 2026-11-14 — Completed Milestone 2 Phase 6: Executed comprehensive technical stabilization. Verified bidirectional scroll on 380vh review track and 450vh map finale; added alias anchor `#reviews`; verified end-to-end booking flow (date calculations, steppers, scroll-lock dialog, pre-filled WhatsApp handoff, Escape key dismissal); audited 9 viewports across 7 routes (63 test cases, 0px overflow); confirmed 0 console errors and clean production build.
 
-Progress: [███████░░░] 71% (Milestone 2: 5/7 phases complete)
+Progress: [█████████░] 86% (Milestone 2: 6/7 phases complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed
-- Milestone 2 phases: 5 / 7 completed
+- Milestone 2 phases: 6 / 7 completed
 - Installed design skills: 5/5 verified in `.agents/skills/`
 - Design system canonical document: `DESIGN.md` established at project root
 - Universal 3D button system: Active via `useTactile3D` and `Button.tsx`
 - Errors in build: 0
 - Type check: Clean (0 errors)
 - Console errors in browser: 0
-- Mobile horizontal overflow: None (hasOverflow: false across Desktop, Tablet, and Mobile on all 10 routes)
-- Baseline screenshots captured: 30 full-page screenshots (10 routes x 3 viewports) + 4 Phase 4 3D button screenshots + 15 Phase 5 verification screenshots
+- Mobile & responsive horizontal overflow: None (hasOverflow: false across all 9 tested viewports)
+- Baseline screenshots captured: 30 baseline + 4 Phase 4 + 15 Phase 5 + 11 Phase 6 stabilization screenshots
 - Curated & verified images on disk: 109 unique images (0 missing references across `src/`)
 - Map basemap style: Permanent CARTO Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=...`) with valid API key
 - Watermarks on map: 0 (completely eliminated)
@@ -49,3 +49,4 @@ Progress: [███████░░░] 71% (Milestone 2: 5/7 phases complete
 14. **Design Token Architecture & Luxury Typography (Phase 14):** Created canonical `DESIGN.md` in root with 5-skill coordinated team. Standardized royal Indian heritage palette, 4px grid, Crimson Text + DM Sans hierarchy, 6-subject photography guidelines (zero stock rule), universal tactile 3D button contracts, and synchronized Tailwind/CSS tokens.
 15. **Universal Tactile Button & Micro-Interaction System (Phase 15):** Implemented centralized `useTactile3D` hook and upgraded universal `Button.tsx` with 3D perspective tilt (±6°), 4px elevation, dynamic sheen overlay, and tactile press compression (`scale: 0.975`). Upgraded controls across reservation dock, gallery filter pills, "Discover More" progressive trigger, map controls, room detail carousel/thumbs, and spa selections. Verified via automated CDP tests and screenshots.
 16. **Page-by-Page Cinematic Refinement & Editorial Elevation (Phase 16):** Executed surgical editorial elevation across all 7 core sections: Homepage (motion hero entrance, amenities links, booking dock), Rooms & Suites (32 rooms, accurate specs, dynamic suites), Gallery (6 consolidated categories, asymmetrical editorial tiles, progressive reveal, 3D CTAs), Weddings (6 royal sections, verified venues), Spa (Kairali Ayurveda storytelling, 16 treatments), About (authentic Bundelkhand heritage, 32-room alignment), and Map & Footer (CARTO Voyager light map, verified landmarks, 4-column footer). Verified via automated CDP tests and 15 screenshots.
+17. **Technical Stabilization, Animation Integrity & Deep Responsive Testing (Phase 17):** Verified bidirectional scroll on 380vh review track and 450vh map finale; added alias anchor `#reviews`; verified end-to-end booking flow (date calculations, steppers, scroll-lock dialog, pre-filled WhatsApp handoff, Escape key dismissal); audited 9 viewports across 7 routes (63 test cases, 0px overflow); confirmed 0 console errors and clean production build.
