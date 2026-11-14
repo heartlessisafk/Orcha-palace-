@@ -1,0 +1,227 @@
+[
+  {
+    "viewport": "desktop_1440",
+    "dimensions": "1440x900",
+    "inspection": {
+      "found": true,
+      "hasImage": true,
+      "imgComplete": true,
+      "badgeText": "The Story of Orchha ResortKanchanghat Sanctuary",
+      "badgeColor": "rgb(243, 211, 130)",
+      "badgeBg": "rgba(6, 12, 27, 0.9)",
+      "h1Text": "Where Sacred Waters Meet Bundela Grandeur",
+      "goldSpanText": "Bundela Grandeur",
+      "goldSpanColor": "rgb(243, 211, 130)",
+      "subtitleText": "Conceived in quiet reverence beside the calm ripples of the Betwa River. Designed by Architect Yogesh Chandra, offering 44 sanctuary keys across from Orchha's 16th-century royal cenotaphs in a certified zero-pollution haven.",
+      "subtitleColor": "rgb(244, 240, 230)",
+      "cards": [
+        {
+          "title": "Kanchan Ghat",
+          "desc": "Direct Betwa Riverfront",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        },
+        {
+          "title": "44 Sanctuary Keys",
+          "desc": "Rooms & Deluxe AC Swiss Tents",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        },
+        {
+          "title": "0% Pollution",
+          "desc": "Certified Tranquil Belt",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        }
+      ],
+      "buttons": [
+        "Explore The Story",
+        "Reserve Your Sanctuary Stay"
+      ],
+      "attribution": "Official Resort Photograph • Evening Pavilions & Lawns at The Orchha Resort",
+      "hasHorizontalOverflow": false,
+      "scrollWidth": 1425,
+      "innerWidth": 1440
+    }
+  },
+  {
+    "viewport": "ipad_portrait_768",
+    "dimensions": "768x1024",
+    "inspection": {
+      "found": true,
+      "hasImage": true,
+      "imgComplete": true,
+      "badgeText": "The Story of Orchha ResortKanchanghat Sanctuary",
+      "badgeColor": "rgb(243, 211, 130)",
+      "badgeBg": "rgba(6, 12, 27, 0.9)",
+      "h1Text": "Where Sacred Waters Meet Bundela Grandeur",
+      "goldSpanText": "Bundela Grandeur",
+      "goldSpanColor": "rgb(243, 211, 130)",
+      "subtitleText": "Conceived in quiet reverence beside the calm ripples of the Betwa River. Designed by Architect Yogesh Chandra, offering 44 sanctuary keys across from Orchha's 16th-century royal cenotaphs in a certified zero-pollution haven.",
+      "subtitleColor": "rgb(244, 240, 230)",
+      "cards": [
+        {
+          "title": "Kanchan Ghat",
+          "desc": "Direct Betwa Riverfront",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        },
+        {
+          "title": "44 Sanctuary Keys",
+          "desc": "Rooms & Deluxe AC Swiss Tents",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        },
+        {
+          "title": "0% Pollution",
+          "desc": "Certified Tranquil Belt",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        }
+      ],
+      "buttons": [
+        "Explore The Story",
+        "Reserve Your Sanctuary Stay"
+      ],
+      "attribution": "Official Resort Photograph • Evening Pavilions & Lawns at The Orchha Resort",
+      "hasHorizontalOverflow": false,
+      "scrollWidth": 768,
+      "innerWidth": 768
+    }
+  },
+  {
+    "viewport": "ipad_air_820",
+    "dimensions": "820x1180",
+    "inspection": {
+      "found": true,
+      "hasImage": true,
+      "imgComplete": true,
+      "badgeText": "The Story of Orchha ResortKanchanghat Sanctuary",
+      "badgeColor": "rgb(243, 211, 130)",
+      "badgeBg": "rgba(6, 12, 27, 0.9)",
+      "h1Text": "Where Sacred Waters Meet Bundela Grandeur",
+      "goldSpanText": "Bundela Grandeur",
+      "goldSpanColor": "rgb(243, 211, 130)",
+      "subtitleText": "Conceived in quiet reverence beside the calm ripples of the Betwa River. Designed by Architect Yogesh Chandra, offering 44 sanctuary keys across from Orchha's 16th-century royal cenotaphs in a certified zero-pollution haven.",
+      "subtitleColor": "rgb(244, 240, 230)",
+      "cards": [
+        {
+          "title": "Kanchan Ghat",
+          "desc": "Direct Betwa Riverfront",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        },
+        {
+          "title": "44 Sanctuary Keys",
+          "desc": "Rooms & Deluxe AC Swiss Tents",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        },
+        {
+          "title": "0% Pollution",
+          "desc": "Certified Tranquil Belt",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        }
+      ],
+      "buttons": [
+        "Explore The Story",
+        "Reserve Your Sanctuary Stay"
+      ],
+      "attribution": "Official Resort Photograph • Evening Pavilions & Lawns at The Orchha Resort",
+      "hasHorizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820
+    }
+  },
+  {
+    "viewport": "iphone_14_390",
+    "dimensions": "390x844",
+    "inspection": {
+      "found": true,
+      "hasImage": true,
+      "imgComplete": true,
+      "badgeText": "The Story of Orchha ResortKanchanghat Sanctuary",
+      "badgeColor": "rgb(243, 211, 130)",
+      "badgeBg": "rgba(6, 12, 27, 0.9)",
+      "h1Text": "Where Sacred Waters Meet Bundela Grandeur",
+      "goldSpanText": "Bundela Grandeur",
+      "goldSpanColor": "rgb(243, 211, 130)",
+      "subtitleText": "Conceived in quiet reverence beside the calm ripples of the Betwa River. Designed by Architect Yogesh Chandra, offering 44 sanctuary keys across from Orchha's 16th-century royal cenotaphs in a certified zero-pollution haven.",
+      "subtitleColor": "rgb(244, 240, 230)",
+      "cards": [
+        {
+          "title": "Kanchan Ghat",
+          "desc": "Direct Betwa Riverfront",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        },
+        {
+          "title": "44 Sanctuary Keys",
+          "desc": "Rooms & Deluxe AC Swiss Tents",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        },
+        {
+          "title": "0% Pollution",
+          "desc": "Certified Tranquil Belt",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        }
+      ],
+      "buttons": [
+        "Explore The Story",
+        "Reserve Your Sanctuary Stay"
+      ],
+      "attribution": "Official Resort Photograph • Evening Pavilions & Lawns at The Orchha Resort",
+      "hasHorizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390
+    }
+  },
+  {
+    "viewport": "iphone_se_375",
+    "dimensions": "375x667",
+    "inspection": {
+      "found": true,
+      "hasImage": true,
+      "imgComplete": true,
+      "badgeText": "The Story of Orchha ResortKanchanghat Sanctuary",
+      "badgeColor": "rgb(243, 211, 130)",
+      "badgeBg": "rgba(6, 12, 27, 0.9)",
+      "h1Text": "Where Sacred Waters Meet Bundela Grandeur",
+      "goldSpanText": "Bundela Grandeur",
+      "goldSpanColor": "rgb(243, 211, 130)",
+      "subtitleText": "Conceived in quiet reverence beside the calm ripples of the Betwa River. Designed by Architect Yogesh Chandra, offering 44 sanctuary keys across from Orchha's 16th-century royal cenotaphs in a certified zero-pollution haven.",
+      "subtitleColor": "rgb(244, 240, 230)",
+      "cards": [
+        {
+          "title": "Kanchan Ghat",
+          "desc": "Direct Betwa Riverfront",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        },
+        {
+          "title": "44 Sanctuary Keys",
+          "desc": "Rooms & Deluxe AC Swiss Tents",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        },
+        {
+          "title": "0% Pollution",
+          "desc": "Certified Tranquil Belt",
+          "titleColor": "rgb(243, 211, 130)",
+          "bgColor": "rgba(6, 12, 27, 0.85)"
+        }
+      ],
+      "buttons": [
+        "Explore The Story",
+        "Reserve Your Sanctuary Stay"
+      ],
+      "attribution": "Official Resort Photograph • Evening Pavilions & Lawns at The Orchha Resort",
+      "hasHorizontalOverflow": false,
+      "scrollWidth": 375,
+      "innerWidth": 375
+    }
+  }
+]
