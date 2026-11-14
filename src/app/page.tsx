@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { NavbarPrimitive } from "@/components/layout/NavbarPrimitive";
@@ -20,12 +20,9 @@ import { GuestLoveExperience } from "@/components/reviews/GuestLoveExperience";
 import { PalaceToMapFinale } from "@/components/map/PalaceToMapFinale";
 import { VERIFIED_ROOMS } from "@/data/rooms";
 import { RESORT_ASSETS } from "@/lib/assets";
-import { RoomDetails } from "@/types/room";
 import { Waves, Coffee, TreePine, Sparkles, MapPin, Compass, Camera, ArrowRight } from "lucide-react";
 
 export default function HomePage() {
-  const [selectedRoom, setSelectedRoom] = useState<RoomDetails | null>(null);
-
   return (
     <div className="min-h-screen bg-brand-canvas text-brand-charcoal flex flex-col selection:bg-brand-gold/20 selection:text-brand-navy">
       <NavbarPrimitive transparentAtTop />
@@ -77,7 +74,14 @@ export default function HomePage() {
               const CardContent = (
                 <RoomCardPrimitive
                   room={room}
-                  onEnquire={(r) => setSelectedRoom(r)}
+                  onEnquire={(r) => {
+                    const bookingDock = document.getElementById("booking-sequence");
+                    if (bookingDock) {
+                      bookingDock.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      window.location.href = `/rooms/${r.id}`;
+                    }
+                  }}
                 />
               );
 
@@ -108,57 +112,63 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <FadeIn delay={0.1}>
-              <div className="group p-7 rounded-luxury bg-white border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-3 h-full cursor-pointer flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-full bg-brand-gold/15 text-brand-gold-dark group-hover:bg-brand-gold group-hover:text-white transition-all duration-300 flex items-center justify-center">
-                    <Waves className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+              <Link href="/gallery?category=pool" className="block h-full group">
+                <div className="p-7 rounded-luxury bg-white border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-3 h-full flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-full bg-brand-gold/15 text-brand-gold-dark group-hover:bg-brand-gold group-hover:text-white transition-all duration-300 flex items-center justify-center">
+                      <Waves className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <h4 className="font-serif text-xl font-semibold text-brand-charcoal group-hover:text-brand-navy transition-colors">Lotus-Shaped Pool</h4>
+                    <p className="font-sans text-sm text-brand-olive leading-relaxed">
+                      Sculpted in the silhouette of a blooming lotus flower, complete with children&apos;s splash pool and riverside sun deck loungers.
+                    </p>
                   </div>
-                  <h4 className="font-serif text-xl font-semibold text-brand-charcoal group-hover:text-brand-navy transition-colors">Lotus-Shaped Pool</h4>
-                  <p className="font-sans text-sm text-brand-olive leading-relaxed">
-                    Sculpted in the silhouette of a blooming lotus flower, complete with children&apos;s splash pool and riverside sun deck loungers.
-                  </p>
+                  <div className="pt-2 flex items-center gap-1.5 text-xs font-sans font-medium text-brand-gold opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                    <span>Explore poolside</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
                 </div>
-                <div className="pt-2 flex items-center gap-1.5 text-xs font-sans font-medium text-brand-gold opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                  <span>Explore poolside</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
-              </div>
+              </Link>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="group p-7 rounded-luxury bg-white border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-3 h-full cursor-pointer flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-full bg-brand-gold/15 text-brand-gold-dark group-hover:bg-brand-gold group-hover:text-white transition-all duration-300 flex items-center justify-center">
-                    <Coffee className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+              <Link href="/gallery?category=amenities" className="block h-full group">
+                <div className="p-7 rounded-luxury bg-white border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-3 h-full flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-full bg-brand-gold/15 text-brand-gold-dark group-hover:bg-brand-gold group-hover:text-white transition-all duration-300 flex items-center justify-center">
+                      <Coffee className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <h4 className="font-serif text-xl font-semibold text-brand-charcoal group-hover:text-brand-navy transition-colors">Kaleva Restaurant</h4>
+                    <p className="font-sans text-sm text-brand-olive leading-relaxed">
+                      Vegetarian-forward dining serving authentic Bundeli specialties alongside classic Indian, Chinese, and Continental culinary menus.
+                    </p>
                   </div>
-                  <h4 className="font-serif text-xl font-semibold text-brand-charcoal group-hover:text-brand-navy transition-colors">Kaleva Restaurant</h4>
-                  <p className="font-sans text-sm text-brand-olive leading-relaxed">
-                    Vegetarian-forward dining serving authentic Bundeli specialties alongside classic Indian, Chinese, and Continental culinary menus.
-                  </p>
+                  <div className="pt-2 flex items-center gap-1.5 text-xs font-sans font-medium text-brand-gold opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                    <span>Discover cuisine</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
                 </div>
-                <div className="pt-2 flex items-center gap-1.5 text-xs font-sans font-medium text-brand-gold opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                  <span>Discover cuisine</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
-              </div>
+              </Link>
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="group p-7 rounded-luxury bg-white border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-3 h-full cursor-pointer flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-full bg-brand-gold/15 text-brand-gold-dark group-hover:bg-brand-gold group-hover:text-white transition-all duration-300 flex items-center justify-center">
-                    <TreePine className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+              <Link href="/spa" className="block h-full group">
+                <div className="p-7 rounded-luxury bg-white border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-3 h-full flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-full bg-brand-gold/15 text-brand-gold-dark group-hover:bg-brand-gold group-hover:text-white transition-all duration-300 flex items-center justify-center">
+                      <TreePine className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <h4 className="font-serif text-xl font-semibold text-brand-charcoal group-hover:text-brand-navy transition-colors">Kerala Ayurveda Spa</h4>
+                    <p className="font-sans text-sm text-brand-olive leading-relaxed">
+                      Rejuvenating herbal massage therapies and steam baths administered by certified practitioners for holistic equilibrium.
+                    </p>
                   </div>
-                  <h4 className="font-serif text-xl font-semibold text-brand-charcoal group-hover:text-brand-navy transition-colors">Kerala Ayurveda Spa</h4>
-                  <p className="font-sans text-sm text-brand-olive leading-relaxed">
-                    Rejuvenating herbal massage therapies and steam baths administered by certified practitioners for holistic equilibrium.
-                  </p>
+                  <div className="pt-2 flex items-center gap-1.5 text-xs font-sans font-medium text-brand-gold opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                    <span>Wellness therapies</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
                 </div>
-                <div className="pt-2 flex items-center gap-1.5 text-xs font-sans font-medium text-brand-gold opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                  <span>Wellness therapies</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
-              </div>
+              </Link>
             </FadeIn>
           </div>
         </Container>

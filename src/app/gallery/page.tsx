@@ -5,6 +5,7 @@ import Link from "next/link";
 import { NavbarPrimitive } from "@/components/layout/NavbarPrimitive";
 import { FooterPrimitive } from "@/components/layout/FooterPrimitive";
 import { GalleryViewer } from "@/components/gallery/GalleryViewer";
+import { Button } from "@/components/ui/Button";
 import { AnimatedHeading, AnimatedParagraph, AnimatedTag } from "@/components/motion/AnimatedTypography";
 import { Sparkles, Calendar, ShieldCheck, MapPin, ArrowRight } from "lucide-react";
 
@@ -87,18 +88,15 @@ export default function GalleryPage() {
               The Orchha Resort welcomes you with genuine Bundelkhand warmth.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-              <Link
-                href="/#rooms"
-                className="px-6 py-3 rounded-full bg-brand-navy hover:bg-brand-charcoal text-brand-sand font-sans text-sm font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2"
-              >
-                <span>Reserve Your Stay</span>
-                <ArrowRight className="w-4 h-4" />
+              <Link href="/#rooms">
+                <Button variant="primary" size="pill" withArrow>
+                  Reserve Your Stay
+                </Button>
               </Link>
-              <Link
-                href="/weddings"
-                className="px-6 py-3 rounded-full bg-white hover:bg-brand-beige text-brand-charcoal border border-brand-charcoal/15 font-sans text-sm font-medium transition-all"
-              >
-                <span>Plan a Destination Wedding</span>
+              <Link href="/weddings">
+                <Button variant="outline" size="pill">
+                  Plan a Destination Wedding
+                </Button>
               </Link>
             </div>
           </div>

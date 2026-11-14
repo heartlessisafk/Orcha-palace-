@@ -28,15 +28,12 @@ interface FilterGroup {
 
 const FILTER_GROUPS: FilterGroup[] = [
   { id: "all", label: "All Curated Views", categories: [] },
-  { id: "aerial", label: "Aerial & Grounds", categories: ["aerial-landscapes"] },
-  { id: "architecture", label: "Architecture", categories: ["architecture-exterior"] },
-  { id: "rooms", label: "Rooms & Tents", categories: ["rooms-deluxe", "rooms-tents", "rooms-suites"] },
+  { id: "architecture", label: "Architecture", categories: ["architecture-exterior", "aerial-landscapes"] },
+  { id: "rooms", label: "Rooms & Suites", categories: ["rooms-deluxe", "rooms-tents", "rooms-suites"] },
   { id: "pool", label: "Lotus Pool", categories: ["pool-gardens"] },
-  { id: "dining", label: "Dining & Bar", categories: ["dining-kaleva", "dining-riverfront"] },
-  { id: "spa", label: "Kairali Spa", categories: ["spa-kairali"] },
   { id: "weddings", label: "Weddings", categories: ["weddings-celebrations"] },
-  { id: "heritage", label: "Heritage Cenotaphs", categories: ["heritage-surroundings"] },
-  { id: "experiences", label: "Guest Moments", categories: ["guest-experiences"] },
+  { id: "amenities", label: "Amenities & Dining", categories: ["dining-kaleva", "dining-riverfront", "spa-kairali"] },
+  { id: "experiences", label: "Experiences", categories: ["heritage-surroundings", "guest-experiences"] },
 ];
 
 export function GalleryViewer() {
@@ -196,6 +193,8 @@ export function GalleryViewer() {
               // Newly revealed images animate with staggered entrance; initial 3 enter cleanly
               const isInitialBatch = index < 3;
               const staggerOffset = isInitialBatch ? index * 0.06 : (index % 3) * 0.08;
+              const isEditorialWide = index === 0 || (index % 5 === 0 && (photo.qualityScore || 8) >= 8);
+              const tileSpanClass = isEditorialWide ? "sm:col-span-2 aspect-[16/10]" : "aspect-[4/3]";
 
               return (
                 <motion.div
@@ -219,7 +218,8 @@ export function GalleryViewer() {
                   }}
                   className={cn(
                     "group relative rounded-2xl overflow-hidden bg-brand-charcoal/5 cursor-pointer shadow-subtle hover:shadow-hover border border-brand-charcoal/10 hover:border-brand-gold/60 transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2",
-                    "aspect-[4/3] hover:-translate-y-1.5 hover:scale-[1.015] active:scale-[0.985]"
+                    tileSpanClass,
+                    "hover:-translate-y-1.5 hover:scale-[1.012] active:scale-[0.985]"
                   )}
                   aria-label={`Open photo: ${photo.title}`}
                 >

@@ -116,7 +116,13 @@ export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimit
             size="md"
             fullWidth
             withArrow
-            onClick={() => onEnquire?.(room)}
+            onClick={() => {
+              if (onEnquire) {
+                onEnquire(room);
+              } else {
+                window.location.href = `/rooms/${room.id}`;
+              }
+            }}
             className="text-xs"
           >
             Reserve

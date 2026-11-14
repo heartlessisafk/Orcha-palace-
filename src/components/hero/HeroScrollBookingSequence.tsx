@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 import { RESORT_ASSETS } from "@/lib/assets";
 import { Button } from "@/components/ui/Button";
 import { HeroRatingBadge } from "@/components/ui/Badge";
@@ -15,6 +16,7 @@ export interface HeroScrollBookingSequenceProps {
 
 export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequenceProps) {
   const [videoError, setVideoError] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
   // Smooth scroll handler for first-screen CTA button
   const handleScrollToBooking = () => {
@@ -88,7 +90,12 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
               High-contrast typography container with controlled backdrop
               blur, gilded accent pill, and natural soft shadow
               ───────────────────────────────────────────────────────────── */}
-          <div className="relative max-w-3xl rounded-3xl p-6 sm:p-8 md:p-10 bg-gradient-to-br from-brand-navy/80 via-brand-navy/65 to-brand-navy/45 backdrop-blur-md border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.45)] space-y-4">
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+            className="relative max-w-3xl rounded-3xl p-6 sm:p-8 md:p-10 bg-gradient-to-br from-brand-navy/80 via-brand-navy/65 to-brand-navy/45 backdrop-blur-md border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.45)] space-y-4"
+          >
             {/* Social Rating Badge */}
             <div className="flex items-center gap-3">
               <HeroRatingBadge />
@@ -134,7 +141,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
                 <ArrowDown className="w-3.5 h-3.5 animate-bounce text-brand-gold-light" />
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Gentle Ambient Base Vignette */}

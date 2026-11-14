@@ -1,0 +1,77 @@
+{
+  "homepage": {
+    "desktopOverflow": false,
+    "mobileOverflow": false,
+    "heroHeadlinePresent": false,
+    "bookingDockPresent": true,
+    "amenityLinks": [
+      "/gallery?category=pool",
+      "/gallery?category=amenities",
+      "/spa"
+    ],
+    "previewTilesCount": 5,
+    "guestLovePresent": false,
+    "mapSectionPresent": true
+  },
+  "rooms": {
+    "desktopOverflow": false,
+    "mobileOverflow": false,
+    "catalog": {
+      "cardCount": 8,
+      "hasReserveButtons": true
+    },
+    "deluxeDetail": {
+      "h1": "Deluxe Marble Room",
+      "hasPrice": true,
+      "hasStickyBox": true,
+      "thumbCount": 4,
+      "hasWhatsApp": true
+    }
+  },
+  "gallery": {
+    "desktopOverflow": false,
+    "mobileOverflow": false,
+    "filterCount": 7,
+    "filterLabels": [
+      "All Curated Views\n48",
+      "Architecture\n11",
+      "Rooms & Suites\n8",
+      "Lotus Pool\n5",
+      "Weddings\n5",
+      "Amenities & Dining\n10",
+      "Experiences\n9"
+    ],
+    "initialTilesCount": 3,
+    "hasDiscoverMoreBtn": true
+  },
+  "weddings": {
+    "desktopOverflow": false,
+    "mobileOverflow": false,
+    "h1": "Where Royal Heritage Becomes Your Forever",
+    "hasEnquiryForm": true,
+    "hasVenues": true
+  },
+  "spa": {
+    "desktopOverflow": false,
+    "mobileOverflow": false,
+    "h1": "Sacred Ayurvedic Wellness & Royal Rejuvenation",
+    "treatmentCardCount": 16,
+    "hasQuickTray": false
+  },
+  "about": {
+    "desktopOverflow": false,
+    "mobileOverflow": false,
+    "h1": "Where Sacred Waters Meet Bundela Grandeur",
+    "hasBetwaText": true,
+    "hasCenotaphsText": true,
+    "has32Rooms": true,
+    "hasYogeshChandra": true
+  },
+  "mapAndFooter": {
+    "hasLeaflet": true,
+    "hasVoyagerTiles": true,
+    "markerCount": 14,
+    "footerLinkCount": 0,
+    "hasOtaLinks": true
+  }
+}
