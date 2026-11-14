@@ -205,8 +205,19 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 
 ### Phase 14: Design Token Architecture, Luxury Typography & Color Harmonies
 
-**Goal**: Refine color palette, typography hierarchy, and spacing tokens according to `frontend-design`, `impeccable`, and `ui-ux-pro-max` guidelines. Formalize `DESIGN.md`.  
+**Goal**: Establish the canonical design system for Orchha Resort by coordinating the five installed skills. Define design tokens, typography scales, photography direction, shared component contracts, and motion language in an authoritative `DESIGN.md`.  
 **Depends on**: Phase 13  
+**Requirements**: TOKEN-SYS-01, TYPO-SYS-01, PHOTO-DIR-01, COMP-CONTRACT-01, MOTION-LANG-01  
+**Success Criteria**:
+
+1. Canonical `DESIGN.md` created in project root covering royal heritage identity, anti-slop rules, and tokens.
+2. Semantic color palette verified with WCAG AA contrast (Midnight Navy, Deep Navy, Heritage Linen, Muted Sand, Canvas, Antique Gold/Bronze).
+3. Synchronized Tailwind configuration (`shadow-gold-ambient`, `shadow-modal`) and CSS variables (`--color-brand-gold-dark`).
+4. Typography hierarchy established pairing `Crimson Text` and `DM Sans` with line length constraints (< 80ch).
+5. Photography direction defined across 6 core subject dimensions; zero stock photo policy strictly enforced.
+6. Universal tactile 3D button hover contract and collision-proof Z-index scale established.
+7. Existing working animations (Palace-to-Map, CARTO Voyager, Guest Love, Gallery reveal) 100% preserved.
+8. Clean Next.js build and type-check verified.
 
 ### Phase 15: Universal Tactile Button & Micro-Interaction System
 

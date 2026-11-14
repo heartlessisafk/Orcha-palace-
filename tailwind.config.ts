@@ -68,6 +68,8 @@ const config: Config = {
         hover: "0 16px 36px -8px rgba(12, 23, 49, 0.12)",
         floating: "0 20px 40px -15px rgba(12, 23, 49, 0.16)",
         navy: "0 20px 40px -15px rgba(6, 12, 27, 0.4)",
+        "gold-ambient": "0 8px 25px -4px rgba(140, 109, 63, 0.28), 0 2px 8px -1px rgba(140, 109, 63, 0.12)",
+        modal: "0 24px 60px -12px rgba(6, 12, 27, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.08)",
       },
       borderRadius: {
         luxury: "12px",

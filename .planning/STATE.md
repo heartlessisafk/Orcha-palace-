@@ -4,20 +4,21 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Milestone 2: Major Professional Design & Engineering Upgrade — Phase 13 (Upgrade Phase 2): Comprehensive Codebase Mapping, Route Audit, Animation Inventory & Baseline Visual Capture.
+**Current focus:** Milestone 2: Major Professional Design & Engineering Upgrade — Phase 14 (Upgrade Phase 3): Design Token Architecture, Luxury Typography & Color Harmonies.
 
 ## Current Position
 Milestone: 2 — Major Professional Design & Engineering Upgrade
-Phase: 2 of 7 (Phase 13 in sequence) (Completed)  
-Status: Completed (Awaiting Phase 3 user prompt)  
-Last activity: 2026-11-14 — Completed Milestone 2 Phase 2: Mapped complete architectural dependency graph, audited 10 routes across 3 viewports (30 baseline screenshots), created exhaustive animation inventory, audited all 109 image assets with 0 missing files, verified interactive workflows (reservation modal scroll lock, CARTO Voyager map, gallery reveal), and formulated 10-point regression checklist.
+Phase: 3 of 7 (Phase 14 in sequence) (Completed)  
+Status: Completed (Awaiting Phase 4 user prompt)  
+Last activity: 2026-11-14 — Completed Milestone 2 Phase 3: Authored canonical DESIGN.md design system with 5-skill coordination. Defined royal heritage palette, 4px grid spacing, Crimson Text + DM Sans typography scale, 6-subject photography guidelines (zero stock rule), universal tactile 3D button contracts, and synchronized Tailwind/CSS tokens.
 
-Progress: [██░░░░░░░░] 29% (Milestone 2: 2/7 phases complete)
+Progress: [███░░░░░░░] 43% (Milestone 2: 3/7 phases complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed
-- Milestone 2 phases: 2 / 7 completed
+- Milestone 2 phases: 3 / 7 completed
 - Installed design skills: 5/5 verified in `.agents/skills/`
+- Design system canonical document: `DESIGN.md` established at project root
 - Errors in build: 0
 - Type check: Clean (0 errors)
 - Console errors in browser: 0
@@ -44,3 +45,4 @@ Progress: [██░░░░░░░░] 29% (Milestone 2: 2/7 phases complete
 11. **CARTO Voyager Light Map & API Integration (Phase 11):** Configured valid CARTO API key in `.env.local`, established CARTO Voyager light tiles as default basemap, and eliminated all watermarks.
 12. **Project Preparation & Skill Integration (Phase 12):** Installed 5 professional design intelligence skills in `.agents/skills/`, established permanent project rules (`GEMINI.md`, `AGENTS.md`), and structured 7-phase upgrade roadmap.
 13. **Comprehensive Codebase Mapping & Baseline Audit (Phase 13):** Full architectural mapping, multi-viewport audit of all 10 pages, 30 baseline captures, 109 image assets verified with 0 missing files, interactive reservation/map/gallery verification, and 10-point regression checklist.
+14. **Design Token Architecture & Luxury Typography (Phase 14):** Created canonical `DESIGN.md` in root with 5-skill coordinated team. Standardized royal Indian heritage palette, 4px grid, Crimson Text + DM Sans hierarchy, 6-subject photography guidelines (zero stock rule), universal tactile 3D button contracts, and synchronized Tailwind/CSS tokens.
