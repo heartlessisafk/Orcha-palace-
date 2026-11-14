@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { SearchQuery } from "@/types/room";
 import {
   validateSearchQuery,
@@ -55,6 +56,11 @@ export function RoomSearchWidgetPrimitive({
   const [openDirection, setOpenDirection] = useState<"down" | "up">("down");
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
   const [isHandoffModalOpen, setIsHandoffModalOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const guestPickerRef = useRef<HTMLDivElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -257,7 +263,7 @@ export function RoomSearchWidgetPrimitive({
               {isGuestPickerOpen && (
                 <div
                   className={cn(
-                    "absolute left-0 right-0 sm:left-auto sm:right-0 w-full sm:w-[320px] p-5 rounded-2xl bg-white border border-brand-gold/30 shadow-2xl z-50 space-y-4 animate-fade-in",
+                    "absolute left-0 right-0 sm:left-0 sm:right-auto lg:left-auto lg:right-0 w-full sm:w-[320px] max-w-[calc(100vw-2rem)] p-5 rounded-2xl bg-white border border-brand-gold/30 shadow-2xl z-50 space-y-4 animate-fade-in",
                     openDirection === "up"
                       ? "bottom-full mb-2 shadow-[0_-20px_50px_rgba(0,0,0,0.2)]"
                       : "top-full mt-2"
@@ -332,178 +338,186 @@ export function RoomSearchWidgetPrimitive({
           ENGINEERED LUXURY BOOKING HANDOFF MODAL
           Strict body scroll-lock, backdrop containment, and keyboard support
           ───────────────────────────────────────────────────────────────── */}
-      {isHandoffModalOpen && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="booking-modal-title"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) setIsHandoffModalOpen(false);
-          }}
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-brand-navy/85 backdrop-blur-md animate-fade-in overflow-y-auto"
-        >
+      {mounted &&
+        isHandoffModalOpen &&
+        typeof document !== "undefined" &&
+        createPortal(
           <div
-            ref={modalRef}
-            className="relative w-full max-w-lg rounded-3xl bg-white border border-brand-gold/30 shadow-2xl p-6 sm:p-8 space-y-6 my-auto"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="booking-modal-title"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setIsHandoffModalOpen(false);
+            }}
+            className="fixed inset-0 z-[999] flex items-center justify-center p-3 sm:p-6 bg-brand-navy/90 backdrop-blur-md animate-fade-in overflow-y-auto"
           >
-            {/* Modal Header */}
-            <div className="flex items-start justify-between gap-4">
-              <div className="space-y-1">
-                <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-[10px] font-mono uppercase tracking-widest text-brand-gold-dark font-semibold">
-                  <Sparkles className="w-3 h-3 text-brand-gold" />
-                  <span>Direct Concierge Handoff</span>
+            <div
+              ref={modalRef}
+              tabIndex={-1}
+              className="relative w-full max-w-lg rounded-2xl sm:rounded-3xl bg-white border border-brand-gold/30 shadow-2xl p-4 sm:p-6 md:p-7 flex flex-col max-h-[92vh] sm:max-h-[90vh] my-auto overflow-hidden outline-none"
+            >
+              {/* Modal Header (Fixed top) */}
+              <div className="shrink-0 pb-3 border-b border-brand-charcoal/10 flex items-start justify-between gap-3 sm:gap-4">
+                <div className="space-y-1 min-w-0">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-[10px] font-mono uppercase tracking-widest text-brand-gold-dark font-semibold">
+                    <Sparkles className="w-3 h-3 text-brand-gold shrink-0" />
+                    <span className="truncate">Direct Concierge Handoff</span>
+                  </div>
+                  <h3
+                    id="booking-modal-title"
+                    className="font-serif text-xl sm:text-2xl md:text-3xl font-semibold text-brand-navy leading-tight"
+                  >
+                    Complete Your Reservation
+                  </h3>
+                  <p className="font-sans text-xs text-brand-olive leading-relaxed">
+                    Connect with our reservations desk for instant tariff confirmation &amp; riverfront allocation.
+                  </p>
                 </div>
-                <h3
-                  id="booking-modal-title"
-                  className="font-serif text-2xl sm:text-3xl font-semibold text-brand-navy"
+
+                <button
+                  type="button"
+                  onClick={() => setIsHandoffModalOpen(false)}
+                  className="w-10 h-10 rounded-full border border-brand-charcoal/15 flex items-center justify-center text-brand-muted hover:text-brand-charcoal hover:border-brand-charcoal hover:bg-brand-canvas transition-colors shrink-0 touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+                  aria-label="Close reservation dialog"
                 >
-                  Complete Your Reservation
-                </h3>
-                <p className="font-sans text-xs text-brand-olive">
-                  Connect with our reservations desk for instant tariff confirmation &amp; riverfront allocation.
-                </p>
+                  <X className="w-4 h-4" />
+                </button>
               </div>
 
-              <button
-                type="button"
-                onClick={() => setIsHandoffModalOpen(false)}
-                className="w-9 h-9 rounded-full border border-brand-charcoal/15 flex items-center justify-center text-brand-muted hover:text-brand-charcoal hover:border-brand-charcoal hover:bg-brand-canvas transition-colors shrink-0"
-                aria-label="Close reservation dialog"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            {/* Stay Summary Strip */}
-            <div className="rounded-2xl bg-brand-beige border border-brand-gold/20 p-4 text-xs text-brand-olive space-y-2">
-              <div className="flex justify-between items-center pb-2 border-b border-brand-charcoal/10">
-                <span className="text-brand-muted flex items-center gap-1.5 font-medium">
-                  <Calendar className="w-3.5 h-3.5 text-brand-gold" />
-                  <span>Stay Dates:</span>
-                </span>
-                <span className="font-semibold text-brand-navy text-right">
-                  {query.checkInDate} → {query.checkOutDate}{" "}
-                  <span className="text-brand-gold font-bold">({nights} {nights === 1 ? "Night" : "Nights"})</span>
-                </span>
-              </div>
-
-              <div className="flex justify-between items-center">
-                <span className="text-brand-muted flex items-center gap-1.5 font-medium">
-                  <Users className="w-3.5 h-3.5 text-brand-gold" />
-                  <span>Occupancy:</span>
-                </span>
-                <span className="font-semibold text-brand-navy">
-                  {query.adults} Adults{query.children > 0 ? `, ${query.children} Children` : ""}{" "}
-                  ({query.roomCount} {query.roomCount > 1 ? "Rooms" : "Room"})
-                </span>
-              </div>
-
-              {defaultCategoryName && (
-                <div className="flex justify-between items-center pt-1 border-t border-brand-charcoal/10">
-                  <span className="text-brand-muted flex items-center gap-1.5 font-medium">
-                    <Bed className="w-3.5 h-3.5 text-brand-gold" />
-                    <span>Preferred Stay:</span>
-                  </span>
-                  <span className="font-semibold text-brand-gold-dark">
-                    {defaultCategoryName}
-                  </span>
-                </div>
-              )}
-            </div>
-
-            {/* Handoff Channels */}
-            <div className="space-y-3">
-              <span className="block font-sans text-xs uppercase tracking-wider text-brand-navy font-semibold">
-                Select Your Preferred Booking Channel
-              </span>
-
-              {/* Option 1: WhatsApp Concierge (Recommended) */}
-              <a
-                href={generateWhatsAppBookingUrl({
-                  ...query,
-                  selectedCategoryName: defaultCategoryName,
-                })}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-2xl border border-emerald-600/30 bg-emerald-50/60 hover:bg-emerald-50 hover:border-emerald-600 shadow-sm hover:shadow-md transition-all duration-200 group"
-              >
-                <div className="w-11 h-11 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                  <MessageCircle className="w-5 h-5" />
-                </div>
-                <div className="flex-1 text-left">
-                  <div className="flex items-center gap-2">
-                    <span className="font-sans text-sm font-semibold text-emerald-950">
-                      Instant WhatsApp Concierge
+              {/* Scrollable Modal Body */}
+              <div className="flex-1 overflow-y-auto space-y-4 py-3 sm:py-4 pr-1">
+                {/* Stay Summary Strip */}
+                <div className="rounded-2xl bg-brand-beige border border-brand-gold/20 p-3.5 sm:p-4 text-xs text-brand-olive space-y-2">
+                  <div className="flex justify-between items-center pb-2 border-b border-brand-charcoal/10 gap-2">
+                    <span className="text-brand-muted flex items-center gap-1.5 font-medium shrink-0">
+                      <Calendar className="w-3.5 h-3.5 text-brand-gold" />
+                      <span>Stay Dates:</span>
                     </span>
-                    <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-600 text-white px-2 py-0.5 rounded-full">
-                      Fastest
+                    <span className="font-semibold text-brand-navy text-right truncate">
+                      {query.checkInDate} → {query.checkOutDate}{" "}
+                      <span className="text-brand-gold font-bold">({nights} {nights === 1 ? "Night" : "Nights"})</span>
                     </span>
                   </div>
-                  <p className="font-sans text-xs text-emerald-800/80 mt-0.5">
-                    Connect directly with our 24/7 front desk at +91 99262 19900 for best direct tariffs.
-                  </p>
-                </div>
-              </a>
 
-              {/* Option 2: Direct Email Reservation */}
-              <a
-                href={generateEmailBookingUrl({
-                  ...query,
-                  selectedCategoryName: defaultCategoryName,
-                })}
-                className="flex items-center gap-4 p-4 rounded-2xl border border-brand-charcoal/15 bg-white hover:bg-brand-beige/40 hover:border-brand-gold shadow-sm hover:shadow-md transition-all duration-200 group"
-              >
-                <div className="w-11 h-11 rounded-full bg-brand-navy text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                  <Mail className="w-5 h-5" />
+                  <div className="flex justify-between items-center gap-2">
+                    <span className="text-brand-muted flex items-center gap-1.5 font-medium shrink-0">
+                      <Users className="w-3.5 h-3.5 text-brand-gold" />
+                      <span>Occupancy:</span>
+                    </span>
+                    <span className="font-semibold text-brand-navy text-right truncate">
+                      {query.adults} Adults{query.children > 0 ? `, ${query.children} Children` : ""}{" "}
+                      ({query.roomCount} {query.roomCount > 1 ? "Rooms" : "Room"})
+                    </span>
+                  </div>
+
+                  {defaultCategoryName && (
+                    <div className="flex justify-between items-center pt-1 border-t border-brand-charcoal/10 gap-2">
+                      <span className="text-brand-muted flex items-center gap-1.5 font-medium shrink-0">
+                        <Bed className="w-3.5 h-3.5 text-brand-gold" />
+                        <span>Preferred Stay:</span>
+                      </span>
+                      <span className="font-semibold text-brand-gold-dark text-right truncate">
+                        {defaultCategoryName}
+                      </span>
+                    </div>
+                  )}
                 </div>
-                <div className="flex-1 text-left">
-                  <span className="font-sans text-sm font-semibold text-brand-navy block">
-                    Direct Email Reservation
+
+                {/* Handoff Channels */}
+                <div className="space-y-2.5 sm:space-y-3">
+                  <span className="block font-sans text-xs uppercase tracking-wider text-brand-navy font-semibold">
+                    Select Your Preferred Booking Channel
                   </span>
-                  <p className="font-sans text-xs text-brand-muted mt-0.5">
-                    Send formal reservation enquiry to orchha@orchharesort.com
-                  </p>
-                </div>
-              </a>
 
-              {/* Option 3: MakeMyTrip Instant Checkout */}
-              <a
-                href={SITE_CONFIG.otaLinks.makeMyTrip}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-2xl border border-brand-charcoal/15 bg-white hover:bg-brand-beige/40 hover:border-brand-gold shadow-sm hover:shadow-md transition-all duration-200 group"
-              >
-                <div className="w-11 h-11 rounded-full bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                  <ExternalLink className="w-5 h-5" />
-                </div>
-                <div className="flex-1 text-left">
-                  <span className="font-sans text-sm font-semibold text-brand-charcoal block">
-                    MakeMyTrip Instant Checkout
-                  </span>
-                  <p className="font-sans text-xs text-brand-muted mt-0.5">
-                    Automated online booking engine with instant credit card payment
-                  </p>
-                </div>
-              </a>
-            </div>
+                  {/* Option 1: WhatsApp Concierge (Recommended) */}
+                  <a
+                    href={generateWhatsAppBookingUrl({
+                      ...query,
+                      selectedCategoryName: defaultCategoryName,
+                    })}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl border border-emerald-600/30 bg-emerald-50/60 hover:bg-emerald-50 hover:border-emerald-600 shadow-sm hover:shadow-md transition-all duration-200 group touch-manipulation"
+                  >
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                      <MessageCircle className="w-5 h-5" />
+                    </div>
+                    <div className="flex-1 min-w-0 text-left">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-sans text-sm font-semibold text-emerald-950">
+                          Instant WhatsApp Concierge
+                        </span>
+                        <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-600 text-white px-2 py-0.5 rounded-full">
+                          Fastest
+                        </span>
+                      </div>
+                      <p className="font-sans text-xs text-emerald-800/80 mt-0.5 line-clamp-2 sm:line-clamp-none">
+                        Connect directly with our 24/7 front desk at +91 99262 19900 for best direct tariffs.
+                      </p>
+                    </div>
+                  </a>
 
-            {/* Reassurance Footer */}
-            <div className="pt-2 border-t border-brand-charcoal/10 flex items-center justify-between text-[11px] text-brand-muted font-sans">
-              <span className="flex items-center gap-1.5 text-brand-olive">
-                <ShieldCheck className="w-3.5 h-3.5 text-brand-gold" />
-                <span>Zero reservation fees · Best Rate Guarantee</span>
-              </span>
-              <button
-                type="button"
-                onClick={() => setIsHandoffModalOpen(false)}
-                className="text-brand-navy font-semibold hover:underline"
-              >
-                Return to Site
-              </button>
+                  {/* Option 2: Direct Email Reservation */}
+                  <a
+                    href={generateEmailBookingUrl({
+                      ...query,
+                      selectedCategoryName: defaultCategoryName,
+                    })}
+                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl border border-brand-charcoal/15 bg-white hover:bg-brand-beige/40 hover:border-brand-gold shadow-sm hover:shadow-md transition-all duration-200 group touch-manipulation"
+                  >
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-brand-navy text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div className="flex-1 min-w-0 text-left">
+                      <span className="font-sans text-sm font-semibold text-brand-navy block">
+                        Direct Email Reservation
+                      </span>
+                      <p className="font-sans text-xs text-brand-muted mt-0.5 truncate sm:whitespace-normal">
+                        Send formal reservation enquiry to orchha@orchharesort.com
+                      </p>
+                    </div>
+                  </a>
+
+                  {/* Option 3: MakeMyTrip Instant Checkout */}
+                  <a
+                    href={SITE_CONFIG.otaLinks.makeMyTrip}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl border border-brand-charcoal/15 bg-white hover:bg-brand-beige/40 hover:border-brand-gold shadow-sm hover:shadow-md transition-all duration-200 group touch-manipulation"
+                  >
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                      <ExternalLink className="w-5 h-5" />
+                    </div>
+                    <div className="flex-1 min-w-0 text-left">
+                      <span className="font-sans text-sm font-semibold text-brand-charcoal block">
+                        MakeMyTrip Instant Checkout
+                      </span>
+                      <p className="font-sans text-xs text-brand-muted mt-0.5 line-clamp-2 sm:line-clamp-none">
+                        Automated online booking engine with instant credit card payment
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              {/* Reassurance Footer (Fixed bottom) */}
+              <div className="shrink-0 pt-3 border-t border-brand-charcoal/10 flex items-center justify-between text-[11px] text-brand-muted font-sans gap-2">
+                <span className="flex items-center gap-1.5 text-brand-olive truncate">
+                  <ShieldCheck className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+                  <span className="truncate">Zero reservation fees · Best Rate Guarantee</span>
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setIsHandoffModalOpen(false)}
+                  className="text-brand-navy font-semibold hover:underline shrink-0 p-1"
+                >
+                  Return to Site
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </>
   );
 }

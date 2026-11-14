@@ -1,0 +1,268 @@
+[
+  {
+    "viewport": "ipad_portrait_768",
+    "dimensions": "768x1024",
+    "popover": {
+      "found": true,
+      "top": 552.59375,
+      "bottom": 882.59375,
+      "left": 77,
+      "right": 397,
+      "width": 320,
+      "height": 330,
+      "windowWidth": 768,
+      "windowHeight": 1024,
+      "isWithinHorizontalBounds": true
+    },
+    "modal": {
+      "found": true,
+      "parentIsBody": true,
+      "modalZIndex": "999",
+      "navZIndex": "40",
+      "cardRect": {
+        "top": 192,
+        "bottom": 832,
+        "left": 128,
+        "right": 640,
+        "width": 512,
+        "height": 640
+      },
+      "closeButtonAccessible": true,
+      "hasWhatsApp": true,
+      "hasEmail": true,
+      "hasMakeMyTrip": true,
+      "hasReturnButton": true,
+      "windowHeight": 1024,
+      "fitsInViewport": true,
+      "bodyScrollLocked": true
+    }
+  },
+  {
+    "viewport": "ipad_landscape_1024",
+    "dimensions": "1024x768",
+    "popover": {
+      "found": true,
+      "top": 397,
+      "bottom": 727,
+      "left": 399.5,
+      "right": 719.5,
+      "width": 320,
+      "height": 330,
+      "windowWidth": 1024,
+      "windowHeight": 768,
+      "isWithinHorizontalBounds": true
+    },
+    "modal": {
+      "found": true,
+      "parentIsBody": true,
+      "modalZIndex": "999",
+      "navZIndex": "40",
+      "cardRect": {
+        "top": 58,
+        "bottom": 710,
+        "left": 256,
+        "right": 768,
+        "width": 512,
+        "height": 652
+      },
+      "closeButtonAccessible": true,
+      "hasWhatsApp": true,
+      "hasEmail": true,
+      "hasMakeMyTrip": true,
+      "hasReturnButton": true,
+      "windowHeight": 768,
+      "fitsInViewport": true,
+      "bodyScrollLocked": true
+    }
+  },
+  {
+    "viewport": "ipad_air_820",
+    "dimensions": "820x1180",
+    "popover": {
+      "found": true,
+      "top": 645,
+      "bottom": 975,
+      "left": 89,
+      "right": 409,
+      "width": 320,
+      "height": 330,
+      "windowWidth": 820,
+      "windowHeight": 1180,
+      "isWithinHorizontalBounds": true
+    },
+    "modal": {
+      "found": true,
+      "parentIsBody": true,
+      "modalZIndex": "999",
+      "navZIndex": "40",
+      "cardRect": {
+        "top": 264,
+        "bottom": 916,
+        "left": 154,
+        "right": 666,
+        "width": 512,
+        "height": 652
+      },
+      "closeButtonAccessible": true,
+      "hasWhatsApp": true,
+      "hasEmail": true,
+      "hasMakeMyTrip": true,
+      "hasReturnButton": true,
+      "windowHeight": 1180,
+      "fitsInViewport": true,
+      "bodyScrollLocked": true
+    }
+  },
+  {
+    "viewport": "iphone_se_375",
+    "dimensions": "375x667",
+    "popover": {
+      "found": true,
+      "top": -24.9375,
+      "bottom": 321.0625,
+      "left": 37,
+      "right": 338,
+      "width": 301,
+      "height": 346,
+      "windowWidth": 375,
+      "windowHeight": 667,
+      "isWithinHorizontalBounds": true
+    },
+    "modal": {
+      "found": true,
+      "parentIsBody": true,
+      "modalZIndex": "999",
+      "navZIndex": "40",
+      "cardRect": {
+        "top": 35,
+        "bottom": 632,
+        "left": 12,
+        "right": 363,
+        "width": 351,
+        "height": 598
+      },
+      "closeButtonAccessible": true,
+      "hasWhatsApp": true,
+      "hasEmail": true,
+      "hasMakeMyTrip": true,
+      "hasReturnButton": true,
+      "windowHeight": 667,
+      "fitsInViewport": true,
+      "bodyScrollLocked": true
+    }
+  },
+  {
+    "viewport": "iphone_14_390",
+    "dimensions": "390x844",
+    "popover": {
+      "found": true,
+      "top": 63.59375,
+      "bottom": 409.59375,
+      "left": 37,
+      "right": 353,
+      "width": 316,
+      "height": 346,
+      "windowWidth": 390,
+      "windowHeight": 844,
+      "isWithinHorizontalBounds": true
+    },
+    "modal": {
+      "found": true,
+      "parentIsBody": true,
+      "modalZIndex": "999",
+      "navZIndex": "40",
+      "cardRect": {
+        "top": 123,
+        "bottom": 721,
+        "left": 12,
+        "right": 378,
+        "width": 366,
+        "height": 598
+      },
+      "closeButtonAccessible": true,
+      "hasWhatsApp": true,
+      "hasEmail": true,
+      "hasMakeMyTrip": true,
+      "hasReturnButton": true,
+      "windowHeight": 844,
+      "fitsInViewport": true,
+      "bodyScrollLocked": true
+    }
+  },
+  {
+    "viewport": "iphone_max_430",
+    "dimensions": "430x932",
+    "popover": {
+      "found": true,
+      "top": 537.796875,
+      "bottom": 867.796875,
+      "left": 37,
+      "right": 393,
+      "width": 356,
+      "height": 330,
+      "windowWidth": 430,
+      "windowHeight": 932,
+      "isWithinHorizontalBounds": true
+    },
+    "modal": {
+      "found": true,
+      "parentIsBody": true,
+      "modalZIndex": "999",
+      "navZIndex": "40",
+      "cardRect": {
+        "top": 181,
+        "bottom": 751,
+        "left": 12,
+        "right": 418,
+        "width": 406,
+        "height": 571
+      },
+      "closeButtonAccessible": true,
+      "hasWhatsApp": true,
+      "hasEmail": true,
+      "hasMakeMyTrip": true,
+      "hasReturnButton": true,
+      "windowHeight": 932,
+      "fitsInViewport": true,
+      "bodyScrollLocked": true
+    }
+  },
+  {
+    "viewport": "desktop_1440",
+    "dimensions": "1440x900",
+    "popover": {
+      "found": true,
+      "top": 463,
+      "bottom": 793,
+      "left": 664,
+      "right": 984,
+      "width": 320,
+      "height": 330,
+      "windowWidth": 1440,
+      "windowHeight": 900,
+      "isWithinHorizontalBounds": true
+    },
+    "modal": {
+      "found": true,
+      "parentIsBody": true,
+      "modalZIndex": "999",
+      "navZIndex": "40",
+      "cardRect": {
+        "top": 124,
+        "bottom": 776,
+        "left": 464,
+        "right": 976,
+        "width": 512,
+        "height": 652
+      },
+      "closeButtonAccessible": true,
+      "hasWhatsApp": true,
+      "hasEmail": true,
+      "hasMakeMyTrip": true,
+      "hasReturnButton": true,
+      "windowHeight": 900,
+      "fitsInViewport": true,
+      "bodyScrollLocked": true
+    }
+  }
+]

@@ -4,14 +4,14 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Phase 23: Correct Homepage Hero Location Label (Client Feedback Fix 05).
+**Current focus:** Phase 24: Tablet & Mobile Booking Experience & Reservation Modal Responsiveness (Client Feedback Fix 07).
 
 ## Current Position
-Milestone: Client Feedback Optimization (Phase 23 in sequence) (Completed)  
-Status: Phase 23 Completed & Verified (Homepage hero location badge updated to exact client-approved text: "KANCHANGHAT · ORCHHA, MADHYA PRADESH, INDIA"; verified across all viewports; 0 regressions)  
-Last activity: 2026-11-14 — Completed Phase 23: Resolved Client Feedback Fix 05. Replaced previous location label with exact approved text `KANCHANGHAT · ORCHHA, MADHYA PRADESH, INDIA` in `HeroScrollBookingSequence.tsx`. Preserved MapPin icon, luxury navy/gold aesthetic, and added responsive font scaling (`text-[11px] sm:text-xs`) to prevent awkward line wrapping on mobile. Verified exact string match via CDP across Desktop (1440px), Tablet (768px), and Mobile (390px) with 0 regressions.
+Milestone: Client Feedback Optimization (Phase 24 in sequence) (Completed)  
+Status: Phase 24 Completed & Verified (Reservation modal portal-mounted directly to document.body at z-[999]; 3-part constrained flex layout with fixed header, scrollable body, fixed footer, max-h-[92vh]; occupancy popover dynamic upward flip and responsive boundary constraints; verified across 7 viewports including iPad Mini, iPad Landscape, iPad Air, iPhone SE, iPhone 14, iPhone Max, Desktop; 0 regressions across all 10 application routes)  
+Last activity: 2026-11-14 — Completed Phase 24: Resolved Client Feedback Fix 07. Eliminated stacking context trapping and header collision by mounting modal via createPortal(modal, document.body) at z-[999]. Implemented viewport-constrained flex column architecture (max-h-[92vh] sm:max-h-[90vh]) ensuring close button, title, all 3 booking channels (WhatsApp, Email, MakeMyTrip), and "Return to Site" are 100% accessible on any screen height. Tested via automated CDP across 7 device viewports with visual screenshot verification.
 
-Progress: [██████████] 100% (Phases 1-23 complete)
+Progress: [██████████] 100% (Phases 1-24 complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed

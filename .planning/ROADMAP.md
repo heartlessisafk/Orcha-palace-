@@ -293,3 +293,45 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 6. Real Leaflet map top bar optimized by removing nested backdrop-blur, eliminating GPU frame-buffer readback stalls.
 7. Mobile layout header upgraded with matching high-contrast ivory card styling.
 8. All 5 scroll acts and 10 application routes verified with zero regressions.
+
+### Phase 21: Excessive Blue Colour Grading Removal (Client Feedback Fix 04)
+
+**Goal**: Remove unnatural cold blue gradient and tint overlays across Homepage Hero, Our Story Hero, and Gallery page, restoring authentic golden heritage tones, warm teak woodwork, and natural turquoise water.  
+**Depends on**: Phase 20  
+**Requirements**: COLOR-HERO-01, COLOR-STORY-01, COLOR-GALLERY-01  
+**Success Criteria**:
+1. Homepage hero background freed from cold blue gradients, preserving authentic evening pool ambient illumination.
+2. Our Story hero (`slide1.jpg`) freed from blue grading, restoring Bundela heritage woodwork and ivory courtyard walls.
+3. Gallery hero and photo cards freed from blue washes, rendering authentic natural photography.
+
+### Phase 22: Global Booking Widget Occupancy Clipping Fix (Client Feedback Fix 06)
+
+**Goal**: Fix occupancy popover dropdown clipping bug where lower portion disappeared behind dark navy sections.  
+**Depends on**: Phase 21  
+**Requirements**: DOCK-OVERFLOW-01, POPOVER-FLIP-01, POPOVER-RESPONSIVE-01  
+**Success Criteria**:
+1. Removed `overflow-hidden` container traps on `#booking-sequence`.
+2. Intelligent directional popover with automatic upward flip when headroom below is restricted (< 370px).
+3. Responsive popover width and bounds constraints verified across mobile, tablet, and desktop.
+
+### Phase 23: Homepage Hero Location Label Correction (Client Feedback Fix 05)
+
+**Goal**: Correct hero location badge text to the client-approved wording.  
+**Depends on**: Phase 22  
+**Requirements**: LOCATION-LABEL-01  
+**Success Criteria**:
+1. Updated location text to `KANCHANGHAT · ORCHHA, MADHYA PRADESH, INDIA`.
+2. Preserved gold pin icon, typography, and container padding.
+
+### Phase 24: Tablet & Mobile Booking Experience & Reservation Modal Responsiveness (Client Feedback Fix 07)
+
+**Goal**: Fully optimize the booking experience and "Complete Your Reservation" modal for iPad (portrait and landscape) and mobile phones, eliminating navbar collision, clipping, and overflow bugs (`IMG_1683.jpeg`, `IMG_1682.jpeg`).  
+**Depends on**: Phase 23  
+**Requirements**: MODAL-PORTAL-01, MODAL-LAYOUT-01, MODAL-RESPONSIVE-01, OCCUPANCY-TABLET-01  
+**Success Criteria**:
+1. Reservation modal mounted via `createPortal` to `document.body` at `z-[999]`, strictly above header navbar (`z-40`).
+2. Three-part constrained flex layout: fixed header with close button, scrollable middle content with booking channels, and fixed footer.
+3. Max height ceiling `max-h-[92vh] sm:max-h-[90vh]` ensuring zero off-screen cutoff on any device.
+4. Occupancy dropdown adapted with responsive width, upward flip detection, and zero horizontal overflow.
+5. 100% verified via automated CDP testing and visual screenshots across 7 viewports (iPad Mini 768px, iPad Landscape 1024px, iPad Air 820px, iPhone SE 375px, iPhone 14 390px, iPhone Max 430px, Desktop 1440px).
+6. Global regression suite passed with 0 errors across all 10 site routes.
