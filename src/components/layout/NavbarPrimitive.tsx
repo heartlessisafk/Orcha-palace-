@@ -80,10 +80,11 @@ export function NavbarPrimitive({
         <div className="hidden sm:flex items-center gap-4">
           <a
             href={`tel:${SITE_CONFIG.contact.phonePrimary.replace(/\s+/g, "")}`}
-            className="hidden xl:flex items-center gap-2 font-sans text-xs font-medium text-brand-olive hover:text-brand-gold transition-colors"
+            className="hidden xl:inline-flex items-center gap-2 font-sans text-xs font-medium px-4 py-2 rounded-full bg-white/65 hover:bg-white/90 border border-brand-charcoal/10 backdrop-blur-sm text-brand-navy shadow-subtle hover:shadow-card active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 shrink-0 select-none"
+            aria-label={`Call concierge: ${SITE_CONFIG.contact.phonePrimary}`}
           >
-            <Phone className="w-3.5 h-3.5 text-brand-gold" />
-            <span>{SITE_CONFIG.contact.phonePrimary}</span>
+            <Phone className="w-3.5 h-3.5 text-brand-navy shrink-0" aria-hidden="true" />
+            <span className="tracking-wide">{SITE_CONFIG.contact.phonePrimary}</span>
           </a>
 
           <Link href="/#booking-sequence">
@@ -122,9 +123,9 @@ export function NavbarPrimitive({
             <div className="pt-4 flex flex-col gap-3">
               <a
                 href={`tel:${SITE_CONFIG.contact.phonePrimary.replace(/\s+/g, "")}`}
-                className="flex items-center justify-center gap-2 font-sans text-sm font-medium py-2.5 rounded-full border border-brand-charcoal/20 text-brand-charcoal"
+                className="flex items-center justify-center gap-2 font-sans text-sm font-medium py-2.5 rounded-full bg-white/70 backdrop-blur-sm border border-brand-charcoal/10 text-brand-navy hover:bg-white transition-all shadow-subtle"
               >
-                <Phone className="w-4 h-4 text-brand-gold" />
+                <Phone className="w-4 h-4 text-brand-navy" />
                 <span>Call Concierge: {SITE_CONFIG.contact.phonePrimary}</span>
               </a>
               <Link href="/#booking-sequence" onClick={() => setIsMobileMenuOpen(false)}>
