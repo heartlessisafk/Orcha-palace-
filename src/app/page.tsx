@@ -20,7 +20,7 @@ import { GuestLoveExperience } from "@/components/reviews/GuestLoveExperience";
 import { PalaceToMapFinale } from "@/components/map/PalaceToMapFinale";
 import { VERIFIED_ROOMS } from "@/data/rooms";
 import { RESORT_ASSETS } from "@/lib/assets";
-import { Waves, Coffee, TreePine, Sparkles, MapPin, Compass, Camera, ArrowRight } from "lucide-react";
+import { Waves, Coffee, TreePine, Sparkles, MapPin, Compass, Camera, ArrowRight, Utensils } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -111,8 +111,28 @@ export default function HomePage() {
             </AnimatedParagraph>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <FadeIn delay={0.1}>
+              <Link href="/gallery?category=amenities" className="block h-full group">
+                <div className="p-7 rounded-luxury bg-white border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-3 h-full flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-full bg-brand-gold/15 text-brand-gold-dark group-hover:bg-brand-gold group-hover:text-white transition-all duration-300 flex items-center justify-center">
+                      <Utensils className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <h4 className="font-serif text-xl font-semibold text-brand-charcoal group-hover:text-brand-navy transition-colors">Betwa View Dining</h4>
+                    <p className="font-sans text-sm text-brand-olive leading-relaxed">
+                      Experience Orchha&apos;s one and only riverside-view dining experience, offering a memorable setting overlooking the serene Betwa River.
+                    </p>
+                  </div>
+                  <div className="pt-2 flex items-center gap-1.5 text-xs font-sans font-medium text-brand-gold opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                    <span>Riverside dining</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
+                </div>
+              </Link>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
               <Link href="/gallery?category=pool" className="block h-full group">
                 <div className="p-7 rounded-luxury bg-white border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-3 h-full flex flex-col justify-between">
                   <div className="space-y-3">
@@ -132,7 +152,7 @@ export default function HomePage() {
               </Link>
             </FadeIn>
 
-            <FadeIn delay={0.2}>
+            <FadeIn delay={0.3}>
               <Link href="/gallery?category=amenities" className="block h-full group">
                 <div className="p-7 rounded-luxury bg-white border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-3 h-full flex flex-col justify-between">
                   <div className="space-y-3">
@@ -152,7 +172,7 @@ export default function HomePage() {
               </Link>
             </FadeIn>
 
-            <FadeIn delay={0.3}>
+            <FadeIn delay={0.4}>
               <Link href="/spa" className="block h-full group">
                 <div className="p-7 rounded-luxury bg-white border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.015] hover:border-brand-gold/40 transition-all duration-300 ease-out space-y-3 h-full flex flex-col justify-between">
                   <div className="space-y-3">

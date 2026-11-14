@@ -1,0 +1,347 @@
+[
+  {
+    "viewport": "desktop_1440",
+    "dimensions": "1440x900",
+    "inspection": {
+      "found": true,
+      "heading": "Why Stay at Orchha Resort",
+      "cardCount": 4,
+      "cards": [
+        {
+          "title": "Betwa View Dining",
+          "desc": "Experience Orchha's one and only riverside-view dining experience, offering a memorable setting overlooking the serene Betwa River.",
+          "action": "Riverside dining",
+          "href": "/gallery?category=amenities",
+          "rect": {
+            "top": 394,
+            "bottom": 692,
+            "left": 137,
+            "right": 407,
+            "width": 270,
+            "height": 298
+          }
+        },
+        {
+          "title": "Lotus-Shaped Pool",
+          "desc": "Sculpted in the silhouette of a blooming lotus flower, complete with children's splash pool and riverside sun deck loungers.",
+          "action": "Explore poolside",
+          "href": "/gallery?category=pool",
+          "rect": {
+            "top": 394,
+            "bottom": 692,
+            "left": 431,
+            "right": 701,
+            "width": 270,
+            "height": 298
+          }
+        },
+        {
+          "title": "Kaleva Restaurant",
+          "desc": "Vegetarian-forward dining serving authentic Bundeli specialties alongside classic Indian, Chinese, and Continental culinary menus.",
+          "action": "Discover cuisine",
+          "href": "/gallery?category=amenities",
+          "rect": {
+            "top": 394,
+            "bottom": 692,
+            "left": 725,
+            "right": 995,
+            "width": 270,
+            "height": 298
+          }
+        },
+        {
+          "title": "Kerala Ayurveda Spa",
+          "desc": "Rejuvenating herbal massage therapies and steam baths administered by certified practitioners for holistic equilibrium.",
+          "action": "Wellness therapies",
+          "href": "/spa",
+          "rect": {
+            "top": 394,
+            "bottom": 692,
+            "left": 1019,
+            "right": 1289,
+            "width": 270,
+            "height": 298
+          }
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "windowWidth": 1440
+    }
+  },
+  {
+    "viewport": "ipad_portrait_768",
+    "dimensions": "768x1024",
+    "inspection": {
+      "found": true,
+      "heading": "Why Stay at Orchha Resort",
+      "cardCount": 4,
+      "cards": [
+        {
+          "title": "Betwa View Dining",
+          "desc": "Experience Orchha's one and only riverside-view dining experience, offering a memorable setting overlooking the serene Betwa River.",
+          "action": "Riverside dining",
+          "href": "/gallery?category=amenities",
+          "rect": {
+            "top": 316,
+            "bottom": 591,
+            "left": 32,
+            "right": 372,
+            "width": 340,
+            "height": 276
+          }
+        },
+        {
+          "title": "Lotus-Shaped Pool",
+          "desc": "Sculpted in the silhouette of a blooming lotus flower, complete with children's splash pool and riverside sun deck loungers.",
+          "action": "Explore poolside",
+          "href": "/gallery?category=pool",
+          "rect": {
+            "top": 316,
+            "bottom": 591,
+            "left": 396,
+            "right": 736,
+            "width": 340,
+            "height": 276
+          }
+        },
+        {
+          "title": "Kaleva Restaurant",
+          "desc": "Vegetarian-forward dining serving authentic Bundeli specialties alongside classic Indian, Chinese, and Continental culinary menus.",
+          "action": "Discover cuisine",
+          "href": "/gallery?category=amenities",
+          "rect": {
+            "top": 615,
+            "bottom": 891,
+            "left": 32,
+            "right": 372,
+            "width": 340,
+            "height": 276
+          }
+        },
+        {
+          "title": "Kerala Ayurveda Spa",
+          "desc": "Rejuvenating herbal massage therapies and steam baths administered by certified practitioners for holistic equilibrium.",
+          "action": "Wellness therapies",
+          "href": "/spa",
+          "rect": {
+            "top": 615,
+            "bottom": 891,
+            "left": 396,
+            "right": 736,
+            "width": 340,
+            "height": 276
+          }
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "windowWidth": 768
+    }
+  },
+  {
+    "viewport": "ipad_air_820",
+    "dimensions": "820x1180",
+    "inspection": {
+      "found": true,
+      "heading": "Why Stay at Orchha Resort",
+      "cardCount": 4,
+      "cards": [
+        {
+          "title": "Betwa View Dining",
+          "desc": "Experience Orchha's one and only riverside-view dining experience, offering a memorable setting overlooking the serene Betwa River.",
+          "action": "Riverside dining",
+          "href": "/gallery?category=amenities",
+          "rect": {
+            "top": 407,
+            "bottom": 682,
+            "left": 48,
+            "right": 398,
+            "width": 350,
+            "height": 276
+          }
+        },
+        {
+          "title": "Lotus-Shaped Pool",
+          "desc": "Sculpted in the silhouette of a blooming lotus flower, complete with children's splash pool and riverside sun deck loungers.",
+          "action": "Explore poolside",
+          "href": "/gallery?category=pool",
+          "rect": {
+            "top": 407,
+            "bottom": 682,
+            "left": 422,
+            "right": 772,
+            "width": 350,
+            "height": 276
+          }
+        },
+        {
+          "title": "Kaleva Restaurant",
+          "desc": "Vegetarian-forward dining serving authentic Bundeli specialties alongside classic Indian, Chinese, and Continental culinary menus.",
+          "action": "Discover cuisine",
+          "href": "/gallery?category=amenities",
+          "rect": {
+            "top": 706,
+            "bottom": 959,
+            "left": 48,
+            "right": 398,
+            "width": 350,
+            "height": 253
+          }
+        },
+        {
+          "title": "Kerala Ayurveda Spa",
+          "desc": "Rejuvenating herbal massage therapies and steam baths administered by certified practitioners for holistic equilibrium.",
+          "action": "Wellness therapies",
+          "href": "/spa",
+          "rect": {
+            "top": 706,
+            "bottom": 959,
+            "left": 422,
+            "right": 772,
+            "width": 350,
+            "height": 253
+          }
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "windowWidth": 820
+    }
+  },
+  {
+    "viewport": "iphone_14_390",
+    "dimensions": "390x844",
+    "inspection": {
+      "found": true,
+      "heading": "Why Stay at Orchha Resort",
+      "cardCount": 4,
+      "cards": [
+        {
+          "title": "Betwa View Dining",
+          "desc": "Experience Orchha's one and only riverside-view dining experience, offering a memorable setting overlooking the serene Betwa River.",
+          "action": "Riverside dining",
+          "href": "/gallery?category=amenities",
+          "rect": {
+            "top": -28,
+            "bottom": 248,
+            "left": 20,
+            "right": 370,
+            "width": 350,
+            "height": 276
+          }
+        },
+        {
+          "title": "Lotus-Shaped Pool",
+          "desc": "Sculpted in the silhouette of a blooming lotus flower, complete with children's splash pool and riverside sun deck loungers.",
+          "action": "Explore poolside",
+          "href": "/gallery?category=pool",
+          "rect": {
+            "top": 272,
+            "bottom": 525,
+            "left": 20,
+            "right": 370,
+            "width": 350,
+            "height": 253
+          }
+        },
+        {
+          "title": "Kaleva Restaurant",
+          "desc": "Vegetarian-forward dining serving authentic Bundeli specialties alongside classic Indian, Chinese, and Continental culinary menus.",
+          "action": "Discover cuisine",
+          "href": "/gallery?category=amenities",
+          "rect": {
+            "top": 549,
+            "bottom": 802,
+            "left": 20,
+            "right": 370,
+            "width": 350,
+            "height": 253
+          }
+        },
+        {
+          "title": "Kerala Ayurveda Spa",
+          "desc": "Rejuvenating herbal massage therapies and steam baths administered by certified practitioners for holistic equilibrium.",
+          "action": "Wellness therapies",
+          "href": "/spa",
+          "rect": {
+            "top": 844,
+            "bottom": 1097,
+            "left": 20,
+            "right": 370,
+            "width": 350,
+            "height": 253
+          }
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "windowWidth": 390
+    }
+  },
+  {
+    "viewport": "iphone_se_375",
+    "dimensions": "375x667",
+    "inspection": {
+      "found": true,
+      "heading": "Why Stay at Orchha Resort",
+      "cardCount": 4,
+      "cards": [
+        {
+          "title": "Betwa View Dining",
+          "desc": "Experience Orchha's one and only riverside-view dining experience, offering a memorable setting overlooking the serene Betwa River.",
+          "action": "Riverside dining",
+          "href": "/gallery?category=amenities",
+          "rect": {
+            "top": -139,
+            "bottom": 136,
+            "left": 20,
+            "right": 355,
+            "width": 335,
+            "height": 276
+          }
+        },
+        {
+          "title": "Lotus-Shaped Pool",
+          "desc": "Sculpted in the silhouette of a blooming lotus flower, complete with children's splash pool and riverside sun deck loungers.",
+          "action": "Explore poolside",
+          "href": "/gallery?category=pool",
+          "rect": {
+            "top": 160,
+            "bottom": 436,
+            "left": 20,
+            "right": 355,
+            "width": 335,
+            "height": 276
+          }
+        },
+        {
+          "title": "Kaleva Restaurant",
+          "desc": "Vegetarian-forward dining serving authentic Bundeli specialties alongside classic Indian, Chinese, and Continental culinary menus.",
+          "action": "Discover cuisine",
+          "href": "/gallery?category=amenities",
+          "rect": {
+            "top": 460,
+            "bottom": 736,
+            "left": 20,
+            "right": 355,
+            "width": 335,
+            "height": 276
+          }
+        },
+        {
+          "title": "Kerala Ayurveda Spa",
+          "desc": "Rejuvenating herbal massage therapies and steam baths administered by certified practitioners for holistic equilibrium.",
+          "action": "Wellness therapies",
+          "href": "/spa",
+          "rect": {
+            "top": 778,
+            "bottom": 1031,
+            "left": 20,
+            "right": 355,
+            "width": 335,
+            "height": 253
+          }
+        }
+      ],
+      "hasHorizontalOverflow": false,
+      "windowWidth": 375
+    }
+  }
+]

@@ -4,14 +4,14 @@
 See: `.planning/PROJECT.md` (updated 2026-10-27)
 
 **Core value:** Flawless visual coherence, physical scroll choreography, authentic imagery, and functional room explorations.  
-**Current focus:** Phase 24: Tablet & Mobile Booking Experience & Reservation Modal Responsiveness (Client Feedback Fix 07).
+**Current focus:** Phase 25: Add Betwa View Dining Feature Tile (Client Feedback Fix 08).
 
 ## Current Position
-Milestone: Client Feedback Optimization (Phase 24 in sequence) (Completed)  
-Status: Phase 24 Completed & Verified (Reservation modal portal-mounted directly to document.body at z-[999]; 3-part constrained flex layout with fixed header, scrollable body, fixed footer, max-h-[92vh]; occupancy popover dynamic upward flip and responsive boundary constraints; verified across 7 viewports including iPad Mini, iPad Landscape, iPad Air, iPhone SE, iPhone 14, iPhone Max, Desktop; 0 regressions across all 10 application routes)  
-Last activity: 2026-11-14 — Completed Phase 24: Resolved Client Feedback Fix 07. Eliminated stacking context trapping and header collision by mounting modal via createPortal(modal, document.body) at z-[999]. Implemented viewport-constrained flex column architecture (max-h-[92vh] sm:max-h-[90vh]) ensuring close button, title, all 3 booking channels (WhatsApp, Email, MakeMyTrip), and "Return to Site" are 100% accessible on any screen height. Tested via automated CDP across 7 device viewports with visual screenshot verification.
+Milestone: Client Feedback Optimization (Phase 25 in sequence) (Completed)  
+Status: Phase 25 Completed & Verified (Added new "Betwa View Dining" feature card as Card 1 in "Why Stay at Orchha Resort"; preserved Lotus-Shaped Pool, Kaleva Restaurant, and Kerala Ayurveda Spa in original relative order; adapted grid to 4-col desktop, 2x2 tablet, and 1-col mobile; verified across 5 device viewports with 0 horizontal overflow; 0 regressions across all 10 application routes)  
+Last activity: 2026-11-14 — Completed Phase 25: Resolved Client Feedback Fix 08. Implemented new feature tile titled `Betwa View Dining` with approved description and `Utensils` icon inside `#amenities`. Positioned as first tile in sequence preceding all existing cards. Configured responsive grid (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6`). Verified via automated CDP across Desktop (1440px), iPad Portrait (768px), iPad Air (820px), iPhone 14 (390px), and iPhone SE (375px) with visual screenshot verification and zero regressions.
 
-Progress: [██████████] 100% (Phases 1-24 complete)
+Progress: [██████████] 100% (Phases 1-25 complete)
 
 ## Performance Metrics
 - Milestone 1 phases: 11 / 11 completed

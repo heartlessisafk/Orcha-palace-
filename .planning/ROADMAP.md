@@ -335,3 +335,16 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 4. Occupancy dropdown adapted with responsive width, upward flip detection, and zero horizontal overflow.
 5. 100% verified via automated CDP testing and visual screenshots across 7 viewports (iPad Mini 768px, iPad Landscape 1024px, iPad Air 820px, iPhone SE 375px, iPhone 14 390px, iPhone Max 430px, Desktop 1440px).
 6. Global regression suite passed with 0 errors across all 10 site routes.
+
+### Phase 25: Add Betwa View Dining Feature Tile (Client Feedback Fix 08)
+
+**Goal**: Add the new "Betwa View Dining" feature card as the first tile in the "Why Stay at Orchha Resort" section, communicating Orchha's exclusive riverside-view dining experience while preserving all existing amenities cards in their exact relative sequence.  
+**Depends on**: Phase 24  
+**Requirements**: DINING-TILE-01, DINING-ORDER-01, DINING-RESPONSIVE-01  
+**Success Criteria**:
+1. New tile titled `Betwa View Dining` added with exact approved copy.
+2. Positioned as Card 1, preceding `Lotus-Shaped Pool`, `Kaleva Restaurant`, and `Kerala Ayurveda Spa`.
+3. Replicates exact card design system (`rounded-luxury`, `shadow-subtle`, 3D hover elevation, `Utensils` icon).
+4. Responsive grid adapted (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6`) for 4-column desktop, 2x2 tablet, and 1-column mobile.
+5. Multi-viewport automated CDP verification confirms 0 horizontal overflow.
+6. Clean production build and zero regressions across all 10 site routes.
