@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Heading, Text, SubtitleTag } from "@/components/ui/Typography";
 import { FadeIn } from "@/components/motion/FadeIn";
@@ -20,6 +21,7 @@ export function AboutDiscoveringOrchha() {
       highlight:
         "17th–18th century memorials built on Kanchan Ghat. Their distinctive fusion of Rajput pavilions with Hindu temple shikharas reflects in the water directly before our resort lawns.",
       tag: "Kanchan Ghat Landmark",
+      image: "/images/destinations/chhatris-cenotaphs.jpg",
     },
     {
       id: "jahangir",
@@ -30,6 +32,7 @@ export function AboutDiscoveringOrchha() {
       highlight:
         "Commissioned by Maharaja Bir Singh Deo in the early 17th century to honor Mughal Emperor Jahangir. Features 236 chambers, stone balconies, and exquisite Bundeli frescoes of royal pageantry.",
       tag: "Imperial Fort Complex",
+      image: "/images/destinations/jahangir-mahal.jpg",
     },
     {
       id: "ramraja",
@@ -40,6 +43,7 @@ export function AboutDiscoveringOrchha() {
       highlight:
         "The sacred heart of Orchha. Lord Rama is revered as a reigning King, receiving a ceremonial armed police guard of honour. Adjacent stands Chaturbhuj Temple, rising over 100 meters above the town.",
       tag: "Living Spiritual Heritage",
+      image: "/images/destinations/chaturbhuj-temple.jpg",
     },
     {
       id: "rafting",
@@ -50,6 +54,7 @@ export function AboutDiscoveringOrchha() {
       highlight:
         "Gentle Class I & II river rafting past granite boulders and ancient monuments. The adjacent sanctuary spans dense teak forests sheltering spotted deer, nilgai, langurs, and kingfishers.",
       tag: "Nature & Adventure",
+      image: "/images/destinations/betwa-river.jpg",
     },
     {
       id: "laxminarayan",
@@ -60,6 +65,7 @@ export function AboutDiscoveringOrchha() {
       highlight:
         "A striking triangular synthesis of fort and temple architecture. Famous for its vibrant wall murals depicting episodes from the Ramayana, Mahabharata, and the 1857 war of independence.",
       tag: "Fresco Masterpiece",
+      image: "/images/destinations/laxminarayan-temple.jpg",
     },
   ];
 
@@ -154,37 +160,51 @@ export function AboutDiscoveringOrchha() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {attractions.map((site, idx) => (
               <FadeIn key={site.id} delay={idx * 0.08}>
-                <div className="bg-brand-canvas rounded-2xl p-6 border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.012] hover:border-brand-gold/40 active:scale-[0.985] cursor-pointer transition-all duration-300 ease-out flex flex-col justify-between h-full group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-brand-gold-dark px-2.5 py-0.5 rounded-full bg-brand-gold/15 border border-brand-gold/30">
-                        {site.tag}
-                      </span>
-                      <span className="text-xs text-brand-charcoal/60 flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5" />
-                        {site.time}
-                      </span>
-                    </div>
-
-                    <h3 className="font-serif text-xl font-semibold text-brand-navy group-hover:text-brand-gold transition-colors">
-                      {site.name}
-                    </h3>
-
-                    <div className="flex items-center gap-1.5 text-xs font-sans text-brand-navy font-medium">
-                      <MapPin className="w-3.5 h-3.5 text-brand-gold-dark shrink-0" />
-                      <span>{site.distance}</span>
-                    </div>
-
-                    <p className="text-sm text-brand-charcoal/80 leading-relaxed font-light">
-                      {site.highlight}
-                    </p>
+                <div className="bg-brand-canvas rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-subtle hover:shadow-hover hover:-translate-y-1.5 hover:scale-[1.012] hover:border-brand-gold/40 active:scale-[0.985] cursor-pointer transition-all duration-300 ease-out flex flex-col justify-between h-full group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+                  {/* Authentic Landmark Photograph */}
+                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-brand-charcoal/5">
+                    <Image
+                      src={site.image}
+                      alt={site.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
                   </div>
 
-                  <div className="pt-4 mt-4 border-t border-brand-charcoal/8 flex items-center justify-between text-xs text-brand-charcoal/70">
-                    <span className="italic">Recommended: {site.bestTime}</span>
-                    <span className="font-semibold text-brand-gold-dark flex items-center gap-1">
-                      Guided Tour Available
-                    </span>
+                  {/* Card Body */}
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-brand-gold-dark px-2.5 py-0.5 rounded-full bg-brand-gold/15 border border-brand-gold/30">
+                          {site.tag}
+                        </span>
+                        <span className="text-xs text-brand-charcoal/60 flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5" />
+                          {site.time}
+                        </span>
+                      </div>
+
+                      <h3 className="font-serif text-xl font-semibold text-brand-navy group-hover:text-brand-gold transition-colors">
+                        {site.name}
+                      </h3>
+
+                      <div className="flex items-center gap-1.5 text-xs font-sans text-brand-navy font-medium">
+                        <MapPin className="w-3.5 h-3.5 text-brand-gold-dark shrink-0" />
+                        <span>{site.distance}</span>
+                      </div>
+
+                      <p className="text-sm text-brand-charcoal/80 leading-relaxed font-light">
+                        {site.highlight}
+                      </p>
+                    </div>
+
+                    <div className="pt-4 mt-4 border-t border-brand-charcoal/8 flex items-center justify-between text-xs text-brand-charcoal/70">
+                      <span className="italic">Recommended: {site.bestTime}</span>
+                      <span className="font-semibold text-brand-gold-dark flex items-center gap-1">
+                        Guided Tour Available
+                      </span>
+                    </div>
                   </div>
                 </div>
               </FadeIn>
