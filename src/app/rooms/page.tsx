@@ -21,22 +21,43 @@ import {
   Phone,
   MessageCircle,
 } from "lucide-react";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Accommodations & Luxury Swiss Tents | The Orchha Resort",
   description:
     "Explore 32 thoughtfully designed heritage rooms, deluxe marble accommodations, glamping AC Swiss tents, and royal suites on the banks of River Betwa in Orchha.",
+  alternates: {
+    canonical: "https://www.orchharesort.com/rooms",
+  },
   openGraph: {
     title: "Luxury Rooms & Suites | The Orchha Resort",
     description:
       "Serene heritage retreats across from the 14 Royal Cenotaphs in Orchha. Pietra Dura marble inlays, direct lotus pool views, and riverside Swiss tents.",
+    url: "https://www.orchharesort.com/rooms",
+    images: ["/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Accommodations & Luxury Swiss Tents | The Orchha Resort",
+    description:
+      "Explore 32 thoughtfully designed heritage rooms, deluxe marble accommodations, glamping AC Swiss tents, and royal suites on the banks of River Betwa in Orchha.",
     images: ["/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg"],
   },
 };
 
 export default function RoomsPage() {
+  const breadcrumbJsonLd = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Accommodations", path: "/rooms" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <NavbarPrimitive />
 
       <main id="main-content" className="pt-20 bg-brand-canvas text-brand-charcoal min-h-screen">

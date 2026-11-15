@@ -361,3 +361,62 @@ A seven-phase execution roadmap establishing top-tier design craft, slop-free ae
 4. Maintained desktop right-alignment and mobile center-alignment with 0 horizontal overflow.
 5. All other footer columns, contact details, and OTA links 100% preserved.
 6. Clean build and 0 regressions across all 10 site routes.
+
+### Phase 27: Heritage Guide Destination Photography Integration
+
+**Goal**: Integrate verified high-resolution destination photography into all 5 landmark cards in `AboutDiscoveringOrchha.tsx`.  
+**Depends on**: Phase 26  
+**Success Criteria**:
+1. 5 authentic photographs mapped for 14 Royal Chhatris, Jahangir Mahal & Raja Mahal, Ram Raja Temple, Betwa River Sanctuary, and Orchha Fort Complex.
+2. Verified responsive masonry and aspect ratios.
+3. Clean build and 0 regressions across all routes.
+
+### Phase 28: Wedding Hero Color Correction
+
+**Goal**: Remove heavy bluish/navy tint overlay from wedding hero background to restore natural golden wedding lighting, authentic skin tones, and architecture.  
+**Depends on**: Phase 27  
+**Success Criteria**:
+1. Replaced blue-tinted overlay with neutral warm black gradient.
+2. Preserved authentic celebration photograph, fireworks, and text legibility.
+3. Clean build and 0 regressions across all routes.
+
+### Phase 29: Hero Readability Fix (Story / Kanchan Ghat)
+
+**Goal**: Improve text contrast on About hero with luminous gold typography and backdrop enhancements.  
+**Depends on**: Phase 28  
+**Success Criteria**:
+1. Elevated heading with luminous `#F3D382` gold italic highlights.
+2. Improved description contrast and stat card definitions.
+
+### Phase 30: Phone Navigation Glass Backdrop
+
+**Goal**: Add subtle translucent white glass background pill behind the top navigation contact phone number.  
+**Depends on**: Phase 29  
+**Success Criteria**:
+1. Rendered rounded pill with `bg-white/65 backdrop-blur-sm border border-brand-charcoal/10`.
+2. Dark navy text and icon for crystal clear legibility.
+3. Preserved click-to-call link and hover states.
+
+### Phase 31: Full Hero Content Glass Backdrop
+
+**Goal**: Implement one unified translucent dark glass panel behind the entire central hero content in `AboutHero.tsx`.  
+**Depends on**: Phase 30  
+**Success Criteria**:
+1. Unified container wrapping eyebrow, heading, subtitle, 3 stat cards, and 2 CTA buttons.
+2. Deep charcoal/navy translucent gradient (`from-[#070F1E]/80 via-[#0B1528]/75 to-[#070F1E]/85`) with `backdrop-blur-md` and `rounded-3xl`.
+3. Nested frosted glass stat cards with luminous gold metrics.
+4. Photograph attribution positioned cleanly below the glass panel.
+5. 0 horizontal overflow across Desktop, Tablet, and Mobile.
+
+### Phase 32: Complete Responsive, Mobile, Tablet, SEO & Performance Optimization
+
+**Goal**: Master optimization across all viewports (320px–440px mobile, iPad Mini/Air/Pro tablets, desktop), technical SEO, local Orchha intent, XML sitemap, robots.txt, and 46 Schema.org structured data schemas.  
+**Depends on**: Phase 31  
+**Success Criteria**:
+1. Mobile navigation drawer upgraded with solid canvas styling (`#FDFBF7`), body scroll locking, backdrop dismissal, Escape key listener, and `aria-modal="true"`.
+2. Tablet-optimized header with quick-call concierge button on viewports `sm` to `xl`.
+3. Native `src/app/sitemap.ts` and `src/app/robots.ts` generating dynamic XML sitemap and robots directives for all 10 routes.
+4. Centralized Schema.org JSON-LD engine (`src/lib/schema.ts`) implementing verified schemas for `Hotel`, `Organization`, `WebSite`, `BreadcrumbList`, `HotelRoom`, `DaySpa`, and `EventVenue`.
+5. Canonical URLs, OpenGraph, and Twitter card metadata complete across all 10 routes.
+6. 0 horizontal overflow verified across 8 mobile breakpoints (320px, 360px, 375px, 390px, 393px, 402px, 430px, 440px) and 9 tablet breakpoints (portrait and landscape).
+7. Clean production build and zero regressions across all 10 site routes.

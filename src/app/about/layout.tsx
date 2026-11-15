@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa",
@@ -18,10 +19,14 @@ export const metadata: Metadata = {
     "Orchha Luxury Stays",
     "Ram Raja Temple Orchha",
   ],
+  alternates: {
+    canonical: "https://www.orchharesort.com/about",
+  },
   openGraph: {
     title: "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa",
     description:
       "A peaceful riverfront sanctuary designed by Yogesh Chandra, nestled on the sacred Betwa River opposite Orchha's 16th-century royal cenotaphs.",
+    url: "https://www.orchharesort.com/about",
     images: [
       {
         url: "/images/resort/genuine/slide1.jpg",
@@ -31,6 +36,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Story of Orchha Resort",
+    description:
+      "A peaceful riverfront sanctuary designed by Yogesh Chandra, nestled on the sacred Betwa River opposite Orchha's 16th-century royal cenotaphs.",
+    images: ["/images/resort/genuine/slide1.jpg"],
+  },
 };
 
 export default function AboutLayout({
@@ -38,5 +50,34 @@ export default function AboutLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  const aboutPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "The Story of Orchha Resort",
+    description:
+      "Historical narrative and architecture of The Orchha Resort by Architect Yogesh Chandra on Kanchanghat.",
+    url: "https://www.orchharesort.com/about",
+    mainEntity: {
+      "@id": "https://www.orchharesort.com/#hotel",
+    },
+  };
+
+  const breadcrumbJsonLd = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Our Story", path: "/about" },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

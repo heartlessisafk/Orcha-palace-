@@ -1,0 +1,179 @@
+{
+  "timestamp": "2026-11-15T05:07:41.937Z",
+  "routesAudited": 10,
+  "viewportsChecked": 19,
+  "seoFindings": [
+    {
+      "route": "/",
+      "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+      "metaDesc": "Experience understated royal luxury at The Orchha Resort. Located on the serene banks of the river Betwa in Orchha, featuring 32 heritage rooms & luxury Swiss tents, lotus pool, and authentic Kerala Ayurveda.",
+      "canonical": null,
+      "ogTitle": null,
+      "ogDesc": null,
+      "ogImage": null,
+      "twitterCard": null,
+      "jsonLdCount": 0,
+      "h1Count": 1,
+      "h1s": [
+        "Understated luxury where royalty meets the river."
+      ],
+      "h2Count": 8,
+      "imagesWithoutAltCount": 13
+    },
+    {
+      "route": "/rooms",
+      "title": "Accommodations & Luxury Swiss Tents | The Orchha Resort | The Orchha Resort",
+      "metaDesc": "Explore 32 thoughtfully designed heritage rooms, deluxe marble accommodations, glamping AC Swiss tents, and royal suites on the banks of River Betwa in Orchha.",
+      "canonical": null,
+      "ogTitle": "Luxury Rooms & Suites | The Orchha Resort",
+      "ogDesc": "Serene heritage retreats across from the 14 Royal Cenotaphs in Orchha. Pietra Dura marble inlays, direct lotus pool views, and riverside Swiss tents.",
+      "ogImage": "https://www.orchharesort.com/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg",
+      "twitterCard": "summary_large_image",
+      "jsonLdCount": 0,
+      "h1Count": 1,
+      "h1s": [
+        "Accommodations & Glamping Tents"
+      ],
+      "h2Count": 3,
+      "imagesWithoutAltCount": 0
+    },
+    {
+      "route": "/rooms/standard-room",
+      "title": "Standard Heritage Room — Luxury Stay in Orchha | The Orchha Resort",
+      "metaDesc": "Spacious and peaceful, our Standard Heritage Rooms offer serene garden views, comfortable king or twin bedding, handcrafted wood furnishings, Pietra Dura m... Starting at ₹4500/night. Book direct for best rates at The Orchha Resort.",
+      "canonical": null,
+      "ogTitle": "Standard Heritage Room | The Orchha Resort",
+      "ogDesc": "Serene garden retreat with traditional comforts",
+      "ogImage": "https://www.orchharesort.com/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg",
+      "twitterCard": "summary_large_image",
+      "jsonLdCount": 0,
+      "h1Count": 1,
+      "h1s": [
+        "Standard Heritage Room"
+      ],
+      "h2Count": 2,
+      "imagesWithoutAltCount": 0
+    },
+    {
+      "route": "/rooms/deluxe-room",
+      "title": "Deluxe Marble Room — Luxury Stay in Orchha | The Orchha Resort",
+      "metaDesc": "Finished with polished Indian marble floors and bespoke Bundeli craftsmanship, Deluxe Rooms feature an open sitting area, enhanced floor plans, and expansi... Starting at ₹6000/night. Book direct for best rates at The Orchha Resort.",
+      "canonical": null,
+      "ogTitle": "Deluxe Marble Room | The Orchha Resort",
+      "ogDesc": "Expansive luxury with views of the lotus pool",
+      "ogImage": "https://www.orchharesort.com/images/resort/curated/rooms/room-deluxe-king-pool-view.jpg",
+      "twitterCard": "summary_large_image",
+      "jsonLdCount": 0,
+      "h1Count": 1,
+      "h1s": [
+        "Deluxe Marble Room"
+      ],
+      "h2Count": 2,
+      "imagesWithoutAltCount": 0
+    },
+    {
+      "route": "/rooms/deluxe-swiss-tent",
+      "title": "Deluxe AC Swiss Tent — Luxury Stay in Orchha | The Orchha Resort",
+      "metaDesc": "Our signature accommodation: permanent luxury Swiss tents situated in lush riverside orchards near the historical Chhatris. Featuring heavy insulated canva... Starting at ₹5200/night. Book direct for best rates at The Orchha Resort.",
+      "canonical": null,
+      "ogTitle": "Deluxe AC Swiss Tent | The Orchha Resort",
+      "ogDesc": "Authentic glamping under the stars near the Royal Chhatris",
+      "ogImage": "https://www.orchharesort.com/images/resort/curated/rooms/room-tent-interior-canopy.jpg",
+      "twitterCard": "summary_large_image",
+      "jsonLdCount": 0,
+      "h1Count": 1,
+      "h1s": [
+        "Deluxe AC Swiss Tent"
+      ],
+      "h2Count": 2,
+      "imagesWithoutAltCount": 0
+    },
+    {
+      "route": "/rooms/royal-heritage-suite",
+      "title": "Royal Heritage Suite — Luxury Stay in Orchha | The Orchha Resort",
+      "metaDesc": "The pinnacle of Bundelkhandi royal hospitality. The Royal Heritage Suite encompasses a master bedroom, separate formal reception parlor with antique diwan ... Starting at ₹8500/night. Book direct for best rates at The Orchha Resort.",
+      "canonical": null,
+      "ogTitle": "Royal Heritage Suite | The Orchha Resort",
+      "ogDesc": "Regal living with panoramic Betwa river and monument horizons",
+      "ogImage": "https://www.orchharesort.com/images/resort/curated/rooms/room-suite-heritage-living.jpg",
+      "twitterCard": "summary_large_image",
+      "jsonLdCount": 0,
+      "h1Count": 1,
+      "h1s": [
+        "Royal Heritage Suite"
+      ],
+      "h2Count": 2,
+      "imagesWithoutAltCount": 0
+    },
+    {
+      "route": "/gallery",
+      "title": "Photo Gallery | The Orchha Resort — Betwa River Sanctuary | The Orchha Resort",
+      "metaDesc": "Explore authentic high-resolution photography of The Orchha Resort. Featuring our lotus-shaped swimming pool, deluxe rooms, luxury Swiss tents, Kaleva restaurant, Kairali Ayurvedic spa, and riverside celebrations overlooking the 14 Royal Chhatris.",
+      "canonical": null,
+      "ogTitle": null,
+      "ogDesc": null,
+      "ogImage": null,
+      "twitterCard": null,
+      "jsonLdCount": 0,
+      "h1Count": 1,
+      "h1s": [
+        "Atmospheres of The Orchha Resort"
+      ],
+      "h2Count": 1,
+      "imagesWithoutAltCount": 0
+    },
+    {
+      "route": "/weddings",
+      "title": "Royal Destination Weddings | The Orchha Resort on River Betwa | The Orchha Resort",
+      "metaDesc": "Plan your royal destination wedding at The Orchha Resort. Sprawling riverfront banquet lawns, 1,500 sq ft ballroom, lotus poolside, canopied mandap pavilions, and 44 guest rooms & Swiss tents on Kanchanghat across from Orchha's royal cenotaphs.",
+      "canonical": null,
+      "ogTitle": "Royal Destination Weddings | The Orchha Resort on River Betwa",
+      "ogDesc": "Celebrate love where royal heritage meets sacred waters. Sprawling banquet lawns, opulent stages, and personalized Bundelkhand hospitality at The Orchha Resort.",
+      "ogImage": "https://www.orchharesort.com/images/weddings/wedding-sangeet-celebration.jpg",
+      "twitterCard": "summary_large_image",
+      "jsonLdCount": 0,
+      "h1Count": 1,
+      "h1s": [
+        "Where Royal Heritage Becomes Your Forever"
+      ],
+      "h2Count": 5,
+      "imagesWithoutAltCount": 0
+    },
+    {
+      "route": "/spa",
+      "title": "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation | The Orchha Resort",
+      "metaDesc": "Discover 11 authentic Ayurvedic therapies, warm medicated herbal oil massages, Shirodhara, and herbal body wraps at Orchha Palace Hotel Spa, Kanchanghat, Orchha. Call 9516006201 or 8103953727.",
+      "canonical": null,
+      "ogTitle": "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation",
+      "ogDesc": "Official catalogue of 11 authentic royal Ayurvedic therapies with warm herbal oils and restorative riverfront peace at Orchha Palace Hotel Spa.",
+      "ogImage": "https://www.orchharesort.com/images/spa/catalog/shirodhara.jpg",
+      "twitterCard": "summary_large_image",
+      "jsonLdCount": 0,
+      "h1Count": 1,
+      "h1s": [
+        "Sacred Ayurvedic Wellness & Royal Rejuvenation"
+      ],
+      "h2Count": 2,
+      "imagesWithoutAltCount": 4
+    },
+    {
+      "route": "/about",
+      "title": "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa | The Orchha Resort",
+      "metaDesc": "Discover the story of The Orchha Resort. Situated on the serene banks of the sacred Betwa River at Kanchanghat, facing the 14 historic royal cenotaphs. Designed by Architect Yogesh Chandra, featuring 44 keys, lotus pool, Kerala Ayurveda, and zero-pollution sanctuary.",
+      "canonical": null,
+      "ogTitle": "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa",
+      "ogDesc": "A peaceful riverfront sanctuary designed by Yogesh Chandra, nestled on the sacred Betwa River opposite Orchha's 16th-century royal cenotaphs.",
+      "ogImage": "https://www.orchharesort.com/images/resort/genuine/slide1.jpg",
+      "twitterCard": "summary_large_image",
+      "jsonLdCount": 0,
+      "h1Count": 1,
+      "h1s": [
+        "Where Sacred Waters Meet Bundela Grandeur"
+      ],
+      "h2Count": 6,
+      "imagesWithoutAltCount": 0
+    }
+  ],
+  "overflowFindings": [],
+  "headingFindings": []
+}

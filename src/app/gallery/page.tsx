@@ -8,16 +8,43 @@ import { GalleryViewer } from "@/components/gallery/GalleryViewer";
 import { Button } from "@/components/ui/Button";
 import { AnimatedHeading, AnimatedParagraph, AnimatedTag } from "@/components/motion/AnimatedTypography";
 import { Sparkles, Calendar, ShieldCheck, MapPin, ArrowRight } from "lucide-react";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Photo Gallery | The Orchha Resort — Betwa River Sanctuary",
   description:
     "Explore authentic high-resolution photography of The Orchha Resort. Featuring our lotus-shaped swimming pool, deluxe rooms, luxury Swiss tents, Kaleva restaurant, Kairali Ayurvedic spa, and riverside celebrations overlooking the 14 Royal Chhatris.",
+  alternates: {
+    canonical: "https://www.orchharesort.com/gallery",
+  },
+  openGraph: {
+    title: "Photo Gallery | The Orchha Resort — Betwa River Sanctuary",
+    description:
+      "Explore authentic high-resolution photography of The Orchha Resort. Featuring our lotus-shaped swimming pool, deluxe rooms, luxury Swiss tents, and riverfront heritage.",
+    url: "https://www.orchharesort.com/gallery",
+    images: ["/images/resort/curated/pool/pool-lotus-twilight-glow.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Photo Gallery | The Orchha Resort",
+    description:
+      "Explore authentic high-resolution photography of The Orchha Resort across accommodations, wellness, dining, and heritage.",
+    images: ["/images/resort/curated/pool/pool-lotus-twilight-glow.jpg"],
+  },
 };
 
 export default function GalleryPage() {
+  const breadcrumbJsonLd = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Gallery", path: "/gallery" },
+  ]);
+
   return (
     <div className="min-h-screen bg-brand-canvas text-brand-charcoal flex flex-col selection:bg-brand-gold/20 selection:text-brand-navy">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Navigation */}
       <NavbarPrimitive transparentAtTop />
 

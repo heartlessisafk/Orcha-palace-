@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSpaSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation",
@@ -19,10 +20,14 @@ export const metadata: Metadata = {
     "Body Exfoliation Massage",
     "Ayurvedic Spa Betwa River",
   ],
+  alternates: {
+    canonical: "https://www.orchharesort.com/spa",
+  },
   openGraph: {
     title: "Orchha Palace Hotel Spa — Ayurvedic Wellness & Rejuvenation",
     description:
       "Official catalogue of 11 authentic royal Ayurvedic therapies with warm herbal oils and restorative riverfront peace at Orchha Palace Hotel Spa.",
+    url: "https://www.orchharesort.com/spa",
     images: [
       {
         url: "/images/spa/catalog/shirodhara.jpg",
@@ -32,6 +37,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Orchha Palace Hotel Spa — Ayurvedic Wellness",
+    description:
+      "Official catalogue of 11 authentic royal Ayurvedic therapies with warm herbal oils and restorative riverfront peace at Orchha Palace Hotel Spa.",
+    images: ["/images/spa/catalog/shirodhara.jpg"],
+  },
 };
 
 export default function SpaLayout({
@@ -39,5 +51,23 @@ export default function SpaLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  const spaJsonLd = getSpaSchema();
+  const breadcrumbJsonLd = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Ayurveda Spa", path: "/spa" },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(spaJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

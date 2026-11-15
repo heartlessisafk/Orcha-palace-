@@ -27,11 +27,31 @@ export function NavbarPrimitive({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll and listen for Escape key when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = "hidden";
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === "Escape") {
+          setIsMobileMenuOpen(false);
+        }
+      };
+      window.addEventListener("keydown", handleKeyDown);
+      return () => {
+        document.body.style.overflow = originalStyle;
+        window.removeEventListener("keydown", handleKeyDown);
+      };
+    }
+  }, [isMobileMenuOpen]);
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-40 transition-all duration-300 ease-out",
-        isScrolled
+        isMobileMenuOpen
+          ? "bg-[#FDFBF7] border-b border-brand-charcoal/10 shadow-subtle py-3.5"
+          : isScrolled
           ? "bg-brand-canvas/90 backdrop-blur-md border-b border-brand-charcoal/8 py-3.5 shadow-subtle"
           : transparentAtTop
           ? "bg-transparent py-5"
@@ -39,16 +59,16 @@ export function NavbarPrimitive({
         className
       )}
     >
-      <div className="max-w-wide mx-auto px-5 sm:px-8 md:px-12 flex items-center justify-between">
+      <div className="max-w-wide mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex items-center justify-between">
         {/* Official Brand Logo & Interactive Luxury White-to-Blue Container */}
         <Link
           href="/"
-          className="group relative inline-flex items-center justify-center rounded-xl bg-white px-3.5 py-1.5 sm:px-4 sm:py-2 border border-brand-charcoal/10 shadow-subtle hover:bg-brand-navy hover:border-brand-navy focus-visible:bg-brand-navy focus-visible:border-brand-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 transition-all duration-300 ease-out shrink-0 select-none"
+          className="group relative inline-flex items-center justify-center rounded-xl bg-white px-3 sm:px-4 py-1.5 sm:py-2 border border-brand-charcoal/10 shadow-subtle hover:bg-brand-navy hover:border-brand-navy focus-visible:bg-brand-navy focus-visible:border-brand-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 transition-all duration-300 ease-out shrink-0 select-none touch-manipulation"
           aria-label="The Orchha Resort — Return to Homepage"
         >
           {/* Logo Lettering & Tagline via Antialiased Mask Asset */}
           <span
-            className="block w-[145px] sm:w-[170px] md:w-[192px] aspect-[607/92] bg-brand-navy group-hover:bg-white group-focus-visible:bg-white transition-colors duration-300 ease-out"
+            className="block w-[135px] sm:w-[165px] md:w-[185px] lg:w-[192px] aspect-[607/92] bg-brand-navy group-hover:bg-white group-focus-visible:bg-white transition-colors duration-300 ease-out"
             style={{
               maskImage: 'url("/images/brand/orchha-logo.png")',
               WebkitMaskImage: 'url("/images/brand/orchha-logo.png")',
@@ -77,65 +97,93 @@ export function NavbarPrimitive({
         </nav>
 
         {/* Right Action CTA & Phone */}
-        <div className="hidden sm:flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
+          {/* Desktop Full Phone Pill */}
           <a
             href={`tel:${SITE_CONFIG.contact.phonePrimary.replace(/\s+/g, "")}`}
-            className="hidden xl:inline-flex items-center gap-2 font-sans text-xs font-medium px-4 py-2 rounded-full bg-white/65 hover:bg-white/90 border border-brand-charcoal/10 backdrop-blur-sm text-brand-navy shadow-subtle hover:shadow-card active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 shrink-0 select-none"
+            className="hidden xl:inline-flex items-center gap-2 font-sans text-xs font-medium px-4 py-2 rounded-full bg-white/65 hover:bg-white/90 border border-brand-charcoal/10 backdrop-blur-sm text-brand-navy shadow-subtle hover:shadow-card active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 shrink-0 select-none touch-manipulation min-h-[36px]"
             aria-label={`Call concierge: ${SITE_CONFIG.contact.phonePrimary}`}
           >
             <Phone className="w-3.5 h-3.5 text-brand-navy shrink-0" aria-hidden="true" />
             <span className="tracking-wide">{SITE_CONFIG.contact.phonePrimary}</span>
           </a>
 
-          <Link href="/#booking-sequence">
-            <Button variant="primary" size="pill" withArrow>
-              Reserve Stay
-            </Button>
-          </Link>
-        </div>
+          {/* Tablet Quick Call Icon Pill (visible on sm to xl) */}
+          <a
+            href={`tel:${SITE_CONFIG.contact.phonePrimary.replace(/\s+/g, "")}`}
+            className="hidden sm:inline-flex xl:hidden p-2.5 rounded-full bg-white/75 hover:bg-white border border-brand-charcoal/10 text-brand-navy shadow-subtle transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold active:scale-95 touch-manipulation min-w-[40px] min-h-[40px] items-center justify-center"
+            aria-label={`Call concierge: ${SITE_CONFIG.contact.phonePrimary}`}
+          >
+            <Phone className="w-4 h-4 text-brand-navy shrink-0" aria-hidden="true" />
+          </a>
 
-        {/* Mobile Hamburger Button */}
-        <button
-          type="button"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 rounded-full border border-brand-charcoal/15 text-brand-charcoal hover:bg-brand-beige transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
-          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isMobileMenuOpen}
-        >
-          {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+          {/* Desktop & Tablet Reserve Stay CTA */}
+          <div className="hidden sm:block">
+            <Link href="/#booking-sequence">
+              <Button variant="primary" size="pill" withArrow className="touch-manipulation">
+                Reserve Stay
+              </Button>
+            </Link>
+          </div>
+
+          {/* Mobile & Tablet Hamburger Button */}
+          <button
+            type="button"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2.5 rounded-full border border-brand-charcoal/15 text-brand-charcoal hover:bg-brand-beige transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center select-none"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+          >
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Backdrop & Drawer Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-brand-canvas/98 border-b border-brand-charcoal/10 shadow-floating p-6 backdrop-blur-lg animate-fade-in">
-          <nav aria-label="Mobile Navigation" className="flex flex-col space-y-3">
-            {SITE_CONFIG.navigation.main.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="font-serif text-lg text-brand-charcoal hover:text-brand-gold py-1.5 border-b border-brand-charcoal/5"
-              >
-                {item.label}
-              </Link>
-            ))}
-            <div className="pt-4 flex flex-col gap-3">
-              <a
-                href={`tel:${SITE_CONFIG.contact.phonePrimary.replace(/\s+/g, "")}`}
-                className="flex items-center justify-center gap-2 font-sans text-sm font-medium py-2.5 rounded-full bg-white/70 backdrop-blur-sm border border-brand-charcoal/10 text-brand-navy hover:bg-white transition-all shadow-subtle"
-              >
-                <Phone className="w-4 h-4 text-brand-navy" />
-                <span>Call Concierge: {SITE_CONFIG.contact.phonePrimary}</span>
-              </a>
-              <Link href="/#booking-sequence" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button variant="primary" size="md" fullWidth withArrow>
-                  Reserve Stay
-                </Button>
-              </Link>
-            </div>
-          </nav>
-        </div>
+        <>
+          {/* Backdrop Overlay */}
+          <div
+            className="lg:hidden fixed inset-0 top-[60px] sm:top-[70px] bg-black/50 backdrop-blur-sm z-30 transition-opacity animate-fade-in"
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+
+          {/* Drawer Container */}
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile Navigation Menu"
+            className="lg:hidden absolute top-full left-0 right-0 bg-[#FDFBF7] border-b border-brand-charcoal/12 shadow-2xl p-5 sm:p-6 z-40 max-h-[calc(100vh-80px)] overflow-y-auto animate-fade-in"
+          >
+            <nav aria-label="Mobile Navigation" className="flex flex-col space-y-1.5">
+              {SITE_CONFIG.navigation.main.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="font-serif text-lg text-brand-charcoal hover:text-brand-gold active:bg-brand-beige/50 py-2.5 px-3 rounded-xl border-b border-brand-charcoal/5 transition-colors touch-manipulation"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <div className="pt-4 flex flex-col gap-3">
+                <a
+                  href={`tel:${SITE_CONFIG.contact.phonePrimary.replace(/\s+/g, "")}`}
+                  className="flex items-center justify-center gap-2.5 font-sans text-sm font-medium py-3 rounded-full bg-white/80 backdrop-blur-sm border border-brand-charcoal/10 text-brand-navy hover:bg-white active:scale-[0.98] transition-all shadow-subtle touch-manipulation min-h-[44px]"
+                >
+                  <Phone className="w-4 h-4 text-brand-navy shrink-0" />
+                  <span>Call Concierge: {SITE_CONFIG.contact.phonePrimary}</span>
+                </a>
+                <Link href="/#booking-sequence" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
+                  <Button variant="primary" size="lg" fullWidth withArrow className="min-h-[44px] touch-manipulation">
+                    Reserve Stay
+                  </Button>
+                </Link>
+              </div>
+            </nav>
+          </div>
+        </>
       )}
     </header>
   );
