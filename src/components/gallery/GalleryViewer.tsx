@@ -36,13 +36,60 @@ const FILTER_GROUPS: FilterGroup[] = [
   { id: "experiences", label: "Experiences", categories: ["heritage-surroundings", "guest-experiences"] },
 ];
 
+const INITIAL_VISIBLE_COUNT = 6;
+const BATCH_INCREMENT = 3;
+
+/**
+ * Responsive column count hook
+ * 1 col on mobile (< 640px)
+ * 2 cols on tablet (640px - 1023px)
+ * 3 cols on desktop (>= 1024px)
+ */
+function useGalleryColumns(): number {
+  const [columns, setColumns] = useState<number>(3);
+
+  useEffect(() => {
+    const updateColumns = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setColumns(1);
+      } else if (width < 1024) {
+        setColumns(2);
+      } else {
+        setColumns(3);
+      }
+    };
+
+    updateColumns();
+    window.addEventListener("resize", updateColumns);
+    return () => window.removeEventListener("resize", updateColumns);
+  }, []);
+
+  return columns;
+}
+
+/**
+ * Returns aspect ratio class preserving natural orientation without excessive cropping
+ */
+function getTileAspectClass(photo: PhotoRecord): string {
+  const isSignature = (photo.qualityScore || 8) >= 9;
+  if (photo.dimensions.orientation === "portrait") {
+    return isSignature ? "aspect-[3/4]" : "aspect-[4/5]";
+  }
+  if (photo.dimensions.orientation === "landscape") {
+    return isSignature ? "aspect-[16/10]" : "aspect-[3/2]";
+  }
+  return "aspect-square";
+}
+
 export function GalleryViewer() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
-  const [visibleCount, setVisibleCount] = useState<number>(3);
+  const [visibleCount, setVisibleCount] = useState<number>(INITIAL_VISIBLE_COUNT);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const shouldReduceMotion = useReducedMotion();
+  const columns = useGalleryColumns();
 
   // Curated photos list (Strictly deduplicated: excludes duplicates & exclusions)
   const curatedPhotos = useMemo(() => {
@@ -57,24 +104,36 @@ export function GalleryViewer() {
     return curatedPhotos.filter((p) => group.categories.includes(p.category));
   }, [activeFilter, curatedPhotos]);
 
-  // When active category changes, reset visible count to initial 3
+  // When active category changes, reset visible count to initial batch
   const handleFilterChange = (groupId: string) => {
     setActiveFilter(groupId);
-    setVisibleCount(3);
+    setVisibleCount(INITIAL_VISIBLE_COUNT);
   };
 
-  // Progressive 3-at-a-time slice
+  // Progressive reveal slice
   const visiblePhotos = useMemo(() => {
     return filteredPhotos.slice(0, visibleCount);
   }, [filteredPhotos, visibleCount]);
 
   const remainingCount = Math.max(0, filteredPhotos.length - visibleCount);
-  const nextBatchSize = Math.min(3, remainingCount);
+  const nextBatchSize = Math.min(BATCH_INCREMENT, remainingCount);
   const hasMore = remainingCount > 0;
 
   const handleDiscoverMore = () => {
-    setVisibleCount((prev) => Math.min(prev + 3, filteredPhotos.length));
+    setVisibleCount((prev) => Math.min(prev + BATCH_INCREMENT, filteredPhotos.length));
   };
+
+  // Partition visible photos across column tracks to eliminate empty chasms and gaps
+  const columnTracks = useMemo(() => {
+    const tracks: { photo: PhotoRecord; globalIndex: number }[][] = Array.from(
+      { length: columns },
+      () => []
+    );
+    visiblePhotos.forEach((photo, index) => {
+      tracks[index % columns].push({ photo, globalIndex: index });
+    });
+    return tracks;
+  }, [visiblePhotos, columns]);
 
   // Lightbox navigation
   const openLightbox = (index: number) => {
@@ -178,7 +237,7 @@ export function GalleryViewer() {
         </div>
       </div>
 
-      {/* Progressive 3-at-a-Time Photo Grid */}
+      {/* Architectural Masonry Photo Gallery (Zero-Empty-Gap Architecture) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatePresence mode="wait">
           <motion.div
@@ -186,101 +245,107 @@ export function GalleryViewer() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            transition={{ duration: 0.25 }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start"
           >
-            {visiblePhotos.map((photo, index) => {
-              // Newly revealed images animate with staggered entrance; initial 3 enter cleanly
-              const isInitialBatch = index < 3;
-              const staggerOffset = isInitialBatch ? index * 0.06 : (index % 3) * 0.08;
-              const isEditorialWide = index === 0 || (index % 5 === 0 && (photo.qualityScore || 8) >= 8);
-              const tileSpanClass = isEditorialWide ? "sm:col-span-2 aspect-[16/10]" : "aspect-[4/3]";
+            {columnTracks.map((column, colIdx) => (
+              <div key={colIdx} className="flex flex-col gap-6 w-full">
+                {column.map(({ photo, globalIndex }) => {
+                  const isInitialBatch = globalIndex < INITIAL_VISIBLE_COUNT;
+                  const staggerOffset = isInitialBatch 
+                    ? globalIndex * 0.05 
+                    : (globalIndex % BATCH_INCREMENT) * 0.08;
+                  const aspectClass = getTileAspectClass(photo);
 
-              return (
-                <motion.div
-                  key={photo.id}
-                  layout="position"
-                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20, scale: 0.98 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{
-                    duration: 0.4,
-                    delay: staggerOffset,
-                    ease: LUXURY_EASE,
-                  }}
-                  onClick={() => openLightbox(index)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      openLightbox(index);
-                    }
-                  }}
-                  className={cn(
-                    "group relative rounded-2xl overflow-hidden bg-brand-charcoal/5 cursor-pointer shadow-subtle hover:shadow-hover border border-brand-charcoal/10 hover:border-brand-gold/60 transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2",
-                    tileSpanClass,
-                    "hover:-translate-y-1.5 hover:scale-[1.012] active:scale-[0.985]"
-                  )}
-                  aria-label={`Open photo: ${photo.title}`}
-                >
-                  {/* Image with internal smooth zoom */}
-                  <Image
-                    src={photo.curatedPath || photo.googlePhotosUrl}
-                    alt={photo.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                    priority={index < 3}
-                  />
+                  return (
+                    <motion.div
+                      key={photo.id}
+                      layout="position"
+                      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{
+                        duration: 0.45,
+                        delay: staggerOffset,
+                        ease: LUXURY_EASE,
+                      }}
+                      onClick={() => openLightbox(globalIndex)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          openLightbox(globalIndex);
+                        }
+                      }}
+                      className={cn(
+                        "group relative w-full rounded-2xl overflow-hidden bg-brand-charcoal/5 cursor-pointer shadow-subtle hover:shadow-hover border border-brand-charcoal/10 hover:border-brand-gold/60 transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2",
+                        aspectClass,
+                        "hover:-translate-y-1.5 hover:scale-[1.012] active:scale-[0.985]"
+                      )}
+                      aria-label={`Open photo: ${photo.title}`}
+                    >
+                      {/* Real Authentic Resort Photograph */}
+                      <Image
+                        src={photo.curatedPath || photo.googlePhotosUrl}
+                        alt={photo.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        priority={globalIndex < 3}
+                      />
 
-                  {/* Top Badges */}
-                  <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider bg-brand-charcoal/70 backdrop-blur-md text-white border border-white/10 shadow-sm">
-                      {photo.category.replace("-", " ")}
-                    </span>
-                    {photo.qualityScore >= 9 && (
-                      <span className="px-2 py-1 rounded-full text-[10px] font-medium bg-brand-gold/90 backdrop-blur-md text-brand-navy flex items-center gap-1 shadow-sm font-mono font-semibold">
-                        <Sparkles className="w-3 h-3 text-brand-navy" />
-                        Signature
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Gradient Overlay & Metadata on Hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex flex-col justify-end p-5">
-                    <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                      <div className="flex items-center gap-2 mb-1">
-                        <Maximize2 className="w-4 h-4 text-brand-sand shrink-0" />
-                        <span className="text-xs font-mono text-brand-sand tracking-wide">
-                          Click to View Fullscreen
+                      {/* Top Badges */}
+                      <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
+                        <span className="px-2.5 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider bg-brand-charcoal/70 backdrop-blur-md text-white border border-white/10 shadow-sm">
+                          {photo.category.replace("-", " ")}
                         </span>
+                        {photo.qualityScore >= 9 && (
+                          <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-brand-gold/90 backdrop-blur-md text-brand-navy flex items-center gap-1 shadow-sm font-mono font-semibold">
+                            <Sparkles className="w-3 h-3 text-brand-navy" />
+                            Signature
+                          </span>
+                        )}
                       </div>
-                      <h3 className="font-serif text-lg font-medium text-white leading-snug drop-shadow-sm">
-                        {photo.title}
-                      </h3>
-                      <p className="font-sans text-xs text-white/80 line-clamp-2 mt-1">
-                        {photo.description}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+
+                      {/* Editorial Gradient Overlay & Metadata on Hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex flex-col justify-end p-5">
+                        <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                          <div className="flex items-center gap-2 mb-1.5">
+                            <Maximize2 className="w-3.5 h-3.5 text-[#F3D382] shrink-0" />
+                            <span className="text-xs font-mono text-[#F3D382] tracking-wider uppercase font-medium">
+                              Click to View Fullscreen
+                            </span>
+                          </div>
+                          <h3 className="font-serif text-lg font-medium text-white leading-snug drop-shadow-sm">
+                            {photo.title}
+                          </h3>
+                          <p className="font-sans text-xs text-white/85 line-clamp-2 mt-1 leading-relaxed">
+                            {photo.description}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            ))}
           </motion.div>
         </AnimatePresence>
 
-        {/* Progressive 3-at-a-Time "Discover More" Bar */}
-        <div className="mt-12 text-center flex flex-col items-center justify-center gap-3">
+        {/* High-Contrast "Discover More Photographs" Action Area */}
+        <div className="mt-14 text-center flex flex-col items-center justify-center gap-3.5">
           {hasMore ? (
             <Button
               variant="primary"
               size="lg"
               onClick={handleDiscoverMore}
               withArrow
-              className="rounded-full shadow-md hover:shadow-gold-ambient border border-brand-gold/40 group px-8 py-3.5 text-brand-sand font-medium text-sm"
+              className="rounded-full shadow-md hover:shadow-gold-ambient border border-brand-gold/50 group px-8 py-3.5 bg-brand-navy hover:bg-brand-navy-light text-[#F8F4EC] font-medium text-sm transition-all duration-300 tactile-3d"
             >
-              <span>Discover More Photographs</span>
-              <span className="ml-2 px-2 py-0.5 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-mono">
+              <span className="text-[#F8F4EC] font-medium tracking-wide">
+                Discover More Photographs
+              </span>
+              <span className="ml-2.5 px-2.5 py-0.5 rounded-full bg-brand-gold/25 border border-brand-gold/40 text-brand-gold-light text-xs font-mono font-semibold shadow-inner">
                 +{nextBatchSize}
               </span>
             </Button>
@@ -291,7 +356,7 @@ export function GalleryViewer() {
             </div>
           )}
 
-          <span className="font-mono text-xs text-brand-charcoal/60">
+          <span className="font-mono text-xs text-brand-charcoal/70 font-medium">
             Displaying {visiblePhotos.length} of {filteredPhotos.length} unique views
           </span>
         </div>
@@ -312,7 +377,7 @@ export function GalleryViewer() {
             {/* Top Bar Controls */}
             <div className="px-4 sm:px-8 py-4 flex items-center justify-between border-b border-white/10 z-20">
               <div className="flex items-center gap-3">
-                <span className="font-mono text-xs text-brand-sand tracking-widest uppercase">
+                <span className="font-mono text-xs text-brand-gold-light tracking-widest uppercase">
                   Photo {lightboxIndex + 1} of {visiblePhotos.length}
                 </span>
                 <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-brand-gold" />

@@ -18,8 +18,8 @@
   },
   "tasteSkillAudit": {
     "categoryCount": 7,
-    "editorialWideCount": 1,
-    "standardTileCount": 4
+    "editorialWideCount": 0,
+    "standardTileCount": 7
   },
   "tactile3DButtonAudit": {
     "found": true,
