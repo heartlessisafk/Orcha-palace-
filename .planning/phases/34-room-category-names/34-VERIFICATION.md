@@ -58,5 +58,45 @@ Searched for: `Standard Heritage Room`, `Deluxe Marble Room`, `Deluxe AC Swiss T
 
 ---
 
-## 5. Global Regression Matrix
+## 5. Prompt 2 — Room Count Statistic Verification (`50 Rooms`)
+- **Test Script**: `scripts/verify_phase34_room_count.js` (CDP WebSocket on port 9222)
+- **Target Page**: `/about` Story / Kanchan Ghat Hero Section
+- **Card 1**:
+  - Title: `Kanchan Ghat`
+  - Subtitle: `DIRECT BETWA RIVERFRONT`
+  - Status: **PASS**
+- **Card 2**:
+  - Title: `50 Rooms`
+  - Subtitle: `GARDEN & POOL FACING`
+  - Status: **PASS**
+- **Card 3**:
+  - Title: `0% Pollution`
+  - Subtitle: `CERTIFIED TRANQUIL BELT`
+  - Status: **PASS**
+- **Hero Body Copy**:
+  - Text: `"...offering 50 rooms across from Orchha's 16th-century royal cenotaphs in a certified zero-pollution haven."`
+  - Status: **PASS**
+
+### Multi-Device CDP Audits for Hero Stats:
+- **Desktop (1440 × 900px)**:
+  - 3-column stats ribbon inside unified glass backdrop.
+  - Border radius: `16px`, Text align: `center`.
+  - Zero layout shift or overflow.
+  - Proof screenshot: `.planning/phases/34-room-category-names/after_about_hero_stats_desktop.jpg`.
+- **Mobile (390 × 844px)**:
+  - Responsive stacking with full touch padding.
+  - `scrollWidth: 390px, innerWidth: 390px, overflow: false`.
+  - Proof screenshot: `.planning/phases/34-room-category-names/after_about_hero_stats_mobile.jpg`.
+
+---
+
+## 6. Codebase Audit for Outdated Inventory Numbers
+- Searched for active inventory references with `44` or `32` (`rooms`, `keys`, `sanctuaries`).
+- **Result**: `0 occurrences in src/`. All property inventory references unified to `50 rooms`.
+- Historical numbers verified intact: `14 Royal Cenotaphs / Chhatris`, `16th century`, `18 km from Jhansi`, `1,500 sq ft ballroom`.
+
+---
+
+## 7. Global Regression Matrix
 - `node scripts/verify_phase7_final.js`: **0 Regressions Detected** across all 10 site routes.
+- Next.js production build: **16/16 pages static pre-rendered successfully**.

@@ -4,7 +4,7 @@ import { getWeddingVenueSchema, getBreadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Royal Destination Weddings | The Orchha Resort on River Betwa",
   description:
-    "Plan your royal destination wedding at The Orchha Resort. Sprawling riverfront banquet lawns, 1,500 sq ft ballroom, lotus poolside, canopied mandap pavilions, and 44 guest rooms & Swiss tents on Kanchanghat across from Orchha's royal cenotaphs.",
+    "Plan your royal destination wedding at The Orchha Resort. Sprawling riverfront banquet lawns, 1,500 sq ft ballroom, lotus poolside, canopied mandap pavilions, and 50 guest rooms on Kanchanghat across from Orchha's royal cenotaphs.",
   keywords: [
     "Orchha Resort Weddings",
     "Destination Wedding Orchha",

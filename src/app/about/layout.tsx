@@ -4,7 +4,7 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa",
   description:
-    "Discover the story of The Orchha Resort. Situated on the serene banks of the sacred Betwa River at Kanchanghat, facing the 14 historic royal cenotaphs. Designed by Architect Yogesh Chandra, featuring 44 keys, lotus pool, Kerala Ayurveda, and zero-pollution sanctuary.",
+    "Discover the story of The Orchha Resort. Situated on the serene banks of the sacred Betwa River at Kanchanghat, facing the 14 historic royal cenotaphs. Designed by Architect Yogesh Chandra, featuring 50 rooms, lotus pool, Kerala Ayurveda, and zero-pollution sanctuary.",
   keywords: [
     "The Orchha Resort",
     "Orchha Resort Story",

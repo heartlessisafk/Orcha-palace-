@@ -26,7 +26,7 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accommodations & Luxury Rooms | The Orchha Resort",
   description:
-    "Explore 32 thoughtfully designed accommodations: Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing on the banks of River Betwa in Orchha.",
+    "Explore 50 thoughtfully designed accommodations: Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing on the banks of River Betwa in Orchha.",
   alternates: {
     canonical: "https://www.orchharesort.com/rooms",
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Accommodations & Luxury Rooms | The Orchha Resort",
     description:
-      "Explore 32 thoughtfully designed accommodations: Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing on the banks of River Betwa in Orchha.",
+      "Explore 50 thoughtfully designed accommodations: Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing on the banks of River Betwa in Orchha.",
     images: ["/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg"],
   },
 };
@@ -87,7 +87,7 @@ export default function RoomsPage() {
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
-                A collection of 32 peaceful rooms and suites nestled in certified zero-pollution
+                A collection of 50 peaceful rooms and suites nestled in certified zero-pollution
                 riverside gardens across from the 14 Royal Cenotaphs.
               </p>
 

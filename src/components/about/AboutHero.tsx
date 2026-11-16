@@ -65,7 +65,7 @@ export function AboutHero() {
           {/* 3. Subtitle */}
           <p className="font-sans text-base sm:text-lg md:text-xl text-brand-beige max-w-2xl mx-auto font-normal leading-relaxed text-pretty drop-shadow-sm">
             Conceived in quiet reverence beside the calm ripples of the Betwa River.
-            Designed by Architect Yogesh Chandra, offering 44 sanctuary keys across
+            Designed by Architect Yogesh Chandra, offering 50 rooms across
             from Orchha&apos;s 16th-century royal cenotaphs in a certified zero-pollution haven.
           </p>
 
@@ -82,10 +82,10 @@ export function AboutHero() {
 
             <div className="bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-sm border border-white/12 hover:border-brand-gold/40 rounded-2xl p-3.5 sm:p-4 text-center transition-all duration-300">
               <span className="block font-serif text-xl sm:text-2xl text-[#F3D382] font-medium drop-shadow-sm">
-                44 Sanctuary Keys
+                50 Rooms
               </span>
               <span className="block font-sans text-xs text-white/85 uppercase tracking-wider mt-0.5 font-medium">
-                Garden &amp; Pool Facing Rooms
+                Garden &amp; Pool Facing
               </span>
             </div>
 

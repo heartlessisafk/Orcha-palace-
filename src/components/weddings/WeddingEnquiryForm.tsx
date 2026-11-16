@@ -53,7 +53,7 @@ export function WeddingEnquiryForm() {
     "Canopied Mandap Pavilion",
     "The Royal Ballroom (1,500 sq ft)",
     "Lotus Poolside Terrace",
-    "Complete Resort Buyout (All 32 Keys)",
+    "Complete Resort Buyout (All 50 Rooms)",
   ];
 
   const handleToggleSpace = (space: string) => {
@@ -319,7 +319,7 @@ ${formData.fullName}`;
                   rows={3}
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  placeholder="Share any special preferences (e.g., pure vegetarian catering, specific dates, accommodation requirements for up to 32 rooms and tents)..."
+                  placeholder="Share any special preferences (e.g., pure vegetarian catering, specific dates, accommodation requirements for up to 50 rooms)..."
                   className="w-full px-4 py-3 rounded-xl border border-brand-charcoal/15 bg-white text-brand-charcoal font-sans text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all resize-none"
                 />
               </div>

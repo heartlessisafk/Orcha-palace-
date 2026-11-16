@@ -87,7 +87,7 @@ export const RESORT_ASSETS: Record<string, ResortAsset> = {
     replacementFileName: "pool-chhatris-reflection-sunset.jpg",
   },
 
-  // Accommodations (32 Rooms Verified Inventory)
+  // Accommodations (50 Rooms Verified Inventory)
   roomStandard: {
     id: "room-standard",
     category: "rooms",

@@ -31,7 +31,7 @@ export function FooterPrimitive() {
             </div>
 
             <p className="font-sans text-xs text-brand-beige-sand/80 leading-relaxed">
-              32 luxury rooms & Swiss tents nestled on the serene banks of the river Betwa, opposite
+              50 luxury rooms & suites nestled on the serene banks of the river Betwa, opposite
               the 14 Royal Cenotaphs in zero-pollution natural surroundings.
             </p>
 

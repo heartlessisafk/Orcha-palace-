@@ -111,7 +111,7 @@ export default function DesignSystemPage() {
               <div className="space-y-1">
                 <span className="text-[10px] uppercase font-mono text-brand-muted">Body Lead & Primary (DM Sans 400)</span>
                 <Text variant="lead">
-                  Situated in a certified zero-pollution sanctuary 18 km from Jhansi, featuring 32 heritage accommodations and genuine Bundelkhandi warmth.
+                  Situated in a certified zero-pollution sanctuary 18 km from Jhansi, featuring 50 heritage accommodations and genuine Bundelkhandi warmth.
                 </Text>
                 <Text variant="body" className="mt-2">
                   All rooms boast satellite LED television, individual climate air-conditioning, stocked mini-bar, digital safety locker, and 24-hour in-room dining.
@@ -196,7 +196,7 @@ export default function DesignSystemPage() {
           <Container>
             <div className="mb-8">
               <SubtitleTag>06. Accommodation Card Primitives</SubtitleTag>
-              <Heading as="h2" size="h2">Verified 32-Room Categories</Heading>
+              <Heading as="h2" size="h2">Verified 50-Room Categories</Heading>
               <Text variant="lead">Hover over cards to verify the 1.03x luxury image zoom and specifications layout.</Text>
             </div>
 

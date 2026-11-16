@@ -58,7 +58,7 @@ export default function HomePage() {
               <SubtitleTag>Accommodation Showcase</SubtitleTag>
               <Heading as="h2" size="h2">Thoughtfully Designed Stays</Heading>
               <Text variant="lead" className="mt-1">
-                32 private rooms and luxury Swiss tents facing landscaped orchards and the lotus pool.
+                50 private rooms and suites facing landscaped gardens and the lotus pool.
               </Text>
             </div>
             <Link href="/about">

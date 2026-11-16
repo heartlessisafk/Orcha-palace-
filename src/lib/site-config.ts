@@ -8,9 +8,9 @@ export const SITE_CONFIG = {
   shortName: "Orchha Resort",
   tagline: "Sanctuary by the River Betwa",
   metaDescription:
-    "Experience understated royal luxury at The Orchha Resort. Located on the serene banks of the river Betwa in Orchha, featuring 32 heritage rooms & luxury Swiss tents, lotus pool, and authentic Kerala Ayurveda.",
+    "Experience understated royal luxury at The Orchha Resort. Located on the serene banks of the river Betwa in Orchha, featuring 50 luxury heritage rooms & suites, lotus pool, and authentic Kerala Ayurveda.",
   propertyFacts: {
-    totalRooms: 44,
+    totalRooms: 50,
     categories: [
       "Standard Room Garden Facing",
       "Deluxe Room Garden Facing",

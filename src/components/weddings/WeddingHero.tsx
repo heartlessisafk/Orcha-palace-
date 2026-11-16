@@ -102,10 +102,10 @@ export function WeddingHero() {
 
           <div className="bg-brand-navy/70 backdrop-blur-md border border-white/10 rounded-xl p-3 sm:p-4 text-center">
             <span className="block font-serif text-xl sm:text-2xl text-brand-gold font-medium">
-              44 Private Keys
+              50 Private Rooms
             </span>
             <span className="block font-sans text-xs text-white/70 uppercase tracking-wider mt-0.5">
-              Garden &amp; Pool Facing Keys
+              Garden &amp; Pool Facing Accommodations
             </span>
           </div>
         </motion.div>

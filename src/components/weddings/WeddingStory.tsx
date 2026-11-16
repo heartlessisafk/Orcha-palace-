@@ -99,7 +99,7 @@ export function WeddingStory() {
                 <div className="space-y-2.5 text-xs sm:text-sm text-brand-charcoal/80">
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
-                    <span><strong>Exclusive Property Buyout:</strong> Take over all 44 rooms and Swiss tents to turn the entire resort into a private wedding estate.</span>
+                    <span><strong>Exclusive Property Buyout:</strong> Take over all 50 rooms to turn the entire resort into a private wedding estate.</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />

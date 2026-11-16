@@ -2,7 +2,7 @@ import { RoomDetails } from "@/types/room";
 
 /**
  * Verified Accommodation Data for The Orchha Resort.
- * Grounded in genuine property audit: 32 rooms total inventory, verified categories & amenities.
+ * Grounded in genuine property audit: 50 rooms total inventory, verified categories & amenities.
  * All photographs sourced strictly from authentic local curated repository.
  * Category names updated to exact client specifications:
  * 1. Standard Room Garden Facing

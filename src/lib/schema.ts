@@ -240,7 +240,7 @@ export function getWeddingVenueSchema() {
     "@id": `${BASE_URL}/weddings#venue`,
     name: "Royal Destination Wedding Lawns & Banquets at The Orchha Resort",
     description:
-      "Royal destination wedding venue with expansive riverfront banquet lawns, 1,500 sq ft ballroom, canopied mandap setups, and 44 heritage keys on Kanchanghat facing Orchha's 16th-century royal cenotaphs.",
+      "Royal destination wedding venue with expansive riverfront banquet lawns, 1,500 sq ft ballroom, canopied mandap setups, and 50 heritage rooms on Kanchanghat facing Orchha's 16th-century royal cenotaphs.",
     url: `${BASE_URL}/weddings`,
     telephone: SITE_CONFIG.contact.phonePrimary.replace(/\s+/g, ""),
     maximumAttendeeCapacity: 1200,

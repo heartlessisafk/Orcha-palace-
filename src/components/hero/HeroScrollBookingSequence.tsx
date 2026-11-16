@@ -116,7 +116,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
 
             {/* Factual Description */}
             <p className="font-sans text-sm sm:text-base md:text-lg text-brand-beige-sand/95 max-w-2xl leading-relaxed">
-              32 secluded heritage rooms and luxury Swiss tents facing the 14 historical Chhatris.
+              50 secluded heritage rooms and suites facing the 14 historical Chhatris.
               Experience authentic Bundeli warmth, lotus pool serenity, and zero-pollution tranquility.
             </p>
 
@@ -169,7 +169,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
               </span>
             </div>
             <span className="text-brand-gold-light/80 text-[11px] font-sans">
-              32 Heritage Accommodations · Instant Concierge Confirmation
+              50 Heritage Accommodations · Instant Concierge Confirmation
             </span>
           </div>
 

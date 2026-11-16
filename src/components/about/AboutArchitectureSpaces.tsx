@@ -102,7 +102,7 @@ export function AboutArchitectureSpaces() {
             Conceived by Architect Yogesh Chandra (New Delhi)
           </p>
           <Text variant="lead" className="mt-4 text-brand-charcoal/80 max-w-2xl">
-            A harmonious low-rise resort campus that honors Bundelkhand&apos;s heritage through sandstone baradaris, lotus waterworks, and 44 tranquil guest sanctuaries.
+            A harmonious low-rise resort campus that honors Bundelkhand&apos;s heritage through sandstone baradaris, lotus waterworks, and 50 tranquil rooms and suites.
           </Text>
         </div>
 

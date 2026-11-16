@@ -46,7 +46,7 @@ export const ORCHHA_HERITAGE_LOCATIONS: HeritageLocationMarker[] = [
     distanceFromResort: "Primary Destination",
     walkingTime: "Your Starting Point",
     description:
-      "Tranquil riverfront sanctuary featuring 32 heritage rooms, luxury AC Swiss tents, blooming lotus swimming pool, and authentic Kerala Ayurveda spa on the eastern banks of the sacred Betwa River.",
+      "Tranquil riverfront sanctuary featuring 50 heritage rooms and suites, blooming lotus swimming pool, and authentic Kerala Ayurveda spa on the eastern banks of the sacred Betwa River.",
     historicalEra: "Zero-Pollution Riverbank Sanctuary",
     badgeText: "Your Sanctuary",
     isPrimary: true,

@@ -89,7 +89,7 @@ export function WeddingExperiences() {
       id: "stay",
       icon: Tent,
       tag: "Guest Sanctuary",
-      title: "Exclusive Accommodations for 44 Keys",
+      title: "Exclusive Accommodations for 50 Rooms",
       description:
         "Host your entire wedding party together in privacy. With Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing accommodations, all your loved ones stay on-site, sharing breakfast by the pool and late-night laughter.",
       image: WEDDING_ASSETS.guestSwissTents.src,

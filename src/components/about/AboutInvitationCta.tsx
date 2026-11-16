@@ -34,7 +34,7 @@ export function AboutInvitationCta() {
           </p>
 
           <p className="font-sans text-brand-beige/85 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
-            Choose your dates below to check availability for our 32 rooms and luxury Swiss tents, or connect directly with our reservation team.
+            Choose your dates below to check availability for our 50 luxury rooms and suites, or connect directly with our reservation team.
           </p>
         </div>
 
