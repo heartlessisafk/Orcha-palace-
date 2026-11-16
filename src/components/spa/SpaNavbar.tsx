@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { SPA_DECORATIVE_ASSETS } from "@/lib/spa-assets";
 import { SPA_CONTACT_INFO } from "@/data/spa-catalog";
 import { Sparkles, Phone, ShoppingBag, ArrowLeft, Clock } from "lucide-react";
 
@@ -41,36 +39,51 @@ export function SpaNavbar({
     >
       <Container>
         <div className="flex items-center justify-between gap-4">
-          {/* Left: Brand Identity & Crest */}
-          <div className="flex items-center gap-3">
+          {/* Left: Brand Identity & Official Logo */}
+          <div className="flex items-center gap-2 sm:gap-3">
             <Link
               href="/"
-              className="inline-flex items-center gap-1.5 text-xs text-brand-charcoal/60 hover:text-brand-navy transition-colors font-sans mr-2 hidden sm:inline-flex"
+              className="inline-flex items-center gap-1.5 text-xs text-brand-charcoal/60 hover:text-brand-navy transition-colors font-sans mr-1 hidden sm:inline-flex"
               title="Return to Main Resort Website"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Resort Home</span>
             </Link>
 
-            <Link href="/spa" className="flex items-center gap-2.5 group">
-              <div className="relative w-8 h-8 sm:w-9 sm:h-9 shrink-0">
-                <Image
-                  src={SPA_DECORATIVE_ASSETS.royalCrest.src}
-                  alt={SPA_DECORATIVE_ASSETS.royalCrest.alt}
-                  fill
-                  sizes="40px"
-                  className="object-contain group-hover:scale-105 transition-transform"
+            <div className="flex items-center gap-2 sm:gap-2.5">
+              {/* Official The Orchha Resort Logo (Matching Main Website Header) */}
+              <Link
+                href="/"
+                className="group relative inline-flex items-center justify-center rounded-xl bg-white px-2.5 sm:px-3 py-1.5 border border-brand-charcoal/10 shadow-subtle hover:bg-brand-navy hover:border-brand-navy focus-visible:bg-brand-navy focus-visible:border-brand-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold transition-all duration-300 ease-out shrink-0 select-none touch-manipulation"
+                aria-label="The Orchha Resort — Return to Homepage"
+              >
+                <span
+                  className="block w-[115px] sm:w-[135px] md:w-[155px] aspect-[607/92] bg-brand-navy group-hover:bg-white group-focus-visible:bg-white transition-colors duration-300 ease-out"
+                  style={{
+                    maskImage: 'url("/images/brand/orchha-logo.png")',
+                    WebkitMaskImage: 'url("/images/brand/orchha-logo.png")',
+                    maskSize: "contain",
+                    WebkitMaskSize: "contain",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskRepeat: "no-repeat",
+                    maskPosition: "center",
+                    WebkitMaskPosition: "center",
+                  }}
+                  aria-hidden="true"
                 />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif font-bold text-sm sm:text-base text-brand-navy tracking-tight leading-tight group-hover:text-brand-gold-dark transition-colors">
-                  {SPA_CONTACT_INFO.brandName}
+              </Link>
+
+              {/* Distinctive Spa Identity Badge */}
+              <Link
+                href="/spa"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-beige border border-brand-gold/30 hover:border-brand-gold text-brand-navy transition-colors shrink-0"
+              >
+                <Sparkles className="w-3 h-3 text-brand-gold-dark shrink-0" />
+                <span className="font-serif font-semibold text-xs sm:text-sm tracking-tight text-brand-navy whitespace-nowrap">
+                  <span className="hidden sm:inline">Ayurveda </span>Spa
                 </span>
-                <span className="text-[10px] sm:text-[11px] font-sans text-brand-gold-dark uppercase tracking-wider font-medium">
-                  {SPA_CONTACT_INFO.subtitle}
-                </span>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
 
           {/* Center: Hours / Status (Desktop only) */}

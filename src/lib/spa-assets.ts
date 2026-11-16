@@ -1,9 +1,9 @@
 /**
- * Centralized Typed Spa Asset Registry for Orchha Palace Hotel Spa.
+ * Centralized Typed Spa Asset Registry for The Orchha Resort Spa.
  *
  * ABSOLUTE PHOTOGRAPHY RESTRICTION:
  * All photographs in this registry are strictly extracted from the 11-page
- * official Orchha Palace Hotel Spa PDF brochure (`Spa 2(1).pdf`).
+ * official spa brochure.
  * No external, stock, or generated photographs are permitted on this route.
  */
 
@@ -29,7 +29,7 @@ export const SPA_PHOTOGRAPHY_REGISTRY: Record<string, SpaAsset> = {
     square: "/images/spa/catalog/abhyangam_square.jpg",
     width: 615,
     height: 865,
-    alt: "Authentic full-body Ayurvedic oil massage using warm medicated herbal oils at Orchha Palace Spa",
+    alt: "Authentic full-body Ayurvedic oil massage using warm medicated herbal oils at The Orchha Resort Spa",
   },
   shirodhara: {
     id: "shirodhara",
@@ -40,7 +40,7 @@ export const SPA_PHOTOGRAPHY_REGISTRY: Record<string, SpaAsset> = {
     square: "/images/spa/catalog/shirodhara_square.jpg",
     width: 585,
     height: 885,
-    alt: "Traditional brass vessel pouring warm herbal oil steadily over the forehead at Orchha Palace Spa",
+    alt: "Traditional brass vessel pouring warm herbal oil steadily over the forehead at The Orchha Resort Spa",
   },
   "marma-massage": {
     id: "marma-massage",
@@ -145,10 +145,10 @@ export const SPA_PHOTOGRAPHY_REGISTRY: Record<string, SpaAsset> = {
 
 export const SPA_DECORATIVE_ASSETS = {
   royalCrest: {
-    src: "/images/spa/extracted/crest_transparent.png",
+    src: "/images/brand/orchha-emblem.svg",
     width: 160,
     height: 170,
-    alt: "Orchha Palace Hotel Spa Royal Elephant Crest",
+    alt: "The Orchha Resort Royal Emblem",
   },
   botanicalBranch: {
     src: "/images/spa/extracted/botanical_transparent.png",
@@ -160,12 +160,12 @@ export const SPA_DECORATIVE_ASSETS = {
     src: "/images/spa/catalog/hero_shirodhara.jpg",
     width: 585,
     height: 885,
-    alt: "Orchha Palace Hotel Spa Shirodhara Cinematic Hero",
+    alt: "The Orchha Resort Ayurvedic Spa Shirodhara Cinematic Hero",
   },
   heroAbhyangam: {
     src: "/images/spa/catalog/hero_abhyangam.jpg",
     width: 615,
     height: 865,
-    alt: "Orchha Palace Hotel Spa Abhyangam Cinematic Composition",
+    alt: "The Orchha Resort Ayurvedic Spa Abhyangam Cinematic Composition",
   },
 };

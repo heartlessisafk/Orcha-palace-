@@ -37,7 +37,7 @@ export function SpaEditorialRoyal() {
           </FadeIn>
 
           <p className="font-serif italic text-sm md:text-base text-brand-gold-dark pt-2">
-            The Orchha Palace Hotel Spa Philosophy • Grounded in Classical Ayurveda
+            The Orchha Resort Spa Philosophy • Grounded in Classical Ayurveda
           </p>
         </div>
 

@@ -55,7 +55,7 @@ export function SpaEnquiryModalRoyal({
       : "• General Ayurvedic Consultation & Wellness Assessment";
 
   const enquiryMessage = [
-    `*SPA ENQUIRY — ORCHHA PALACE HOTEL SPA*`,
+    `*SPA ENQUIRY — THE ORCHHA RESORT SPA*`,
     `========================================`,
     `Guest Name: ${guestName || "Guest"}`,
     guestPhone ? `Contact Phone: ${guestPhone}` : null,
@@ -114,7 +114,7 @@ export function SpaEnquiryModalRoyal({
           <div className="space-y-1">
             <div className="inline-flex items-center gap-1.5 text-xs text-brand-gold-light font-sans font-medium">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Orchha Palace Hotel Spa Concierge</span>
+              <span>The Orchha Resort Spa Concierge</span>
             </div>
             <h2
               id="enquiry-modal-title"

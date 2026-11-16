@@ -1,5 +1,5 @@
 /**
- * Official Treatment Catalogue for Orchha Palace Hotel Spa
+ * Official Treatment Catalogue for The Orchha Resort Spa
  * Source: Official 11-page Spa Brochure (`Spa 2(1).pdf`)
  *
  * Strict Compliance:
@@ -47,7 +47,7 @@ export interface SpaTreatmentItem {
 }
 
 export const SPA_CONTACT_INFO = {
-  brandName: "Orchha Palace Hotel Spa",
+  brandName: "The Orchha Resort",
   subtitle: "Ayurvedic Wellness & Rejuvenation",
   phonePrimary: "9516006201",
   phonePrimaryFormatted: "+91 95160 06201",

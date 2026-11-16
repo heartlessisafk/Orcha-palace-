@@ -32,7 +32,7 @@ export function SpaConversionRoyal({
   const whatsappUrl = `https://wa.me/91${
     SPA_CONTACT_INFO.phonePrimary
   }?text=${encodeURIComponent(
-    "Hello Orchha Palace Hotel Spa, I would like to enquire about Ayurvedic wellness therapies and appointments during my stay."
+    "Hello The Orchha Resort Spa, I would like to enquire about Ayurvedic wellness therapies and appointments during my stay."
   )}`;
 
   return (

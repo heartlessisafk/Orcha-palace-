@@ -93,7 +93,7 @@ export function SpaCatalogueBrowser({
               Browse All 11 Ayurvedic Therapies
             </h2>
             <Text className="text-brand-charcoal/75 text-sm sm:text-base">
-              Explore authentic therapies transcribed directly from the Orchha Palace Hotel Spa brochure. Filter by category, duration, or search specific wellness goals.
+              Explore authentic therapies transcribed directly from the Ayurvedic wellness catalogue at The Orchha Resort. Filter by category, duration, or search specific wellness goals.
             </Text>
           </div>
 

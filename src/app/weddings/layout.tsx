@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Royal Wedding in Madhya Pradesh",
     "Riverfront Wedding Lawns Orchha",
     "Bundelkhand Destination Wedding",
-    "Orchha Palace Hotel Weddings",
+    "The Orchha Resort Weddings",
     "Wedding Venues near Jhansi",
     "Lotus Pool Wedding Mandap",
     "Resort Buyout Wedding India",
