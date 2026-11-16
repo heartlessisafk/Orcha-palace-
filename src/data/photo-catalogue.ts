@@ -2044,8 +2044,8 @@ export const PHOTO_CATALOGUE: PhotoRecord[] = [
     "id": "orchha-photo-062",
     "index": 62,
     "category": "rooms-suites",
-    "title": "Royal Heritage Suite Living Salon",
-    "description": "Spacious living salon of the Royal Suite with carved wood diwan, upholstered seating, and heritage brass accents.",
+    "title": "Super Deluxe Living Salon",
+    "description": "Spacious living salon with carved wood diwan, upholstered seating, and heritage brass accents.",
     "originalFilename": "2024_08_09_19_08_IMG_5433.mov.jpg",
     "timestamp": "2024-08-09 19:08:41",
     "dimensions": {

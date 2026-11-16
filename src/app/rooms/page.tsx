@@ -24,24 +24,24 @@ import {
 import { getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Accommodations & Luxury Swiss Tents | The Orchha Resort",
+  title: "Accommodations & Luxury Rooms | The Orchha Resort",
   description:
-    "Explore 32 thoughtfully designed heritage rooms, deluxe marble accommodations, glamping AC Swiss tents, and royal suites on the banks of River Betwa in Orchha.",
+    "Explore 32 thoughtfully designed accommodations: Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing on the banks of River Betwa in Orchha.",
   alternates: {
     canonical: "https://www.orchharesort.com/rooms",
   },
   openGraph: {
-    title: "Luxury Rooms & Suites | The Orchha Resort",
+    title: "Luxury Accommodations & Rooms | The Orchha Resort",
     description:
-      "Serene heritage retreats across from the 14 Royal Cenotaphs in Orchha. Pietra Dura marble inlays, direct lotus pool views, and riverside Swiss tents.",
+      "Serene heritage retreats across from the 14 Royal Cenotaphs in Orchha. Featuring Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing.",
     url: "https://www.orchharesort.com/rooms",
     images: ["/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Accommodations & Luxury Swiss Tents | The Orchha Resort",
+    title: "Accommodations & Luxury Rooms | The Orchha Resort",
     description:
-      "Explore 32 thoughtfully designed heritage rooms, deluxe marble accommodations, glamping AC Swiss tents, and royal suites on the banks of River Betwa in Orchha.",
+      "Explore 32 thoughtfully designed accommodations: Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing on the banks of River Betwa in Orchha.",
     images: ["/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg"],
   },
 };
@@ -83,12 +83,12 @@ export default function RoomsPage() {
               </div>
 
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-tight">
-                Accommodations &amp; Glamping Tents
+                Accommodations &amp; Suites
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
-                A collection of 32 peaceful rooms, suites, and permanent luxury Swiss tents nestled
-                in certified zero-pollution riverside gardens across from the 14 Royal Cenotaphs.
+                A collection of 32 peaceful rooms and suites nestled in certified zero-pollution
+                riverside gardens across from the 14 Royal Cenotaphs.
               </p>
 
               {/* Direct Booking Highlights */}

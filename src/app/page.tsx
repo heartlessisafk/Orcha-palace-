@@ -70,7 +70,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             {VERIFIED_ROOMS.map((room, idx) => {
-              // Apply TiltCard 3D depth to the Royal Heritage Suite for subtle tactile elegance
+              // Apply TiltCard 3D depth to the Super Deluxe Pool Facing for subtle tactile elegance
               const isSuite = room.category === "suite";
               const CardContent = (
                 <RoomCardPrimitive

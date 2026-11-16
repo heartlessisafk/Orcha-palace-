@@ -11,7 +11,12 @@ export const SITE_CONFIG = {
     "Experience understated royal luxury at The Orchha Resort. Located on the serene banks of the river Betwa in Orchha, featuring 32 heritage rooms & luxury Swiss tents, lotus pool, and authentic Kerala Ayurveda.",
   propertyFacts: {
     totalRooms: 44,
-    categories: ["Standard Room (27)", "Deluxe Room (6)", "Deluxe AC Swiss Tent (11)"],
+    categories: [
+      "Standard Room Garden Facing",
+      "Deluxe Room Garden Facing",
+      "Deluxe Marble Bed Garden Facing",
+      "Super Deluxe Pool Facing",
+    ],
     architect: "Yogesh Chandra (New Delhi)",
     signatureFeatures: [
       "Lotus-shaped outdoor swimming pool",

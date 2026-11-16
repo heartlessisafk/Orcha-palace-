@@ -169,7 +169,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
               </span>
             </div>
             <span className="text-brand-gold-light/80 text-[11px] font-sans">
-              32 Rooms &amp; Swiss Tents · Instant Concierge Confirmation
+              32 Heritage Accommodations · Instant Concierge Confirmation
             </span>
           </div>
 

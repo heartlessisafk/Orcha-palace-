@@ -61,12 +61,12 @@ export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimit
       <div className="flex flex-col flex-1 p-6 sm:p-7">
         {/* Title & Price Header */}
         <div className="flex items-start justify-between gap-4 mb-2.5">
-          <div>
+          <div className="min-w-0 flex-1">
             <span className="font-sans text-[11px] font-semibold uppercase tracking-widest text-brand-gold">
               {room.views[0]}
             </span>
             <Link href={`/rooms/${room.id}`} className="transition-colors block">
-              <h3 className="font-serif text-xl sm:text-2xl font-semibold text-brand-charcoal group-hover:text-brand-navy leading-tight transition-colors flex items-center justify-between gap-2">
+              <h3 className="font-serif text-lg sm:text-xl lg:text-2xl font-semibold text-brand-charcoal group-hover:text-brand-navy leading-snug transition-colors flex items-center justify-between gap-2 text-balance">
                 <span>{room.name}</span>
                 <ArrowRight className="w-4 h-4 text-brand-gold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 shrink-0" />
               </h3>

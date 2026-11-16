@@ -85,7 +85,7 @@ export function AboutHero() {
                 44 Sanctuary Keys
               </span>
               <span className="block font-sans text-xs text-white/85 uppercase tracking-wider mt-0.5 font-medium">
-                Rooms &amp; Deluxe AC Swiss Tents
+                Garden &amp; Pool Facing Rooms
               </span>
             </div>
 

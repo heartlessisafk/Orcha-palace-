@@ -105,7 +105,7 @@ export function WeddingHero() {
               44 Private Keys
             </span>
             <span className="block font-sans text-xs text-white/70 uppercase tracking-wider mt-0.5">
-              Deluxe Rooms &amp; AC Swiss Tents
+              Garden &amp; Pool Facing Keys
             </span>
           </div>
         </motion.div>

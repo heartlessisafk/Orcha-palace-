@@ -4,15 +4,20 @@ import { RoomDetails } from "@/types/room";
  * Verified Accommodation Data for The Orchha Resort.
  * Grounded in genuine property audit: 32 rooms total inventory, verified categories & amenities.
  * All photographs sourced strictly from authentic local curated repository.
+ * Category names updated to exact client specifications:
+ * 1. Standard Room Garden Facing
+ * 2. Deluxe Room Garden Facing
+ * 3. Deluxe Marble Bed Garden Facing
+ * 4. Super Deluxe Pool Facing
  */
 export const VERIFIED_ROOMS: RoomDetails[] = [
   {
     id: "standard-room",
     category: "standard",
-    name: "Standard Heritage Room",
+    name: "Standard Room Garden Facing",
     tagline: "Serene garden retreat with traditional comforts",
     description:
-      "Spacious and peaceful, our Standard Heritage Rooms offer serene garden views, comfortable king or twin bedding, handcrafted wood furnishings, Pietra Dura marble floor inlays, and an ensuite marble bathroom with 24-hour hot water.",
+      "Spacious and peaceful, our Standard Room Garden Facing accommodations offer serene garden views, comfortable king or twin bedding, handcrafted wood furnishings, Pietra Dura marble floor inlays, and an ensuite marble bathroom with 24-hour hot water.",
     startingPriceInr: 4500,
     areaSqFt: 225,
     bedType: "King Bed or Twin Beds",
@@ -52,7 +57,7 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
     gallery: [
       {
         src: "/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg",
-        alt: "Standard Heritage Room bedroom interior with king bed and marble floor",
+        alt: "Standard Room Garden Facing bedroom interior with king bed and marble floor",
         caption: "King bedroom suite featuring polished Pietra Dura marble floor inlay",
       },
       {
@@ -75,10 +80,10 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
   {
     id: "deluxe-room",
     category: "deluxe",
-    name: "Deluxe Marble Room",
-    tagline: "Expansive luxury with views of the lotus pool",
+    name: "Deluxe Marble Bed Garden Facing",
+    tagline: "Expansive luxury with handcrafted marble bed and garden tranquility",
     description:
-      "Finished with polished Indian marble floors and bespoke Bundeli craftsmanship, Deluxe Rooms feature an open sitting area, enhanced floor plans, and expansive picture windows directly overlooking the blooming lotus-shaped swimming pool and garden palms.",
+      "Finished with polished Indian marble floors, handcrafted marble bed design, and bespoke Bundeli craftsmanship, Deluxe Marble Bed Garden Facing rooms feature an open sitting area, enhanced floor plans, and expansive picture windows overlooking the resort gardens and lotus pool.",
     startingPriceInr: 6000,
     areaSqFt: 280,
     bedType: "King-size Heritage Bed",
@@ -86,7 +91,7 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
       adults: 3,
       children: 1,
     },
-    views: ["Lotus Swimming Pool", "Riverbank Gardens"],
+    views: ["Landscaped Gardens", "Lotus Pool Deck"],
     keyAmenities: [
       "Lotus Pool View Picture Window",
       "Premium Marble Bathroom with Tub",
@@ -111,14 +116,14 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
       { label: "Room Size", value: "280 sq ft (26 m²)" },
       { label: "Bed Configuration", value: "1 King-size Heritage Bed" },
       { label: "Maximum Guests", value: "3 Adults + 1 Child" },
-      { label: "View Perspective", value: "Direct Lotus Pool & Sunset Glow" },
+      { label: "View Perspective", value: "Lush Landscaped Gardens & Pool Deck" },
       { label: "Flooring", value: "Imported Indian Marble with Inlay" },
       { label: "Balcony / Outlook", value: "Large Picture Bay Window" },
     ],
     gallery: [
       {
         src: "/images/resort/curated/rooms/room-deluxe-king-pool-view.jpg",
-        alt: "Deluxe Marble Room overlooking the blooming lotus swimming pool",
+        alt: "Deluxe Marble Bed Garden Facing bedroom overlooking the lush resort grounds",
         caption: "King bedroom with direct picture window perspective of the lotus pool",
       },
       {
@@ -141,10 +146,10 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
   {
     id: "deluxe-swiss-tent",
     category: "swiss-tent",
-    name: "Deluxe AC Swiss Tent",
-    tagline: "Authentic glamping under the stars near the Royal Chhatris",
+    name: "Deluxe Room Garden Facing",
+    tagline: "Authentic sanctuary under the stars near the Royal Chhatris",
     description:
-      "Our signature accommodation: permanent luxury Swiss tents situated in lush riverside orchards near the historical Chhatris. Featuring heavy insulated canvas walls, individual air-conditioning, attached modern tiled bathrooms, custom timber flooring, and private sit-out verandahs ideal for morning tea and birdwatching.",
+      "Our signature accommodation: permanent Deluxe Room Garden Facing accommodations situated in lush riverside orchards near the historical Chhatris. Featuring heavy insulated canvas walls, individual air-conditioning, attached modern tiled bathrooms, custom timber flooring, and private sit-out verandahs ideal for morning tea and birdwatching.",
     startingPriceInr: 5200,
     areaSqFt: 320,
     bedType: "King Bed with Custom Linen",
@@ -152,7 +157,7 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
       adults: 2,
       children: 1,
     },
-    views: ["Orchha Chhatris Panorama", "Riverbank Orchards"],
+    views: ["Riverside Gardens", "Orchha Chhatris Horizon"],
     keyAmenities: [
       "Attached Permanent Modern Bathroom",
       "Full Climate Air-Conditioning & Heating",
@@ -184,7 +189,7 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
     gallery: [
       {
         src: "/images/resort/curated/rooms/room-tent-interior-canopy.jpg",
-        alt: "Luxury AC Swiss Tent canvas interior with traditional floral block print",
+        alt: "Deluxe Room Garden Facing canvas interior with traditional floral block print",
         caption: "Interior glamping bedroom under the patterned canvas canopy ceiling",
       },
       {
@@ -207,10 +212,10 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
   {
     id: "royal-heritage-suite",
     category: "suite",
-    name: "Royal Heritage Suite",
-    tagline: "Regal living with panoramic Betwa river and monument horizons",
+    name: "Super Deluxe Pool Facing",
+    tagline: "Regal living with panoramic lotus pool views and Betwa river horizons",
     description:
-      "The pinnacle of Bundelkhandi royal hospitality. The Royal Heritage Suite encompasses a master bedroom, separate formal reception parlor with antique diwan seating, handcrafted brass artifacts, and a private stone balcony directly framing the sacred Betwa River and the 14 royal cenotaphs.",
+      "The pinnacle of Bundelkhandi royal hospitality. Super Deluxe Pool Facing accommodations encompass a master bedroom, separate formal reception parlor with antique diwan seating, handcrafted brass artifacts, and a private stone balcony directly framing the lotus swimming pool and sacred Betwa River horizon.",
     startingPriceInr: 8500,
     areaSqFt: 450,
     bedType: "Four-poster Royal King Bed",
@@ -218,7 +223,7 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
       adults: 3,
       children: 2,
     },
-    views: ["Direct Betwa River Panorama", "14 Royal Cenotaphs Horizon"],
+    views: ["Lotus Pool Panorama", "Betwa River Horizon"],
     keyAmenities: [
       "Separate Formal Living Room Parlor",
       "Panoramic Riverfront Stone Balcony",
@@ -243,14 +248,14 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
       { label: "Suite Size", value: "450 sq ft (42 m²)" },
       { label: "Bed Configuration", value: "1 Four-poster Royal King Bed" },
       { label: "Maximum Guests", value: "3 Adults + 2 Children" },
-      { label: "View Perspective", value: "Unobstructed River Betwa & Chhatris" },
+      { label: "View Perspective", value: "Panoramic Lotus Pool & Betwa River Horizon" },
       { label: "Layout", value: "Master Bedroom + Separate Living Salon" },
       { label: "Outdoor Space", value: "Private Stone Balcony (Jharokha)" },
     ],
     gallery: [
       {
         src: "/images/resort/curated/rooms/room-suite-heritage-living.jpg",
-        alt: "Royal Heritage Suite living parlor with carved wood diwan and brass lamps",
+        alt: "Super Deluxe Pool Facing suite living parlor with carved wood diwan and brass lamps",
         caption: "Spacious salon with handcrafted diwan, plush armchairs, and brass decor",
       },
       {

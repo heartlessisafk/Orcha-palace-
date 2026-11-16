@@ -86,13 +86,13 @@ export const VERIFIED_GUEST_REVIEWS: GuestReviewItem[] = [
     sourceUrl:
       "https://www.tripadvisor.in/Hotel_Review-g319728-d446996-Reviews-The_Orchha_Resort-Orchha_Madhya_Pradesh.html",
     verifiedLabel: "TripAdvisor Verified Stay",
-    aspect: "Luxury Swiss Tents & The Lotus Pool",
+    aspect: "Garden Accommodations & The Lotus Pool",
     image: {
       src: "/images/resort/genuine/swimming.jpg",
       alt: "Lotus-shaped outdoor swimming pool at The Orchha Resort",
       caption: "Sculpted lotus pool surrounded by landscaped orchard gardens",
     },
-    highlightPhrase: "Luxury AC Swiss tents and refreshing lotus-shaped pool.",
+    highlightPhrase: "Peaceful garden-facing rooms and refreshing lotus-shaped pool.",
   },
   {
     id: "review-kaleva-hospitality",

@@ -105,7 +105,7 @@ export default function DesignSystemPage() {
 
               <div className="space-y-1">
                 <span className="text-[10px] uppercase font-mono text-brand-muted">Card Heading H3 (Crimson Text 600)</span>
-                <Heading as="h3" size="h3">Deluxe AC Swiss Tent by the Chhatris</Heading>
+                <Heading as="h3" size="h3">Deluxe Room Garden Facing</Heading>
               </div>
 
               <div className="space-y-1">

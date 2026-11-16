@@ -91,7 +91,7 @@ export function WeddingExperiences() {
       tag: "Guest Sanctuary",
       title: "Exclusive Accommodations for 44 Keys",
       description:
-        "Host your entire wedding party together in privacy. With 27 Standard Rooms, 6 spacious Deluxe Rooms, and 11 romantic garden AC Swiss Tents, all your loved ones stay on-site, sharing breakfast by the pool and late-night laughter.",
+        "Host your entire wedding party together in privacy. With Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing accommodations, all your loved ones stay on-site, sharing breakfast by the pool and late-night laughter.",
       image: WEDDING_ASSETS.guestSwissTents.src,
       alt: WEDDING_ASSETS.guestSwissTents.alt,
       highlights: [

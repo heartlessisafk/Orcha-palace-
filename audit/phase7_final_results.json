@@ -59,7 +59,7 @@
       "rooms": {
         "desktop_1440": {
           "hasOverflow": false,
-          "title": "Accommodations & Luxury Swiss Tents | The Orchha Resort | The Orchha Resort",
+          "title": "Accommodations & Luxury Rooms | The Orchha Resort | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 1425,
@@ -67,7 +67,7 @@
         },
         "tablet_768": {
           "hasOverflow": false,
-          "title": "Accommodations & Luxury Swiss Tents | The Orchha Resort | The Orchha Resort",
+          "title": "Accommodations & Luxury Rooms | The Orchha Resort | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 768,
@@ -75,7 +75,7 @@
         },
         "mobile_390": {
           "hasOverflow": false,
-          "title": "Accommodations & Luxury Swiss Tents | The Orchha Resort | The Orchha Resort",
+          "title": "Accommodations & Luxury Rooms | The Orchha Resort | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 390,
@@ -85,7 +85,7 @@
       "room_standard": {
         "desktop_1440": {
           "hasOverflow": false,
-          "title": "Standard Heritage Room — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Standard Room Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 1425,
@@ -93,7 +93,7 @@
         },
         "tablet_768": {
           "hasOverflow": false,
-          "title": "Standard Heritage Room — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Standard Room Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 768,
@@ -101,7 +101,7 @@
         },
         "mobile_390": {
           "hasOverflow": false,
-          "title": "Standard Heritage Room — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Standard Room Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 390,
@@ -111,7 +111,7 @@
       "room_deluxe": {
         "desktop_1440": {
           "hasOverflow": false,
-          "title": "Deluxe Marble Room — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Deluxe Marble Bed Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 1425,
@@ -119,7 +119,7 @@
         },
         "tablet_768": {
           "hasOverflow": false,
-          "title": "Deluxe Marble Room — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Deluxe Marble Bed Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 768,
@@ -127,7 +127,7 @@
         },
         "mobile_390": {
           "hasOverflow": false,
-          "title": "Deluxe Marble Room — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Deluxe Marble Bed Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 390,
@@ -137,7 +137,7 @@
       "room_tent": {
         "desktop_1440": {
           "hasOverflow": false,
-          "title": "Deluxe AC Swiss Tent — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Deluxe Room Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 1425,
@@ -145,7 +145,7 @@
         },
         "tablet_768": {
           "hasOverflow": false,
-          "title": "Deluxe AC Swiss Tent — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Deluxe Room Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 768,
@@ -153,7 +153,7 @@
         },
         "mobile_390": {
           "hasOverflow": false,
-          "title": "Deluxe AC Swiss Tent — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Deluxe Room Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 390,
@@ -163,7 +163,7 @@
       "room_suite": {
         "desktop_1440": {
           "hasOverflow": false,
-          "title": "Royal Heritage Suite — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Super Deluxe Pool Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 1425,
@@ -171,7 +171,7 @@
         },
         "tablet_768": {
           "hasOverflow": false,
-          "title": "Royal Heritage Suite — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Super Deluxe Pool Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 768,
@@ -179,7 +179,7 @@
         },
         "mobile_390": {
           "hasOverflow": false,
-          "title": "Royal Heritage Suite — Luxury Stay in Orchha | The Orchha Resort",
+          "title": "Super Deluxe Pool Facing — Luxury Stay in Orchha | The Orchha Resort",
           "mainPresent": true,
           "footerPresent": true,
           "scrollWidth": 390,
