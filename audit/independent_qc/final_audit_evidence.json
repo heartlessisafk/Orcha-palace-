@@ -1,0 +1,295 @@
+{
+  "roomCategories": {
+    "status": "PASS",
+    "renderedNamesRoomsPage": [
+      "Standard Room Garden Facing",
+      "Deluxe Marble Bed Garden Facing",
+      "Deluxe Room Garden Facing",
+      "Super Deluxe Pool Facing"
+    ],
+    "renderedNamesHomePage": [
+      "Standard Room Garden Facing",
+      "Deluxe Marble Bed Garden Facing",
+      "Deluxe Room Garden Facing",
+      "Super Deluxe Pool Facing"
+    ],
+    "slugChecks": [
+      {
+        "slug": "royal-heritage-suite",
+        "expected": "Super Deluxe Pool Facing",
+        "h1": "Super Deluxe Pool Facing",
+        "matches": true
+      },
+      {
+        "slug": "deluxe-room",
+        "expected": "Deluxe Marble Bed Garden Facing",
+        "h1": "Deluxe Marble Bed Garden Facing",
+        "matches": true
+      },
+      {
+        "slug": "deluxe-swiss-tent",
+        "expected": "Deluxe Room Garden Facing",
+        "h1": "Deluxe Room Garden Facing",
+        "matches": true
+      },
+      {
+        "slug": "standard-room",
+        "expected": "Standard Room Garden Facing",
+        "h1": "Standard Room Garden Facing",
+        "matches": true
+      }
+    ],
+    "hasOldNames": false
+  },
+  "roomCount": {
+    "status": "PASS",
+    "evidence": {
+      "aboutPage": {
+        "has50Rooms": true,
+        "hasGardenPoolFacing": false,
+        "hasKanchanGhat": true,
+        "hasZeroPollution": true,
+        "hasOld44SanctuaryKeys": false
+      },
+      "homePage": {
+        "has50RoomsMention": true,
+        "hasOld44": false
+      }
+    }
+  },
+  "hospitality": {
+    "status": "PASS",
+    "evidence": {
+      "cardCount": 3,
+      "hasBetwaCard": true,
+      "betwaCard": {
+        "title": "Betwa View Dining",
+        "category": "Riverside Dining",
+        "desc": "An inviting riverside dining experience overlooking the tranquil waters of the Betwa, where guests can enjoy memorable meals surrounded by the natural beauty of Orchha.",
+        "imgSrc": "/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fdining%2Fdining-riverfront-alfresco.jpg&w=1920&q=75",
+        "width": 363,
+        "height": 686
+      },
+      "hasKalevaCard": true,
+      "hasSpaCard": true,
+      "cards": [
+        {
+          "title": "Kaleva Multi-Cuisine Restaurant",
+          "category": "Culinary Heritage",
+          "desc": "Named after traditional hospitality feasts, Kaleva presents the authentic flavors of Bundelkhand alongside classical North Indian, Continental, and Oriental cuisines. Dine within the warm timber-lined indoor hall or request a lantern-lit table on the poolside lawn under the starlit sky.",
+          "imgSrc": "/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fkaleva.jpg&w=1920&q=75",
+          "width": 363,
+          "height": 686
+        },
+        {
+          "title": "Betwa View Dining",
+          "category": "Riverside Dining",
+          "desc": "An inviting riverside dining experience overlooking the tranquil waters of the Betwa, where guests can enjoy memorable meals surrounded by the natural beauty of Orchha.",
+          "imgSrc": "/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fdining%2Fdining-riverfront-alfresco.jpg&w=1920&q=75",
+          "width": 363,
+          "height": 686
+        },
+        {
+          "title": "Authentic Kerala Ayurveda Spa",
+          "category": "Holistic Wellness",
+          "desc": "Tucked into a tranquil pavilion, our dedicated wellness retreat is staffed by experienced practitioners versed in ancient Kerala healing. Featuring classic Shirodhara oil stream therapies, synchronized Abhyanga herbal massages, and restorative herbal steam baths using native botanical infusions.",
+          "imgSrc": "/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fspa2.jpg&w=1920&q=75",
+          "width": 363,
+          "height": 686
+        }
+      ]
+    }
+  },
+  "experienceSelector": {
+    "status": "PASS",
+    "initialTabs": [
+      "BETWA VIEW DINING Riverside Dining",
+      "LOTUS-SHAPED POOL Signature Aquatic Centre",
+      "DELUXE ROOMS Refined Modern Comfort",
+      "COURTYARDS & BARADARI Traditional Stone Craft"
+    ],
+    "interactions": [
+      {
+        "tabName": "BETWA VIEW DINING",
+        "activeTitle": "Betwa View Dining by the Waters",
+        "activeImgSrc": "/_next/image?url=%2Fimages%2Fresort%2Fcurated%2Fdining%2Fdining-riverfront-alfresco.jpg&w=1920&q=75",
+        "imgMatches": true,
+        "hasForbidden": false
+      },
+      {
+        "tabName": "LOTUS-SHAPED POOL",
+        "activeTitle": "The Central Lotus Swimming Pool",
+        "activeImgSrc": "/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2Fswimming.jpg&w=1920&q=75",
+        "imgMatches": true,
+        "hasForbidden": false
+      },
+      {
+        "tabName": "DELUXE ROOMS",
+        "activeTitle": "Deluxe Guest Rooms & Suites",
+        "activeImgSrc": "/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2F13.jpg&w=1920&q=75",
+        "imgMatches": true,
+        "hasForbidden": false
+      },
+      {
+        "tabName": "COURTYARDS & BARADARI",
+        "activeTitle": "Pillared Baradari & Open Courtyards",
+        "activeImgSrc": "/_next/image?url=%2Fimages%2Fresort%2Fgenuine%2F16.jpg&w=1920&q=75",
+        "imgMatches": true,
+        "hasForbidden": false
+      }
+    ]
+  },
+  "spaBranding": {
+    "status": "PASS",
+    "evidence": {
+      "pageTitle": "Ayurvedic Wellness & Rejuvenation Spa | The Orchha Resort",
+      "hasOfficialLogoLink": true,
+      "logoMaskImage": "url(\"http://localhost:3000/images/brand/orchha-logo.png\")",
+      "usesOfficialLogoMask": true,
+      "hasSpaBadge": true,
+      "palaceMentions": 0,
+      "therapiesCount": 1
+    }
+  },
+  "bookingForm": {
+    "status": "PASS",
+    "evidence": {
+      "metrics": {
+        "labels": {
+          "checkin": {
+            "top": 384,
+            "height": 20,
+            "borderRadius": "0px"
+          },
+          "checkout": {
+            "top": 384,
+            "height": 20,
+            "borderRadius": "0px"
+          },
+          "guest": {
+            "top": 384,
+            "height": 20,
+            "borderRadius": "0px"
+          },
+          "header": {
+            "top": 384,
+            "height": 20,
+            "borderRadius": "0px"
+          }
+        },
+        "controls": {
+          "checkin": {
+            "top": 410,
+            "height": 50,
+            "borderRadius": "12px"
+          },
+          "checkout": {
+            "top": 410,
+            "height": 50,
+            "borderRadius": "12px"
+          },
+          "guest": {
+            "top": 410,
+            "height": 50,
+            "borderRadius": "12px"
+          },
+          "submit": {
+            "top": 410,
+            "height": 50,
+            "borderRadius": "12px"
+          }
+        }
+      },
+      "functionality": {
+        "modalOpened": true,
+        "title": "Complete Your Reservation",
+        "whatsappUrlValid": true
+      }
+    }
+  },
+  "websiteRegression": {
+    "status": "PASS",
+    "routesChecked": 11,
+    "zeroConsoleErrors": true,
+    "consoleErrors": [],
+    "routes": [
+      {
+        "route": "/",
+        "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      },
+      {
+        "route": "/about",
+        "title": "The Story of Orchha Resort | Heritage Sanctuary on the River Betwa | The Orchha Resort",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      },
+      {
+        "route": "/rooms",
+        "title": "Accommodations & Luxury Rooms | The Orchha Resort | The Orchha Resort",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      },
+      {
+        "route": "/rooms/standard-room",
+        "title": "Standard Room Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      },
+      {
+        "route": "/rooms/deluxe-room",
+        "title": "Deluxe Marble Bed Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      },
+      {
+        "route": "/rooms/deluxe-swiss-tent",
+        "title": "Deluxe Room Garden Facing — Luxury Stay in Orchha | The Orchha Resort",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      },
+      {
+        "route": "/rooms/royal-heritage-suite",
+        "title": "Super Deluxe Pool Facing — Luxury Stay in Orchha | The Orchha Resort",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      },
+      {
+        "route": "/gallery",
+        "title": "Photo Gallery | The Orchha Resort — Betwa River Sanctuary | The Orchha Resort",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      },
+      {
+        "route": "/spa",
+        "title": "Ayurvedic Wellness & Rejuvenation Spa | The Orchha Resort",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      },
+      {
+        "route": "/weddings",
+        "title": "Royal Destination Weddings | The Orchha Resort on River Betwa | The Orchha Resort",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      },
+      {
+        "route": "/design-system",
+        "title": "The Orchha Resort — Luxury Sanctuary on the River Betwa",
+        "overflow": false,
+        "hasNav": true,
+        "hasFooter": true
+      }
+    ]
+  }
+}
