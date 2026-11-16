@@ -1,0 +1,452 @@
+{
+  "viewports": {
+    "desktop": {
+      "overflow": false,
+      "labels": {
+        "checkin": {
+          "top": 384,
+          "bottom": 404,
+          "left": 169,
+          "right": 433,
+          "width": 263.5,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "checkout": {
+          "top": 384,
+          "bottom": 404,
+          "left": 449,
+          "right": 712,
+          "width": 263.5,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "guest": {
+          "top": 384,
+          "bottom": 404,
+          "left": 728,
+          "right": 992,
+          "width": 263.5,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "buttonHeader": {
+          "top": 384,
+          "bottom": 404,
+          "left": 1008,
+          "right": 1271,
+          "width": 263.5,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      },
+      "controls": {
+        "checkinInput": {
+          "top": 410,
+          "bottom": 460,
+          "left": 169,
+          "right": 433,
+          "width": 263.5,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "checkoutInput": {
+          "top": 410,
+          "bottom": 460,
+          "left": 449,
+          "right": 712,
+          "width": 263.5,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "guestBtn": {
+          "top": 410,
+          "bottom": 460,
+          "left": 728,
+          "right": 992,
+          "width": 263.5,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "submitBtn": {
+          "top": 410,
+          "bottom": 460,
+          "left": 1008,
+          "right": 1271,
+          "width": 263.5,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "borderRadius": "12px",
+          "display": "flex"
+        }
+      }
+    },
+    "tablet": {
+      "overflow": false,
+      "labels": {
+        "checkin": {
+          "top": 114,
+          "bottom": 134,
+          "left": 77,
+          "right": 376,
+          "width": 299,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "checkout": {
+          "top": 114,
+          "bottom": 134,
+          "left": 392,
+          "right": 691,
+          "width": 299,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "guest": {
+          "top": 206,
+          "bottom": 226,
+          "left": 77,
+          "right": 376,
+          "width": 299,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "buttonHeader": {
+          "top": 206,
+          "bottom": 226,
+          "left": 392,
+          "right": 691,
+          "width": 299,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      },
+      "controls": {
+        "checkinInput": {
+          "top": 140,
+          "bottom": 190,
+          "left": 77,
+          "right": 376,
+          "width": 299,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "checkoutInput": {
+          "top": 140,
+          "bottom": 190,
+          "left": 392,
+          "right": 691,
+          "width": 299,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "guestBtn": {
+          "top": 232,
+          "bottom": 282,
+          "left": 77,
+          "right": 376,
+          "width": 299,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "submitBtn": {
+          "top": 232,
+          "bottom": 282,
+          "left": 392,
+          "right": 691,
+          "width": 299,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "borderRadius": "12px",
+          "display": "flex"
+        }
+      }
+    },
+    "mobile": {
+      "overflow": false,
+      "labels": {
+        "checkin": {
+          "top": 122,
+          "bottom": 142,
+          "left": 37,
+          "right": 353,
+          "width": 316,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "checkout": {
+          "top": 214,
+          "bottom": 234,
+          "left": 37,
+          "right": 353,
+          "width": 316,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "guest": {
+          "top": 306,
+          "bottom": 326,
+          "left": 37,
+          "right": 353,
+          "width": 316,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "buttonHeader": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "none"
+        }
+      },
+      "controls": {
+        "checkinInput": {
+          "top": 148,
+          "bottom": 198,
+          "left": 37,
+          "right": 353,
+          "width": 316,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "checkoutInput": {
+          "top": 240,
+          "bottom": 290,
+          "left": 37,
+          "right": 353,
+          "width": 316,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "guestBtn": {
+          "top": 332,
+          "bottom": 382,
+          "left": 37,
+          "right": 353,
+          "width": 316,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "submitBtn": {
+          "top": 404,
+          "bottom": 454,
+          "left": 37,
+          "right": 353,
+          "width": 316,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "borderRadius": "12px",
+          "display": "flex"
+        }
+      }
+    },
+    "mobile_narrow": {
+      "overflow": false,
+      "labels": {
+        "checkin": {
+          "top": 122,
+          "bottom": 142,
+          "left": 37,
+          "right": 283,
+          "width": 246,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "checkout": {
+          "top": 214,
+          "bottom": 234,
+          "left": 37,
+          "right": 283,
+          "width": 246,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "guest": {
+          "top": 306,
+          "bottom": 326,
+          "left": 37,
+          "right": 283,
+          "width": 246,
+          "height": 20,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "flex"
+        },
+        "buttonHeader": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0,
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "borderRadius": "0px",
+          "display": "none"
+        }
+      },
+      "controls": {
+        "checkinInput": {
+          "top": 148,
+          "bottom": 198,
+          "left": 37,
+          "right": 283,
+          "width": 246,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "checkoutInput": {
+          "top": 240,
+          "bottom": 290,
+          "left": 37,
+          "right": 283,
+          "width": 246,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "guestBtn": {
+          "top": 332,
+          "bottom": 382,
+          "left": 37,
+          "right": 283,
+          "width": 246,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "borderRadius": "12px",
+          "display": "flex"
+        },
+        "submitBtn": {
+          "top": 404,
+          "bottom": 454,
+          "left": 37,
+          "right": 283,
+          "width": 246,
+          "height": 50,
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "borderRadius": "12px",
+          "display": "flex"
+        }
+      }
+    }
+  },
+  "functionality": {
+    "initialCheckin": "2026-11-16",
+    "initialCheckout": "2026-11-17",
+    "minCheckout": "2026-11-16",
+    "checkoutCannotPrecedeCheckin": true,
+    "datesValid": true,
+    "popoverToggles": true
+  },
+  "aboutBooking": {
+    "checkin": {
+      "top": 4640,
+      "height": 50,
+      "borderRadius": "12px"
+    },
+    "checkout": {
+      "top": 4640,
+      "height": 50,
+      "borderRadius": "12px"
+    },
+    "guestBtn": {
+      "top": 4640,
+      "height": 50,
+      "borderRadius": "12px"
+    },
+    "submitBtn": {
+      "top": 4640,
+      "height": 50,
+      "borderRadius": "12px"
+    }
+  },
+  "modalTest": {
+    "modalOpened": true,
+    "modalTitle": "Complete Your Reservation",
+    "whatsappLinkValid": true
+  },
+  "modalClosedWithEscape": true
+}

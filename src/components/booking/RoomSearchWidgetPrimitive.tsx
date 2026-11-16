@@ -163,12 +163,12 @@ export function RoomSearchWidgetPrimitive({
         )}
       >
         <form onSubmit={handleSearchSubmit} className="space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-start">
             {/* 1. Check-In Date */}
-            <div className="space-y-1.5">
-              <label htmlFor="checkin-date" className="font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy flex items-center justify-between cursor-pointer">
+            <div className="space-y-1.5 flex flex-col justify-between">
+              <label htmlFor="checkin-date" className="h-5 flex items-center justify-between font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy cursor-pointer">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-brand-gold" />
+                  <Calendar className="w-3.5 h-3.5 text-brand-gold shrink-0" />
                   <span>Check-In</span>
                 </span>
                 <span className="text-[10px] font-mono text-brand-muted">Arrival</span>
@@ -191,7 +191,7 @@ export function RoomSearchWidgetPrimitive({
                         query.checkOutDate <= newCheckIn ? nextDay : query.checkOutDate,
                     });
                   }}
-                  className="w-full rounded-xl bg-brand-canvas border border-brand-charcoal/15 px-3.5 py-3 font-sans text-sm font-medium text-brand-charcoal focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
+                  className="w-full h-[50px] rounded-xl bg-brand-canvas border border-brand-charcoal/15 px-3.5 font-sans text-sm font-medium text-brand-charcoal focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all box-border cursor-pointer flex items-center leading-normal [&::-webkit-calendar-picker-indicator]:cursor-pointer [&::-webkit-calendar-picker-indicator]:opacity-75 hover:[&::-webkit-calendar-picker-indicator]:opacity-100"
                 />
               </div>
               {validationErrors.checkInDate && (
@@ -202,10 +202,10 @@ export function RoomSearchWidgetPrimitive({
             </div>
 
             {/* 2. Check-Out Date */}
-            <div className="space-y-1.5">
-              <label htmlFor="checkout-date" className="font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy flex items-center justify-between cursor-pointer">
+            <div className="space-y-1.5 flex flex-col justify-between">
+              <label htmlFor="checkout-date" className="h-5 flex items-center justify-between font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy cursor-pointer">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-brand-gold" />
+                  <Calendar className="w-3.5 h-3.5 text-brand-gold shrink-0" />
                   <span>Check-Out</span>
                 </span>
                 <span className="text-[10px] font-mono text-brand-gold font-bold">
@@ -219,7 +219,7 @@ export function RoomSearchWidgetPrimitive({
                   min={query.checkInDate || today}
                   value={query.checkOutDate}
                   onChange={(e) => setQuery({ ...query, checkOutDate: e.target.value })}
-                  className="w-full rounded-xl bg-brand-canvas border border-brand-charcoal/15 px-3.5 py-3 font-sans text-sm font-medium text-brand-charcoal focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
+                  className="w-full h-[50px] rounded-xl bg-brand-canvas border border-brand-charcoal/15 px-3.5 font-sans text-sm font-medium text-brand-charcoal focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all box-border cursor-pointer flex items-center leading-normal [&::-webkit-calendar-picker-indicator]:cursor-pointer [&::-webkit-calendar-picker-indicator]:opacity-75 hover:[&::-webkit-calendar-picker-indicator]:opacity-100"
                 />
               </div>
               {validationErrors.checkOutDate && (
@@ -232,24 +232,29 @@ export function RoomSearchWidgetPrimitive({
             {/* 3. Guests Selector Dropdown */}
             <div
               className={cn(
-                "space-y-1.5 relative",
+                "space-y-1.5 relative flex flex-col justify-between",
                 isGuestPickerOpen ? "z-40" : "z-10"
               )}
               ref={guestPickerRef}
             >
-              <label className="font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy flex items-center justify-between">
+              <label
+                htmlFor="guest-picker-btn"
+                onClick={handleToggleGuestPicker}
+                className="h-5 flex items-center justify-between font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy cursor-pointer"
+              >
                 <span className="flex items-center gap-1.5">
-                  <Users className="w-3.5 h-3.5 text-brand-gold" />
+                  <Users className="w-3.5 h-3.5 text-brand-gold shrink-0" />
                   <span>Guests &amp; Rooms</span>
                 </span>
                 <span className="text-[10px] font-mono text-brand-muted">Occupancy</span>
               </label>
               <button
+                id="guest-picker-btn"
                 type="button"
                 aria-haspopup="dialog"
                 aria-expanded={isGuestPickerOpen}
                 onClick={handleToggleGuestPicker}
-                className="w-full rounded-xl bg-brand-canvas border border-brand-charcoal/15 px-3.5 py-3 font-sans text-sm font-medium text-brand-charcoal text-left flex items-center justify-between focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
+                className="w-full h-[50px] rounded-xl bg-brand-canvas border border-brand-charcoal/15 px-3.5 font-sans text-sm font-medium text-brand-charcoal text-left flex items-center justify-between focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all box-border cursor-pointer"
               >
                 <span className="truncate">
                   {query.adults} Adults{query.children > 0 ? `, ${query.children} Kids` : ""} · {query.roomCount} Rm
@@ -318,14 +323,27 @@ export function RoomSearchWidgetPrimitive({
             </div>
 
             {/* 4. Action Button */}
-            <div>
+            <div className="space-y-1.5 flex flex-col justify-between">
+              {/* Desktop and Tablet alignment header matching label height */}
+              <div
+                className="hidden sm:flex h-5 items-center justify-between font-sans text-xs font-semibold tracking-wider uppercase text-brand-navy select-none"
+                aria-hidden="true"
+              >
+                <span className="flex items-center gap-1.5 text-brand-navy">
+                  <Sparkles className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+                  <span>Sanctuary Tariffs</span>
+                </span>
+                <span className="text-[10px] font-mono text-emerald-700 font-bold">
+                  Best Rate
+                </span>
+              </div>
               <Button
                 type="submit"
                 variant="primary"
                 size="lg"
                 fullWidth
                 withArrow
-                className="h-[46px] shadow-md hover:shadow-lg font-medium text-sm"
+                className="w-full h-[50px] min-h-[50px] rounded-xl shadow-md hover:shadow-lg font-medium text-sm flex items-center justify-center tracking-wide"
               >
                 Check Rates &amp; Book
               </Button>
