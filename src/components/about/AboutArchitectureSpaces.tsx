@@ -6,13 +6,31 @@ import { Container } from "@/components/ui/Container";
 import { Heading, Text, SubtitleTag } from "@/components/ui/Typography";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { ABOUT_HERITAGE_ASSETS } from "@/lib/about-assets";
-import { Compass, Waves, Tent, BedDouble, Columns, Sparkles, ShieldCheck, Check } from "lucide-react";
+import { UtensilsCrossed, Waves, BedDouble, Columns, ShieldCheck, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function AboutArchitectureSpaces() {
   const [activeSpaceIndex, setActiveSpaceIndex] = useState(0);
 
   const spaces = [
+    {
+      id: "betwa-dining",
+      label: "Betwa View Dining",
+      icon: UtensilsCrossed,
+      tag: "Riverside Dining",
+      title: "Betwa View Dining by the Waters",
+      description:
+        "Situated directly along the peaceful riverbanks, Betwa View Dining offers an unforgettable open-air culinary experience overlooking the calm waters of the Betwa. Guests can savor freshly prepared Bundelkhandi specialties and royal dining menus surrounded by river breezes, natural greenery, and the quiet rhythm of Orchha's sacred waters.",
+      image: ABOUT_HERITAGE_ASSETS.betwaViewDining.src,
+      alt: ABOUT_HERITAGE_ASSETS.betwaViewDining.alt,
+      features: [
+        "Al fresco riverside tables with panoramic Betwa waterscape",
+        "Sunset high tea, bespoke evening dinners, and chef specialties",
+        "Serene open-air sanctuary immersed in Orchha's natural riverbank",
+      ],
+      architectNote:
+        "Conceived to merge Bundelkhand's royal riverbank tradition with relaxed open-air dining, offering unobstructed views of the Betwa.",
+    },
     {
       id: "pool",
       label: "Lotus-Shaped Pool",
@@ -30,24 +48,6 @@ export function AboutArchitectureSpaces() {
       ],
       architectNote:
         "Conceived by Yogesh Chandra as a visual reservoir echoing the historic kunds of Orchha while serving as a revitalizing oasis.",
-    },
-    {
-      id: "tents",
-      label: "Luxury Swiss Tents",
-      icon: Tent,
-      tag: "Garden Glamping Experience",
-      title: "11 Deluxe Air-Conditioned Swiss Tents",
-      description:
-        "Tucked into secluded garden alcoves beneath flowering shade trees, the resort's 11 Deluxe Swiss Tents offer a romantic safari-style immersion into nature. Built upon solid stone plinths and crafted with heavy-gauge weatherproof canvas, each tent features full interior climate control, timber furnishings, private ensuite tiled bathrooms, and a personal shaded veranda facing the orchards.",
-      image: ABOUT_HERITAGE_ASSETS.swissTents.src,
-      alt: ABOUT_HERITAGE_ASSETS.swissTents.alt,
-      features: [
-        "Full split air conditioning and heating for year-round comfort",
-        "Modern attached bathroom with 24-hour hot running water",
-        "Private outdoor veranda overlooking manicured lawns",
-      ],
-      architectNote:
-        "Inspired by royal encampments of Bundela rulers during hunting and military expeditions across central India.",
     },
     {
       id: "rooms",
@@ -152,7 +152,7 @@ export function AboutArchitectureSpaces() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-brand-canvas/60 rounded-2xl p-6 sm:p-8 border border-brand-charcoal/10 shadow-subtle">
           {/* Left Column: Genuine Photo Frame */}
           <div className="lg:col-span-7">
-            <FadeIn>
+            <FadeIn key={currentSpace.id}>
               <div className="relative rounded-xl overflow-hidden border border-brand-charcoal/10 shadow-elevated bg-brand-beige">
                 <div className="relative aspect-[16/10] w-full">
                   <Image
