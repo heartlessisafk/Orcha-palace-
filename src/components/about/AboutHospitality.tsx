@@ -8,7 +8,7 @@ import { Heading, Text, SubtitleTag } from "@/components/ui/Typography";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { ABOUT_HERITAGE_ASSETS } from "@/lib/about-assets";
 import { Button } from "@/components/ui/Button";
-import { Utensils, Sparkles, Activity, Music, ArrowRight, ShieldCheck } from "lucide-react";
+import { Utensils, Sparkles, UtensilsCrossed, ArrowRight, ShieldCheck } from "lucide-react";
 
 export function AboutHospitality() {
   const experiences = [
@@ -27,7 +27,24 @@ export function AboutHospitality() {
         "Open daily for breakfast, lunch, and dinner",
       ],
       ctaLabel: "View Dining Offerings",
-      ctaHref: "/#dining",
+      ctaHref: "/#amenities",
+    },
+    {
+      id: "betwa-view-dining",
+      icon: UtensilsCrossed,
+      eyebrow: "Riverside Dining",
+      title: "Betwa View Dining",
+      description:
+        "An inviting riverside dining experience overlooking the tranquil waters of the Betwa, where guests can enjoy memorable meals surrounded by the natural beauty of Orchha.",
+      image: ABOUT_HERITAGE_ASSETS.betwaViewDining.src,
+      alt: ABOUT_HERITAGE_ASSETS.betwaViewDining.alt,
+      features: [
+        "Al fresco riverside tables with panoramic Betwa waterscape",
+        "Sunset tea, bespoke evening dinners, and chef specialties",
+        "Serene open-air sanctuary immersed in Orchha's natural riverbank",
+      ],
+      ctaLabel: "Discover Riverside Dining",
+      ctaHref: "/#amenities",
     },
     {
       id: "ayurveda",
@@ -46,40 +63,6 @@ export function AboutHospitality() {
       ctaLabel: "Explore Full Spa Menu (11 Treatments)",
       ctaHref: "/spa",
     },
-    {
-      id: "sports",
-      icon: Activity,
-      eyebrow: "Active Recreation",
-      title: "Riverside Tennis & Sports",
-      description:
-        "For guests who appreciate active wellness, the resort features an outdoor tennis and badminton court framed by riverfront trees and greenery. Wake to early morning matches as the river mist clears, or utilize the fully equipped fitness gymnasium.",
-      image: ABOUT_HERITAGE_ASSETS.riversideSports.src,
-      alt: ABOUT_HERITAGE_ASSETS.riversideSports.alt,
-      features: [
-        "Full-size outdoor hard tennis and badminton court",
-        "Equipped gymnasium with cardio and strength stations",
-        "Complimentary racquets and sports equipment at the desk",
-      ],
-      ctaLabel: "Resort Amenities Guide",
-      ctaHref: "/#amenities",
-    },
-    {
-      id: "cultural",
-      icon: Music,
-      eyebrow: "Cultural Living",
-      title: "Bundeli Folk Dances & Evenings",
-      description:
-        "As twilight descends, the resort courtyard comes alive with the rhythm of the dholak and nagada. Local Bundelkhand folk dancers perform celebratory Rai and Badhai dances in vibrant traditional attire, sharing the folklore of brave kings and timeless devotion.",
-      image: ABOUT_HERITAGE_ASSETS.banquetCourtyard.src,
-      alt: ABOUT_HERITAGE_ASSETS.banquetCourtyard.alt,
-      features: [
-        "Nightly Bundeli folk performances under courtyard lanterns",
-        "Open-air celebration lawns for private banquets & weddings",
-        "1,500 sq ft Ballroom hall for destination gatherings",
-      ],
-      ctaLabel: "Inquire for Celebrations",
-      ctaHref: "#reserve",
-    },
   ];
 
   return (
@@ -95,16 +78,21 @@ export function AboutHospitality() {
             Warm Bundelkhandi warmth paired with thoughtful 5-star comforts
           </p>
           <Text variant="lead" className="mt-4 text-brand-charcoal/80 max-w-2xl">
-            From the fragrant spices of Kaleva to the soothing rhythm of warm herbal oils in the Ayurveda suite, every moment is arranged to restore both body and spirit.
+            From the fragrant spices of Kaleva and open-air riverside tables at Betwa View Dining to the soothing rhythm of warm herbal oils in the Ayurveda suite, every moment is arranged to restore both body and spirit.
           </Text>
         </div>
 
-        {/* 2x2 Grid of Rich Experience Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        {/* 3-Column Balanced Experience Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {experiences.map((exp, idx) => {
             const Icon = exp.icon;
+            const isThirdCard = idx === 2;
             return (
-              <FadeIn key={exp.id} delay={idx * 0.1}>
+              <FadeIn
+                key={exp.id}
+                delay={idx * 0.1}
+                className={isThirdCard ? "md:col-span-2 lg:col-span-1 md:max-w-lg md:mx-auto lg:max-w-none w-full" : "w-full"}
+              >
                 <div className="bg-white rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-subtle hover:shadow-elevated transition-all duration-300 flex flex-col h-full group">
                   {/* Photo Frame */}
                   <div className="relative aspect-[16/9] w-full overflow-hidden bg-brand-beige">
@@ -112,7 +100,7 @@ export function AboutHospitality() {
                       src={exp.image}
                       alt={exp.alt}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 48vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

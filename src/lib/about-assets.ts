@@ -158,6 +158,21 @@ export const ABOUT_HERITAGE_ASSETS: Record<string, HeritageAsset> = {
     section: "Section E: Hospitality & Kaleva",
   },
 
+  // 9b. Betwa View Dining (Riverside Dining)
+  betwaViewDining: {
+    id: "betwa-view-dining",
+    category: "resort",
+    title: "Betwa View Dining",
+    description: "An inviting riverside dining experience overlooking the tranquil waters of the Betwa, where guests can enjoy memorable meals surrounded by the natural beauty of Orchha",
+    src: "/images/resort/curated/dining/dining-riverfront-alfresco.jpg",
+    originalUrl: "/images/resort/curated/dining/dining-riverfront-alfresco.jpg",
+    width: 1564,
+    height: 878,
+    alt: "Betwa View Dining al fresco table setting overlooking River Betwa at The Orchha Resort",
+    isGenuineResort: true,
+    section: "Section E: Hospitality & Dining",
+  },
+
   // 10. Ayurveda Spa Room
   ayurvedaSpaRoom: {
     id: "ayurveda-spa-room",
