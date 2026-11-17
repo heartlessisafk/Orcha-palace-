@@ -93,40 +93,56 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
             initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-            className="relative max-w-3xl rounded-3xl p-6 sm:p-8 md:p-10 bg-gradient-to-br from-brand-navy/80 via-brand-navy/65 to-brand-navy/45 backdrop-blur-md border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.45)] space-y-4"
+            className="group relative max-w-3xl rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 md:p-10 overflow-hidden bg-gradient-to-br from-white/[0.12] via-brand-navy/60 to-brand-navy/75 backdrop-blur-2xl backdrop-saturate-[180%] border border-white/20 border-t-white/35 border-l-white/25 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),inset_0_0_24px_rgba(244,223,192,0.05),0_24px_60px_-12px_rgba(0,0,0,0.55),0_0_1px_1px_rgba(197,160,89,0.18)] space-y-4 sm:space-y-5 transition-all duration-500 hover:border-white/30 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.5),inset_0_0_30px_rgba(244,223,192,0.08),0_28px_70px_-10px_rgba(0,0,0,0.6),0_0_1px_1px_rgba(197,160,89,0.25)]"
           >
+            {/* Liquid Glass Internal Specular Refraction Layer */}
+            <div
+              aria-hidden="true"
+              className="absolute -top-24 -left-24 w-80 h-80 bg-gradient-to-br from-white/[0.18] via-[#F4DFC0]/[0.08] to-transparent rounded-full blur-2xl pointer-events-none transform-gpu"
+            />
+            {/* Warm Sunset Ambient Reflection in Corner */}
+            <div
+              aria-hidden="true"
+              className="absolute -bottom-16 -right-16 w-72 h-72 bg-gradient-to-tl from-[#C5A059]/15 via-transparent to-transparent rounded-full blur-2xl pointer-events-none transform-gpu"
+            />
+            {/* Prismatic Top Edge Specular Hairline */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-x-8 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+            />
+
             {/* Social Rating Badge */}
-            <div className="flex items-center gap-3">
+            <div className="relative z-10 flex items-center gap-3">
               <HeroRatingBadge />
             </div>
 
             {/* High-Contrast Location Kicker */}
-            <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-gold-light text-[11px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest shadow-sm">
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/35 text-[#F4DFC0] text-[11px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest backdrop-blur-md shadow-sm">
                 <MapPin className="w-3.5 h-3.5 text-brand-gold shrink-0" />
                 <span>KANCHANGHAT · ORCHHA, MADHYA PRADESH, INDIA</span>
               </div>
             </div>
 
             {/* Monumental Serif Headline */}
-            <h1 className="font-serif text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-semibold text-white leading-display tracking-tightest drop-shadow-sm">
+            <h1 className="relative z-10 font-serif text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-normal text-white leading-[1.12] tracking-tight drop-shadow-[0_2px_14px_rgba(0,0,0,0.7)]">
               Understated luxury where royalty meets the river.
             </h1>
 
             {/* Factual Description */}
-            <p className="font-sans text-sm sm:text-base md:text-lg text-brand-beige-sand/95 max-w-2xl leading-relaxed">
+            <p className="relative z-10 font-sans text-sm sm:text-base md:text-lg text-white/90 max-w-2xl leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.65)]">
               50 secluded heritage rooms and suites facing the 14 historical Chhatris.
               Experience authentic Bundeli warmth, lotus pool serenity, and zero-pollution tranquility.
             </p>
 
             {/* Primary Action Button Group */}
-            <div className="pt-2 flex flex-wrap items-center gap-4">
+            <div className="relative z-10 pt-2 flex flex-wrap items-center gap-4">
               <Button
-                variant="gold"
+                variant="sage"
                 size="lg"
                 withArrow
                 onClick={handleScrollToBooking}
-                className="shadow-floating hover:shadow-navy font-medium text-sm"
+                className="shadow-[0_4px_22px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_28px_rgba(112,141,121,0.4)] text-sm tracking-wide"
               >
                 Book Your Stay
               </Button>
@@ -134,7 +150,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
               <button
                 type="button"
                 onClick={handleScrollToBooking}
-                className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-brand-beige-sand/80 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-[#F4DFC0]/85 hover:text-white transition-colors"
               >
                 <span>Scroll to Reserve</span>
                 <ArrowDown className="w-3.5 h-3.5 animate-bounce text-brand-gold-light" />

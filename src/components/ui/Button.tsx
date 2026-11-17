@@ -6,7 +6,7 @@ import { ArrowRight, Loader2 } from "lucide-react";
 import { useTactile3D } from "@/hooks/useTactile3D";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "gold" | "outline" | "ghost" | "navy-outline";
+  variant?: "primary" | "secondary" | "gold" | "outline" | "ghost" | "navy-outline" | "sage";
   size?: "sm" | "md" | "lg" | "pill";
   withArrow?: boolean;
   isLoading?: boolean;
@@ -62,6 +62,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         "bg-brand-beige text-brand-charcoal hover:bg-brand-beige-sand hover:text-brand-charcoal border border-brand-charcoal/10 shadow-subtle hover:shadow-card",
       gold:
         "bg-brand-gold text-white hover:bg-brand-gold-light shadow-subtle hover:shadow-gold-ambient border border-brand-gold-light/40",
+      sage:
+        "bg-[#829D8A] text-[#080D15] hover:bg-[#708D79] shadow-subtle hover:shadow-[0_6px_25px_rgba(112,141,121,0.38)] border border-[#9BB4A2]/60 font-semibold",
       outline:
         "bg-transparent text-brand-charcoal border border-brand-charcoal/20 hover:border-brand-gold hover:text-brand-gold hover:bg-brand-beige/40 shadow-subtle",
       "navy-outline":
