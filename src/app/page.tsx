@@ -213,8 +213,8 @@ export default function HomePage() {
             <ClippedReveal direction="up" delay={0.2} className="rounded-luxury border border-white/10 shadow-floating">
               <div className="relative aspect-[16/10] w-full">
                 <Image
-                  src={RESORT_ASSETS.chhatrisHeritage.src}
-                  alt={RESORT_ASSETS.chhatrisHeritage.alt}
+                  src={RESORT_ASSETS.historicalHorizons.src}
+                  alt={RESORT_ASSETS.historicalHorizons.alt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
