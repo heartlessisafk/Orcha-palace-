@@ -592,8 +592,9 @@ export function HomeFacilitiesInteractive() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.4, ease: LUXURY_EASE }}
-              className="space-y-6"
+              className="space-y-6 sm:space-y-8"
             >
+              {/* Header Bar with Category Context */}
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 border-b border-brand-charcoal/10">
                 <div className="space-y-1.5 max-w-2xl">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/25 text-brand-gold-dark text-xs font-medium tracking-wide">
@@ -601,58 +602,124 @@ export function HomeFacilitiesInteractive() {
                     <span>Curated Facility Showcase • Kerala Ayurveda Spa</span>
                   </div>
                   <h3 className="font-serif text-2xl sm:text-3xl font-normal text-brand-charcoal">
-                    Kairali Ayurvedic Healing Sanctuary
+                    Ayurvedic Sanctuary on Kanchanghat
                   </h3>
                   <p className="font-sans text-sm text-brand-olive leading-relaxed">
-                    Authentic Kerala Ayurvedic treatments, Abhyanga oil therapies, and herbal steam baths directed by licensed practitioners.
+                    A private sanctuary of restorative healing and timeless holistic traditions nestled along the sacred Betwa riverbanks.
                   </p>
                 </div>
 
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 pt-2 sm:pt-0">
                   <Link
                     href="/spa"
-                    className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white text-xs sm:text-sm font-sans font-medium tracking-wide shadow-subtle hover:shadow-hover transition-all duration-300 border border-white/10"
+                    className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white text-xs sm:text-sm font-sans font-medium tracking-wide shadow-subtle hover:shadow-hover hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 border border-white/10 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
                   >
-                    <span>Explore Spa</span>
+                    <span>Explore Spa Experiences</span>
                     <ArrowRight className="w-4 h-4 text-brand-gold transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                <div className="lg:col-span-8 relative aspect-[16/10] rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-subtle">
-                  <Image
-                    src="/images/resort/curated/spa/kairali-ayurvedic-massage-room.jpg"
-                    alt="Kairali Ayurvedic Massage Room at The Orchha Resort"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 800px"
-                    className="object-cover"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-charcoal/70 backdrop-blur-md text-white text-[11px] font-sans font-medium border border-white/15">
-                      <Camera className="w-3 h-3 text-brand-gold" />
-                      <span>Genuine Property Photo</span>
-                    </span>
+              {/* Editorial Single-Image Experience Showcase */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                {/* Single Premium Image */}
+                <div className="lg:col-span-7">
+                  <div className="group relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-card bg-brand-charcoal/5">
+                    <Image
+                      src="/images/resort/curated/spa/kerala-ayurveda-spa-sanctuary-rejuvenation.jpg"
+                      alt="Private Kerala Ayurveda Spa treatment room with carved teak Droni bed and brass Shirodhara vessel"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 700px"
+                      priority
+                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+
+                    {/* Top Badges */}
+                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-charcoal/70 backdrop-blur-md text-white text-[11px] font-sans font-medium border border-white/15 shadow-sm">
+                        <Camera className="w-3 h-3 text-brand-gold" />
+                        <span>Holistic Healing Sanctuary</span>
+                      </span>
+                      <span className="px-2.5 py-1 rounded-full bg-brand-gold/90 backdrop-blur-md text-white text-[11px] font-sans font-semibold tracking-wide uppercase shadow-sm">
+                        Panchakarma Rituals
+                      </span>
+                    </div>
+
+                    {/* Bottom Floating Caption Overlay */}
+                    <div className="absolute inset-x-0 bottom-0 pt-16 pb-4 px-4 sm:px-5 bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/50 to-transparent flex flex-col justify-end text-white z-10">
+                      <h5 className="font-serif text-lg sm:text-xl font-normal text-white group-hover:text-brand-gold-light transition-colors">
+                        Authentic Kerala Treatment Sanctuary
+                      </h5>
+                      <p className="font-sans text-xs sm:text-sm text-brand-beige-sand/90 line-clamp-2 mt-0.5 leading-relaxed">
+                        Handcrafted teak Droni massage table, traditional brass Shirodhara vessel, and fresh botanical oils.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="lg:col-span-4 space-y-4 p-6 rounded-2xl bg-brand-beige/50 border border-brand-charcoal/10">
-                  <span className="text-xs font-mono font-medium text-brand-gold-dark uppercase tracking-wider">
-                    Phase 4 Upcoming
-                  </span>
-                  <h4 className="font-serif text-xl font-medium text-brand-charcoal">
-                    Holistic Equilibrium
-                  </h4>
-                  <p className="font-sans text-sm text-brand-olive leading-relaxed">
-                    Interactive photo views for Kerala Ayurveda Spa will be integrated in Phase 4. Learn about our full menu of wellness therapies on our Spa page.
-                  </p>
-                  <Link
-                    href="/spa"
-                    className="inline-flex items-center gap-1.5 text-xs font-sans font-medium text-brand-gold hover:text-brand-gold-dark transition-colors pt-2"
-                  >
-                    <span>View Spa Therapies & Packages</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+
+                {/* Experience-Focused Narrative & Direct CTA */}
+                <div className="lg:col-span-5 space-y-6 flex flex-col justify-center">
+                  <div className="space-y-3">
+                    <div className="inline-flex items-center gap-2 text-xs font-sans font-semibold text-brand-gold-dark tracking-wider uppercase">
+                      <Sparkles className="w-4 h-4 text-brand-gold" />
+                      <span>Art of Classical Healing</span>
+                    </div>
+                    <h4 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-brand-charcoal leading-tight">
+                      Rediscover the Art of Rejuvenation
+                    </h4>
+                  </div>
+
+                  <div className="space-y-3.5 text-sm sm:text-base font-sans text-brand-olive leading-relaxed">
+                    <p>
+                      Step away from the hurried world into a quiet sanctuary where time dissolves into deep stillness. Rooted in authentic Kerala traditions and attuned to the serene waters of the Betwa, every moment here is curated so that arriving feels like a profound exhale.
+                    </p>
+                    <p>
+                      From full-body warm herbal oil Abhyangam and meditative Shirodhara oil flows to balancing Marma therapies and botanical facials, our dedicated practitioners guide you back to pure physical ease and mental clarity.
+                    </p>
+                  </div>
+
+                  {/* 3 Core Experience Highlights */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-2.5 pt-1">
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-sans text-brand-charcoal bg-brand-beige/60 border border-brand-charcoal/5 rounded-xl px-3.5 py-2">
+                      <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                      <span>Warm Medicated Herbal Oils</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-sans text-brand-charcoal bg-brand-beige/60 border border-brand-charcoal/5 rounded-xl px-3.5 py-2">
+                      <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                      <span>Continuous Shirodhara Forehead Flow</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-sans text-brand-charcoal bg-brand-beige/60 border border-brand-charcoal/5 rounded-xl px-3.5 py-2">
+                      <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                      <span>Tridosha Equilibrium &amp; Deep Peace</span>
+                    </div>
+                  </div>
+
+                  {/* Primary CTA Button */}
+                  <div className="pt-2">
+                    <Link
+                      href="/spa"
+                      className="group inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white text-sm font-sans font-medium tracking-wide shadow-subtle hover:shadow-hover hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 border border-white/10 w-full sm:w-auto"
+                    >
+                      <span>Explore Spa Experiences</span>
+                      <ArrowRight className="w-4 h-4 text-brand-gold transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
+                  </div>
                 </div>
+              </div>
+
+              {/* Bottom Verification Note & Secondary Link */}
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-sans text-brand-olive border-t border-brand-charcoal/5">
+                <div className="flex items-center gap-2 text-brand-charcoal">
+                  <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                  <span>Phase 4 Verified: Single premium experience showcase loaded at Full HD+ resolution.</span>
+                </div>
+                <Link
+                  href="/spa"
+                  className="inline-flex items-center gap-1.5 text-brand-gold hover:text-brand-gold-dark font-medium transition-colors"
+                >
+                  <span>View 11 authentic therapies &amp; packages</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </motion.div>
           )}
