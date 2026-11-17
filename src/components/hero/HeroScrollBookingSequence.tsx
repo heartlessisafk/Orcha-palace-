@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { RESORT_ASSETS } from "@/lib/assets";
 import { Button } from "@/components/ui/Button";
 import { HeroRatingBadge } from "@/components/ui/Badge";
@@ -15,8 +15,18 @@ export interface HeroScrollBookingSequenceProps {
 }
 
 export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequenceProps) {
-  const [videoError, setVideoError] = useState(false);
+  const heroRef = useRef<HTMLElement>(null);
   const shouldReduceMotion = useReducedMotion();
+
+  // Track scroll progress along the hero section for fluid cinematic zoom
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Smooth progressive zoom animation directly tied to scroll position (1.0 -> 1.25)
+  const rawScale = useTransform(scrollYProgress, [0, 1], [1, 1.25], { clamp: true });
+  const scale = shouldReduceMotion ? 1 : rawScale;
 
   // Smooth scroll handler for first-screen CTA button
   const handleScrollToBooking = () => {
@@ -33,54 +43,37 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
     >
       {/* ─────────────────────────────────────────────────────────────────
           1. CINEMATIC HERO SECTION
-          Full-viewport architectural video/photo with high-contrast
-          editorial translucent surface behind the typography
+          Full-viewport architectural aerial photograph with progressive
+          scroll-based zoom and high-contrast editorial glass surface
           ───────────────────────────────────────────────────────────────── */}
       <section
         id="hero"
+        ref={heroRef}
         className="relative min-h-[90vh] lg:min-h-screen w-full flex flex-col justify-between overflow-hidden"
       >
-        {/* Background Cinematic Video / High-Resolution Photo Layer */}
-        <div className="absolute inset-0 z-0 origin-center pointer-events-none">
-          {!videoError ? (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster={RESORT_ASSETS.heroDesktop.src}
-              onError={() => setVideoError(true)}
-              className="w-full h-full object-cover"
-            >
-              <source src={RESORT_ASSETS.heroVideo.src} type="video/mp4" />
-              {/* Fallback image if video fails to decode */}
-              <Image
-                src={RESORT_ASSETS.heroDesktop.src}
-                alt={RESORT_ASSETS.heroDesktop.alt}
-                fill
-                priority
-                className="object-cover"
-              />
-            </video>
-          ) : (
+        {/* Background Cinematic Zooming Photo Layer */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <motion.div
+            style={{
+              scale,
+              transformOrigin: "center 42%",
+              willChange: "transform",
+            }}
+            className="relative w-full h-full transform-gpu"
+          >
             <Image
               src={RESORT_ASSETS.heroDesktop.src}
               alt={RESORT_ASSETS.heroDesktop.alt}
               fill
               priority
-              className="object-cover"
+              sizes="100vw"
+              quality={90}
+              className="object-cover object-center"
             />
-          )}
 
-          {/* Staging Video Disclaimer Label */}
-          {RESORT_ASSETS.heroVideo.isStagingPlaceholder && (
-            <div className="absolute top-24 right-6 z-20 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-[10px] text-white/70 font-sans tracking-wide">
-              Staging Atmospheric Video · Drone Asset in Production
-            </div>
-          )}
-
-          {/* Dynamic Darkening Vignette Layer - Neutral tone to preserve authentic pool and landscape colors */}
-          <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/60 via-transparent to-black/25 pointer-events-none" />
+            {/* Dynamic Darkening Vignette Layer - Balanced contrast for typography while preserving river and sunset colors */}
+            <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/70 via-black/20 to-black/35 pointer-events-none" />
+          </motion.div>
         </div>
 
         {/* Hero Editorial Text Container */}
