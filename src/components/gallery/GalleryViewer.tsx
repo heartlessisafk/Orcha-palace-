@@ -28,11 +28,12 @@ interface FilterGroup {
 
 const FILTER_GROUPS: FilterGroup[] = [
   { id: "all", label: "All Curated Views", categories: [] },
+  { id: "betwa-dining", label: "Betwa View Dining", categories: ["dining-riverfront"] },
   { id: "architecture", label: "Architecture", categories: ["architecture-exterior", "aerial-landscapes"] },
-  { id: "rooms", label: "Rooms & Suites", categories: ["rooms-deluxe", "rooms-tents", "rooms-suites"] },
+  { id: "rooms", label: "Accommodations", categories: ["rooms-deluxe", "rooms-tents", "rooms-suites"] },
   { id: "pool", label: "Lotus Pool", categories: ["pool-gardens"] },
-  { id: "weddings", label: "Weddings", categories: ["weddings-celebrations"] },
   { id: "amenities", label: "Amenities & Dining", categories: ["dining-kaleva", "dining-riverfront", "spa-kairali"] },
+  { id: "weddings", label: "Weddings", categories: ["weddings-celebrations"] },
   { id: "experiences", label: "Experiences", categories: ["heritage-surroundings", "guest-experiences"] },
 ];
 
