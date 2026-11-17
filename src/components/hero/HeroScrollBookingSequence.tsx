@@ -39,7 +39,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
   return (
     <div
       id="hero-and-reservation"
-      className={cn("relative w-full bg-brand-navy overflow-visible", className)}
+      className={cn("relative w-full bg-brand-canvas overflow-visible", className)}
     >
       {/* ─────────────────────────────────────────────────────────────────
           1. CINEMATIC HERO SECTION
@@ -78,7 +78,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
             />
 
             {/* Dynamic Darkening Vignette Layer - Balanced contrast for typography while preserving river and sunset colors */}
-            <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/70 via-black/20 to-black/35 pointer-events-none" />
+            <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/50 via-transparent to-black/30 pointer-events-none" />
           </motion.div>
         </div>
 
@@ -142,19 +142,16 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
             </div>
           </motion.div>
         </div>
-
-        {/* Gentle Ambient Base Vignette */}
-        <div className="h-16 w-full bg-gradient-to-b from-transparent to-brand-navy pointer-events-none" />
       </section>
 
       {/* ─────────────────────────────────────────────────────────────────
           2. INTEGRATED RESERVATION SANCTUARY SUITE
-          Seamless in-flow luxury booking section bridging the cinematic
-          hero directly into the resort philosophy with zero overlap
+          Seamless floating luxury booking dock bridging the cinematic
+          hero directly into the resort philosophy with zero dead space
           ───────────────────────────────────────────────────────────────── */}
       <section
         id="booking-sequence"
-        className="relative z-20 -mt-10 sm:-mt-14 lg:-mt-16 pb-12 sm:pb-16 px-4 sm:px-6 md:px-8 max-w-container mx-auto w-full"
+        className="relative z-20 -mt-16 sm:-mt-20 lg:-mt-24 pb-8 sm:pb-12 px-4 sm:px-6 md:px-8 max-w-container mx-auto w-full"
       >
         <div className="rounded-3xl bg-brand-beige border border-brand-gold/30 shadow-[0_20px_60px_rgba(0,0,0,0.18)] overflow-visible relative">
           {/* Header Bar */}
