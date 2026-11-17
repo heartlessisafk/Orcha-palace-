@@ -92,6 +92,20 @@ export function GalleryViewer() {
   const shouldReduceMotion = useReducedMotion();
   const columns = useGalleryColumns();
 
+  // Read URL query parameter on mount (e.g., /gallery?filter=betwa-dining)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const requested = params.get("filter") || params.get("category");
+      if (requested) {
+        const matched = FILTER_GROUPS.find((g) => g.id === requested);
+        if (matched) {
+          setActiveFilter(matched.id);
+        }
+      }
+    }
+  }, []);
+
   // Curated photos list (Strictly deduplicated: excludes duplicates & exclusions)
   const curatedPhotos = useMemo(() => {
     return PHOTO_CATALOGUE.filter((p) => p.curatedPath && !p.isExcluded && !p.isDuplicate);
