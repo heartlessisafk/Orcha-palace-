@@ -258,4 +258,18 @@ export const RESORT_ASSETS: Record<string, ResortAsset> = {
     targetPlacement: "Heritage & Location Guide Section",
     replacementFileName: "heritage-chhatris-reflection-river.jpg",
   },
+  heritageGeographyHero: {
+    id: "heritage-geography-hero",
+    category: "heritage",
+    title: "Poolside Sanctuary Overlooking Ancient Chhatris",
+    description: "Vibrant golden-hour atmosphere by the lotus pool with resort guests enjoying cocktails against the backdrop of Orchha's historic spires",
+    src: "/images/resort/curated/heritage/heritage-geography-poolside-hero.jpg",
+    aspectRatio: "16:9",
+    width: 2560,
+    height: 1706,
+    alt: "Poolside relaxation at The Orchha Resort overlooking the ancient Chhatris",
+    isStagingPlaceholder: false,
+    targetPlacement: "The Heritage Geography of Orchha Interactive Cartographic Finale Hero",
+    replacementFileName: "heritage-geography-poolside-hero.jpg",
+  },
 };

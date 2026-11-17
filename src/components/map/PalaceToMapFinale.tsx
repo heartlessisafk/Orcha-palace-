@@ -49,7 +49,7 @@ export function PalaceToMapFinale({
   const heroPointerEvents = useTransform(scrollYProgress, (p) => (p < 0.11 ? "auto" : "none"));
 
   // STAGE 2: Image Saturation Dissolve & Architectural Blueprint (0.08 - 0.30)
-  const imageOverlayOpacity = useTransform(scrollYProgress, [0.06, 0.26], [0.35, 0.94], { clamp: true });
+  const imageOverlayOpacity = useTransform(scrollYProgress, [0.06, 0.26], [0.22, 0.94], { clamp: true });
   const imageScale = useTransform(scrollYProgress, [0.00, 0.28], [1.05, 1.0], { clamp: true });
 
   // Architectural Grid & Cenotaph Blueprint
@@ -111,25 +111,28 @@ export function PalaceToMapFinale({
         >
           <div className="relative w-full h-full">
             <Image
-              src={RESORT_ASSETS.chhatrisHeritage.src}
-              alt="The 14 Royal Cenotaphs along the River Betwa in Orchha"
+              src={RESORT_ASSETS.heritageGeographyHero.src}
+              alt={RESORT_ASSETS.heritageGeographyHero.alt}
               fill
               sizes="100vw"
               priority
-              className="object-cover object-center"
+              className="object-cover object-[center_35%]"
             />
           </div>
 
-          {/* Dynamic Darkness Overlay */}
+          {/* Warm Heritage Atmospheric Tone Blending Layer */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080D15]/65 via-transparent to-[#080D15]/30 pointer-events-none" />
+
+          {/* Warm Ambient Golden & Navy Radial Vignette */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.14),rgba(12,23,49,0.22)_65%,rgba(8,13,21,0.60)_100%)] pointer-events-none" />
+
+          {/* Dynamic Darkness Overlay (Dissolves smoothly into Stage 2 Architectural Blueprint) */}
           <motion.div
             style={{
               opacity: imageOverlayOpacity,
             }}
             className="absolute inset-0 bg-[#080D15] transform-gpu"
           />
-
-          {/* Subtle Ambient Radial Vignette */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.08),transparent_75%)]" />
         </motion.div>
 
         {/* Layer 2: Archival Survey Coordinate Grid (Stage 2) */}
