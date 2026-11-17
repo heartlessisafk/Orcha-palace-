@@ -93,22 +93,22 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
             initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-            className="group relative max-w-3xl rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 md:p-10 overflow-hidden bg-gradient-to-br from-white/[0.12] via-brand-navy/60 to-brand-navy/75 backdrop-blur-2xl backdrop-saturate-[180%] border border-white/20 border-t-white/35 border-l-white/25 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),inset_0_0_24px_rgba(244,223,192,0.05),0_24px_60px_-12px_rgba(0,0,0,0.55),0_0_1px_1px_rgba(197,160,89,0.18)] space-y-4 sm:space-y-5 transition-all duration-500 hover:border-white/30 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.5),inset_0_0_30px_rgba(244,223,192,0.08),0_28px_70px_-10px_rgba(0,0,0,0.6),0_0_1px_1px_rgba(197,160,89,0.25)]"
+            className="group relative max-w-3xl rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 md:p-10 overflow-hidden bg-gradient-to-br from-white/[0.14] via-[#080D15]/28 to-[#0B131E]/42 backdrop-blur-xl backdrop-saturate-[190%] border border-white/25 border-t-white/45 border-l-white/35 border-r-white/20 border-b-white/15 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.5),inset_0_0_28px_rgba(244,223,192,0.06),0_20px_50px_-10px_rgba(0,0,0,0.45),0_0_1px_1px_rgba(197,160,89,0.22)] space-y-4 sm:space-y-5 transition-all duration-500 hover:border-white/35 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.6),inset_0_0_32px_rgba(244,223,192,0.09),0_24px_60px_-10px_rgba(0,0,0,0.5),0_0_1px_1px_rgba(197,160,89,0.3)]"
           >
             {/* Liquid Glass Internal Specular Refraction Layer */}
             <div
               aria-hidden="true"
-              className="absolute -top-24 -left-24 w-80 h-80 bg-gradient-to-br from-white/[0.18] via-[#F4DFC0]/[0.08] to-transparent rounded-full blur-2xl pointer-events-none transform-gpu"
+              className="absolute -top-24 -left-24 w-80 h-80 bg-gradient-to-br from-white/[0.14] via-[#F4DFC0]/[0.05] to-transparent rounded-full blur-2xl pointer-events-none transform-gpu"
             />
             {/* Warm Sunset Ambient Reflection in Corner */}
             <div
               aria-hidden="true"
-              className="absolute -bottom-16 -right-16 w-72 h-72 bg-gradient-to-tl from-[#C5A059]/15 via-transparent to-transparent rounded-full blur-2xl pointer-events-none transform-gpu"
+              className="absolute -bottom-16 -right-16 w-72 h-72 bg-gradient-to-tl from-[#C5A059]/12 via-transparent to-transparent rounded-full blur-2xl pointer-events-none transform-gpu"
             />
             {/* Prismatic Top Edge Specular Hairline */}
             <div
               aria-hidden="true"
-              className="absolute inset-x-8 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+              className="absolute inset-x-8 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/55 to-transparent pointer-events-none"
             />
 
             {/* Social Rating Badge */}
@@ -125,12 +125,12 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
             </div>
 
             {/* Monumental Serif Headline */}
-            <h1 className="relative z-10 font-serif text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-normal text-white leading-[1.12] tracking-tight drop-shadow-[0_2px_14px_rgba(0,0,0,0.7)]">
+            <h1 className="relative z-10 font-serif text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-normal text-white leading-[1.12] tracking-tight drop-shadow-[0_2px_18px_rgba(0,0,0,0.95)]">
               Understated luxury where royalty meets the river.
             </h1>
 
             {/* Factual Description */}
-            <p className="relative z-10 font-sans text-sm sm:text-base md:text-lg text-white/90 max-w-2xl leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.65)]">
+            <p className="relative z-10 font-sans text-sm sm:text-base md:text-lg text-white/95 max-w-2xl leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.9)]">
               50 secluded heritage rooms and suites facing the 14 historical Chhatris.
               Experience authentic Bundeli warmth, lotus pool serenity, and zero-pollution tranquility.
             </p>
