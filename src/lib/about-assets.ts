@@ -53,6 +53,51 @@ export const ABOUT_HERITAGE_ASSETS: Record<string, HeritageAsset> = {
     section: "Section B: The Place Beside the Betwa",
   },
 
+  // 2A. River Dawn — IMG_3119
+  riverDawn: {
+    id: "river-dawn",
+    category: "resort",
+    title: "River Dawn at Kanchanghat (IMG_3119)",
+    description: "Early morning river mist rising over the Betwa River and manicured riverfront dining lawns",
+    src: "/images/resort/curated/heritage/IMG_3119.jpg",
+    originalUrl: "/images/resort/curated/heritage/IMG_3119.jpg",
+    width: 2560,
+    height: 1440,
+    alt: "The Orchha Resort riverfront lawn and morning mist along the Betwa River (IMG_3119)",
+    isGenuineResort: true,
+    section: "Section B: The Place Beside the Betwa — River Dawn",
+  },
+
+  // 2B. Daylight Flora — IMG_3108
+  daylightFlora: {
+    id: "daylight-flora",
+    category: "resort",
+    title: "Daylight Flora & Betwa Panorama (IMG_3108)",
+    description: "Panoramic aerial view of The Orchha Resort pool, lush flora, and ancient Chhatris along the Betwa",
+    src: "/images/resort/curated/heritage/IMG_3108.jpg",
+    originalUrl: "/images/resort/curated/heritage/IMG_3108.jpg",
+    width: 2560,
+    height: 1440,
+    alt: "The Orchha Resort daylight flora, swimming pool and royal chhatris panoramic view (IMG_3108)",
+    isGenuineResort: true,
+    section: "Section B: The Place Beside the Betwa — Daylight Flora",
+  },
+
+  // 2C. Twilight Dusk — IMG_3118
+  twilightDusk: {
+    id: "twilight-dusk",
+    category: "resort",
+    title: "Twilight Dusk & Courtyard Lamp Glow (IMG_3118)",
+    description: "Evening lanterns illuminating the grand entrance portico and courtyard under dusk skies",
+    src: "/images/resort/curated/heritage/IMG_3118.jpg",
+    originalUrl: "/images/resort/curated/heritage/IMG_3118.jpg",
+    width: 2560,
+    height: 1440,
+    alt: "The Orchha Resort illuminated courtyard, entrance lanterns and evening dusk sky (IMG_3118)",
+    isGenuineResort: true,
+    section: "Section B: The Place Beside the Betwa — Twilight Dusk",
+  },
+
   // 3. Garden Walkways
   gardenWalkways: {
     id: "garden-walkways",
