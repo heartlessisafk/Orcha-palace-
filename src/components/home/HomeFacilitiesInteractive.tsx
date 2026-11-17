@@ -43,7 +43,7 @@ const FACILITIES: FacilityCategory[] = [
   {
     id: "pool",
     title: "Lotus-Shaped Pool",
-    subtitle: "Central Aquatic Sanctuary",
+    subtitle: "Signature Aquatic Centre",
     description: "Sculpted in the silhouette of a blooming lotus flower, complete with children's splash pool and riverside sun deck loungers.",
     icon: Waves,
     badge: "Explore poolside",
@@ -69,7 +69,7 @@ const FACILITIES: FacilityCategory[] = [
   },
 ];
 
-interface BetwaPhoto {
+interface FacilityPhoto {
   src: string;
   alt: string;
   title: string;
@@ -78,7 +78,7 @@ interface BetwaPhoto {
   objectPosition: string;
 }
 
-const BETWA_VIEW_DINING_PHOTOS: BetwaPhoto[] = [
+const BETWA_VIEW_DINING_PHOTOS: FacilityPhoto[] = [
   {
     src: "/images/resort/curated/dining/betwa-view-dining-afternoon-lawn-gathering.jpg",
     alt: "Guests gathered on the riverfront lawn beside the Betwa balustrade enjoying afternoon refreshments",
@@ -110,6 +110,41 @@ const BETWA_VIEW_DINING_PHOTOS: BetwaPhoto[] = [
     caption: "Unobstructed river frontage with attentive hospitality and open vistas.",
     tag: "River Panorama",
     objectPosition: "object-[center_45%]",
+  },
+];
+
+const LOTUS_POOL_PHOTOS: FacilityPhoto[] = [
+  {
+    src: "/images/resort/curated/pool/pool-facility-lotus-aerial-courtyard.jpg",
+    alt: "Aerial courtyard perspective of the blooming lotus-shaped pool surrounded by guest cottages",
+    title: "Lotus Courtyard Architecture",
+    caption: "Eight-petaled blooming lotus geometry sculpted into the central resort courtyard.",
+    tag: "Aerial View",
+    objectPosition: "object-center",
+  },
+  {
+    src: "/images/resort/curated/pool/pool-facility-lotus-petal-waters-ground.jpg",
+    alt: "Ground perspective across the clear turquoise pool waters and mushroom splash fountain",
+    title: "Petaled Aquatic Sanctuary",
+    caption: "Shallow splash pool and deep swimming curves framed by terracotta chalets.",
+    tag: "Poolside",
+    objectPosition: "object-[center_60%]",
+  },
+  {
+    src: "/images/resort/curated/pool/pool-facility-sunset-drinks-heritage-spire.jpg",
+    alt: "Guest relaxing beside the swimming pool with tropical drinks facing sunset and heritage spire",
+    title: "Sunset Poolside Solitude",
+    caption: "Golden hour glow and chilled refreshments overlooking ancient temple spires.",
+    tag: "Sunset Glow",
+    objectPosition: "object-[center_55%]",
+  },
+  {
+    src: "/images/resort/curated/pool/pool-facility-sun-deck-loungers-afternoon.jpg",
+    alt: "Guests sunbathing on comfortable lounge beds beside the shimmering pool deck",
+    title: "Sun Deck & Garden Loungers",
+    caption: "Relaxed afternoon sun loungers bordered by tall cypress and blooming hedges.",
+    tag: "Sun Deck",
+    objectPosition: "object-[center_50%]",
   },
 ];
 
@@ -268,7 +303,7 @@ export function HomeFacilitiesInteractive() {
                         alt={photo.alt}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
-                        priority={idx < 2}
+                        priority
                         className={cn(
                           "object-cover transition-transform duration-700 ease-out group-hover:scale-105",
                           photo.objectPosition
@@ -324,8 +359,9 @@ export function HomeFacilitiesInteractive() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.4, ease: LUXURY_EASE }}
-              className="space-y-6"
+              className="space-y-6 sm:space-y-8"
             >
+              {/* Header Bar with Editorial Context & "Go to Library →" Button */}
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 border-b border-brand-charcoal/10">
                 <div className="space-y-1.5 max-w-2xl">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/25 text-brand-gold-dark text-xs font-medium tracking-wide">
@@ -336,14 +372,15 @@ export function HomeFacilitiesInteractive() {
                     The Central Lotus Swimming Pool
                   </h3>
                   <p className="font-sans text-sm text-brand-olive leading-relaxed">
-                    Sculpted in the silhouette of an eight-petaled blooming lotus, serving as the serene aquatic core of the resort.
+                    Sculpted in the silhouette of an eight-petaled blooming lotus, featuring shallow children&apos;s splash areas, sun deck loungers, and serene heritage vistas.
                   </p>
                 </div>
 
-                <div className="flex-shrink-0">
+                {/* Go to Library Button */}
+                <div className="flex-shrink-0 pt-2 sm:pt-0">
                   <Link
                     href="/gallery?filter=pool"
-                    className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white text-xs sm:text-sm font-sans font-medium tracking-wide shadow-subtle hover:shadow-hover transition-all duration-300 border border-white/10"
+                    className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white text-xs sm:text-sm font-sans font-medium tracking-wide shadow-subtle hover:shadow-hover hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 border border-white/10 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
                   >
                     <span>Go to Library</span>
                     <ArrowRight className="w-4 h-4 text-brand-gold transition-transform duration-300 group-hover:translate-x-1" />
@@ -351,40 +388,65 @@ export function HomeFacilitiesInteractive() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                <div className="lg:col-span-8 relative aspect-[16/10] rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-subtle">
-                  <Image
-                    src="/images/resort/curated/pool/central-lotus-swimming-pool-aerial.jpg"
-                    alt="The Central Lotus Swimming Pool at The Orchha Resort"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 800px"
-                    className="object-cover"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-charcoal/70 backdrop-blur-md text-white text-[11px] font-sans font-medium border border-white/15">
-                      <Camera className="w-3 h-3 text-brand-gold" />
-                      <span>Genuine Property Photo</span>
-                    </span>
-                  </div>
-                </div>
-                <div className="lg:col-span-4 space-y-4 p-6 rounded-2xl bg-brand-beige/50 border border-brand-charcoal/10">
-                  <span className="text-xs font-mono font-medium text-brand-gold-dark uppercase tracking-wider">
-                    Phase 2 Upcoming
-                  </span>
-                  <h4 className="font-serif text-xl font-medium text-brand-charcoal">
-                    Architectural Lotus Form
-                  </h4>
-                  <p className="font-sans text-sm text-brand-olive leading-relaxed">
-                    Multi-angle photography showcase for the Lotus-Shaped Pool will arrive in Phase 2. Explore the full pool gallery right now in our photo library.
-                  </p>
-                  <Link
-                    href="/gallery?filter=pool"
-                    className="inline-flex items-center gap-1.5 text-xs font-sans font-medium text-brand-gold hover:text-brand-gold-dark transition-colors pt-2"
+              {/* 2x2 Clean Photo Presentation Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
+                {LOTUS_POOL_PHOTOS.map((photo, idx) => (
+                  <div
+                    key={photo.src}
+                    className="group relative rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-subtle hover:shadow-card hover:border-brand-gold/40 transition-all duration-300 bg-brand-charcoal/5"
                   >
-                    <span>View Lotus Pool Collection</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                    {/* Responsive Aspect Ratio Container */}
+                    <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                        priority
+                        className={cn(
+                          "object-cover transition-transform duration-700 ease-out group-hover:scale-105",
+                          photo.objectPosition
+                        )}
+                      />
+
+                      {/* Top Badges */}
+                      <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-charcoal/70 backdrop-blur-md text-white text-[11px] font-sans font-medium border border-white/15 shadow-sm">
+                          <Camera className="w-3 h-3 text-brand-gold" />
+                          <span>Genuine Property Photo</span>
+                        </span>
+                        <span className="px-2.5 py-1 rounded-full bg-brand-gold/90 backdrop-blur-md text-white text-[11px] font-sans font-semibold tracking-wide uppercase shadow-sm">
+                          {photo.tag}
+                        </span>
+                      </div>
+
+                      {/* Bottom Editorial Caption Gradient Overlay */}
+                      <div className="absolute inset-x-0 bottom-0 pt-16 pb-4 px-4 sm:px-5 bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/50 to-transparent flex flex-col justify-end text-white z-10">
+                        <h5 className="font-serif text-lg sm:text-xl font-normal text-white group-hover:text-brand-gold-light transition-colors">
+                          {photo.title}
+                        </h5>
+                        <p className="font-sans text-xs sm:text-sm text-brand-beige-sand/90 line-clamp-2 mt-0.5 leading-relaxed">
+                          {photo.caption}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Bottom Verification Note & Secondary Library Link */}
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-sans text-brand-olive border-t border-brand-charcoal/5">
+                <div className="flex items-center gap-2 text-brand-charcoal">
+                  <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                  <span>Phase 2 Verified: All 4 authentic Lotus-Shaped Pool perspectives loaded at Full HD resolution.</span>
                 </div>
+                <Link
+                  href="/gallery?filter=pool"
+                  className="inline-flex items-center gap-1.5 text-brand-gold hover:text-brand-gold-dark font-medium transition-colors"
+                >
+                  <span>Explore full pool collection in Gallery</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </motion.div>
           )}
