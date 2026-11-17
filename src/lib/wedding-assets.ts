@@ -20,7 +20,20 @@ export interface WeddingAsset {
 }
 
 export const WEDDING_ASSETS: Record<string, WeddingAsset> = {
-  // 1. Grand Couple Celebration & Stage Performance
+  // 1. Royal Couple Celebration & Floral Canopy Walk (Main Wedding Hero)
+  royalCoupleMandap: {
+    id: "royal-couple-mandap",
+    title: "Royal Couple Celebration & Floral Canopy Walk",
+    description: "Bride and groom walking hand in hand under an illuminated royal floral canopy with crystal chandeliers and draped pavilions at The Orchha Resort",
+    src: "/images/weddings/wedding-royal-couple-mandap.jpg",
+    width: 2048,
+    height: 1160,
+    alt: "Bride and groom under the illuminated royal floral canopy with crystal chandeliers at The Orchha Resort",
+    source: "Authentic Orchha Resort wedding photography",
+    spaceType: "celebration",
+  },
+
+  // 2. Grand Couple Celebration & Stage Performance
   sangeetCelebration: {
     id: "sangeet-celebration",
     title: "Royal Stage & Sangeet Celebrations",
