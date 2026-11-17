@@ -32,22 +32,18 @@ export default function HomePage() {
         {/* 1 & 2. CINEMATIC HERO & SCROLL-TRANSFORMING BOOKING SEQUENCE */}
         <HeroScrollBookingSequence />
 
-      {/* 3. RESORT PHILOSOPHY & WORD-BY-WORD SCROLL REVEAL */}
-      <Section surface="canvas" spacing="default" id="about">
-        <Container size="narrow">
-          <div className="text-center space-y-4 mb-8">
-            <SubtitleTag>Our Philosophy</SubtitleTag>
-            <FadeIn>
-              <TextReveal
-                text="We believe a great stay is quiet, considered, and completely yours. Every room, every detail, and every interaction is arranged so arriving feels like exhaling."
-                className="text-center justify-center max-w-3xl mx-auto"
-              />
-            </FadeIn>
-            <Text variant="muted" className="max-w-xl mx-auto pt-4">
-              Established on the sacred riverbanks of Bundelkhand across from the 14 royal cenotaphs,
-              The Orchha Resort combines royal architectural harmony with 5-star comforts in a certified zero-pollution sanctuary.
-            </Text>
+      {/* 3. SIGNATURE AMENITIES (Why Stay at Orchha Resort) */}
+      <Section surface="beige" spacing="default" id="amenities">
+        <Container>
+          <div className="max-w-2xl mb-12">
+            <SubtitleTag>Signature Facilities</SubtitleTag>
+            <AnimatedHeading as="h2" size="h2" delay={0.05}>Why Stay at Orchha Resort</AnimatedHeading>
+            <AnimatedParagraph variant="lead" className="mt-2" delay={0.15}>
+              Every facility is thoughtfully curated to immerse guests in tranquility, wellness, and authentic regional hospitality.
+            </AnimatedParagraph>
           </div>
+
+          <HomeFacilitiesInteractive />
         </Container>
       </Section>
 
@@ -95,18 +91,22 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 5. SIGNATURE AMENITIES (Why Stay With Us) */}
-      <Section surface="beige" spacing="default" id="amenities">
-        <Container>
-          <div className="max-w-2xl mb-12">
-            <SubtitleTag>Signature Facilities</SubtitleTag>
-            <AnimatedHeading as="h2" size="h2" delay={0.05}>Why Stay at Orchha Resort</AnimatedHeading>
-            <AnimatedParagraph variant="lead" className="mt-2" delay={0.15}>
-              Every facility is thoughtfully curated to immerse guests in tranquility, wellness, and authentic regional hospitality.
-            </AnimatedParagraph>
+      {/* 5. RESORT PHILOSOPHY & WORD-BY-WORD SCROLL REVEAL */}
+      <Section surface="canvas" spacing="default" id="about">
+        <Container size="narrow">
+          <div className="text-center space-y-4 mb-8">
+            <SubtitleTag>Our Philosophy</SubtitleTag>
+            <FadeIn>
+              <TextReveal
+                text="We believe a great stay is quiet, considered, and completely yours. Every room, every detail, and every interaction is arranged so arriving feels like exhaling."
+                className="text-center justify-center max-w-3xl mx-auto"
+              />
+            </FadeIn>
+            <Text variant="muted" className="max-w-xl mx-auto pt-4">
+              Established on the sacred riverbanks of Bundelkhand across from the 14 royal cenotaphs,
+              The Orchha Resort combines royal architectural harmony with 5-star comforts in a certified zero-pollution sanctuary.
+            </Text>
           </div>
-
-          <HomeFacilitiesInteractive />
         </Container>
       </Section>
 
