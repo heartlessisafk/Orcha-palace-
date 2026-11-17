@@ -127,6 +127,11 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
     ],
     gallery: [
       {
+        src: "/images/resort/curated/rooms/room-deluxe-marble-bed-interior.jpg",
+        alt: "Deluxe Marble Bed Garden Facing bedroom with handcrafted carved marble bed and canopy",
+        caption: "Handcrafted white marble bed with royal canopy drape and Pietra Dura inlaid marble table",
+      },
+      {
         src: "/images/resort/curated/rooms/room-deluxe-king-pool-view.jpg",
         alt: "Deluxe Marble Bed Garden Facing bedroom overlooking the lush resort grounds",
         caption: "King bedroom with direct picture window perspective of the lotus pool",
