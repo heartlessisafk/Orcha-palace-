@@ -485,11 +485,11 @@ export function RoomDetailView({ room }: RoomDetailViewProps) {
               More sanctuaries across the resort
             </h2>
             <p className="font-sans text-sm text-brand-olive max-w-xl mx-auto">
-              From poolside heritage suites to authentic glamping tents under the starlit sky of Orchha.
+              Refined Bundelkhandi comfort, handcrafted marble details, and serene garden views beside the Betwa River.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-lg mx-auto">
             {otherRooms.map((other) => (
               <RoomCardPrimitive key={other.id} room={other} />
             ))}

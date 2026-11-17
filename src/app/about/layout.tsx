@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Architect Yogesh Chandra",
     "Lotus Swimming Pool Orchha",
     "14 Royal Chhatris View",
-    "Swiss Tents Orchha",
+    "Deluxe Accommodations Orchha",
     "Bundelkhand Heritage Resort",
     "Orchha Luxury Stays",
     "Ram Raja Temple Orchha",

@@ -70,8 +70,6 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             {VERIFIED_ROOMS.map((room, idx) => {
-              // Apply TiltCard 3D depth to the Super Deluxe Pool Facing for subtle tactile elegance
-              const isSuite = room.category === "suite";
               const CardContent = (
                 <RoomCardPrimitive
                   room={room}
@@ -88,11 +86,7 @@ export default function HomePage() {
 
               return (
                 <FadeIn key={room.id} delay={idx * 0.1}>
-                  {isSuite ? (
-                    <TiltCard maxTilt={2.0}>{CardContent}</TiltCard>
-                  ) : (
-                    CardContent
-                  )}
+                  <TiltCard maxTilt={1.8}>{CardContent}</TiltCard>
                 </FadeIn>
               );
             })}
@@ -205,12 +199,12 @@ export default function HomePage() {
                 Direct Views of the 14 Royal Cenotaphs
               </Heading>
               <Text variant="on-dark">
-                Set just 500 meters along the peaceful riverbanks, Orchha Resort provides unobstructed views of the grand 17th-century multi-storied memorials of the Bundela rulers. Experience golden-hour sunsets from our manicured lawns or your Swiss tent verandah.
+                Set just 500 meters along the peaceful riverbanks, Orchha Resort provides unobstructed views of the grand 17th-century multi-storied memorials of the Bundela rulers. Experience golden-hour sunsets from our manicured lawns and private balconies.
               </Text>
               <div className="pt-2">
-                <Link href="/#rooms">
+                <Link href="/rooms">
                   <Button variant="gold" size="pill" withArrow>
-                    Explore Riverside Tents
+                    Explore Accommodations
                   </Button>
                 </Link>
               </div>

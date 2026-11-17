@@ -143,20 +143,6 @@ export const ABOUT_HERITAGE_ASSETS: Record<string, HeritageAsset> = {
     section: "Section D: Architecture & Spaces",
   },
 
-  // 6. Deluxe Swiss Tents
-  swissTents: {
-    id: "swiss-tents",
-    category: "resort",
-    title: "Deluxe Air-Conditioned Swiss Tents",
-    description: "One of the 11 luxury AC Swiss tents nestled privately in the resort gardens",
-    src: "/images/resort/genuine/g6.jpg",
-    originalUrl: "https://www.orchharesort.com/system/images/g6.jpg",
-    width: 525,
-    height: 350,
-    alt: "Exterior view of luxury AC Swiss Tent in the gardens of The Orchha Resort",
-    isGenuineResort: true,
-    section: "Section D: Swiss Tents & Spaces",
-  },
 
   // 7. Deluxe Guest Room Interior
   deluxeRoom: {

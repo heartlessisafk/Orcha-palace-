@@ -91,7 +91,7 @@ export function WeddingExperiences() {
       tag: "Guest Sanctuary",
       title: "Exclusive Accommodations for 50 Rooms",
       description:
-        "Host your entire wedding party together in privacy. With Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing accommodations, all your loved ones stay on-site, sharing breakfast by the pool and late-night laughter.",
+        "Host your entire wedding party together in privacy. With Standard and Deluxe accommodations, all your loved ones stay on-site, sharing breakfast by the pool and late-night laughter.",
       image: WEDDING_ASSETS.guestSwissTents.src,
       alt: WEDDING_ASSETS.guestSwissTents.alt,
       highlights: [

@@ -12,10 +12,8 @@ export const SITE_CONFIG = {
   propertyFacts: {
     totalRooms: 50,
     categories: [
-      "Standard Room Garden Facing",
-      "Deluxe Room Garden Facing",
-      "Deluxe Marble Bed Garden Facing",
-      "Super Deluxe Pool Facing",
+      "Standard",
+      "Deluxe",
     ],
     architect: "Yogesh Chandra (New Delhi)",
     signatureFeatures: [

@@ -111,10 +111,10 @@ export const WEDDING_ASSETS: Record<string, WeddingAsset> = {
     spaceType: "lawn",
   },
 
-  // 8. Deluxe Swiss Tents for Wedding Guests
+  // 8. Deluxe Accommodations for Wedding Guests
   guestSwissTents: {
     id: "guest-swiss-tents",
-    title: "Deluxe Room Garden Facing Accommodations for Guests",
+    title: "Deluxe Accommodations for Wedding Guests",
     description: "Safari-style air-conditioned garden tents providing romantic and exclusive private stays for wedding VIPs and bridal entourages",
     src: "/images/resort/genuine/g6.jpg",
     width: 525,

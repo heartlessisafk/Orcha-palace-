@@ -13,14 +13,14 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Photo Gallery | The Orchha Resort — Betwa River Sanctuary",
   description:
-    "Explore authentic high-resolution photography of The Orchha Resort. Featuring our lotus-shaped swimming pool, deluxe rooms, luxury Swiss tents, Kaleva restaurant, Kairali Ayurvedic spa, and riverside celebrations overlooking the 14 Royal Chhatris.",
+    "Explore authentic high-resolution photography of The Orchha Resort. Featuring our lotus-shaped swimming pool, standard and deluxe rooms, Kaleva restaurant, Kairali Ayurvedic spa, and riverside celebrations overlooking the 14 Royal Chhatris.",
   alternates: {
     canonical: "https://www.orchharesort.com/gallery",
   },
   openGraph: {
     title: "Photo Gallery | The Orchha Resort — Betwa River Sanctuary",
     description:
-      "Explore authentic high-resolution photography of The Orchha Resort. Featuring our lotus-shaped swimming pool, deluxe rooms, luxury Swiss tents, and riverfront heritage.",
+      "Explore authentic high-resolution photography of The Orchha Resort. Featuring our lotus-shaped swimming pool, standard and deluxe accommodations, and riverfront heritage.",
     url: "https://www.orchharesort.com/gallery",
     images: ["/images/resort/curated/pool/pool-lotus-twilight-glow.jpg"],
   },
@@ -79,7 +79,7 @@ export default function GalleryPage() {
 
               <AnimatedParagraph variant="lead" className="text-white/85 max-w-2xl" delay={0.25}>
                 Step inside our riverside sanctuary. Discover the sacred blooming geometry of our lotus pool, 
-                hand-carved Bundelkhand stone architecture, luxury Swiss tents under starry skies, and royal 
+                hand-carved Bundelkhand stone architecture, manicured riverside lawns under starry skies, and royal 
                 banquets overlooking the ancient 14 Chhatris.
               </AnimatedParagraph>
 

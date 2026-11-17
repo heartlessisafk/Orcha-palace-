@@ -1,4 +1,4 @@
-export type RoomCategory = "standard" | "deluxe" | "swiss-tent" | "suite";
+export type RoomCategory = "standard" | "deluxe";
 
 export interface RoomAmenity {
   name: string;

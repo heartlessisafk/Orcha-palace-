@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "Best resort in Orchha",
     "Betwa River Resort Orchha",
     "Hotels in Orchha Madhya Pradesh",
-    "Swiss Tents Orchha",
+    "Deluxe Rooms Orchha",
     "Ayurveda Spa Orchha",
     "Destination Wedding Orchha",
     "Hotels near Orchha Chhatris",

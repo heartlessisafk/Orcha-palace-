@@ -26,14 +26,14 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accommodations & Luxury Rooms | The Orchha Resort",
   description:
-    "Explore 50 thoughtfully designed accommodations: Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing on the banks of River Betwa in Orchha.",
+    "Explore 50 thoughtfully designed accommodations: Standard and Deluxe rooms on the banks of River Betwa in Orchha.",
   alternates: {
     canonical: "https://www.orchharesort.com/rooms",
   },
   openGraph: {
     title: "Luxury Accommodations & Rooms | The Orchha Resort",
     description:
-      "Serene heritage retreats across from the 14 Royal Cenotaphs in Orchha. Featuring Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing.",
+      "Serene heritage retreats across from the 14 Royal Cenotaphs in Orchha. Featuring Standard and Deluxe accommodations.",
     url: "https://www.orchharesort.com/rooms",
     images: ["/images/resort/curated/rooms/room-standard-twin-garden.jpg"],
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Accommodations & Luxury Rooms | The Orchha Resort",
     description:
-      "Explore 50 thoughtfully designed accommodations: Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing on the banks of River Betwa in Orchha.",
+      "Explore 50 thoughtfully designed accommodations: Standard and Deluxe rooms on the banks of River Betwa in Orchha.",
     images: ["/images/resort/curated/rooms/room-standard-twin-garden.jpg"],
   },
 };
