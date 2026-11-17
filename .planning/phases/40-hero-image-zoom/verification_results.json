@@ -49,18 +49,18 @@
       "zoomProgress": [
         {
           "scrollY": 250,
-          "transform": "matrix(1.07972, 0, 0, 1.07972, 0, 0)",
-          "scale": 1.08
+          "transform": "matrix(1.08138, 0, 0, 1.08138, 0, 0)",
+          "scale": 1.081
         },
         {
           "scrollY": 500,
-          "transform": "matrix(1.15944, 0, 0, 1.15944, 0, 0)",
-          "scale": 1.159
+          "transform": "matrix(1.16276, 0, 0, 1.16276, 0, 0)",
+          "scale": 1.163
         },
         {
           "scrollY": 750,
-          "transform": "matrix(1.23916, 0, 0, 1.23916, 0, 0)",
-          "scale": 1.239
+          "transform": "matrix(1.24414, 0, 0, 1.24414, 0, 0)",
+          "scale": 1.244
         }
       ]
     },

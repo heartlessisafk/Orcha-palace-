@@ -70,7 +70,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
               priority
               sizes="100vw"
               quality={95}
-              className="object-cover object-center"
+              className="object-cover object-[center_40%]"
               style={{
                 backfaceVisibility: "hidden",
                 WebkitBackfaceVisibility: "hidden",
