@@ -56,9 +56,14 @@ export const VERIFIED_ROOMS: RoomDetails[] = [
     ],
     gallery: [
       {
+        src: "/images/resort/curated/rooms/room-standard-twin-garden.jpg",
+        alt: "Standard Room Garden Facing with twin beds, handcrafted wooden headboard, and marble floor inlay",
+        caption: "Comfortable twin bedroom with polished Indian white marble and handcrafted furnishings",
+      },
+      {
         src: "/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg",
         alt: "Standard Room Garden Facing bedroom interior with king bed and marble floor",
-        caption: "King bedroom suite featuring polished Pietra Dura marble floor inlay",
+        caption: "Bedroom suite featuring polished Pietra Dura marble floor inlay",
       },
       {
         src: "/images/resort/curated/rooms/room-deluxe-media-station.jpg",

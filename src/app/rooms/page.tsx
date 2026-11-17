@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     description:
       "Serene heritage retreats across from the 14 Royal Cenotaphs in Orchha. Featuring Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing.",
     url: "https://www.orchharesort.com/rooms",
-    images: ["/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg"],
+    images: ["/images/resort/curated/rooms/room-standard-twin-garden.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Accommodations & Luxury Rooms | The Orchha Resort",
     description:
       "Explore 50 thoughtfully designed accommodations: Standard Room Garden Facing, Deluxe Room Garden Facing, Deluxe Marble Bed Garden Facing, and Super Deluxe Pool Facing on the banks of River Betwa in Orchha.",
-    images: ["/images/resort/curated/rooms/room-deluxe-interior-panoramic.jpg"],
+    images: ["/images/resort/curated/rooms/room-standard-twin-garden.jpg"],
   },
 };
 
