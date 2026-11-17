@@ -1,16 +1,48 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { WEDDING_ASSETS } from "@/lib/wedding-assets";
-import { Button } from "@/components/ui/Button";
-import { ArrowDown, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { LUXURY_EASE } from "@/lib/motion";
 
 export function WeddingHero() {
+  const sectionRef = useRef<HTMLElement>(null);
   const shouldReduceMotion = useReducedMotion();
   const heroAsset = WEDDING_ASSETS.royalCoupleMandap;
+
+  // Track scroll progress through the hero section (0 to 1)
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Cinematic scroll-driven zoom (starts wide, pushes smoothly into the couple)
+  const imageScale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    shouldReduceMotion ? [1, 1] : [1.0, 1.18]
+  );
+
+  // Subtle upward crane/dolly movement keeping the couple as the primary focal point
+  const imageY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    shouldReduceMotion ? [0, 0] : [0, -32]
+  );
+
+  // Text content dissolves softly as visitor scrolls into the hero
+  const contentOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.48],
+    [1, 0]
+  );
+  const contentY = useTransform(
+    scrollYProgress,
+    [0, 0.48],
+    shouldReduceMotion ? [0, 0] : [0, -36]
+  );
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -20,119 +52,103 @@ export function WeddingHero() {
   };
 
   return (
-    <section className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-between overflow-hidden bg-brand-navy pt-20 sm:pt-24 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8">
-      {/* 1. Cinematic Background Image with Tailored Gradients */}
-      <div className="absolute inset-0 z-0">
+    <section
+      ref={sectionRef}
+      className="relative h-screen min-h-[680px] overflow-hidden bg-[#080D15] text-white"
+    >
+      {/* ─────────────────────────────────────────────────────────────────
+          1. CINEMATIC BACKGROUND PHOTOGRAPH WITH SCROLL-DRIVEN ZOOM
+          Starts in a wide, expansive composition and slowly pushes in
+          towards the royal couple as the visitor scrolls.
+          ───────────────────────────────────────────────────────────────── */}
+      <motion.div
+        style={{
+          scale: imageScale,
+          y: imageY,
+          transformOrigin: "center 45%",
+        }}
+        className="absolute inset-0 w-full h-full transform-gpu will-change-transform"
+      >
         <Image
           src={heroAsset.src}
           alt={heroAsset.alt}
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_35%] scale-[1.01] transition-transform duration-1000 ease-out"
+          className="object-cover object-[center_42%]"
         />
-        {/* Soft top gradient for crisp text legibility over floral canopy */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/35 to-transparent via-[26%] to-[50%]" />
-        {/* Rich bottom gradient for smooth transition into next section and clear dock contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent from-[0%] via-[20%] to-[42%]" />
-      </div>
 
-      {/* 2. Top-Anchored Compact Typography (Keeps Couple and Canopy Unobstructed) */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center space-y-2.5 sm:space-y-3.5 pt-2 sm:pt-3">
-        {/* Delicate Eyebrow Badge */}
+        {/* Ethereal top vignette: ensures effortless text legibility while letting chandelier glow through */}
+        <div className="absolute inset-x-0 top-0 h-[48%] bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none" />
+
+        {/* Subtle radial focus vignette: softly guides attention toward the central couple */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_48%,transparent_45%,rgba(8,13,21,0.38)_100%)] pointer-events-none" />
+
+        {/* Ground shadow vignette: grounds the CTAs and blends softly into the next section */}
+        <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[#080D15]/90 via-[#080D15]/30 to-transparent pointer-events-none" />
+      </motion.div>
+
+      {/* ─────────────────────────────────────────────────────────────────
+          2. EDITORIAL TYPOGRAPHY & REFINED LUXURY CTAS
+          Framed cleanly with ample negative space to let the photograph dominate.
+          ───────────────────────────────────────────────────────────────── */}
+      <motion.div
+        style={{
+          opacity: contentOpacity,
+          y: contentY,
+        }}
+        className="relative z-10 flex flex-col justify-between h-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-8 sm:pb-10 text-center transform-gpu"
+      >
+        {/* Editorial Heading & Evocative Description */}
+        <div className="space-y-3 sm:space-y-4 max-w-4xl mx-auto">
+          <motion.h1
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: LUXURY_EASE }}
+            className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-[#FAF6F0] leading-[1.12] tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]"
+          >
+            Where Royal Heritage Becomes{" "}
+            <span className="italic font-serif text-[#E6CA85] whitespace-nowrap">
+              Your Forever
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: LUXURY_EASE }}
+            className="font-sans text-xs sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto font-light leading-relaxed tracking-wide drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] text-balance"
+          >
+            Exchange eternal vows amidst illuminated riverside banquet lawns, fragrant floral canopies,
+            and the timeless grace of 16th-century Bundelkhand majesty.
+          </motion.p>
+        </div>
+
+        {/* Center Breathing Room: Completely unobstructed view of the couple, chandeliers & floral arch */}
+        <div className="flex-1 min-h-[140px] sm:min-h-[220px]" />
+
+        {/* Refined Action CTAs (Understated Luxury Styling, High Contrast) */}
         <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: LUXURY_EASE }}
-          className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-navy/75 backdrop-blur-md border border-brand-gold/40 text-brand-gold text-[11px] sm:text-xs font-sans font-medium tracking-widest uppercase shadow-subtle"
-        >
-          <Sparkles className="w-3.5 h-3.5 text-brand-gold flex-shrink-0" />
-          <span>Royal Wedding Celebrations</span>
-          <span className="w-1 h-1 rounded-full bg-brand-gold/60" />
-          <span>The Orchha Resort</span>
-        </motion.div>
-
-        {/* Hero Title */}
-        <motion.h1
           initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: LUXURY_EASE }}
-          className="font-serif text-2xl sm:text-4xl md:text-5xl font-normal text-white leading-[1.15] tracking-tight drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] max-w-3xl mx-auto"
+          transition={{ duration: 0.8, delay: 0.28, ease: LUXURY_EASE }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-md sm:max-w-none mx-auto w-full"
         >
-          Where Royal Heritage Becomes{" "}
-          <span className="font-serif italic text-brand-gold font-normal">
-            Your Forever
-          </span>
-        </motion.h1>
-
-        {/* Concise Poetic Subtitle */}
-        <motion.p
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2, ease: LUXURY_EASE }}
-          className="font-sans text-xs sm:text-sm md:text-base text-brand-beige/95 max-w-xl mx-auto font-light leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)] text-pretty"
-        >
-          Exchange eternal vows amidst illuminated riverside banquet lawns, fragrant floral canopies,
-          and the timeless grace of 16th-century Bundelkhand majesty.
-        </motion.p>
-      </div>
-
-      {/* 3. Center Breathing Space (Unobstructed View of Couple & Floral Walk) */}
-      <div className="flex-1 min-h-[160px] sm:min-h-[260px]" />
-
-      {/* 4. Bottom Dock: Refined CTAs & Translucent Highlights Strip */}
-      <motion.div
-        initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.35, ease: LUXURY_EASE }}
-        className="relative z-10 w-full max-w-5xl mx-auto space-y-3.5"
-      >
-        {/* Action CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <Button
-            variant="gold"
-            size="pill"
+          <button
             onClick={() => scrollToSection("wedding-enquiry")}
-            className="w-full sm:w-auto px-7 py-3 shadow-floating font-medium text-xs sm:text-sm"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-[#C5A059] hover:bg-[#D4AF37] text-[#0A1018] font-sans text-xs sm:text-sm font-semibold tracking-wider uppercase rounded-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:shadow-[0_6px_28px_rgba(197,160,89,0.4)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059]"
           >
             <span>Enquire About Your Wedding</span>
-            <ArrowDown className="w-3.5 h-3.5 ml-2" />
-          </Button>
+            <ArrowDown className="w-3.5 h-3.5 ml-2.5 transition-transform duration-300 group-hover:translate-y-0.5" />
+          </button>
 
-          <Button
-            variant="navy-outline"
-            size="pill"
+          <button
             onClick={() => scrollToSection("wedding-venues")}
-            className="w-full sm:w-auto px-7 py-3 backdrop-blur-md text-xs sm:text-sm"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-black/30 hover:bg-black/50 border border-white/35 hover:border-[#C5A059] text-white hover:text-[#F4DFC0] font-sans text-xs sm:text-sm font-medium tracking-wider uppercase rounded-md backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059]"
           >
             <span>Explore Wedding Spaces</span>
-          </Button>
-        </div>
-
-        {/* Translucent Venue Highlights Strip */}
-        <div className="bg-brand-navy/80 backdrop-blur-md border border-white/12 rounded-xl sm:rounded-full py-2.5 px-4 sm:px-6 shadow-card flex flex-col sm:flex-row items-center justify-between gap-2.5 text-center sm:text-left">
-          {/* Authentic Property Photography Badge */}
-          <div className="flex items-center gap-2 text-[11px] font-sans text-brand-gold/90 tracking-wide uppercase">
-            <ShieldCheck className="w-3.5 h-3.5 text-brand-gold flex-shrink-0" />
-            <span className="text-white/90 font-medium">Authentic Orchha Resort Wedding Photography</span>
-          </div>
-
-          {/* Key Venue Highlights Ribbon */}
-          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-1 text-xs text-white/80 font-sans">
-            <span className="inline-flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-              <span>Grand Riverfront Lawns</span>
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-              <span>1,500 sq ft Ballroom</span>
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-              <span>50 Heritage Rooms</span>
-            </span>
-          </div>
-        </div>
+          </button>
+        </motion.div>
       </motion.div>
     </section>
   );
