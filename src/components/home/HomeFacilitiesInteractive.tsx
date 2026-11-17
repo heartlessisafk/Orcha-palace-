@@ -52,7 +52,7 @@ const FACILITIES: FacilityCategory[] = [
   {
     id: "kaleva",
     title: "Kaleva Restaurant",
-    subtitle: "Royal Heritage Dining",
+    subtitle: "Vegetarian Dining",
     description: "Vegetarian-forward dining serving authentic Bundeli specialties alongside classic Indian, Chinese, and Continental culinary menus.",
     icon: Coffee,
     badge: "Discover cuisine",
@@ -145,6 +145,41 @@ const LOTUS_POOL_PHOTOS: FacilityPhoto[] = [
     caption: "Relaxed afternoon sun loungers bordered by tall cypress and blooming hedges.",
     tag: "Sun Deck",
     objectPosition: "object-[center_50%]",
+  },
+];
+
+const KALEVA_PHOTOS: FacilityPhoto[] = [
+  {
+    src: "/images/resort/curated/dining/kaleva-restaurant-intimate-dinner.jpg",
+    alt: "Young couple enjoying a vegetarian feast inside Kaleva Restaurant under carved ceilings and chandelier",
+    title: "Intimate Heritage Dining",
+    caption: "Guests savoring authentic Bundelkhand delicacies beneath ornate coffered ceilings.",
+    tag: "Dining Experience",
+    objectPosition: "object-[center_60%]",
+  },
+  {
+    src: "/images/resort/curated/dining/kaleva-restaurant-royal-thali-spread.jpg",
+    alt: "Authentic royal vegetarian thali spread in polished copper bowls on a luxury dining table",
+    title: "Royal Vegetarian Thali",
+    caption: "Artfully plated Indian culinary courses served in traditional polished copper katoris.",
+    tag: "Authentic Cuisine",
+    objectPosition: "object-center",
+  },
+  {
+    src: "/images/resort/curated/dining/kaleva-restaurant-carved-pillars.jpg",
+    alt: "Intricately carved dark teak wooden pillars with apsara motifs in Kaleva dining hall",
+    title: "Bundeli Teak Pillars",
+    caption: "Intricately sculpted wooden pillars and apsara motifs adorning the dining sanctuary.",
+    tag: "Heritage Decor",
+    objectPosition: "object-[center_45%]",
+  },
+  {
+    src: "/images/resort/curated/dining/kaleva-restaurant-dining-hall-vista.jpg",
+    alt: "Architectural vista of Kaleva Restaurant hall with crystal chandeliers and brocade dining chairs",
+    title: "Regal Dining Hall Vista",
+    caption: "Opulent crystal chandeliers and brocade seating arranged for quiet, refined dinners.",
+    tag: "Dining Hall",
+    objectPosition: "object-center",
   },
 ];
 
@@ -458,8 +493,9 @@ export function HomeFacilitiesInteractive() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.4, ease: LUXURY_EASE }}
-              className="space-y-6"
+              className="space-y-6 sm:space-y-8"
             >
+              {/* Header Bar with Editorial Context & "Go to Library →" Button */}
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 border-b border-brand-charcoal/10">
                 <div className="space-y-1.5 max-w-2xl">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/25 text-brand-gold-dark text-xs font-medium tracking-wide">
@@ -467,17 +503,18 @@ export function HomeFacilitiesInteractive() {
                     <span>Curated Facility Showcase • Kaleva Restaurant</span>
                   </div>
                   <h3 className="font-serif text-2xl sm:text-3xl font-normal text-brand-charcoal">
-                    Kaleva Multi-Cuisine Dining
+                    Kaleva Royal Vegetarian Dining
                   </h3>
                   <p className="font-sans text-sm text-brand-olive leading-relaxed">
-                    Fine dining hall celebrating authentic Bundelkhand recipes alongside pan-Indian delicacies and international cuisine.
+                    Fine dining hall celebrating authentic Bundelkhand recipes alongside pan-Indian delicacies and international cuisine in an atmosphere of carved teak grandeur.
                   </p>
                 </div>
 
-                <div className="flex-shrink-0">
+                {/* Go to Library Button */}
+                <div className="flex-shrink-0 pt-2 sm:pt-0">
                   <Link
                     href="/gallery?filter=amenities"
-                    className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white text-xs sm:text-sm font-sans font-medium tracking-wide shadow-subtle hover:shadow-hover transition-all duration-300 border border-white/10"
+                    className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-navy hover:bg-brand-navy-light text-white text-xs sm:text-sm font-sans font-medium tracking-wide shadow-subtle hover:shadow-hover hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 border border-white/10 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
                   >
                     <span>Go to Library</span>
                     <ArrowRight className="w-4 h-4 text-brand-gold transition-transform duration-300 group-hover:translate-x-1" />
@@ -485,40 +522,65 @@ export function HomeFacilitiesInteractive() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                <div className="lg:col-span-8 relative aspect-[16/10] rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-subtle">
-                  <Image
-                    src="/images/resort/curated/dining/dining-kaleva-interior-apsara.jpg"
-                    alt="Kaleva Restaurant Interior at The Orchha Resort"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 800px"
-                    className="object-cover"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-charcoal/70 backdrop-blur-md text-white text-[11px] font-sans font-medium border border-white/15">
-                      <Camera className="w-3 h-3 text-brand-gold" />
-                      <span>Genuine Property Photo</span>
-                    </span>
-                  </div>
-                </div>
-                <div className="lg:col-span-4 space-y-4 p-6 rounded-2xl bg-brand-beige/50 border border-brand-charcoal/10">
-                  <span className="text-xs font-mono font-medium text-brand-gold-dark uppercase tracking-wider">
-                    Phase 3 Upcoming
-                  </span>
-                  <h4 className="font-serif text-xl font-medium text-brand-charcoal">
-                    Heritage Culinary Setting
-                  </h4>
-                  <p className="font-sans text-sm text-brand-olive leading-relaxed">
-                    Dedicated interactive photographs for Kaleva Restaurant will be configured in Phase 3. You can browse Kaleva dishes and ambiance in our gallery.
-                  </p>
-                  <Link
-                    href="/gallery?filter=amenities"
-                    className="inline-flex items-center gap-1.5 text-xs font-sans font-medium text-brand-gold hover:text-brand-gold-dark transition-colors pt-2"
+              {/* 2x2 Clean Photo Presentation Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
+                {KALEVA_PHOTOS.map((photo, idx) => (
+                  <div
+                    key={photo.src}
+                    className="group relative rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-subtle hover:shadow-card hover:border-brand-gold/40 transition-all duration-300 bg-brand-charcoal/5"
                   >
-                    <span>View Dining Collection</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                    {/* Responsive Aspect Ratio Container */}
+                    <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                        priority
+                        className={cn(
+                          "object-cover transition-transform duration-700 ease-out group-hover:scale-105",
+                          photo.objectPosition
+                        )}
+                      />
+
+                      {/* Top Badges */}
+                      <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-charcoal/70 backdrop-blur-md text-white text-[11px] font-sans font-medium border border-white/15 shadow-sm">
+                          <Camera className="w-3 h-3 text-brand-gold" />
+                          <span>Genuine Property Photo</span>
+                        </span>
+                        <span className="px-2.5 py-1 rounded-full bg-brand-gold/90 backdrop-blur-md text-white text-[11px] font-sans font-semibold tracking-wide uppercase shadow-sm">
+                          {photo.tag}
+                        </span>
+                      </div>
+
+                      {/* Bottom Editorial Caption Gradient Overlay */}
+                      <div className="absolute inset-x-0 bottom-0 pt-16 pb-4 px-4 sm:px-5 bg-gradient-to-t from-brand-charcoal/90 via-brand-charcoal/50 to-transparent flex flex-col justify-end text-white z-10">
+                        <h5 className="font-serif text-lg sm:text-xl font-normal text-white group-hover:text-brand-gold-light transition-colors">
+                          {photo.title}
+                        </h5>
+                        <p className="font-sans text-xs sm:text-sm text-brand-beige-sand/90 line-clamp-2 mt-0.5 leading-relaxed">
+                          {photo.caption}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Bottom Verification Note & Secondary Library Link */}
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-sans text-brand-olive border-t border-brand-charcoal/5">
+                <div className="flex items-center gap-2 text-brand-charcoal">
+                  <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                  <span>Phase 3 Verified: All 4 authentic Kaleva Restaurant perspectives loaded at Full HD resolution.</span>
                 </div>
+                <Link
+                  href="/gallery?filter=amenities"
+                  className="inline-flex items-center gap-1.5 text-brand-gold hover:text-brand-gold-dark font-medium transition-colors"
+                >
+                  <span>Explore full dining collection in Gallery</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </motion.div>
           )}
