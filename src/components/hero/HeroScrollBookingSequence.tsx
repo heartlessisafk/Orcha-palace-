@@ -58,6 +58,8 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
               scale,
               transformOrigin: "center 42%",
               willChange: "transform",
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
             }}
             className="relative w-full h-full transform-gpu"
           >
@@ -67,8 +69,12 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
               fill
               priority
               sizes="100vw"
-              quality={90}
+              quality={95}
               className="object-cover object-center"
+              style={{
+                backfaceVisibility: "hidden",
+                WebkitBackfaceVisibility: "hidden",
+              }}
             />
 
             {/* Dynamic Darkening Vignette Layer - Balanced contrast for typography while preserving river and sunset colors */}

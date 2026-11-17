@@ -3,7 +3,7 @@
     "desktop_1440": {
       "initial": {
         "heroFound": true,
-        "imageSrc": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fhero%2Fhero-aerial-chhatris-river.jpg&w=1920&q=90",
+        "imageSrc": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fhero%2Fhero-aerial-chhatris-river.jpg&w=3840&q=95",
         "usesNewHeroImage": true,
         "hasVideo": false,
         "hasPoolImageInHero": false,
@@ -35,7 +35,7 @@
     "ipad_1024": {
       "initial": {
         "heroFound": true,
-        "imageSrc": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fhero%2Fhero-aerial-chhatris-river.jpg&w=1920&q=90",
+        "imageSrc": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fhero%2Fhero-aerial-chhatris-river.jpg&w=3840&q=95",
         "usesNewHeroImage": true,
         "hasVideo": false,
         "hasPoolImageInHero": false,
@@ -67,7 +67,7 @@
     "tablet_768": {
       "initial": {
         "heroFound": true,
-        "imageSrc": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fhero%2Fhero-aerial-chhatris-river.jpg&w=1920&q=90",
+        "imageSrc": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fhero%2Fhero-aerial-chhatris-river.jpg&w=3840&q=95",
         "usesNewHeroImage": true,
         "hasVideo": false,
         "hasPoolImageInHero": false,
@@ -99,7 +99,7 @@
     "mobile_390": {
       "initial": {
         "heroFound": true,
-        "imageSrc": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fhero%2Fhero-aerial-chhatris-river.jpg&w=1920&q=90",
+        "imageSrc": "http://localhost:3000/_next/image?url=%2Fimages%2Fresort%2Fhero%2Fhero-aerial-chhatris-river.jpg&w=3840&q=95",
         "usesNewHeroImage": true,
         "hasVideo": false,
         "hasPoolImageInHero": false,
