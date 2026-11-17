@@ -23,6 +23,7 @@ export function AboutArchitectureSpaces() {
         "Situated directly along the peaceful riverbanks, Betwa View Dining offers an unforgettable open-air culinary experience overlooking the calm waters of the Betwa. Guests can savor freshly prepared Bundelkhandi specialties and royal dining menus surrounded by river breezes, natural greenery, and the quiet rhythm of Orchha's sacred waters.",
       image: ABOUT_HERITAGE_ASSETS.betwaViewDining.src,
       alt: ABOUT_HERITAGE_ASSETS.betwaViewDining.alt,
+      objectPosition: "object-[center_40%]",
       features: [
         "Al fresco riverside tables with panoramic Betwa waterscape",
         "Sunset high tea, bespoke evening dinners, and chef specialties",
@@ -160,7 +161,10 @@ export function AboutArchitectureSpaces() {
                     alt={currentSpace.alt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 55vw"
-                    className="object-cover transition-all duration-700 ease-out"
+                    className={cn(
+                      "object-cover transition-all duration-700 ease-out",
+                      (currentSpace as { objectPosition?: string }).objectPosition || "object-center"
+                    )}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
