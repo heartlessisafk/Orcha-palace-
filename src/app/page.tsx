@@ -269,15 +269,15 @@ export default function HomePage() {
             <FadeIn delay={0.1}>
               <Link href="/gallery" className="group block relative aspect-square rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-sm hover:shadow-xl transition-all">
                 <Image
-                  src="/images/resort/curated/rooms/room-deluxe-king-pool-view.jpg"
-                  alt="Deluxe Room with Lotus Pool View"
+                  src="/images/resort/curated/aerial/gallery-aerial-betwa-chhatris.jpg"
+                  alt="Aerial View of 14 Royal Cenotaphs & Betwa Waters"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
-                  <span className="text-[10px] font-mono text-brand-gold uppercase">Accommodations</span>
-                  <h4 className="font-serif text-sm text-white font-medium">Deluxe Room Pool View</h4>
+                  <span className="text-[10px] font-mono text-brand-gold uppercase">Heritage Horizons</span>
+                  <h4 className="font-serif text-sm text-white font-medium">Aerial Kanchan Ghat & Betwa</h4>
                 </div>
               </Link>
             </FadeIn>
@@ -285,15 +285,15 @@ export default function HomePage() {
             <FadeIn delay={0.15}>
               <Link href="/gallery" className="group block relative aspect-square rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-sm hover:shadow-xl transition-all">
                 <Image
-                  src="/images/resort/curated/dining/dining-riverfront-alfresco.jpg"
-                  alt="Al Fresco Riverfront Dining"
+                  src="/images/resort/curated/heritage/gallery-riverfront-promenade-dusk.jpg"
+                  alt="Riverfront Terrace Promenade with Evening Lanterns"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
-                  <span className="text-[10px] font-mono text-brand-gold uppercase">Riverfront Dining</span>
-                  <h4 className="font-serif text-sm text-white font-medium">Betwa Riverside Kebabs</h4>
+                  <span className="text-[10px] font-mono text-brand-gold uppercase">Riverfront Walkways</span>
+                  <h4 className="font-serif text-sm text-white font-medium">Betwa Riverside Promenade</h4>
                 </div>
               </Link>
             </FadeIn>
@@ -301,15 +301,15 @@ export default function HomePage() {
             <FadeIn delay={0.2}>
               <Link href="/gallery" className="group block relative aspect-square rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-sm hover:shadow-xl transition-all">
                 <Image
-                  src="/images/resort/curated/weddings/wedding-lawn-canopy-mandap.jpg"
-                  alt="Royal Wedding Canopy Mandap"
+                  src="/images/resort/curated/gardens/gallery-riverside-lawn-lounge.jpg"
+                  alt="Manicured Riverside Lawn with Shaded Lounge Seating"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
-                  <span className="text-[10px] font-mono text-brand-gold uppercase">Royal Celebrations</span>
-                  <h4 className="font-serif text-sm text-white font-medium">Emerald & Ivory Mandap</h4>
+                  <span className="text-[10px] font-mono text-brand-gold uppercase">Resort Lawns</span>
+                  <h4 className="font-serif text-sm text-white font-medium">Al Fresco Riverside Lawn</h4>
                 </div>
               </Link>
             </FadeIn>
@@ -317,15 +317,15 @@ export default function HomePage() {
             <FadeIn delay={0.25}>
               <Link href="/gallery" className="group block relative aspect-square rounded-2xl overflow-hidden border border-brand-charcoal/10 shadow-sm hover:shadow-xl transition-all">
                 <Image
-                  src="/images/resort/curated/architecture/architecture-lobby-ganesha.jpg"
-                  alt="Sandstone Ganesha Lobby Mural"
+                  src="/images/resort/curated/heritage/gallery-chhatri-sunset-silhouette.jpg"
+                  alt="Silhouette of Royal Cenotaph Dome at Twilight Sunset"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover object-[center_60%] group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
-                  <span className="text-[10px] font-mono text-brand-gold uppercase">Architecture</span>
-                  <h4 className="font-serif text-sm text-white font-medium">Handcrafted Stone Ganesha</h4>
+                  <span className="text-[10px] font-mono text-brand-gold uppercase">Twilight Splendour</span>
+                  <h4 className="font-serif text-sm text-white font-medium">Cenotaph Sunset Silhouette</h4>
                 </div>
               </Link>
             </FadeIn>
