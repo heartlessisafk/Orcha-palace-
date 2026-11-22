@@ -142,7 +142,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
 
             {/* Compact Factual Description */}
             <p className="relative z-10 font-sans text-xs sm:text-[13px] text-white/90 leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.9)]">
-              50 secluded heritage rooms and suites facing the 14 historical Chhatris.
+              Secluded heritage rooms and suites facing the 14 historical Chhatris.
               Experience authentic Bundeli warmth, lotus pool serenity, and zero-pollution tranquility.
             </p>
 
