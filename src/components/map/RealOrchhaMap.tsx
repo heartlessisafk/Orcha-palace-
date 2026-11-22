@@ -25,6 +25,7 @@ import {
   Landmark,
   Waves,
   ExternalLink,
+  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import "leaflet/dist/leaflet.css";
@@ -97,6 +98,7 @@ export function RealOrchhaMap({
   );
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [isMapReady, setIsMapReady] = useState(false);
+  const [isPopupDismissed, setIsPopupDismissed] = useState(false);
 
   // Sync external selectedLandmarkId if provided
   useEffect(() => {
@@ -127,6 +129,7 @@ export function RealOrchhaMap({
       source: "click" | "scroll" = "click"
     ) => {
       setSelectedId(landmark.id);
+      setIsPopupDismissed(false);
       if (onSelectLandmark) {
         onSelectLandmark(landmark);
       }
@@ -500,24 +503,24 @@ export function RealOrchhaMap({
       {/* ─────────────────────────────────────────────────────────────────
           HEADER & CATEGORY FILTER BAR
           ───────────────────────────────────────────────────────────────── */}
-      <div className="p-4 sm:p-5 border-b border-brand-gold/15 bg-[#0B131E]/98 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="p-3.5 sm:p-5 border-b border-brand-gold/15 bg-[#0B131E]/98 flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <Compass className="w-4 h-4 text-brand-gold animate-spin-slow" />
+          <div className="hidden sm:flex items-center gap-2 mb-1">
+            <Compass className="w-3.5 h-3.5 text-brand-gold animate-spin-slow" />
             <span className="text-[10px] font-mono tracking-widest text-brand-gold uppercase">
               Cartographic Sanctuary Atlas · 25.348° N, 78.639° E
             </span>
           </div>
-          <h3 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight">
+          <h3 className="font-serif text-lg sm:text-2xl text-white font-medium tracking-tight">
             The Heritage Geography of Orchha
           </h3>
-          <p className="font-sans text-xs sm:text-sm text-white/70 max-w-xl">
-            Scroll through the landmark cards to navigate the living geography of the Bundela rulers and the sacred Betwa River.
+          <p className="font-sans text-xs sm:text-sm text-white/70 max-w-xl leading-relaxed">
+            Navigate the living geography of the Bundela rulers and the sacred Betwa River.
           </p>
         </div>
 
-        {/* Category Pills */}
-        <div className="flex items-center gap-1.5 flex-wrap">
+        {/* Category Pills (Single horizontally scrollable row on mobile, wrapped on desktop) */}
+        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar scrollbar-none whitespace-nowrap pb-1 pt-0.5 -mx-3.5 px-3.5 sm:mx-0 sm:px-0 lg:flex-wrap lg:overflow-visible">
           {MAP_CATEGORIES.map((cat) => {
             const isActive = activeCategory === cat.id;
             return (
@@ -525,7 +528,7 @@ export function RealOrchhaMap({
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
                 className={cn(
-                  "px-3 py-1.5 rounded-full text-xs font-sans tracking-wide transition-all duration-200 border tactile-3d hover:-translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold",
+                  "px-3 py-1.5 rounded-full text-xs font-sans tracking-wide transition-all duration-200 border tactile-3d shrink-0 hover:-translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold",
                   isActive
                     ? "bg-brand-gold text-brand-charcoal font-semibold border-brand-gold shadow-md hover:shadow-gold-ambient"
                     : "bg-white/5 text-white/75 border-white/10 hover:border-brand-gold/40 hover:text-white shadow-subtle"
@@ -540,20 +543,22 @@ export function RealOrchhaMap({
 
       {/* ─────────────────────────────────────────────────────────────────
           MAIN EXPLORER: SCROLL-SYNCHRONIZED LIST + INTERACTIVE ATLAS
+          Mobile-First: Dedicated Map on top (order-1), Compact Cards below (order-2)
+          Desktop: Side-by-side synchronized view (lg:flex-row)
           ───────────────────────────────────────────────────────────────── */}
       <div className="relative flex-1 flex flex-col lg:flex-row min-h-[580px] lg:min-h-[640px]">
-        {/* Left Side: Scrollable Landmark List Panel */}
-        <div className="w-full lg:w-[380px] xl:w-[420px] bg-[#0A1018]/95 border-b lg:border-b-0 lg:border-r border-brand-gold/15 flex flex-col justify-between p-4 sm:p-5 z-10">
+        {/* Landmark List Panel (Desktop: Left side, Mobile: Positioned below map) */}
+        <div className="order-2 lg:order-1 w-full lg:w-[380px] xl:w-[420px] bg-[#0A1018]/95 border-t lg:border-t-0 lg:border-r border-brand-gold/15 flex flex-col justify-between p-3.5 sm:p-5 z-10">
           <div className="flex-1 flex flex-col min-h-0">
             <div className="text-[11px] font-mono text-brand-gold/80 uppercase tracking-wider flex items-center justify-between pb-2">
-              <span>Scroll to Explore ({filteredLocations.length})</span>
+              <span>Landmarks ({filteredLocations.length})</span>
               <span className="text-[10px] text-white/40">Synchronized Atlas</span>
             </div>
 
             {/* Scrollable Container with IntersectionObserver */}
             <div
               ref={listContainerRef}
-              className="space-y-2.5 pr-1 overflow-y-auto max-h-[380px] lg:max-h-[500px] scroll-smooth overscroll-contain"
+              className="space-y-2 pr-1 overflow-y-auto max-h-[280px] sm:max-h-[340px] lg:max-h-[500px] scroll-smooth overscroll-contain"
             >
               {filteredLocations.map((location) => {
                 const isSelected = location.id === selectedId;
@@ -570,18 +575,18 @@ export function RealOrchhaMap({
                     onMouseEnter={() => setHoveredId(location.id)}
                     onMouseLeave={() => setHoveredId(null)}
                     className={cn(
-                      "p-3.5 rounded-xl border cursor-pointer transition-all duration-300 relative group flex items-start justify-between gap-3",
+                      "p-2.5 sm:p-3 rounded-xl border cursor-pointer transition-all duration-300 relative group flex items-start justify-between gap-2.5",
                       isSelected
-                        ? "bg-brand-gold/15 border-brand-gold shadow-[0_0_18px_rgba(197,160,89,0.3)] translate-x-1"
-                        : "bg-white/[0.03] border-white/10 hover:border-brand-gold/40 hover:bg-white/[0.06] hover:-translate-y-0.5"
+                        ? "bg-brand-gold/15 border-brand-gold shadow-[0_0_18px_rgba(197,160,89,0.3)] translate-x-0.5 sm:translate-x-1"
+                        : "bg-white/[0.03] border-white/10 hover:border-brand-gold/40 hover:bg-white/[0.06]"
                     )}
                   >
-                    <div className="flex-1 space-y-1">
-                      <div className="flex items-center gap-2">
+                    <div className="flex-1 min-w-0 space-y-1">
+                      <div className="flex items-center gap-1.5 flex-wrap">
                         {getCategoryIcon(location.category)}
                         <span
                           className={cn(
-                            "text-[10px] font-mono uppercase tracking-wider",
+                            "text-[9px] sm:text-[10px] font-mono uppercase tracking-wider",
                             isResort
                               ? "text-brand-gold font-bold"
                               : "text-white/60"
@@ -590,7 +595,7 @@ export function RealOrchhaMap({
                           {location.badgeText}
                         </span>
                         {isResort && (
-                          <span className="px-1.5 py-0.2 rounded bg-brand-gold/20 text-brand-gold text-[9px] font-sans font-semibold">
+                          <span className="px-1.5 py-0.2 rounded bg-brand-gold/20 text-brand-gold text-[8px] sm:text-[9px] font-sans font-semibold">
                             Primary
                           </span>
                         )}
@@ -598,7 +603,7 @@ export function RealOrchhaMap({
 
                       <h4
                         className={cn(
-                          "font-serif text-sm font-semibold transition-colors leading-tight",
+                          "font-serif text-xs sm:text-sm font-semibold transition-colors leading-snug truncate",
                           isSelected
                             ? "text-brand-gold"
                             : "text-white group-hover:text-brand-gold"
@@ -607,18 +612,18 @@ export function RealOrchhaMap({
                         {location.name}
                       </h4>
 
-                      <p className="font-sans text-xs text-white/65 line-clamp-2 leading-relaxed">
+                      <p className="font-sans text-[11px] sm:text-xs text-white/65 line-clamp-2 leading-relaxed">
                         {location.description}
                       </p>
 
-                      <div className="pt-1 flex items-center gap-3 text-[11px] font-sans text-white/50">
+                      <div className="pt-0.5 flex items-center gap-2.5 text-[10px] sm:text-[11px] font-sans text-white/50">
                         <span className="flex items-center gap-1">
-                          <Navigation className="w-3 h-3 text-brand-gold/80" />
+                          <Navigation className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-brand-gold/80 shrink-0" />
                           {location.distanceFromResort}
                         </span>
                         {location.walkingTime && (
                           <span className="flex items-center gap-1">
-                            <Clock className="w-3 h-3 text-brand-gold/80" />
+                            <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-brand-gold/80 shrink-0" />
                             {location.walkingTime}
                           </span>
                         )}
@@ -627,13 +632,13 @@ export function RealOrchhaMap({
 
                     <div
                       className={cn(
-                        "w-6 h-6 rounded-full flex items-center justify-center transition-all mt-1 flex-shrink-0",
+                        "w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center transition-all mt-1 flex-shrink-0",
                         isSelected
                           ? "bg-brand-gold text-brand-charcoal font-bold"
                           : "text-white/40 group-hover:text-brand-gold group-hover:translate-x-0.5"
                       )}
                     >
-                      <ChevronRight className="w-4 h-4" />
+                      <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                   </div>
                 );
@@ -642,22 +647,22 @@ export function RealOrchhaMap({
           </div>
 
           {/* Quick Reset Button in List Footer */}
-          <div className="pt-3 mt-2 border-t border-white/10 flex items-center justify-between text-xs">
+          <div className="pt-2.5 mt-2 border-t border-white/10 flex items-center justify-between text-xs">
             <button
               onClick={handleResetView}
-              className="flex items-center gap-1.5 text-brand-gold hover:text-white transition-colors"
+              className="flex items-center gap-1.5 text-brand-gold hover:text-white transition-colors text-[11px] sm:text-xs"
             >
-              <RotateCcw className="w-3.5 h-3.5" />
+              <RotateCcw className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               <span>Reset Overview</span>
             </button>
-            <span className="text-white/40 text-[11px]">
+            <span className="text-white/40 text-[10px] sm:text-[11px]">
               {selectedLocation.categoryLabel}
             </span>
           </div>
         </div>
 
-        {/* Right Side: Interactive Leaflet Map Viewport */}
-        <div className="relative flex-1 min-h-[420px] lg:min-h-full w-full bg-[#080D15]">
+        {/* Interactive Leaflet Map Viewport (Desktop: Right side, Mobile: Positioned on top) */}
+        <div className="order-1 lg:order-2 relative flex-1 h-[460px] sm:h-[500px] lg:h-auto lg:min-h-full w-full bg-[#080D15]">
           {/* Leaflet Container */}
           <div
             ref={mapContainerRef}
@@ -668,38 +673,36 @@ export function RealOrchhaMap({
           <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_24px_rgba(8,13,21,0.4)] z-1" />
 
           {/* Floating Map Controls in Top Right */}
-          <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
+          <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex flex-col gap-1.5 sm:gap-2">
             <button
               onClick={handleZoomIn}
               title="Zoom In"
-              className="p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 hover:shadow-gold-ambient flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+              className="p-2 sm:p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
             >
-              <Plus className="w-4 h-4" />
+              <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
 
             <button
               onClick={handleZoomOut}
               title="Zoom Out"
-              className="p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 hover:shadow-gold-ambient flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+              className="p-2 sm:p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
             >
-              <Minus className="w-4 h-4" />
+              <Minus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
 
             <button
               onClick={handleResetView}
               title="Reset Overview"
-              className="p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 hover:shadow-gold-ambient flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+              className="p-2 sm:p-2.5 rounded-xl bg-[#0B131E]/90 hover:bg-[#0E1724] border border-white/15 text-white hover:text-brand-gold shadow-xl backdrop-blur-md transition-all tactile-3d hover:-translate-y-0.5 active:scale-95 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
             >
-              <RotateCcw className="w-4 h-4" />
+              <RotateCcw className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
           </div>
 
           {/* ─────────────────────────────────────────────────────────────
-              DYNAMIC INFORMATION DIALOGUE (PHASE 2)
-              Positioned elegantly at top-left inside map container,
-              connected to scroll-state with fluid Framer Motion transitions.
+              DESKTOP FLOATING HUD DIALOGUE (hidden on mobile, visible on lg)
               ───────────────────────────────────────────────────────────── */}
-          <div className="absolute top-4 left-4 z-20 w-[calc(100%-6rem)] sm:w-auto sm:max-w-md max-h-[calc(100%-2rem)] overflow-y-auto pointer-events-auto">
+          <div className="hidden lg:block absolute top-4 left-4 z-20 w-auto max-w-md max-h-[calc(100%-2rem)] overflow-y-auto pointer-events-auto">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedLocation.id}
@@ -760,6 +763,108 @@ export function RealOrchhaMap({
                   </div>
                 </div>
               </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* ─────────────────────────────────────────────────────────────
+              MOBILE COMPACT FLOATING BOTTOM CARD (visible on mobile, hidden on lg)
+              Non-intrusive preview occupying < 25% of map height with close button
+              ───────────────────────────────────────────────────────────── */}
+          <div className="lg:hidden absolute bottom-3 inset-x-3 z-20 max-w-sm sm:max-w-md mx-auto pointer-events-auto">
+            <AnimatePresence mode="wait">
+              {!isPopupDismissed ? (
+                <motion.div
+                  key={selectedLocation.id}
+                  initial={{ opacity: 0, y: 12, scale: 0.97 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 12, scale: 0.97 }}
+                  transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                  className="relative p-2.5 sm:p-3 rounded-2xl bg-[#0A1018]/95 border border-brand-gold/45 shadow-[0_12px_36px_rgba(0,0,0,0.7)] backdrop-blur-xl flex items-center gap-2.5 sm:gap-3 overflow-hidden"
+                >
+                  {/* Close Button to dismiss popup */}
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsPopupDismissed(true);
+                    }}
+                    className="absolute top-2 right-2 p-1 rounded-full text-white/50 hover:text-white hover:bg-white/10 active:scale-90 transition-all z-10"
+                    aria-label="Dismiss landmark preview"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+
+                  {/* Compact Thumbnail (hidden on screens < 360px) */}
+                  {selectedLocation.imageSrc && (
+                    <div className="hidden xs:block relative w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden shrink-0 border border-brand-gold/25 bg-black/40">
+                      <Image
+                        src={selectedLocation.imageSrc}
+                        alt={selectedLocation.name}
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+
+                  {/* Landmark Compact Content */}
+                  <div className="flex-1 min-w-0 pr-5 space-y-0.5">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[9px] font-mono text-brand-gold uppercase tracking-wider font-semibold">
+                        {selectedLocation.badgeText}
+                      </span>
+                      <span className="text-white/40 text-[9px]">·</span>
+                      <span className="text-brand-gold/90 font-mono text-[9px] flex items-center gap-0.5">
+                        <Navigation className="w-2.5 h-2.5" />
+                        {selectedLocation.distanceFromResort}
+                      </span>
+                    </div>
+
+                    <h4 className="font-serif text-sm font-semibold text-white truncate leading-tight">
+                      {selectedLocation.name}
+                    </h4>
+
+                    <p className="font-sans text-[11px] text-white/75 line-clamp-2 leading-snug">
+                      {selectedLocation.description}
+                    </p>
+
+                    <div className="pt-0.5 flex items-center gap-3 text-[10px]">
+                      {selectedLocation.isPrimary ? (
+                        <Link
+                          href="#rooms"
+                          className="font-sans text-brand-gold hover:underline flex items-center gap-0.5 font-semibold"
+                        >
+                          <span>Reserve Sanctuary</span>
+                          <ChevronRight className="w-2.5 h-2.5" />
+                        </Link>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => handleSelectLandmark(selectedLocation, true, "click")}
+                          className="font-sans text-brand-gold hover:text-brand-gold-light hover:underline flex items-center gap-0.5 font-medium"
+                        >
+                          <span>Focus on Map</span>
+                          <ExternalLink className="w-2.5 h-2.5" />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              ) : (
+                /* Minimal Re-open Floating Pill when user explicitly dismissed preview */
+                <motion.button
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  type="button"
+                  onClick={() => setIsPopupDismissed(false)}
+                  className="mx-auto flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0A1018]/95 border border-brand-gold/35 shadow-lg text-[10px] font-sans text-brand-gold hover:text-white backdrop-blur-md active:scale-95 transition-all"
+                >
+                  <Compass className="w-3 h-3 text-brand-gold" />
+                  <span className="truncate max-w-[170px]">{selectedLocation.name}</span>
+                  <span className="text-white/50">· Show Info</span>
+                  <ChevronRight className="w-3 h-3" />
+                </motion.button>
+              )}
             </AnimatePresence>
           </div>
         </div>

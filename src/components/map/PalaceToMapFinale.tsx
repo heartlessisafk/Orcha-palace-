@@ -358,19 +358,9 @@ export function PalaceToMapFinale({
 
       {/* ─────────────────────────────────────────────────────────────────
           RESPONSIVE MOBILE & TABLET LAYOUT (< lg: screens)
-          Real geographic map with touch-friendly navigation
+          Streamlined mobile-first geography explorer with dedicated map space
           ───────────────────────────────────────────────────────────────── */}
-      <div className="lg:hidden px-4 py-16 sm:px-6 max-w-4xl mx-auto space-y-8">
-        <header className="text-center space-y-3 p-6 sm:p-8 rounded-2xl bg-white/95 border border-brand-gold/35 shadow-xl text-brand-charcoal">
-          <SubtitleTag>Beyond the Ordinary</SubtitleTag>
-          <h2 className="font-serif text-3xl sm:text-4xl text-brand-navy font-normal">
-            The Heritage Geography of Orchha
-          </h2>
-          <p className="font-sans text-sm text-brand-charcoal/80 leading-relaxed max-w-md mx-auto">
-            Discover the temples, royal architecture, and sacred river landscapes surrounding your stay.
-          </p>
-        </header>
-
+      <div className="lg:hidden px-3 py-6 sm:px-6 sm:py-10 max-w-4xl mx-auto space-y-6">
         {/* Mobile Real Map Component */}
         <div className="rounded-2xl overflow-hidden shadow-2xl">
           <RealOrchhaMap
@@ -380,7 +370,7 @@ export function PalaceToMapFinale({
         </div>
 
         {/* Mobile Booking Invitation Banner */}
-        <div className="p-6 rounded-2xl bg-[#0B131E] border border-brand-gold/30 text-center space-y-4">
+        <div className="p-5 sm:p-6 rounded-2xl bg-[#0B131E] border border-brand-gold/30 text-center space-y-3 sm:space-y-4">
           <h3 className="font-serif text-xl text-white font-medium">
             Stay close to the stories of Orchha.
           </h3>
