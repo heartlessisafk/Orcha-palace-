@@ -182,7 +182,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
       >
         <div className="rounded-3xl bg-brand-beige border border-brand-gold/30 shadow-[0_20px_60px_rgba(0,0,0,0.18)] overflow-visible relative">
           {/* Header Bar */}
-          <div className="bg-brand-navy rounded-t-3xl px-4 sm:px-6 py-3 sm:py-3.5 border-b border-brand-gold/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-white font-sans">
+          <div className="bg-brand-navy rounded-t-3xl px-4 sm:px-6 py-3 sm:py-3.5 border-b border-brand-gold/20 flex items-center justify-between gap-2 text-xs text-white font-sans">
             <div className="flex items-center gap-2.5">
               <div className="w-5 h-5 rounded-full bg-brand-gold/20 flex items-center justify-center shrink-0">
                 <Sparkles className="w-3 h-3 text-brand-gold" />
@@ -191,9 +191,6 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
                 Reserve Your Sanctuary · Best Tariff Guarantee
               </span>
             </div>
-            <span className="hidden sm:inline-block text-brand-gold-light/80 text-[11px] font-sans">
-              50 Heritage Accommodations · Instant Concierge Confirmation
-            </span>
           </div>
 
           {/* Search Content Body */}
