@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SPA_CONTACT_INFO } from "@/data/spa-catalog";
 import { Sparkles, Phone, ShoppingBag, ArrowLeft, Clock } from "lucide-react";
@@ -57,20 +58,22 @@ export function SpaNavbar({
                 className="group relative inline-flex items-center justify-center rounded-xl bg-white px-2.5 sm:px-3 py-1.5 border border-brand-charcoal/10 shadow-subtle hover:bg-brand-navy hover:border-brand-navy focus-visible:bg-brand-navy focus-visible:border-brand-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold transition-all duration-300 ease-out shrink-0 select-none touch-manipulation"
                 aria-label="The Orchha Resort — Return to Homepage"
               >
-                <span
-                  className="block w-[115px] sm:w-[135px] md:w-[155px] aspect-[607/92] bg-brand-navy group-hover:bg-white group-focus-visible:bg-white transition-colors duration-300 ease-out"
-                  style={{
-                    maskImage: 'url("/images/brand/orchha-logo.png")',
-                    WebkitMaskImage: 'url("/images/brand/orchha-logo.png")',
-                    maskSize: "contain",
-                    WebkitMaskSize: "contain",
-                    maskRepeat: "no-repeat",
-                    WebkitMaskRepeat: "no-repeat",
-                    maskPosition: "center",
-                    WebkitMaskPosition: "center",
-                  }}
-                  aria-hidden="true"
-                />
+                <div className="relative w-[115px] sm:w-[135px] md:w-[155px] aspect-[607/92] overflow-hidden">
+                  <Image
+                    src="/images/brand/orchha-logo-navy.png"
+                    alt="The Orchha Resort"
+                    fill
+                    sizes="(max-width: 640px) 115px, (max-width: 768px) 135px, 155px"
+                    className="object-contain group-hover:opacity-0 group-focus-visible:opacity-0 transition-opacity duration-300 ease-out"
+                  />
+                  <Image
+                    src="/images/brand/orchha-logo-white.png"
+                    alt="The Orchha Resort"
+                    fill
+                    sizes="(max-width: 640px) 115px, (max-width: 768px) 135px, 155px"
+                    className="object-contain opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 ease-out"
+                  />
+                </div>
               </Link>
 
               {/* Distinctive Spa Identity Badge */}

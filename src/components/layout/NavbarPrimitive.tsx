@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_CONFIG } from "@/lib/site-config";
 import { Button } from "@/components/ui/Button";
 import { Phone, Menu, X } from "lucide-react";
@@ -66,21 +67,25 @@ export function NavbarPrimitive({
           className="group relative inline-flex items-center justify-center rounded-xl bg-white px-3 sm:px-4 py-1.5 sm:py-2 border border-brand-charcoal/10 shadow-subtle hover:bg-brand-navy hover:border-brand-navy focus-visible:bg-brand-navy focus-visible:border-brand-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 transition-all duration-300 ease-out shrink-0 select-none touch-manipulation"
           aria-label="The Orchha Resort — Return to Homepage"
         >
-          {/* Logo Lettering & Tagline via Antialiased Mask Asset */}
-          <span
-            className="block w-[135px] sm:w-[165px] md:w-[185px] lg:w-[192px] aspect-[607/92] bg-brand-navy group-hover:bg-white group-focus-visible:bg-white transition-colors duration-300 ease-out"
-            style={{
-              maskImage: 'url("/images/brand/orchha-logo.png")',
-              WebkitMaskImage: 'url("/images/brand/orchha-logo.png")',
-              maskSize: "contain",
-              WebkitMaskSize: "contain",
-              maskRepeat: "no-repeat",
-              WebkitMaskRepeat: "no-repeat",
-              maskPosition: "center",
-              WebkitMaskPosition: "center",
-            }}
-            aria-hidden="true"
-          />
+          {/* Authentic Brand Logo Image (Navy Default, White on Desktop Hover/Focus) */}
+          <div className="relative w-[130px] sm:w-[160px] md:w-[180px] lg:w-[192px] aspect-[607/92] overflow-hidden">
+            <Image
+              src="/images/brand/orchha-logo-navy.png"
+              alt="The Orchha Resort"
+              fill
+              priority
+              sizes="(max-width: 640px) 130px, (max-width: 768px) 160px, (max-width: 1024px) 180px, 192px"
+              className="object-contain group-hover:opacity-0 group-focus-visible:opacity-0 transition-opacity duration-300 ease-out"
+            />
+            <Image
+              src="/images/brand/orchha-logo-white.png"
+              alt="The Orchha Resort"
+              fill
+              priority
+              sizes="(max-width: 640px) 130px, (max-width: 768px) 160px, (max-width: 1024px) 180px, 192px"
+              className="object-contain opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 ease-out"
+            />
+          </div>
         </Link>
 
         {/* Center Desktop Navigation Pill */}

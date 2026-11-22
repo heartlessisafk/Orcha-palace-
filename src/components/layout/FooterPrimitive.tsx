@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_CONFIG } from "@/lib/site-config";
 import { Phone, Mail, MapPin, Clock, Train, Plane, ExternalLink } from "lucide-react";
 
@@ -18,20 +19,22 @@ export function FooterPrimitive() {
                 className="group relative inline-flex items-center justify-center rounded-xl bg-white px-3 sm:px-3.5 py-1.5 sm:py-2 border border-white/15 shadow-subtle hover:bg-brand-navy hover:border-brand-gold focus-visible:bg-brand-navy focus-visible:border-brand-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 transition-all duration-300 ease-out shrink-0 select-none touch-manipulation"
                 aria-label="The Orchha Resort — Return to Homepage"
               >
-                <span
-                  className="block w-[130px] sm:w-[145px] aspect-[607/92] bg-brand-navy group-hover:bg-white group-focus-visible:bg-white transition-colors duration-300 ease-out"
-                  style={{
-                    maskImage: 'url("/images/brand/orchha-logo.png")',
-                    WebkitMaskImage: 'url("/images/brand/orchha-logo.png")',
-                    maskSize: "contain",
-                    WebkitMaskSize: "contain",
-                    maskRepeat: "no-repeat",
-                    WebkitMaskRepeat: "no-repeat",
-                    maskPosition: "center",
-                    WebkitMaskPosition: "center",
-                  }}
-                  aria-hidden="true"
-                />
+                <div className="relative w-[130px] sm:w-[145px] aspect-[607/92] overflow-hidden">
+                  <Image
+                    src="/images/brand/orchha-logo-navy.png"
+                    alt="The Orchha Resort"
+                    fill
+                    sizes="145px"
+                    className="object-contain group-hover:opacity-0 group-focus-visible:opacity-0 transition-opacity duration-300 ease-out"
+                  />
+                  <Image
+                    src="/images/brand/orchha-logo-white.png"
+                    alt="The Orchha Resort"
+                    fill
+                    sizes="145px"
+                    className="object-contain opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 ease-out"
+                  />
+                </div>
               </Link>
               <div>
                 <h4 className="font-serif text-lg sm:text-xl font-semibold text-white tracking-tight leading-tight">
