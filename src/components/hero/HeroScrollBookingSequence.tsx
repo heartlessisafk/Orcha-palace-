@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { RESORT_ASSETS } from "@/lib/assets";
 import { Button } from "@/components/ui/Button";
-import { HeroRatingBadge } from "@/components/ui/Badge";
 import { RoomSearchWidgetPrimitive } from "@/components/booking/RoomSearchWidgetPrimitive";
 import { ArrowDown, Sparkles, MessageCircle, ShieldCheck, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -83,66 +82,78 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
         </div>
 
         {/* Hero Editorial Text Container */}
-        <div className="relative z-10 pt-32 sm:pt-36 lg:pt-40 pb-20 px-4 sm:px-6 md:px-8 lg:px-12 max-w-wide mx-auto w-full my-auto flex flex-col items-start pointer-events-auto">
+        <div className="relative z-10 pt-28 sm:pt-32 md:pt-36 pb-24 sm:pb-28 px-4 sm:px-6 md:px-8 lg:px-12 max-w-wide mx-auto w-full flex flex-col items-start justify-center flex-1 pointer-events-auto">
           {/* ─────────────────────────────────────────────────────────────
-              SOPHISTICATED TRANSLUCENT EDITORIAL GLASS SURFACE
-              High-contrast typography container with controlled backdrop
-              blur, gilded accent pill, and natural soft shadow
+              SOPHISTICATED TRANSLUCENT EDITORIAL GLASS SURFACE (IMAGE-FIRST)
+              Compact luxury container with controlled backdrop blur,
+              gilded specular highlights, and unobtrusive footprint
               ───────────────────────────────────────────────────────────── */}
           <motion.div
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-            className="group relative max-w-3xl rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 md:p-10 overflow-hidden bg-gradient-to-br from-white/[0.14] via-[#080D15]/28 to-[#0B131E]/42 backdrop-blur-xl backdrop-saturate-[190%] border border-white/25 border-t-white/45 border-l-white/35 border-r-white/20 border-b-white/15 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.5),inset_0_0_28px_rgba(244,223,192,0.06),0_20px_50px_-10px_rgba(0,0,0,0.45),0_0_1px_1px_rgba(197,160,89,0.22)] space-y-4 sm:space-y-5 transition-all duration-500 hover:border-white/35 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.6),inset_0_0_32px_rgba(244,223,192,0.09),0_24px_60px_-10px_rgba(0,0,0,0.5),0_0_1px_1px_rgba(197,160,89,0.3)]"
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+            className="group relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[480px] rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 overflow-hidden bg-gradient-to-br from-white/[0.14] via-[#080D15]/28 to-[#0B131E]/42 backdrop-blur-xl backdrop-saturate-[190%] border border-white/25 border-t-white/45 border-l-white/35 border-r-white/20 border-b-white/15 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.5),inset_0_0_24px_rgba(244,223,192,0.06),0_16px_40px_-10px_rgba(0,0,0,0.45),0_0_1px_1px_rgba(197,160,89,0.22)] space-y-2.5 sm:space-y-3 transition-all duration-500 hover:border-white/35 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.6),inset_0_0_28px_rgba(244,223,192,0.08),0_20px_48px_-10px_rgba(0,0,0,0.5),0_0_1px_1px_rgba(197,160,89,0.28)]"
           >
             {/* Liquid Glass Internal Specular Refraction Layer */}
             <div
               aria-hidden="true"
-              className="absolute -top-24 -left-24 w-80 h-80 bg-gradient-to-br from-white/[0.14] via-[#F4DFC0]/[0.05] to-transparent rounded-full blur-2xl pointer-events-none transform-gpu"
+              className="absolute -top-20 -left-20 w-64 h-64 bg-gradient-to-br from-white/[0.14] via-[#F4DFC0]/[0.05] to-transparent rounded-full blur-2xl pointer-events-none transform-gpu"
             />
             {/* Warm Sunset Ambient Reflection in Corner */}
             <div
               aria-hidden="true"
-              className="absolute -bottom-16 -right-16 w-72 h-72 bg-gradient-to-tl from-[#C5A059]/12 via-transparent to-transparent rounded-full blur-2xl pointer-events-none transform-gpu"
+              className="absolute -bottom-12 -right-12 w-56 h-56 bg-gradient-to-tl from-[#C5A059]/12 via-transparent to-transparent rounded-full blur-2xl pointer-events-none transform-gpu"
             />
             {/* Prismatic Top Edge Specular Hairline */}
             <div
               aria-hidden="true"
-              className="absolute inset-x-8 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/55 to-transparent pointer-events-none"
+              className="absolute inset-x-6 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/55 to-transparent pointer-events-none"
             />
 
-            {/* Social Rating Badge */}
-            <div className="relative z-10 flex items-center gap-3">
-              <HeroRatingBadge />
-            </div>
+            {/* Compact Top Metadata: Rating Badge & Location Label */}
+            <div className="relative z-10 flex flex-wrap items-center gap-2 pt-0.5">
+              {/* Compact Social Rating Badge */}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md border border-brand-navy/10 shadow-sm text-[11px] font-sans">
+                <div className="flex -space-x-1.5">
+                  <span className="inline-block w-4 h-4 rounded-full bg-brand-gold/20 border border-white flex items-center justify-center text-[8px] font-bold text-brand-gold-dark">
+                    ✦
+                  </span>
+                  <span className="inline-block w-4 h-4 rounded-full bg-brand-navy/20 border border-white flex items-center justify-center text-[8px] font-bold text-brand-navy">
+                    R
+                  </span>
+                </div>
+                <span className="font-semibold text-brand-navy">4.9</span>
+                <span className="text-amber-500 text-[10px]">★</span>
+                <span className="text-brand-muted hidden sm:inline">·</span>
+                <span className="font-medium text-brand-charcoal text-[11px] hidden sm:inline">Excellent Stay</span>
+              </div>
 
-            {/* High-Contrast Location Kicker */}
-            <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/35 text-[#F4DFC0] text-[11px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest backdrop-blur-md shadow-sm">
-                <MapPin className="w-3.5 h-3.5 text-brand-gold shrink-0" />
-                <span>KANCHANGHAT · ORCHHA, MADHYA PRADESH, INDIA</span>
+              {/* Compact Location Label */}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-[#F4DFC0] text-[10px] sm:text-[11px] font-mono uppercase tracking-wider backdrop-blur-md">
+                <MapPin className="w-3 h-3 text-brand-gold shrink-0" />
+                <span>KANCHANGHAT · ORCHHA, MP</span>
               </div>
             </div>
 
-            {/* Monumental Serif Headline */}
-            <h1 className="relative z-10 font-serif text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-normal text-white leading-[1.12] tracking-tight drop-shadow-[0_2px_18px_rgba(0,0,0,0.95)]">
+            {/* Refined Headline with Controlled Line Wrapping */}
+            <h1 className="relative z-10 font-serif text-2xl sm:text-[1.75rem] md:text-[1.95rem] lg:text-[2.1rem] font-normal text-white leading-[1.2] tracking-tight drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
               Understated luxury where royalty meets the river.
             </h1>
 
-            {/* Factual Description */}
-            <p className="relative z-10 font-sans text-sm sm:text-base md:text-lg text-white/95 max-w-2xl leading-relaxed drop-shadow-[0_1px_10px_rgba(0,0,0,0.9)]">
+            {/* Compact Factual Description */}
+            <p className="relative z-10 font-sans text-xs sm:text-[13px] text-white/90 leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.9)]">
               50 secluded heritage rooms and suites facing the 14 historical Chhatris.
               Experience authentic Bundeli warmth, lotus pool serenity, and zero-pollution tranquility.
             </p>
 
-            {/* Primary Action Button Group */}
-            <div className="relative z-10 pt-2 flex flex-wrap items-center gap-4">
+            {/* Compact Primary Action Button Group */}
+            <div className="relative z-10 pt-1 sm:pt-1.5 flex flex-wrap items-center gap-3">
               <Button
                 variant="sage"
-                size="lg"
+                size="md"
                 withArrow
                 onClick={handleScrollToBooking}
-                className="shadow-[0_4px_22px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_28px_rgba(112,141,121,0.4)] text-sm tracking-wide"
+                className="shadow-[0_4px_18px_rgba(0,0,0,0.3)] hover:shadow-[0_6px_22px_rgba(112,141,121,0.35)] text-xs sm:text-sm tracking-wide"
               >
                 Book Your Stay
               </Button>
@@ -150,10 +161,10 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
               <button
                 type="button"
                 onClick={handleScrollToBooking}
-                className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-[#F4DFC0]/85 hover:text-white transition-colors"
+                className="inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-wider text-[#F4DFC0]/85 hover:text-white transition-colors"
               >
                 <span>Scroll to Reserve</span>
-                <ArrowDown className="w-3.5 h-3.5 animate-bounce text-brand-gold-light" />
+                <ArrowDown className="w-3 h-3 animate-bounce text-brand-gold-light" />
               </button>
             </div>
           </motion.div>
