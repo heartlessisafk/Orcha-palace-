@@ -31,7 +31,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
   const handleScrollToBooking = () => {
     const bookingSection = document.getElementById("booking-sequence");
     if (bookingSection) {
-      bookingSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      bookingSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -41,14 +41,94 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
       className={cn("relative w-full bg-brand-canvas overflow-visible", className)}
     >
       {/* ─────────────────────────────────────────────────────────────────
-          1. CINEMATIC HERO SECTION
+          1A. MOBILE HERO SECTION (SCREEN < 1024px)
+          Image-first editorial sequence according to client feedback:
+          TAGLINE
+             ↓
+          LARGE RIVERSIDE PHOTOGRAPH (NO OVERLAYS OR CARDS)
+             ↓
+          BOOK YOUR STAY BUTTON
+          ───────────────────────────────────────────────────────────────── */}
+      <section
+        id="hero-mobile"
+        className="block lg:hidden w-full pt-20 sm:pt-24 pb-2 sm:pb-4 px-4 sm:px-6 max-w-3xl mx-auto"
+      >
+        {/* 1. Short, Elegant, Premium Tagline Above Riverside Photograph */}
+        <motion.div
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col items-center text-center"
+        >
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/25 text-brand-gold-dark text-[10px] sm:text-[11px] font-mono uppercase tracking-widest mb-2 sm:mb-2.5">
+            <MapPin className="w-3 h-3 text-brand-gold-dark shrink-0" />
+            <span>Kanchanghat · Orchha, MP</span>
+          </div>
+
+          <h1 className="font-serif text-[1.65rem] xs:text-[1.85rem] sm:text-3xl text-brand-navy font-normal tracking-tight leading-[1.22] max-w-lg mx-auto">
+            Understated luxury where royalty meets the river.
+          </h1>
+
+          <p className="mt-2 text-xs sm:text-sm font-sans text-brand-charcoal/75 leading-relaxed max-w-md mx-auto">
+            Facing the 14 monumental Chhatris on the tranquil banks of River Betwa.
+          </p>
+        </motion.div>
+
+        {/* 2. Large Riverside Photograph (Central Visual Focus - Zero Overlays or Cards) */}
+        <motion.div
+          initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          className="mt-4 sm:mt-5 relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_12px_36px_rgba(12,23,49,0.14)] border border-brand-gold/25 bg-brand-beige"
+        >
+          <Image
+            src={RESORT_ASSETS.heroDesktop.src}
+            alt={RESORT_ASSETS.heroDesktop.alt}
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 800px"
+            quality={95}
+            className="object-cover object-[center_38%]"
+          />
+        </motion.div>
+
+        {/* 3. Book Your Stay Button Below the Photograph */}
+        <motion.div
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          className="mt-4 sm:mt-5 flex flex-col items-center justify-center gap-2"
+        >
+          <Button
+            variant="sage"
+            size="lg"
+            withArrow
+            onClick={handleScrollToBooking}
+            className="w-full sm:w-auto min-w-[220px] shadow-[0_4px_16px_rgba(12,23,49,0.12)] hover:shadow-[0_6px_22px_rgba(112,141,121,0.35)] text-sm tracking-wide font-medium py-3 px-8 text-center justify-center tactile-3d"
+          >
+            Book Your Stay
+          </Button>
+
+          <div className="flex items-center gap-2 text-[11px] font-sans text-brand-muted pt-0.5">
+            <span className="flex items-center gap-1">
+              <ShieldCheck className="w-3.5 h-3.5 text-brand-gold-dark" />
+              Best Tariff Guarantee
+            </span>
+            <span>·</span>
+            <span>Instant Confirmation</span>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────────
+          1B. DESKTOP HERO SECTION (SCREEN >= 1024px)
           Full-viewport architectural aerial photograph with progressive
           scroll-based zoom and high-contrast editorial glass surface
           ───────────────────────────────────────────────────────────────── */}
       <section
         id="hero"
         ref={heroRef}
-        className="relative min-h-[90vh] lg:min-h-screen w-full flex flex-col justify-between overflow-hidden"
+        className="hidden lg:flex relative min-h-screen w-full flex-col justify-between overflow-hidden"
       >
         {/* Background Cinematic Zooming Photo Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -178,7 +258,7 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
           ───────────────────────────────────────────────────────────────── */}
       <section
         id="booking-sequence"
-        className="relative z-20 -mt-16 sm:-mt-20 lg:-mt-24 pb-8 sm:pb-12 px-4 sm:px-6 md:px-8 max-w-container mx-auto w-full"
+        className="relative z-20 mt-6 sm:mt-8 lg:-mt-24 pb-8 sm:pb-12 px-4 sm:px-6 md:px-8 max-w-container mx-auto w-full scroll-mt-20 lg:scroll-mt-24"
       >
         <div className="rounded-3xl bg-brand-beige border border-brand-gold/30 shadow-[0_20px_60px_rgba(0,0,0,0.18)] overflow-visible relative">
           {/* Header Bar */}
