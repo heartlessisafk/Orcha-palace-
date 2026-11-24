@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 async function run() {
-  console.log("=== Verifying Mobile Hero Layout via Chrome DevTools Protocol ===");
+  console.log("=== Verifying Hero Without 'Scroll to Reserve' via Chrome DevTools Protocol ===");
   const artifactDir = "/Users/sam/.gemini/antigravity/brain/ebed3400-0ccc-4bed-94be-917fd27e626f";
 
   const tabs = await (await fetch("http://127.0.0.1:9222/json")).json();
@@ -36,10 +36,7 @@ async function run() {
   await send("Runtime.enable");
 
   const viewports = [
-    { name: "mobile_compact", width: 360, height: 780, isMobile: true },
     { name: "mobile_standard", width: 390, height: 844, isMobile: true },
-    { name: "mobile_large", width: 414, height: 896, isMobile: true },
-    { name: "tablet", width: 768, height: 1024, isMobile: false },
     { name: "desktop", width: 1440, height: 900, isMobile: false },
   ];
 
@@ -58,96 +55,33 @@ async function run() {
 
     const evalResult = await send("Runtime.evaluate", {
       expression: `(() => {
-        const scrollWidth = document.documentElement.scrollWidth;
-        const innerWidth = window.innerWidth;
-        const hasHorizontalOverflow = scrollWidth > innerWidth;
+        const bodyText = document.body.innerText;
+        const hasScrollToReserveText = bodyText.toLowerCase().includes("scroll to reserve");
+        
+        const heroDesktop = document.getElementById("hero");
+        const heroMobile = document.getElementById("hero-mobile");
 
-        const mobileHero = document.getElementById("hero-mobile");
-        const desktopHero = document.getElementById("hero");
-
-        const isMobileHeroVisible = mobileHero ? (window.getComputedStyle(mobileHero).display !== "none") : false;
-        const isDesktopHeroVisible = desktopHero ? (window.getComputedStyle(desktopHero).display !== "none") : false;
-
-        let mobileDetails = null;
-        if (isMobileHeroVisible && mobileHero) {
-          const h1 = mobileHero.querySelector("h1");
-          const img = mobileHero.querySelector("img");
-          const button = mobileHero.querySelector("button");
-
-          mobileDetails = {
-            hasH1: !!h1,
-            h1Text: h1 ? h1.innerText : "",
-            hasImg: !!img,
-            imgSrc: img ? img.src : "",
-            imgDimensions: img ? { width: img.clientWidth, height: img.clientHeight } : null,
-            hasButton: !!button,
-            buttonText: button ? button.innerText : "",
-          };
-        }
+        const desktopButtons = heroDesktop ? Array.from(heroDesktop.querySelectorAll("button, a")).map(el => el.innerText.trim()) : [];
+        const mobileButtons = heroMobile ? Array.from(heroMobile.querySelectorAll("button, a")).map(el => el.innerText.trim()) : [];
 
         return {
-          scrollWidth,
-          innerWidth,
-          hasHorizontalOverflow,
-          isMobileHeroVisible,
-          isDesktopHeroVisible,
-          mobileDetails
+          hasScrollToReserveText,
+          desktopButtons,
+          mobileButtons,
         };
       })()`,
       returnByValue: true,
     });
 
     const data = evalResult.result.value;
-    console.log(`Horizontal Overflow: ${data.hasHorizontalOverflow ? "FAIL" : "PASS"} (scrollWidth: ${data.scrollWidth}, innerWidth: ${data.innerWidth})`);
-    console.log(`Mobile Hero Visible: ${data.isMobileHeroVisible}, Desktop Hero Visible: ${data.isDesktopHeroVisible}`);
+    console.log(`Contains 'Scroll to Reserve' Text: ${data.hasScrollToReserveText ? "FOUND (FAIL)" : "NONE (PASS)"}`);
+    console.log(`Desktop Hero Buttons:`, data.desktopButtons);
+    console.log(`Mobile Hero Buttons:`, data.mobileButtons);
 
-    if (data.isMobileHeroVisible) {
-      console.log(`Mobile Hero Sequence Verified:`);
-      console.log(`  1. Tagline H1: "${data.mobileDetails?.h1Text}"`);
-      console.log(`  2. Central Image: ${data.mobileDetails?.imgDimensions?.width}x${data.mobileDetails?.imgDimensions?.height}`);
-      console.log(`  3. CTA Button: "${data.mobileDetails?.buttonText}"`);
-    }
-
-    // Capture screenshot for key viewports
-    if (["mobile_standard", "tablet", "desktop"].includes(vp.name)) {
-      const screenshot = await send("Page.captureScreenshot", { format: "jpeg", quality: 85 });
-      const imgPath = path.join(artifactDir, `verified_hero_${vp.name}.jpg`);
-      fs.writeFileSync(imgPath, Buffer.from(screenshot.data, "base64"));
-      console.log(`Saved screenshot: ${imgPath}`);
-    }
-
-    // On mobile, test clicking Book Your Stay button
-    if (vp.name === "mobile_standard") {
-      console.log("\nTesting 'Book Your Stay' button scroll on mobile standard...");
-      const clickResult = await send("Runtime.evaluate", {
-        expression: `(() => {
-          const mobileHero = document.getElementById("hero-mobile");
-          const button = mobileHero?.querySelector("button");
-          if (!button) return { clicked: false, error: "Button not found" };
-          const initialY = window.scrollY;
-          button.click();
-          return { clicked: true, initialY };
-        })()`,
-        returnByValue: true,
-      });
-
-      await new Promise((r) => setTimeout(r, 800));
-
-      const afterScroll = await send("Runtime.evaluate", {
-        expression: `(() => {
-          const bookingSequence = document.getElementById("booking-sequence");
-          const rect = bookingSequence ? bookingSequence.getBoundingClientRect() : null;
-          return {
-            scrollY: window.scrollY,
-            bookingTop: rect ? rect.top : null,
-          };
-        })()`,
-        returnByValue: true,
-      });
-
-      console.log(`Initial Scroll: ${clickResult.result.value.initialY}, After Click Scroll: ${afterScroll.result.value.scrollY}`);
-      console.log(`Booking Sequence Rect Top: ${afterScroll.result.value.bookingTop}px`);
-    }
+    const screenshot = await send("Page.captureScreenshot", { format: "jpeg", quality: 85 });
+    const imgPath = path.join(artifactDir, `verified_no_scroll_reserve_${vp.name}.jpg`);
+    fs.writeFileSync(imgPath, Buffer.from(screenshot.data, "base64"));
+    console.log(`Saved screenshot: ${imgPath}`);
   }
 
   ws.close();

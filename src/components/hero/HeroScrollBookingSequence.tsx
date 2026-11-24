@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion
 import { RESORT_ASSETS } from "@/lib/assets";
 import { Button } from "@/components/ui/Button";
 import { RoomSearchWidgetPrimitive } from "@/components/booking/RoomSearchWidgetPrimitive";
-import { ArrowDown, Sparkles, MessageCircle, ShieldCheck, MapPin } from "lucide-react";
+import { Sparkles, MessageCircle, ShieldCheck, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface HeroScrollBookingSequenceProps {
@@ -226,8 +226,8 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
               Experience authentic Bundeli warmth, lotus pool serenity, and zero-pollution tranquility.
             </p>
 
-            {/* Compact Primary Action Button Group */}
-            <div className="relative z-10 pt-1 sm:pt-1.5 flex flex-wrap items-center gap-3">
+            {/* Primary Action Button */}
+            <div className="relative z-10 pt-1 sm:pt-1.5 flex items-center">
               <Button
                 variant="sage"
                 size="md"
@@ -237,15 +237,6 @@ export function HeroScrollBookingSequence({ className }: HeroScrollBookingSequen
               >
                 Book Your Stay
               </Button>
-
-              <button
-                type="button"
-                onClick={handleScrollToBooking}
-                className="inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-wider text-[#F4DFC0]/85 hover:text-white transition-colors"
-              >
-                <span>Scroll to Reserve</span>
-                <ArrowDown className="w-3 h-3 animate-bounce text-brand-gold-light" />
-              </button>
             </div>
           </motion.div>
         </div>
