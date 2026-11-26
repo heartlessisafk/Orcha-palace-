@@ -14,15 +14,25 @@ interface PageProps {
   }>;
 }
 
+const LEGACY_SLUG_MAP: Record<string, string> = {
+  "standard-room": "standard-bed",
+  "deluxe-room": "deluxe-marble-bed",
+};
+
 export async function generateStaticParams() {
-  return VERIFIED_ROOMS.map((room) => ({
-    slug: room.id,
-  }));
+  return [
+    ...VERIFIED_ROOMS.map((room) => ({
+      slug: room.id,
+    })),
+    { slug: "standard-room" },
+    { slug: "deluxe-room" },
+  ];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const room = VERIFIED_ROOMS.find((r) => r.id === slug);
+  const resolvedId = LEGACY_SLUG_MAP[slug] || slug;
+  const room = VERIFIED_ROOMS.find((r) => r.id === resolvedId);
 
   if (!room) {
     return {
@@ -37,12 +47,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${room.name} — Luxury Stay in Orchha`,
     description: `${room.description.slice(0, 155)}... Starting at ₹${room.startingPriceInr}/night. Book direct for best rates at ${SITE_CONFIG.name}.`,
     alternates: {
-      canonical: `https://www.orchharesort.com/rooms/${slug}`,
+      canonical: `https://www.orchharesort.com/rooms/${room.id}`,
     },
     openGraph: {
       title: `${room.name} | ${SITE_CONFIG.name}`,
       description: room.tagline,
-      url: `https://www.orchharesort.com/rooms/${slug}`,
+      url: `https://www.orchharesort.com/rooms/${room.id}`,
       images: roomImage,
     },
     twitter: {
@@ -56,7 +66,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function RoomDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const room = VERIFIED_ROOMS.find((r) => r.id === slug);
+  const resolvedId = LEGACY_SLUG_MAP[slug] || slug;
+  const room = VERIFIED_ROOMS.find((r) => r.id === resolvedId);
 
   if (!room) {
     notFound();

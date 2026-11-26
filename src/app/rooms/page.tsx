@@ -26,23 +26,23 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Accommodations & Luxury Rooms | The Orchha Resort",
   description:
-    "Explore 50 thoughtfully designed accommodations: Standard and Deluxe rooms on the banks of River Betwa in Orchha.",
+    "Explore 50 thoughtfully designed accommodations across 5 official categories: Deluxe garden view king bed, Deluxe garden view twin bed, Deluxe marble bed, Standard bed, and Super deluxe pool view on the banks of River Betwa in Orchha.",
   alternates: {
     canonical: "https://www.orchharesort.com/rooms",
   },
   openGraph: {
     title: "Luxury Accommodations & Rooms | The Orchha Resort",
     description:
-      "Serene heritage retreats across from the 14 Royal Cenotaphs in Orchha. Featuring Standard and Deluxe accommodations.",
+      "Serene heritage retreats across from the 14 Royal Cenotaphs in Orchha. Featuring 5 distinct room categories.",
     url: "https://www.orchharesort.com/rooms",
-    images: ["/images/resort/curated/rooms/room-standard-twin-garden.jpg"],
+    images: ["/images/rooms/deluxe-garden-view-king-bed/modern-hotel-bedroom-with-garden-view.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Accommodations & Luxury Rooms | The Orchha Resort",
     description:
-      "Explore 50 thoughtfully designed accommodations: Standard and Deluxe rooms on the banks of River Betwa in Orchha.",
-    images: ["/images/resort/curated/rooms/room-standard-twin-garden.jpg"],
+      "Explore 50 thoughtfully designed accommodations across 5 official categories on the banks of River Betwa in Orchha.",
+    images: ["/images/rooms/deluxe-garden-view-king-bed/modern-hotel-bedroom-with-garden-view.png"],
   },
 };
 
@@ -87,7 +87,7 @@ export default function RoomsPage() {
               </h1>
 
               <p className="font-sans text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
-                A collection of 50 peaceful rooms and suites nestled in certified zero-pollution
+                A collection of 5 distinctive room categories and 50 peaceful rooms and suites nestled in certified zero-pollution
                 riverside gardens across from the 14 Royal Cenotaphs.
               </p>
 
@@ -116,7 +116,7 @@ export default function RoomsPage() {
             <div className="space-y-4 text-center max-w-2xl mx-auto mb-12">
               <SubtitleTag>Accommodation Showcase</SubtitleTag>
               <Heading as="h2" size="h2">
-                Thoughtfully Designed Stays
+                Five Distinctive Room Categories
               </Heading>
               <Text variant="muted">
                 Each category reflects authentic Bundelkhandi architecture, handcrafted teak
@@ -124,7 +124,7 @@ export default function RoomsPage() {
               </Text>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {VERIFIED_ROOMS.map((room) => (
                 <RoomCardPrimitive key={room.id} room={room} />
               ))}

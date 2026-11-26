@@ -1,4 +1,12 @@
-export type RoomCategory = "standard" | "deluxe";
+export type RoomCategory =
+  | "deluxe-garden-view-king-bed"
+  | "deluxe-garden-view-twin-bed"
+  | "deluxe-marble-bed"
+  | "standard-bed"
+  | "super-deluxe-pool-view"
+  | "standard"
+  | "deluxe"
+  | string;
 
 export interface RoomAmenity {
   name: string;

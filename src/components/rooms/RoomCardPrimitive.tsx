@@ -8,7 +8,7 @@ import { RESORT_ASSETS } from "@/lib/assets";
 import { HoverZoom } from "@/components/motion/HoverZoom";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { Users, Maximize2, Bed, Eye, ArrowRight } from "lucide-react";
+import { Users, Maximize2, Bed, Eye, ArrowRight, Camera } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface RoomCardPrimitiveProps {
@@ -19,6 +19,9 @@ export interface RoomCardPrimitiveProps {
 
 export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimitiveProps) {
   const asset = RESORT_ASSETS[room.imageKey] || RESORT_ASSETS.roomStandard;
+  const imageSrc = room.gallery?.[0]?.src || asset.src;
+  const imageAlt = room.gallery?.[0]?.alt || asset.alt;
+  const photoCount = room.gallery?.length || 0;
 
   return (
     <div
@@ -32,8 +35,8 @@ export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimit
       <Link href={`/rooms/${room.id}`} className="relative block overflow-hidden">
         <HoverZoom aspectRatio="4:3">
           <Image
-            src={asset.src}
-            alt={asset.alt}
+            src={imageSrc}
+            alt={imageAlt}
             fill
             sizes="(max-width: 810px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
@@ -49,9 +52,17 @@ export function RoomCardPrimitive({ room, onEnquire, className }: RoomCardPrimit
           </div>
         )}
 
+        {/* Photo Count Indicator */}
+        {photoCount > 0 && (
+          <div className="absolute bottom-2.5 right-2.5 z-10 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-mono text-white/90 flex items-center gap-1.5 shadow-sm border border-white/10">
+            <Camera className="w-3 h-3 text-brand-gold" />
+            <span>{photoCount} Photos</span>
+          </div>
+        )}
+
         {/* Staging Disclaimer Tag if using placeholder */}
         {asset.isStagingPlaceholder && (
-          <div className="absolute bottom-2.5 right-2.5 z-10 px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm text-[10px] text-white/80 font-sans">
+          <div className="absolute bottom-2.5 left-2.5 z-10 px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm text-[10px] text-white/80 font-sans">
             Staging Composition
           </div>
         )}
