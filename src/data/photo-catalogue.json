@@ -131,24 +131,24 @@
     "id": "orchha-photo-004",
     "index": 4,
     "category": "heritage-surroundings",
-    "title": "Orchha Architectural Spires",
-    "description": "Architectural detail of the stone temple spires and cupolas.",
-    "originalFilename": "C0123 copy.jpg",
-    "timestamp": "2018-08-07 17:28:24",
+    "title": "Riverfront Dining along the Betwa",
+    "description": "Guests enjoying al fresco dining on the manicured riverfront lawns of Betwa View Dining overlooking River Betwa and the heritage surroundings.",
+    "originalFilename": "betwa-view-dining-panoramic-riverfront-lawn.jpg",
+    "timestamp": "2024-05-20 17:28:24",
     "dimensions": {
-      "width": 1080,
-      "height": 1920,
-      "aspectRatio": 0.562,
+      "width": 1534,
+      "height": 2048,
+      "aspectRatio": 0.749,
       "orientation": "portrait"
     },
-    "qualityScore": 8,
-    "compositionScore": 8,
-    "recommendedRole": "detail",
-    "confidence": 0.9,
+    "qualityScore": 10,
+    "compositionScore": 10,
+    "recommendedRole": "gallery",
+    "confidence": 0.95,
     "tags": [
-      "monuments",
-      "betwa-river",
-      "chhatris",
+      "dining",
+      "riverfront",
+      "lawns",
       "heritage",
       "orchha-resort"
     ],
@@ -156,7 +156,7 @@
     "isDuplicate": false,
     "isExcluded": false,
     "exclusionReason": null,
-    "curatedPath": "/images/resort/curated/heritage/heritage-monument-stone-spires.jpg",
+    "curatedPath": "/images/resort/curated/dining/betwa-view-dining-panoramic-riverfront-lawn.jpg",
     "googlePhotosUrl": "https://lh3.googleusercontent.com/pw/AP1GczNpbep09dkWw5I3odmn4SOF8sYAcKVzZgvUKA9Mfl69X0dHWdXROFduZSwasqjmQiY8LZTmHFUjpUOVyRBV_AC1ajF_0GOUPj9B04Z887MpXExsRYHh=w1200-no"
   },
   {
@@ -353,13 +353,13 @@
     "category": "aerial-landscapes",
     "title": "Master Aerial View of Orchha Resort",
     "description": "DJI drone high-angle perspective showcasing resort wings, river retaining wall, lush lawns, and Kanchan Ghat.",
-    "originalFilename": "dji_fly_20240520_173908_0041_1716209136030_video.jpg",
+    "originalFilename": "aerial-resort-chhatris-sunset-panorama.jpg",
     "timestamp": "2024-05-20 17:39:08",
     "dimensions": {
-      "width": 1512,
-      "height": 2688,
-      "aspectRatio": 0.562,
-      "orientation": "portrait"
+      "width": 2560,
+      "height": 1450,
+      "aspectRatio": 1.765,
+      "orientation": "landscape"
     },
     "qualityScore": 10,
     "compositionScore": 10,
@@ -377,7 +377,7 @@
     "isDuplicate": false,
     "isExcluded": false,
     "exclusionReason": null,
-    "curatedPath": "/images/resort/curated/aerial/aerial-resort-drone-chhatris.jpg",
+    "curatedPath": "/images/resort/curated/aerial/aerial-resort-chhatris-sunset-panorama.jpg",
     "googlePhotosUrl": "https://lh3.googleusercontent.com/pw/AP1GczNKDBafK1bO9XD7UFXi1YkENsS-BsWCQZD0sko9hGQlX6rkFxpJ5afj8Seq71XayxYWTU0spaJfES8Cci3pgchmMXcxqa9fwci3jn5k7s6nV3cSkyNu=w1200-no"
   },
   {

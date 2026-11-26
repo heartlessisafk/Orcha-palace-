@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     description:
       "Explore authentic high-resolution photography of The Orchha Resort. Featuring our lotus-shaped swimming pool, standard and deluxe accommodations, and riverfront heritage.",
     url: "https://www.orchharesort.com/gallery",
-    images: ["/images/resort/curated/pool/pool-lotus-twilight-glow.jpg"],
+    images: ["/images/resort/curated/heritage/IMG_3119.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Photo Gallery | The Orchha Resort",
     description:
       "Explore authentic high-resolution photography of The Orchha Resort across accommodations, wellness, dining, and heritage.",
-    images: ["/images/resort/curated/pool/pool-lotus-twilight-glow.jpg"],
+    images: ["/images/resort/curated/heritage/IMG_3119.jpg"],
   },
 };
 
@@ -51,11 +51,11 @@ export default function GalleryPage() {
       <main id="main-content" className="flex-1">
         {/* Cinematic Gallery Hero */}
         <section className="relative min-h-[58vh] sm:min-h-[64vh] flex items-end pb-12 sm:pb-16 pt-32 overflow-hidden bg-brand-charcoal">
-          {/* Background Image: Iconic Lotus Pool Twilight - Authentic Natural Colors */}
+          {/* Background Image: Authentic Riverside View of The Orchha Resort */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/resort/curated/pool/pool-lotus-twilight-glow.jpg"
-              alt="Orchha Resort Lotus Pool Twilight Glow"
+              src="/images/resort/curated/heritage/IMG_3119.jpg"
+              alt="The Orchha Resort on the banks of River Betwa"
               fill
               priority
               className="object-cover object-center scale-105"
